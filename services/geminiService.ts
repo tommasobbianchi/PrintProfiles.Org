@@ -1,12 +1,6 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { FilamentProfile, PrinterBrand, FilamentType } from '../types';
 
-if (!process.env.API_KEY) {
-  console.warn("API_KEY environment variable not set. AI features will not work.");
-}
-
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
-
 const responseSchema = {
     type: Type.OBJECT,
     properties: {
@@ -44,6 +38,14 @@ export const suggestFilamentSettings = async (
   manufacturer: string,
   brand?: string
 ): Promise<Partial<FilamentProfile>> => {
+  const apiKey = process.env.API_KEY;
+  
+  if (!apiKey) {
+      throw new Error("API_KEY environment variable not set. AI features will not work.");
+  }
+
+  const ai = new GoogleGenAI({ apiKey });
+
   try {
     const prompt = `
       Based on the following 3D printer and filament information, provide optimal settings for a high-quality print.
@@ -64,7 +66,7 @@ export const suggestFilamentSettings = async (
         },
     });
 
-    const jsonText = response.text.trim();
+    const jsonText = response.text;
     if (!jsonText) {
         throw new Error("AI returned an empty response.");
     }
@@ -74,6 +76,9 @@ export const suggestFilamentSettings = async (
 
   } catch (error) {
     console.error("Error fetching suggestions from Gemini API:", error);
+    if (error instanceof Error && error.message.includes("API_KEY")) {
+        throw error;
+    }
     throw new Error("Failed to get AI suggestions. Please check your API key and try again.");
   }
 };
