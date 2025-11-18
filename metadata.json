@@ -1,0 +1,5 @@
+{
+  "name": "PrintProfiles.Org",
+  "description": "An application for 3D printing enthusiasts to create, share, and download filament profiles for popular slicers like Bambu Studio, Creality, and Anycubic. Features AI-powered setting suggestions to optimize your prints.",
+  "requestFramePermissions": []
+}
