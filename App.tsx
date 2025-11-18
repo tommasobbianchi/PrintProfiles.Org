@@ -46,9 +46,29 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-gray-200 font-sans">
       <Header />
       <main className="max-w-4xl mx-auto p-4 md:p-6">
-        <div className="mb-6 flex justify-center space-x-4">
+        
+        {/* Logo Section */}
+        <div className="flex justify-center mb-8">
+          <img 
+            src="/logo.svg" 
+            alt="PrintProfiles.Org" 
+            className="max-h-40 w-auto object-contain drop-shadow-lg"
+          />
+        </div>
+
+        <div className="mb-2 flex justify-center space-x-4">
           <TabButton tabName="create" label="Create New Profile" />
           <TabButton tabName="community" label="Community Profiles" />
+        </div>
+
+        {/* Contact Email */}
+        <div className="flex justify-center mb-6">
+            <a 
+                href="mailto:Contact@PrintProfiles.Org" 
+                className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-medium"
+            >
+                Contact@PrintProfiles.Org
+            </a>
         </div>
 
         <div className="bg-gray-800 rounded-lg shadow-xl p-6">
