@@ -376,7 +376,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
 
   const InputField: React.FC<{label: string, name: keyof Omit<FilamentProfile, 'id'>, type?: string, value: any, step?: string, placeholder?: string, children?: React.ReactNode}> = ({ label, name, type = 'text', value, step, placeholder, children }) => (
     <div className="flex flex-col">
-      <label htmlFor={name} className="mb-1 text-sm font-medium text-gray-400">{label}</label>
+      <label htmlFor={name} className="mb-1 text-sm font-medium text-stone-500">{label}</label>
       {children ? children :
         <input
           type={type}
@@ -386,15 +386,15 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
           onChange={handleChange}
           step={step}
           placeholder={placeholder}
-          className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-stone-400"
         />
       }
     </div>
   );
 
   const Section: React.FC<{title: string, children: React.ReactNode}> = ({title, children}) => (
-      <div className="border-t border-gray-700 pt-6 mt-6">
-          <h3 className="text-lg font-semibold text-gray-300 mb-4">{title}</h3>
+      <div className="border-t border-stone-200 pt-6 mt-6">
+          <h3 className="text-lg font-semibold text-stone-700 mb-4">{title}</h3>
           {children}
       </div>
   );
@@ -402,17 +402,17 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
   return (
     <div className="space-y-6">
        <div className="flex flex-wrap justify-between items-center mb-2 gap-2">
-         <h2 className="text-2xl font-bold text-white">Create Filament Profile</h2>
+         <h2 className="text-2xl font-bold text-stone-800">Create Filament Profile</h2>
          <div className="flex gap-2">
              <button
                  onClick={() => setImportMode(importMode === 'excel' ? 'none' : 'excel')}
-                 className={`text-sm py-1 px-3 rounded-md border border-gray-600 transition-colors ${importMode === 'excel' ? 'bg-blue-900 text-white' : 'bg-gray-700 text-blue-300 hover:bg-gray-600'}`}
+                 className={`text-sm py-1 px-3 rounded-md border border-stone-300 transition-colors ${importMode === 'excel' ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-600 hover:bg-stone-50'}`}
              >
                  Excel Import
              </button>
              <button
                  onClick={() => setImportMode(importMode === 'raw' ? 'none' : 'raw')}
-                 className={`text-sm py-1 px-3 rounded-md border border-gray-600 transition-colors ${importMode === 'raw' ? 'bg-purple-900 text-white' : 'bg-gray-700 text-purple-300 hover:bg-gray-600'}`}
+                 className={`text-sm py-1 px-3 rounded-md border border-stone-300 transition-colors ${importMode === 'raw' ? 'bg-purple-600 text-white border-purple-600' : 'bg-white text-purple-600 hover:bg-stone-50'}`}
              >
                  Mass Import (Raw Files)
              </button>
@@ -421,9 +421,9 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
        
        {/* --- Excel Import UI --- */}
        {importMode === 'excel' && (
-           <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 animate-fadeIn">
-               <h3 className="text-xl font-semibold text-white mb-4">Batch Import (Excel)</h3>
-               <p className="text-gray-400 mb-6 text-sm">
+           <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 animate-fadeIn shadow-sm">
+               <h3 className="text-xl font-semibold text-stone-800 mb-4">Batch Import (Excel)</h3>
+               <p className="text-stone-600 mb-6 text-sm">
                    Upload an Excel (.xlsx) file containing multiple filament profiles. 
                    Ensure your file matches the template format.
                </p>
@@ -431,38 +431,39 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                <div className="flex flex-col gap-4">
                    <button 
                        onClick={downloadBulkTemplate}
-                       className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-colors"
+                       className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-colors shadow-sm"
                    >
                        <DownloadIcon /> Download Excel Template
                    </button>
                    
-                   <div className="border-t border-gray-700 my-2"></div>
+                   <div className="border-t border-stone-300 my-2"></div>
                    
                    <div className="flex flex-col gap-2">
-                       <label className="text-sm font-medium text-gray-300">Upload Completed Template:</label>
+                       <label className="text-sm font-medium text-stone-700">Upload Completed Template:</label>
                        <input 
                            type="file" 
                            ref={bulkInputRef}
                            onChange={handleBulkFileChange}
                            accept=".xlsx, .xls"
-                           className="block w-full text-sm text-gray-400
+                           className="block w-full text-sm text-stone-500
                              file:mr-4 file:py-2 file:px-4
                              file:rounded-md file:border-0
                              file:text-sm file:font-semibold
-                             file:bg-gray-700 file:text-blue-300
-                             hover:file:bg-gray-600
+                             file:bg-white file:text-blue-600
+                             file:border file:border-stone-300
+                             hover:file:bg-stone-50
                            "
                        />
                    </div>
 
                    {bulkSuccessCount > 0 && (
-                       <div className="bg-green-900/30 border border-green-600 text-green-200 p-3 rounded-md mt-2">
+                       <div className="bg-green-50 border border-green-200 text-green-800 p-3 rounded-md mt-2">
                            Successfully imported {bulkSuccessCount} profiles to the Download list!
                        </div>
                    )}
 
                    {bulkErrors.length > 0 && (
-                       <div className="bg-red-900/30 border border-red-600 text-red-200 p-4 rounded-md mt-2 max-h-60 overflow-y-auto">
+                       <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-md mt-2 max-h-60 overflow-y-auto">
                            <p className="font-bold mb-2">Import Errors:</p>
                            <ul className="list-disc pl-5 space-y-1 text-sm">
                                {bulkErrors.map((err, i) => <li key={i}>{err}</li>)}
@@ -475,46 +476,46 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
 
        {/* --- Raw Files Import UI --- */}
        {importMode === 'raw' && (
-           <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 animate-fadeIn">
-               <h3 className="text-xl font-semibold text-white mb-4">Mass Import (Raw Files)</h3>
-               <p className="text-gray-400 mb-4 text-sm">
+           <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 animate-fadeIn shadow-sm">
+               <h3 className="text-xl font-semibold text-stone-800 mb-4">Mass Import (Raw Files)</h3>
+               <p className="text-stone-600 mb-4 text-sm">
                    Select multiple files (.json, .ini) to import. Optionally force Brand/Model to clean up data.
                </p>
                
                {/* Overrides */}
-               <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-700/30 rounded-md border border-gray-600">
+               <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-white rounded-md border border-stone-200">
                    <div>
-                       <label className="block text-xs text-gray-400 mb-1">Force Brand</label>
+                       <label className="block text-xs text-stone-500 mb-1">Force Brand</label>
                        <select 
                            value={overrideBrand} 
                            onChange={(e) => {
                                setOverrideBrand(e.target.value as PrinterBrand | 'Auto');
                                setOverrideModel('Auto'); // Reset model on brand change
                            }}
-                           className="w-full bg-gray-700 border border-gray-600 rounded-md text-sm px-2 py-1 text-white"
+                           className="w-full bg-white border border-stone-300 rounded-md text-sm px-2 py-1 text-stone-900 focus:outline-none focus:border-blue-500"
                        >
                            <option value="Auto">Auto-Detect</option>
                            {PRINTER_BRANDS.map(b => <option key={b} value={b}>{b}</option>)}
                        </select>
                    </div>
                    <div>
-                       <label className="block text-xs text-gray-400 mb-1">Force Model</label>
+                       <label className="block text-xs text-stone-500 mb-1">Force Model</label>
                         <select 
                            value={overrideModel} 
                            onChange={(e) => setOverrideModel(e.target.value)}
                            disabled={overrideBrand === 'Auto'}
-                           className="w-full bg-gray-700 border border-gray-600 rounded-md text-sm px-2 py-1 text-white disabled:opacity-50"
+                           className="w-full bg-white border border-stone-300 rounded-md text-sm px-2 py-1 text-stone-900 focus:outline-none focus:border-blue-500 disabled:opacity-50 disabled:bg-stone-100"
                        >
                            <option value="Auto">Auto-Detect</option>
                            {overrideBrand !== 'Auto' && (PRINTER_MODELS[overrideBrand] || []).map(m => <option key={m} value={m}>{m}</option>)}
                        </select>
                    </div>
                    <div>
-                       <label className="block text-xs text-gray-400 mb-1">Force Nozzle</label>
+                       <label className="block text-xs text-stone-500 mb-1">Force Nozzle</label>
                        <select 
                            value={overrideNozzle} 
                            onChange={(e) => setOverrideNozzle(e.target.value)}
-                           className="w-full bg-gray-700 border border-gray-600 rounded-md text-sm px-2 py-1 text-white"
+                           className="w-full bg-white border border-stone-300 rounded-md text-sm px-2 py-1 text-stone-900 focus:outline-none focus:border-blue-500"
                        >
                            <option value="Auto">Auto-Detect</option>
                            {NOZZLE_DIAMETERS.map(d => <option key={d} value={d}>{d} mm</option>)}
@@ -524,25 +525,26 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                
                <div className="flex flex-col gap-4">
                    <div className="flex flex-col gap-2">
-                       <label className="text-sm font-medium text-gray-300">Select Files:</label>
+                       <label className="text-sm font-medium text-stone-700">Select Files:</label>
                        <input 
                            type="file" 
                            ref={rawFolderInputRef}
                            onChange={handleRawFilesChange}
                            multiple
                            accept=".json,.ini,.filament"
-                           className="block w-full text-sm text-gray-400
+                           className="block w-full text-sm text-stone-500
                              file:mr-4 file:py-2 file:px-4
                              file:rounded-md file:border-0
                              file:text-sm file:font-semibold
-                             file:bg-gray-700 file:text-purple-300
-                             hover:file:bg-gray-600
+                             file:bg-white file:text-purple-600
+                             file:border file:border-stone-300
+                             hover:file:bg-stone-50
                            "
                        />
                    </div>
 
                    {rawFilesStatus && (
-                       <div className={`p-3 rounded-md mt-2 border ${rawFilesStatus.includes('failed') && !rawFilesStatus.includes('0 failed') ? 'bg-yellow-900/30 border-yellow-600 text-yellow-200' : 'bg-green-900/30 border-green-600 text-green-200'}`}>
+                       <div className={`p-3 rounded-md mt-2 border ${rawFilesStatus.includes('failed') && !rawFilesStatus.includes('0 failed') ? 'bg-yellow-50 border-yellow-300 text-yellow-800' : 'bg-green-50 border-green-200 text-green-800'}`}>
                            {rawFilesStatus}
                        </div>
                    )}
@@ -553,34 +555,34 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
        {/* --- Single Editor UI (Default) --- */}
        {importMode === 'none' && (
        <>
-       <p className="text-center text-gray-400 mb-6">Fill in the details below, use AI to suggest settings, or import an existing profile.</p>
+       <p className="text-center text-stone-500 mb-6">Fill in the details below, use AI to suggest settings, or import an existing profile.</p>
 
-        {error && <div className="bg-red-900/50 border border-red-700 text-red-200 px-4 py-3 rounded-md text-center animate-pulse">{error}</div>}
+        {error && <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-md text-center animate-pulse">{error}</div>}
 
        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <InputField label="Profile Name" name="profileName" value={profile.profileName} placeholder="e.g. My Favorite PETG"/>
             
             {/* Printer Brand & Model Selection */}
             <InputField label="Printer Brand" name="printerBrand" value={profile.printerBrand}>
-                <select id="printerBrand" name="printerBrand" value={profile.printerBrand} onChange={handleChange} className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                <select id="printerBrand" name="printerBrand" value={profile.printerBrand} onChange={handleChange} className="bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
                     {PRINTER_BRANDS.map(brand => <option key={brand} value={brand}>{brand}</option>)}
                 </select>
             </InputField>
              <InputField label="Printer Model" name="printerModel" value={profile.printerModel || 'Generic'}>
-                <select id="printerModel" name="printerModel" value={profile.printerModel || 'Generic'} onChange={handleChange} className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                <select id="printerModel" name="printerModel" value={profile.printerModel || 'Generic'} onChange={handleChange} className="bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
                     {(PRINTER_MODELS[profile.printerBrand] || ['Generic']).map(model => <option key={model} value={model}>{model}</option>)}
                 </select>
             </InputField>
             
             <InputField label="Manufacturer" name="manufacturer" value={profile.manufacturer}>
-                <select id="manufacturer" name="manufacturer" value={profile.manufacturer} onChange={handleChange} className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                <select id="manufacturer" name="manufacturer" value={profile.manufacturer} onChange={handleChange} className="bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
                     <option value="">Select a manufacturer...</option>
                     {FILAMENT_MANUFACTURERS.map(brand => <option key={brand} value={brand}>{brand}</option>)}
                 </select>
             </InputField>
              <InputField label="Brand / Product Line" name="brand" value={profile.brand ?? ''} placeholder="e.g. PolyLite, Prusament"/>
              <InputField label="Filament Type" name="filamentType" value={profile.filamentType}>
-                <select id="filamentType" name="filamentType" value={profile.filamentType} onChange={handleChange} className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                <select id="filamentType" name="filamentType" value={profile.filamentType} onChange={handleChange} className="bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
                     {FILAMENT_TYPES.map(type => <option key={type} value={type}>{type}</option>)}
                 </select>
             </InputField>
@@ -588,7 +590,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
             <div className="grid grid-cols-2 gap-4">
                 <InputField label="Filament Diam. (mm)" name="filamentDiameter" type="number" value={profile.filamentDiameter} step="0.01"/>
                 <InputField label="Nozzle Diam. (mm)" name="nozzleDiameter" value={profile.nozzleDiameter || 0.4}>
-                     <select id="nozzleDiameter" name="nozzleDiameter" value={profile.nozzleDiameter || 0.4} onChange={handleChange} className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                     <select id="nozzleDiameter" name="nozzleDiameter" value={profile.nozzleDiameter || 0.4} onChange={handleChange} className="bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
                         {NOZZLE_DIAMETERS.map(dia => <option key={dia} value={dia}>{dia}</option>)}
                     </select>
                 </InputField>
@@ -632,7 +634,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                  <div className="grid grid-cols-2 gap-4 mb-4">
                      <InputField label="Cost/Spool ($)" name="filamentCost" type="number" value={profile.filamentCost ?? ''} />
                      <div className="flex flex-col">
-                        <label htmlFor="colorHex" className="mb-1 text-sm font-medium text-gray-400">Color</label>
+                        <label htmlFor="colorHex" className="mb-1 text-sm font-medium text-stone-500">Color</label>
                         <div className="flex items-center gap-2">
                             <input
                             type="color"
@@ -640,14 +642,14 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                             name="colorHex"
                             value={profile.colorHex || '#ffffff'}
                             onChange={handleChange}
-                            className="p-1 h-10 w-10 block bg-gray-700 border border-gray-600 cursor-pointer rounded-md"
+                            className="p-1 h-10 w-10 block bg-white border border-stone-300 cursor-pointer rounded-md"
                             />
                             <input 
                                 name="colorName" 
                                 value={profile.colorName ?? ''} 
                                 onChange={handleChange}
                                 placeholder="Color Name" 
-                                className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-stone-400"
                             />
                         </div>
                     </div>
@@ -662,7 +664,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                 value={profile.notes ?? ''}
                 onChange={handleChange}
                 rows={3}
-                className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-stone-400"
                 placeholder="e.g., Good for detailed prints, requires glue stick."
             ></textarea>
         </Section>
@@ -674,7 +676,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                 <button
                     onClick={handleAISuggest}
                     disabled={isSuggesting}
-                    className="flex-1 min-w-[200px] flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 disabled:bg-purple-800 disabled:cursor-not-allowed shadow-lg"
+                    className="flex-1 min-w-[200px] flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 disabled:bg-purple-800 disabled:cursor-not-allowed shadow-md"
                 >
                     {isSuggesting ? (
                         <>
@@ -690,14 +692,14 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                 </button>
                  <button
                     onClick={handleImportClick}
-                    className="flex-1 min-w-[150px] flex items-center justify-center gap-2 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 shadow-lg"
+                    className="flex-1 min-w-[150px] flex items-center justify-center gap-2 bg-stone-600 hover:bg-stone-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 shadow-md"
                 >
                     <ImportIcon />
                     Import JSON
                 </button>
                 <button
                     onClick={handleShare}
-                    className="flex-1 min-w-[150px] flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 shadow-lg"
+                    className="flex-1 min-w-[150px] flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 shadow-md"
                 >
                     <ShareIcon />
                     Share Profile
@@ -705,8 +707,8 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
             </div>
 
             {/* Download Section */}
-            <div className="border-t border-gray-700 pt-4 mt-2">
-                <p className="text-sm text-gray-400 text-center mb-3">Export Profile For:</p>
+            <div className="border-t border-stone-200 pt-4 mt-2">
+                <p className="text-sm text-stone-500 text-center mb-3">Export Profile For:</p>
                 <div className="flex flex-wrap justify-center gap-3">
                     <button
                         onClick={() => downloadFile('bambu')}

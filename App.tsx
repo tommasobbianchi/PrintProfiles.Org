@@ -101,8 +101,8 @@ const App: React.FC = () => {
       onClick={() => setActiveTab(tabName)}
       className={`px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
         activeTab === tabName
-          ? 'bg-blue-600 text-white'
-          : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+          ? 'bg-stone-800 text-white shadow-md'
+          : 'bg-stone-200 text-stone-600 hover:bg-stone-300'
       }`}
     >
       {label}
@@ -110,15 +110,15 @@ const App: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-200 font-sans">
+    <div className="min-h-screen bg-[#fdfbf7] text-stone-800 font-sans transition-colors duration-300">
       <Header />
       <main className="max-w-4xl mx-auto p-4 md:p-6">
         
         {/* Logo Section */}
         <div className="flex flex-col items-center justify-center mb-8">
-          <div className="p-4 bg-gray-800/50 rounded-xl border border-gray-700/50 backdrop-blur-sm shadow-lg mb-2 transition-all duration-300 hover:bg-gray-800/80">
+          <div className="p-4 bg-white/60 rounded-xl border border-stone-200/60 backdrop-blur-sm shadow-sm mb-2 transition-all duration-300 hover:bg-white/80 hover:shadow-md">
             {logoLoadError ? (
-                <div className="h-20 w-40 flex items-center justify-center text-red-400 text-xs border border-red-900/50 rounded bg-red-900/20">
+                <div className="h-20 w-40 flex items-center justify-center text-red-500 text-xs border border-red-200 rounded bg-red-50">
                    Invalid Image
                 </div>
             ) : (
@@ -143,7 +143,7 @@ const App: React.FC = () => {
                 />
                 <button
                     onClick={() => logoInputRef.current?.click()}
-                    className="text-xs text-gray-500 hover:text-blue-400 transition-colors flex items-center gap-1"
+                    className="text-xs text-stone-500 hover:text-blue-600 transition-colors flex items-center gap-1"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -153,7 +153,7 @@ const App: React.FC = () => {
                 {logoSrc !== '/logo.svg' && (
                     <button
                         onClick={handleResetLogo}
-                        className="text-xs text-gray-500 hover:text-red-400 transition-colors flex items-center gap-1"
+                        className="text-xs text-stone-500 hover:text-red-600 transition-colors flex items-center gap-1"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -165,7 +165,7 @@ const App: React.FC = () => {
           )}
         </div>
 
-        <div className="mb-2 flex justify-center space-x-4">
+        <div className="mb-4 flex justify-center space-x-4">
           <TabButton tabName="create" label="Access for Filament Producers" />
           <TabButton tabName="community" label="Download Profiles" />
         </div>
@@ -174,21 +174,21 @@ const App: React.FC = () => {
         <div className="flex justify-center mb-6">
             <a 
                 href="mailto:Contact@PrintProfiles.Org" 
-                className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-medium"
+                className="text-sm text-stone-500 hover:text-blue-600 transition-colors font-medium"
             >
                 Contact@PrintProfiles.Org
             </a>
         </div>
 
-        <div className="bg-gray-800 rounded-lg shadow-xl p-6">
+        <div className="bg-white rounded-lg shadow-xl border border-stone-100 p-6">
           {activeTab === 'create' && (
             isProducerAuthenticated ? (
                 <CreateProfileForm onShare={addProfileToCommunity} />
             ) : (
                 <div className="flex flex-col items-center justify-center py-10">
-                    <div className="w-full max-w-md bg-gray-700/50 p-8 rounded-lg shadow-lg border border-gray-600">
-                        <h2 className="text-xl font-bold text-white mb-4 text-center">Producer Access Required</h2>
-                        <p className="text-gray-400 mb-6 text-center text-sm">
+                    <div className="w-full max-w-md bg-stone-50 p-8 rounded-lg shadow-md border border-stone-200">
+                        <h2 className="text-xl font-bold text-stone-800 mb-4 text-center">Producer Access Required</h2>
+                        <p className="text-stone-500 mb-6 text-center text-sm">
                             Please enter the password to access the profile creation tools.
                         </p>
                         <form onSubmit={handleLogin} className="space-y-4">
@@ -198,15 +198,15 @@ const App: React.FC = () => {
                                     value={passwordInput}
                                     onChange={(e) => setPasswordInput(e.target.value)}
                                     placeholder="Enter Password"
-                                    className="w-full bg-gray-800 border border-gray-600 rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    className="w-full bg-white border border-stone-300 rounded-md px-4 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-stone-400"
                                 />
                             </div>
                             {authError && (
-                                <p className="text-red-400 text-sm text-center">{authError}</p>
+                                <p className="text-red-500 text-sm text-center">{authError}</p>
                             )}
                             <button
                                 type="submit"
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors"
+                                className="w-full bg-stone-800 hover:bg-stone-900 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-sm"
                             >
                                 Unlock Access
                             </button>
@@ -217,7 +217,7 @@ const App: React.FC = () => {
           )}
           {activeTab === 'community' && <CommunityProfiles profiles={communityProfiles} isLoading={isLoadingProfiles} />}
         </div>
-        <footer className="text-center mt-8 text-gray-500 text-sm">
+        <footer className="text-center mt-8 text-stone-500 text-sm">
           <p>Slicer Profile Generator &copy; 2024. Happy Printing!</p>
         </footer>
       </main>

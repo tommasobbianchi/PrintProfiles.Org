@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { FilamentProfile, PrinterBrand } from '../types';
 import { PRINTER_BRANDS, PRINTER_MODELS, NOZZLE_DIAMETERS, FILAMENT_MANUFACTURERS, FILAMENT_TYPES } from '../constants';
@@ -10,8 +11,8 @@ interface CommunityProfilesProps {
 
 const Detail: React.FC<{ label: string; value: string | number }> = ({ label, value }) => (
   <div>
-    <span className="text-gray-400">{label}: </span>
-    <span className="font-semibold text-white">{value}</span>
+    <span className="text-stone-500">{label}: </span>
+    <span className="font-semibold text-stone-800">{value}</span>
   </div>
 );
 
@@ -61,10 +62,10 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
       const isModelMatch = filterModel !== 'All' && p.printerModel === filterModel;
       const isNozzleMatch = filterNozzle !== 'All' && p.nozzleDiameter === parseFloat(filterNozzle);
 
-      if (isBrandMatch && isModelMatch && isNozzleMatch) return { text: 'Perfect Match', color: 'bg-green-900 text-green-200 border-green-700' };
-      if (isBrandMatch && isModelMatch) return { text: 'Model Match', color: 'bg-blue-900 text-blue-200 border-blue-700' };
-      if (isBrandMatch) return { text: 'Brand Compatible', color: 'bg-indigo-900 text-indigo-200 border-indigo-700' };
-      if (p.printerBrand === 'Other') return { text: 'Generic / Universal', color: 'bg-gray-700 text-gray-300 border-gray-600' };
+      if (isBrandMatch && isModelMatch && isNozzleMatch) return { text: 'Perfect Match', color: 'bg-green-100 text-green-800 border-green-300' };
+      if (isBrandMatch && isModelMatch) return { text: 'Model Match', color: 'bg-blue-100 text-blue-800 border-blue-300' };
+      if (isBrandMatch) return { text: 'Brand Compatible', color: 'bg-indigo-100 text-indigo-800 border-indigo-300' };
+      if (p.printerBrand === 'Other') return { text: 'Generic / Universal', color: 'bg-stone-200 text-stone-600 border-stone-300' };
       
       return null;
   };
@@ -220,7 +221,7 @@ cooling = 1
       const matchLabel = getMatchLabel(profile);
 
       return (
-        <div className="bg-gray-700/50 rounded-lg p-4 flex flex-col justify-between transition-all duration-300 hover:bg-gray-700 hover:shadow-2xl hover:scale-[1.02] relative overflow-hidden border border-gray-600/50">
+        <div className="bg-white rounded-lg p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:scale-[1.02] relative overflow-hidden border border-stone-200 hover:border-blue-300">
         
         {matchLabel && (
             <div className={`absolute top-0 right-0 px-3 py-1 text-xs font-bold rounded-bl-lg border-b border-l ${matchLabel.color}`}>
@@ -230,29 +231,29 @@ cooling = 1
 
         <div>
             <div className="flex items-center justify-between mb-1 pr-20">
-                <h3 className="text-lg font-bold text-blue-300 truncate pr-2" title={profile.profileName}>{profile.profileName}</h3>
+                <h3 className="text-lg font-bold text-stone-800 truncate pr-2" title={profile.profileName}>{profile.profileName}</h3>
             </div>
             <div className="flex items-center mb-2">
-                 {profile.colorHex && <div className="w-4 h-4 rounded-full border border-gray-500 mr-2" title={profile.colorName} style={{ backgroundColor: profile.colorHex }}></div>}
-                 <p className="text-sm text-gray-400 truncate">
+                 {profile.colorHex && <div className="w-4 h-4 rounded-full border border-stone-300 mr-2" title={profile.colorName} style={{ backgroundColor: profile.colorHex }}></div>}
+                 <p className="text-sm text-stone-500 truncate">
                     {profile.manufacturer} {profile.brand ? `- ${profile.brand}` : ''}
                  </p>
             </div>
 
             {/* Hardware Specs */}
             <div className="flex gap-2 mb-3">
-                 <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${profile.printerBrand === 'Other' ? 'bg-gray-600 text-gray-200' : 'bg-blue-900 text-blue-200'}`}>
+                 <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${profile.printerBrand === 'Other' ? 'bg-stone-100 text-stone-600' : 'bg-blue-50 text-blue-700 border border-blue-100'}`}>
                      {profile.printerBrand}
                  </span>
-                 <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-800 text-gray-300 border border-gray-600">
+                 <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-stone-50 text-stone-600 border border-stone-200">
                      {profile.printerModel || 'Generic'}
                  </span>
-                 <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-800 text-gray-300 border border-gray-600">
+                 <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-stone-50 text-stone-600 border border-stone-200">
                      {profile.nozzleDiameter ? `⌀ ${profile.nozzleDiameter}mm` : 'All Nozzles'}
                  </span>
             </div>
             
-            <div className="border-t border-gray-600/50 pt-3">
+            <div className="border-t border-stone-100 pt-3">
             <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm mb-3">
                 <Detail label="Nozzle" value={`${profile.nozzleTemp}°C`} />
                 <Detail label="Bed" value={`${profile.bedTemp}°C`} />
@@ -262,29 +263,29 @@ cooling = 1
             </div>
             </div>
             
-            {profile.notes && <p className="text-xs text-gray-300 italic bg-gray-800 p-2 rounded-md mt-2">"{profile.notes}"</p>}
+            {profile.notes && <p className="text-xs text-stone-600 italic bg-stone-50 p-2 rounded-md mt-2 border border-stone-100">"{profile.notes}"</p>}
         </div>
         
-        <div className="mt-4 pt-3 border-t border-gray-600/30">
-            <p className="text-xs text-gray-500 text-center mb-2">Download For:</p>
+        <div className="mt-4 pt-3 border-t border-stone-100">
+            <p className="text-xs text-stone-400 text-center mb-2">Download For:</p>
             <div className="flex flex-col gap-2">
                 <button
                     onClick={() => downloadFile(profile, 'bambu')}
-                    className="w-full flex items-center justify-center gap-1 bg-green-600 hover:bg-green-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
+                    className="w-full flex items-center justify-center gap-1 bg-green-600 hover:bg-green-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors shadow-sm"
                     title="Bambu Studio / Orca Slicer"
                 >
                     <DownloadIcon /> Bambu/Orca
                 </button>
                 <button
                     onClick={() => downloadFile(profile, 'prusa')}
-                    className="w-full flex items-center justify-center gap-1 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
+                    className="w-full flex items-center justify-center gap-1 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors shadow-sm"
                     title="Prusa Slicer"
                 >
                     <DownloadIcon /> Prusa
                 </button>
                 <button
                     onClick={() => downloadFile(profile, 'ideamaker')}
-                    className="w-full flex items-center justify-center gap-1 bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
+                    className="w-full flex items-center justify-center gap-1 bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors shadow-sm"
                     title="ideaMaker"
                 >
                     <DownloadIcon /> IdeaMaker
@@ -297,7 +298,7 @@ cooling = 1
 
   const LoadingSpinner = () => (
     <div className="flex justify-center items-center p-10">
-      <svg className="animate-spin h-8 w-8 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <svg className="animate-spin h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
       </svg>
@@ -306,23 +307,23 @@ cooling = 1
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-center text-white mb-2">Download Profiles</h2>
-      <p className="text-center text-gray-400 mb-6">
+      <h2 className="text-2xl font-bold text-center text-stone-800 mb-2">Download Profiles</h2>
+      <p className="text-center text-stone-500 mb-6">
         Browse and download Official Brand Approved Profiles. Use filters to find your perfect match.
       </p>
       
       {/* Smart Filter Bar */}
-      <div className="flex flex-col gap-4 mb-6 bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700">
+      <div className="flex flex-col gap-4 mb-6 bg-stone-100 p-4 rounded-lg shadow-sm border border-stone-200">
           
           {/* Row 1: Printer Hardware */}
           <div className="flex flex-col md:flex-row gap-4">
               {/* 1. Printer Brand */}
               <div className="flex-1">
-                  <label className="block text-xs text-gray-400 mb-1">1. Printer Brand</label>
+                  <label className="block text-xs text-stone-500 mb-1">1. Printer Brand</label>
                   <select 
                     value={filterBrand} 
                     onChange={(e) => handleBrandChange(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   >
                       <option value="All">All Brands</option>
                       {PRINTER_BRANDS.map(b => <option key={b} value={b}>{b}</option>)}
@@ -331,12 +332,12 @@ cooling = 1
 
               {/* 2. Printer Model (Conditional) */}
               <div className={`flex-1 transition-opacity duration-200 ${filterBrand === 'All' ? 'opacity-50 pointer-events-none' : 'opacity-100'}`}>
-                   <label className="block text-xs text-gray-400 mb-1">2. Model (Optional)</label>
+                   <label className="block text-xs text-stone-500 mb-1">2. Model (Optional)</label>
                    <select 
                     value={filterModel} 
                     onChange={(e) => setFilterModel(e.target.value)}
                     disabled={filterBrand === 'All'}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   >
                       <option value="All">All / Generic</option>
                       {availableModels.map(m => <option key={m} value={m}>{m}</option>)}
@@ -345,12 +346,12 @@ cooling = 1
 
               {/* 3. Nozzle Diameter (Conditional) */}
                <div className={`w-full md:w-40 transition-opacity duration-200 ${filterBrand === 'All' ? 'opacity-50 pointer-events-none' : 'opacity-100'}`}>
-                   <label className="block text-xs text-gray-400 mb-1">3. Nozzle (Optional)</label>
+                   <label className="block text-xs text-stone-500 mb-1">3. Nozzle (Optional)</label>
                    <select 
                     value={filterNozzle} 
                     onChange={(e) => setFilterNozzle(e.target.value)}
                     disabled={filterBrand === 'All'}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   >
                       <option value="All">All</option>
                       {NOZZLE_DIAMETERS.map(d => <option key={d} value={d}>{d} mm</option>)}
@@ -362,11 +363,11 @@ cooling = 1
           <div className="flex flex-col md:flex-row gap-4">
                {/* 4. Manufacturer */}
                <div className="flex-1">
-                  <label className="block text-xs text-gray-400 mb-1">4. Manufacturer</label>
+                  <label className="block text-xs text-stone-500 mb-1">4. Manufacturer</label>
                   <select 
                     value={filterManufacturer} 
                     onChange={(e) => setFilterManufacturer(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   >
                       <option value="All">All Manufacturers</option>
                       {FILAMENT_MANUFACTURERS.map(m => <option key={m} value={m}>{m}</option>)}
@@ -375,11 +376,11 @@ cooling = 1
 
               {/* 5. Material */}
               <div className="flex-1">
-                   <label className="block text-xs text-gray-400 mb-1">5. Material Type</label>
+                   <label className="block text-xs text-stone-500 mb-1">5. Material Type</label>
                    <select 
                     value={filterMaterial} 
                     onChange={(e) => setFilterMaterial(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   >
                       <option value="All">All Materials</option>
                       {FILAMENT_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
@@ -394,7 +395,7 @@ cooling = 1
                 placeholder="Search by profile name, manufacturer, material type..." 
                 value={filterText}
                 onChange={(e) => setFilterText(e.target.value)}
-                className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-gray-500"
+                className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-stone-400"
               />
           </div>
       </div>
@@ -402,19 +403,19 @@ cooling = 1
       {isLoading ? (
         <LoadingSpinner />
       ) : !hasFiltersApplied ? (
-        <div className="text-center py-20 bg-gray-800/30 rounded-lg border border-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-gray-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="text-center py-20 bg-stone-50 rounded-lg border border-stone-200">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-stone-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
-            <h3 className="text-xl font-bold text-gray-300 mb-2">Search or Filter to view profiles</h3>
-            <p className="text-gray-500 max-w-md mx-auto">
+            <h3 className="text-xl font-bold text-stone-600 mb-2">Search or Filter to view profiles</h3>
+            <p className="text-stone-400 max-w-md mx-auto">
                 Select a Printer Brand, Manufacturer, or type in the search bar to find the perfect filament profile for your setup.
             </p>
         </div>
       ) : filteredProfiles.length === 0 ? (
-        <div className="text-center py-10 bg-gray-800/30 rounded-lg border border-dashed border-gray-700">
-            <p className="text-gray-400 text-lg">No profiles match your specific criteria.</p>
-            <p className="text-gray-500 text-sm mt-2">Try resetting the filters to see more results.</p>
+        <div className="text-center py-10 bg-stone-50 rounded-lg border border-dashed border-stone-300">
+            <p className="text-stone-500 text-lg">No profiles match your specific criteria.</p>
+            <p className="text-stone-400 text-sm mt-2">Try resetting the filters to see more results.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
