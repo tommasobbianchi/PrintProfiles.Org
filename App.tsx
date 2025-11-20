@@ -6,37 +6,32 @@ import Header from './components/Header';
 import CreateProfileForm from './components/CreateProfileForm';
 import CommunityProfiles from './components/CommunityProfiles';
 
-type Tab = 'create' | 'community';
+type Tab = 'community' | 'create';
 
 const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<Tab>('create');
+  const [activeTab, setActiveTab] = useState<Tab>('community');
   const [communityProfiles, setCommunityProfiles] = useState<FilamentProfile[]>([]);
   const [isLoadingProfiles, setIsLoadingProfiles] = useState(true);
 
-  // Authentication State
-  const [isProducerAuthenticated, setIsProducerAuthenticated] = useState(false);
+  // Authentication State (For Creating Profiles & Admin Tasks)
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
   const [authError, setAuthError] = useState('');
 
-  // Logo State
+  // Logo State (App Branding)
   const [logoSrc, setLogoSrc] = useState<string>(() => {
-    // Load from local storage if available
     if (typeof window !== 'undefined') {
-        return localStorage.getItem('custom_logo') || '/logo.svg';
+        return localStorage.getItem('custom_app_logo') || '/logo.svg';
     }
     return '/logo.svg';
   });
-  const [logoLoadError, setLogoLoadError] = useState(false);
-  const [logoKey, setLogoKey] = useState(0); // Use a counter to force re-render reliably
   const logoInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    // Simulate fetching community profiles
     const timer = setTimeout(() => {
         setCommunityProfiles(PRESET_PROFILES);
         setIsLoadingProfiles(false);
     }, 1500);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -47,29 +42,33 @@ const App: React.FC = () => {
     } else {
         setCommunityProfiles(prevProfiles => [profileOrProfiles, ...prevProfiles]);
     }
+    alert("Profile added to Download list successfully!");
     setActiveTab('community');
   };
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (passwordInput === 'PrintProfiles.Org') {
-        setIsProducerAuthenticated(true);
+        setIsAuthenticated(true);
         setAuthError('');
+        setPasswordInput('');
     } else {
-        setAuthError('Incorrect password. Access denied.');
+        setAuthError('Incorrect password.');
     }
   };
 
-  const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleLogout = () => {
+      setIsAuthenticated(false);
+      setActiveTab('community');
+  };
+
+  const handleAppLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    
-    // Reset input value to allow selecting the same file again
-    e.target.value = '';
+    e.target.value = ''; // Reset input
 
     if (file) {
-        // Basic validation: Check size (limit to ~2MB for localStorage safety)
         if (file.size > 2 * 1024 * 1024) {
-            alert("File is too large. Please select an image under 2MB.");
+            alert("File is too large. Max 2MB.");
             return;
         }
 
@@ -77,8 +76,6 @@ const App: React.FC = () => {
         reader.onload = (event) => {
             const buffer = event.target?.result;
             if (buffer instanceof ArrayBuffer) {
-                // Robust Binary-to-Base64 conversion
-                // This avoids browser MIME sniffing issues which often fail for SVGs or PNGs served locally
                 let binary = '';
                 const bytes = new Uint8Array(buffer);
                 const len = bytes.byteLength;
@@ -88,31 +85,21 @@ const App: React.FC = () => {
                 const base64 = window.btoa(binary);
 
                 const ext = file.name.split('.').pop()?.toLowerCase();
-                let mimeType = 'image/png'; // Default fallback
-                
-                if (ext === 'svg') {
-                    mimeType = 'image/svg+xml';
-                } else if (ext === 'png') {
-                    mimeType = 'image/png';
-                } else if (ext === 'jpg' || ext === 'jpeg') {
-                    mimeType = 'image/jpeg';
-                }
+                let mimeType = 'image/png'; 
+                if (ext === 'svg') mimeType = 'image/svg+xml';
+                else if (ext === 'jpg' || ext === 'jpeg') mimeType = 'image/jpeg';
 
                 const finalResult = `data:${mimeType};base64,${base64}`;
 
-                // Clear previous logo to free up storage space BEFORE setting new one
                 try {
-                     localStorage.removeItem('custom_logo');
+                     localStorage.removeItem('custom_app_logo');
                 } catch (e) { /* ignore */ }
 
                 setLogoSrc(finalResult);
-                setLogoLoadError(false);
-                setLogoKey(prev => prev + 1); // Force fresh mount
                 
                 try {
-                    localStorage.setItem('custom_logo', finalResult);
+                    localStorage.setItem('custom_app_logo', finalResult);
                 } catch (error) {
-                    console.error("Failed to save logo to local storage", error);
                     alert("Could not save logo permanently (storage full?), but it will display for this session.");
                 }
             }
@@ -122,120 +109,117 @@ const App: React.FC = () => {
   };
 
   const handleResetLogo = () => {
-      localStorage.removeItem('custom_logo');
-      setLogoSrc('/logo.svg');
-      setLogoLoadError(false);
-      setLogoKey(prev => prev + 1);
+      if(confirm("Reset app logo to default?")) {
+        localStorage.removeItem('custom_app_logo');
+        setLogoSrc('/logo.svg');
+      }
   };
 
   return (
     <div className="min-h-screen bg-[#fdfbf7]">
-      <Header />
+      <Header logoSrc={logoSrc} />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
-        <div className="flex flex-col md:flex-row gap-8">
-            {/* Sidebar / Logo Area */}
-            <div className="w-full md:w-64 flex-shrink-0 flex flex-col items-center">
-                <div className="bg-gray-800/50 p-4 rounded-xl mb-4 w-full flex justify-center items-center min-h-[200px]">
-                    {/* Key prop forces re-mount on change. onError handles broken images. */}
-                    <img 
-                        key={logoKey}
-                        src={logoSrc} 
-                        alt="Producer Logo" 
-                        className="h-40 w-auto object-contain transition-opacity duration-300"
-                        onError={(e) => {
-                            console.error("Image load error", e);
-                            if (!logoLoadError) {
-                                setLogoLoadError(true);
-                                // If custom logo fails, maybe fall back or just show text? 
-                                // Usually we don't auto-revert to prevent loops, but we can show a placeholder.
-                            }
-                        }}
-                        style={{ display: logoLoadError ? 'none' : 'block' }}
-                    />
-                    {logoLoadError && (
-                        <div className="text-red-400 text-center text-sm">
-                            <p>Failed to load logo.</p>
-                            <button onClick={handleResetLogo} className="underline mt-2">Reset to Default</button>
+        {/* Tabs */}
+        <div className="flex justify-center mb-8">
+            <div className="flex bg-white p-1 rounded-xl border border-stone-200 shadow-sm">
+                <button
+                    className={`py-2 px-6 font-medium text-sm rounded-lg transition-all duration-200 ${activeTab === 'community' ? 'bg-stone-800 text-white shadow-md' : 'text-stone-500 hover:text-stone-700 hover:bg-stone-50'}`}
+                    onClick={() => setActiveTab('community')}
+                >
+                    Download Profiles
+                </button>
+                <button
+                    className={`py-2 px-6 font-medium text-sm rounded-lg transition-all duration-200 flex items-center gap-2 ${activeTab === 'create' ? 'bg-stone-800 text-white shadow-md' : 'text-stone-500 hover:text-stone-700 hover:bg-stone-50'}`}
+                    onClick={() => setActiveTab('create')}
+                >
+                    {!isAuthenticated && <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>}
+                    Creator Area
+                </button>
+            </div>
+        </div>
+
+        <div className="animate-fadeIn">
+            {activeTab === 'community' ? (
+                <CommunityProfiles profiles={communityProfiles} isLoading={isLoadingProfiles} />
+            ) : (
+                /* Protected Create / Admin Area */
+                <div className="max-w-4xl mx-auto">
+                    {!isAuthenticated ? (
+                         <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-sm border border-stone-200 mt-10 text-center">
+                            <div className="mb-6">
+                                <div className="h-12 w-12 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                                </div>
+                                <h2 className="text-xl font-bold text-stone-800">Restricted Access</h2>
+                                <p className="text-stone-500 text-sm mt-2">Please enter the password to access the Profile Creator and Admin settings.</p>
+                            </div>
+                            <form onSubmit={handleLogin} className="space-y-4">
+                                <input 
+                                    type="password" 
+                                    value={passwordInput}
+                                    onChange={(e) => setPasswordInput(e.target.value)}
+                                    placeholder="Enter Password"
+                                    className="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-stone-500 focus:border-stone-500 outline-none transition-all"
+                                />
+                                {authError && <p className="text-red-500 text-xs">{authError}</p>}
+                                <button type="submit" className="w-full bg-stone-800 text-white py-2.5 rounded-lg font-medium hover:bg-stone-700 transition-colors">
+                                    Unlock Access
+                                </button>
+                            </form>
+                        </div>
+                    ) : (
+                        <div className="space-y-8">
+                            {/* Admin Toolbar */}
+                            <div className="bg-stone-800 text-stone-200 p-4 rounded-lg flex flex-wrap items-center justify-between gap-4 shadow-md">
+                                <div className="flex items-center gap-2">
+                                    <span className="bg-green-500 h-2 w-2 rounded-full animate-pulse"></span>
+                                    <span className="text-sm font-semibold tracking-wide text-white">ADMIN MODE ACTIVE</span>
+                                </div>
+                                <div className="flex gap-3">
+                                    <input 
+                                        type="file" 
+                                        accept=".svg, .png, .jpg" 
+                                        ref={logoInputRef}
+                                        className="hidden"
+                                        onChange={handleAppLogoUpload}
+                                    />
+                                    <button 
+                                        onClick={() => logoInputRef.current?.click()}
+                                        className="text-xs bg-stone-700 hover:bg-stone-600 text-white px-3 py-1.5 rounded border border-stone-600 transition-colors"
+                                    >
+                                        Change App Logo
+                                    </button>
+                                     <button 
+                                        onClick={handleResetLogo}
+                                        className="text-xs bg-stone-700 hover:bg-stone-600 text-white px-3 py-1.5 rounded border border-stone-600 transition-colors"
+                                    >
+                                        Reset Logo
+                                    </button>
+                                    <button 
+                                        onClick={handleLogout}
+                                        className="text-xs bg-red-900/50 hover:bg-red-900 text-red-100 px-3 py-1.5 rounded border border-red-900 transition-colors"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* The Create Form */}
+                            <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                                <CreateProfileForm onShare={addProfileToCommunity} />
+                            </div>
                         </div>
                     )}
                 </div>
-                
-                {/* Producer Login / Logo Controls */}
-                {!isProducerAuthenticated ? (
-                    <form onSubmit={handleLogin} className="w-full space-y-2">
-                        <input 
-                            type="password" 
-                            value={passwordInput}
-                            onChange={(e) => setPasswordInput(e.target.value)}
-                            placeholder="Producer Password"
-                            className="w-full px-3 py-2 border border-stone-300 rounded-md text-sm"
-                        />
-                        <button type="submit" className="w-full bg-stone-800 text-white py-2 rounded-md text-sm font-medium hover:bg-stone-700 transition-colors">
-                            Producer Login
-                        </button>
-                        {authError && <p className="text-xs text-red-600 text-center">{authError}</p>}
-                    </form>
-                ) : (
-                    <div className="w-full space-y-2 animate-fadeIn">
-                        <div className="bg-green-100 text-green-800 px-3 py-2 rounded-md text-xs text-center font-semibold border border-green-200 mb-4">
-                            Producer Mode Active
-                        </div>
-                        
-                        <input 
-                            type="file" 
-                            accept=".svg, .png, .jpg, .jpeg" 
-                            ref={logoInputRef}
-                            className="hidden"
-                            onChange={handleLogoUpload}
-                        />
-                        <button 
-                            onClick={() => logoInputRef.current?.click()}
-                            className="w-full bg-blue-600 text-white py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>
-                            Change Logo
-                        </button>
-                         <button 
-                            onClick={handleResetLogo}
-                            className="w-full bg-white text-stone-600 border border-stone-300 py-2 rounded-md text-sm font-medium hover:bg-stone-50 transition-colors"
-                        >
-                            Reset Default Logo
-                        </button>
-                    </div>
-                )}
-            </div>
-
-            {/* Main Content */}
-            <div className="flex-1">
-                {/* Tabs */}
-                <div className="flex border-b border-stone-200 mb-6">
-                    <button
-                        className={`py-2 px-4 font-medium text-sm focus:outline-none ${activeTab === 'create' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-stone-500 hover:text-stone-700'}`}
-                        onClick={() => setActiveTab('create')}
-                    >
-                        Create / Import Profile
-                    </button>
-                    <button
-                        className={`py-2 px-4 font-medium text-sm focus:outline-none ${activeTab === 'community' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-stone-500 hover:text-stone-700'}`}
-                        onClick={() => setActiveTab('community')}
-                    >
-                        Download Profiles
-                    </button>
-                </div>
-
-                {activeTab === 'create' ? (
-                    <CreateProfileForm onShare={addProfileToCommunity} />
-                ) : (
-                    <CommunityProfiles profiles={communityProfiles} isLoading={isLoadingProfiles} />
-                )}
-            </div>
+            )}
         </div>
+
       </main>
       
-      <footer className="bg-white border-t border-stone-200 mt-12 py-8">
-          <div className="max-w-7xl mx-auto px-4 text-center text-stone-400 text-sm">
+      <footer className="mt-20 py-8 border-t border-stone-200/50">
+          <div className="max-w-7xl mx-auto px-4 text-center text-stone-400 text-xs">
               &copy; {new Date().getFullYear()} PrintProfiles.Org. All rights reserved.
           </div>
       </footer>
