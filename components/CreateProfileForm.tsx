@@ -134,6 +134,11 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
   // Import Modes
   const [importMode, setImportMode] = useState<'none' | 'excel' | 'raw'>('none');
   
+  // Import Overrides
+  const [overrideBrand, setOverrideBrand] = useState<PrinterBrand | 'Auto'>('Auto');
+  const [overrideModel, setOverrideModel] = useState<string>('Auto');
+  const [overrideNozzle, setOverrideNozzle] = useState<string>('Auto');
+
   const [bulkErrors, setBulkErrors] = useState<string[]>([]);
   const [bulkSuccessCount, setBulkSuccessCount] = useState(0);
   const [rawFilesStatus, setRawFilesStatus] = useState<string>('');
@@ -323,6 +328,29 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
       for (let i = 0; i < files.length; i++) {
           try {
               const profile = await parseNativeSlicerProfile(files[i]);
+              
+              // Apply Overrides
+              if (overrideBrand !== 'Auto') {
+                  profile.printerBrand = overrideBrand;
+                  // Clean up Profile Name if needed (remove Model from name if forcing Model)
+              }
+              
+              if (overrideModel !== 'Auto') {
+                  profile.printerModel = overrideModel;
+                  
+                  // Clean Name Logic: Remove Model string from Name if present
+                  // e.g. "eSUN PLA+ @Bambu Lab A1" -> "eSUN PLA+"
+                  const regex = new RegExp(`\\s*@?${overrideModel}`, 'gi');
+                  profile.profileName = profile.profileName.replace(regex, '').trim();
+                   // Also remove simple "A1" or "X1C" if standalone in name
+                   const simpleRegex = new RegExp(`\\b${overrideModel}\\b`, 'gi');
+                   profile.profileName = profile.profileName.replace(simpleRegex, '').replace(/\s+/g, ' ').trim();
+              }
+
+              if (overrideNozzle !== 'Auto') {
+                  profile.nozzleDiameter = parseFloat(overrideNozzle);
+              }
+
               newProfiles.push(profile);
               successCount++;
           } catch (e) {
@@ -443,9 +471,50 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
        {importMode === 'raw' && (
            <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 animate-fadeIn">
                <h3 className="text-xl font-semibold text-white mb-4">Mass Import (Raw Files)</h3>
-               <p className="text-gray-400 mb-6 text-sm">
-                   Select multiple <strong>.json</strong> (Bambu/Orca/IdeaMaker) or <strong>.ini</strong> (Prusa) files from your computer to import them all at once.
+               <p className="text-gray-400 mb-4 text-sm">
+                   Select multiple files (.json, .ini) to import. Optionally force Brand/Model to clean up data.
                </p>
+               
+               {/* Overrides */}
+               <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-700/30 rounded-md border border-gray-600">
+                   <div>
+                       <label className="block text-xs text-gray-400 mb-1">Force Brand</label>
+                       <select 
+                           value={overrideBrand} 
+                           onChange={(e) => {
+                               setOverrideBrand(e.target.value as PrinterBrand | 'Auto');
+                               setOverrideModel('Auto'); // Reset model on brand change
+                           }}
+                           className="w-full bg-gray-700 border border-gray-600 rounded-md text-sm px-2 py-1 text-white"
+                       >
+                           <option value="Auto">Auto-Detect</option>
+                           {PRINTER_BRANDS.map(b => <option key={b} value={b}>{b}</option>)}
+                       </select>
+                   </div>
+                   <div>
+                       <label className="block text-xs text-gray-400 mb-1">Force Model</label>
+                        <select 
+                           value={overrideModel} 
+                           onChange={(e) => setOverrideModel(e.target.value)}
+                           disabled={overrideBrand === 'Auto'}
+                           className="w-full bg-gray-700 border border-gray-600 rounded-md text-sm px-2 py-1 text-white disabled:opacity-50"
+                       >
+                           <option value="Auto">Auto-Detect</option>
+                           {overrideBrand !== 'Auto' && (PRINTER_MODELS[overrideBrand] || []).map(m => <option key={m} value={m}>{m}</option>)}
+                       </select>
+                   </div>
+                   <div>
+                       <label className="block text-xs text-gray-400 mb-1">Force Nozzle</label>
+                       <select 
+                           value={overrideNozzle} 
+                           onChange={(e) => setOverrideNozzle(e.target.value)}
+                           className="w-full bg-gray-700 border border-gray-600 rounded-md text-sm px-2 py-1 text-white"
+                       >
+                           <option value="Auto">Auto-Detect</option>
+                           {NOZZLE_DIAMETERS.map(d => <option key={d} value={d}>{d} mm</option>)}
+                       </select>
+                   </div>
+               </div>
                
                <div className="flex flex-col gap-4">
                    <div className="flex flex-col gap-2">
