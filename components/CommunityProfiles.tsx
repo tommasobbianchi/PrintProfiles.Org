@@ -17,7 +17,22 @@ const Detail: React.FC<{ label: string; value: string | number }> = ({ label, va
 const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoading }) => {
 
   const downloadJson = (profile: FilamentProfile) => {
-    const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify({ filament_profile: profile }, null, 2))}`;
+    // Use the standard export structure here too, or keep simpler for community share
+    // For consistency, let's keep the internal structure for re-upload, but mapped for download
+    const standardData = {
+        profile_name: profile.profileName,
+        filament_type: profile.filamentType,
+        filament_vendor: profile.manufacturer,
+        nozzle_temperature: profile.nozzleTemp,
+        hot_plate_temp: profile.bedTemp,
+        filament_max_volumetric_speed: profile.maxVolumetricSpeed,
+        fan_min_speed: profile.fanSpeedMin,
+        fan_max_speed: profile.fanSpeedMax,
+        // ... add full mapping if needed, or just dump profile
+        ...profile 
+    };
+    
+    const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(standardData, null, 2))}`;
     const link = document.createElement('a');
     link.href = jsonString;
     const safeName = profile.profileName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
@@ -38,11 +53,8 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
           <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm mb-3">
             <Detail label="Nozzle" value={`${profile.nozzleTemp}°C`} />
             <Detail label="Bed" value={`${profile.bedTemp}°C`} />
-            <Detail label="Speed" value={`${profile.printSpeed} mm/s`} />
-            <Detail label="Fan" value={`${profile.fanSpeed}%`} />
-            <Detail label="Retraction" value={`${profile.retractionDistance} mm`} />
-            <Detail label="Retract Speed" value={`${profile.retractionSpeed} mm/s`} />
-            {profile.spoolWeight && <Detail label="Weight" value={`${profile.spoolWeight}g`} />}
+            <Detail label="Max Flow" value={`${profile.maxVolumetricSpeed} mm³/s`} />
+            <Detail label="Fan" value={`${profile.fanSpeedMin}-${profile.fanSpeedMax}%`} />
             {profile.density && <Detail label="Density" value={`${profile.density} g/cm³`} />}
           </div>
         </div>

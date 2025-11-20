@@ -20,13 +20,18 @@ const initialProfileState: Omit<FilamentProfile, 'id'> = {
   filamentType: 'PLA',
   filamentDiameter: 1.75,
   nozzleTemp: 220,
+  nozzleTempInitial: 225,
   bedTemp: 60,
+  bedTempInitial: 60,
   printSpeed: 60,
+  maxVolumetricSpeed: 15,
   retractionDistance: 1,
   retractionSpeed: 40,
-  fanSpeed: 100,
+  fanSpeedMin: 100,
+  fanSpeedMax: 100,
   notes: '',
   spoolWeight: 1000,
+  filamentCost: 20,
   colorName: '',
   colorHex: '#FFFFFF',
   dryingTemp: undefined,
@@ -35,23 +40,35 @@ const initialProfileState: Omit<FilamentProfile, 'id'> = {
   tensileStrength: '',
 };
 
-const isValidProfileData = (data: any): data is Omit<FilamentProfile, 'id'> => {
-    return (
-        data &&
-        typeof data.profileName === 'string' &&
-        typeof data.printerBrand === 'string' && PRINTER_BRANDS.includes(data.printerBrand as PrinterBrand) &&
-        typeof data.manufacturer === 'string' &&
-        typeof data.filamentType === 'string' && FILAMENT_TYPES.includes(data.filamentType as FilamentType) &&
-        typeof data.filamentDiameter === 'number' &&
-        typeof data.nozzleTemp === 'number' &&
-        typeof data.bedTemp === 'number' &&
-        typeof data.printSpeed === 'number' &&
-        typeof data.retractionDistance === 'number' &&
-        typeof data.retractionSpeed === 'number' &&
-        typeof data.fanSpeed === 'number'
-    );
+// Helper to map internal camelCase to industry standard snake_case for JSON export
+const mapToStandardJson = (profile: Omit<FilamentProfile, 'id'>) => {
+    return {
+        profile_name: profile.profileName,
+        filament_type: profile.filamentType,
+        filament_vendor: profile.manufacturer,
+        filament_density: profile.density,
+        filament_cost: profile.filamentCost,
+        nozzle_temperature: profile.nozzleTemp,
+        nozzle_temperature_initial_layer: profile.nozzleTempInitial,
+        hot_plate_temp: profile.bedTemp,
+        hot_plate_temp_initial_layer: profile.bedTempInitial,
+        filament_max_volumetric_speed: profile.maxVolumetricSpeed,
+        fan_min_speed: profile.fanSpeedMin,
+        fan_max_speed: profile.fanSpeedMax,
+        retraction_length: profile.retractionDistance,
+        retraction_speed: profile.retractionSpeed,
+        filament_notes: profile.notes,
+        // Extras
+        printer_brand: profile.printerBrand,
+        filament_diameter: profile.filamentDiameter,
+        filament_brand_name: profile.brand,
+        spool_weight: profile.spoolWeight,
+        color_hex: profile.colorHex,
+        color_name: profile.colorName,
+        drying_temperature: profile.dryingTemp,
+        drying_time: profile.dryingTime
+    };
 };
-
 
 const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
   const [profile, setProfile] = useState<Omit<FilamentProfile, 'id'>>(initialProfileState);
@@ -61,8 +78,11 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    // A bit of a broader regex to catch all numeric fields
-    setProfile(prev => ({ ...prev, [name]: name.match(/Temp|Speed|Distance|Diameter|Weight|Density/) ? parseFloat(value) || 0 : value }));
+    const isNumber = ['Temp', 'Speed', 'Distance', 'Diameter', 'Weight', 'Density', 'Cost'].some(key => name.includes(key));
+    setProfile(prev => ({ 
+        ...prev, 
+        [name]: isNumber ? parseFloat(value) || 0 : value 
+    }));
   };
 
   const handleAISuggest = async () => {
@@ -92,7 +112,9 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
         return;
     }
     setError(null);
-    const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify({ filament_profile: profile }, null, 2))}`;
+    // Export using standard structure
+    const standardData = mapToStandardJson(profile);
+    const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(standardData, null, 2))}`;
     const link = document.createElement('a');
     link.href = jsonString;
     const safeName = profile.profileName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
@@ -126,33 +148,35 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
     reader.onload = (e) => {
       try {
         const text = e.target?.result;
-        if (typeof text !== 'string') {
-          throw new Error("Failed to read file content.");
-        }
-        const parsedJson = JSON.parse(text);
-        let importedProfile = parsedJson.filament_profile;
+        if (typeof text !== 'string') throw new Error("Failed to read file.");
+        
+        const parsed = JSON.parse(text);
+        const imported = parsed.filament_profile || parsed; // Support both wrapped and unwrapped
 
-        // Backwards compatibility for old format
-        if (importedProfile && importedProfile.filamentBrand && !importedProfile.manufacturer) {
-            importedProfile.manufacturer = importedProfile.filamentBrand;
-            delete importedProfile.filamentBrand;
-        }
+        // Map standard keys back to internal state if needed
+        const mappedState: any = { ...initialProfileState };
+        
+        // Heuristic mapping for import
+        if (imported.nozzle_temperature) mappedState.nozzleTemp = imported.nozzle_temperature;
+        if (imported.nozzle_temperature_initial_layer) mappedState.nozzleTempInitial = imported.nozzle_temperature_initial_layer;
+        if (imported.hot_plate_temp) mappedState.bedTemp = imported.hot_plate_temp;
+        if (imported.hot_plate_temp_initial_layer) mappedState.bedTempInitial = imported.hot_plate_temp_initial_layer;
+        if (imported.filament_max_volumetric_speed) mappedState.maxVolumetricSpeed = imported.filament_max_volumetric_speed;
+        if (imported.fan_min_speed) mappedState.fanSpeedMin = imported.fan_min_speed;
+        if (imported.fan_max_speed) mappedState.fanSpeedMax = imported.fan_max_speed;
+        
+        // Fallback to direct copy for matching keys
+        Object.keys(imported).forEach(key => {
+            if (key in mappedState) mappedState[key] = imported[key];
+        });
 
-        if (isValidProfileData(importedProfile)) {
-          const newProfileState = { ...initialProfileState, ...importedProfile };
-          setProfile(newProfileState);
-          setError(null);
-          alert("Profile imported successfully!");
-        } else {
-          setError("Invalid JSON structure. The file does not match the expected filament profile format.");
-        }
+        setProfile(mappedState);
+        setError(null);
+        alert("Profile imported successfully! Note: Some fields might need manual verification.");
       } catch (err) {
-        setError("Malformed JSON. The selected file is not a valid JSON file.");
+        setError("Invalid JSON file.");
       }
     };
-    reader.onerror = () => {
-        setError("An error occurred while reading the file.");
-    }
     reader.readAsText(file);
     event.target.value = '';
   };
@@ -211,39 +235,63 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
             <InputField label="Filament Diameter (mm)" name="filamentDiameter" type="number" value={profile.filamentDiameter} step="0.01"/>
        </div>
 
-        <Section title="Print Settings">
+        <Section title="Temperature Settings">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <InputField label="Nozzle Initial (°C)" name="nozzleTempInitial" type="number" value={profile.nozzleTempInitial} />
+                <InputField label="Nozzle Other (°C)" name="nozzleTemp" type="number" value={profile.nozzleTemp} />
+                <InputField label="Bed Initial (°C)" name="bedTempInitial" type="number" value={profile.bedTempInitial} />
+                <InputField label="Bed Other (°C)" name="bedTemp" type="number" value={profile.bedTemp} />
+            </div>
+        </Section>
+
+        <Section title="Speed & Cooling">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <InputField label="Nozzle Temp (°C)" name="nozzleTemp" type="number" value={profile.nozzleTemp} />
-                <InputField label="Bed Temp (°C)" name="bedTemp" type="number" value={profile.bedTemp} />
+                <InputField label="Max Flow (mm³/s)" name="maxVolumetricSpeed" type="number" value={profile.maxVolumetricSpeed} step="0.1" />
                 <InputField label="Print Speed (mm/s)" name="printSpeed" type="number" value={profile.printSpeed} />
+                <div className="hidden md:block"></div>
+                <InputField label="Min Fan Speed (%)" name="fanSpeedMin" type="number" value={profile.fanSpeedMin} />
+                <InputField label="Max Fan Speed (%)" name="fanSpeedMax" type="number" value={profile.fanSpeedMax} />
+            </div>
+        </Section>
+
+        <Section title="Retraction">
+            <div className="grid grid-cols-2 gap-6">
                 <InputField label="Retraction Dist. (mm)" name="retractionDistance" type="number" value={profile.retractionDistance} step="0.1" />
                 <InputField label="Retraction Spd. (mm/s)" name="retractionSpeed" type="number" value={profile.retractionSpeed} />
-                <InputField label="Fan Speed (%)" name="fanSpeed" type="number" value={profile.fanSpeed} />
             </div>
         </Section>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
-            <Section title="Drying Settings">
+            <Section title="Drying & Material">
                 <div className="grid grid-cols-2 gap-6">
                     <InputField label="Drying Temp (°C)" name="dryingTemp" type="number" value={profile.dryingTemp ?? ''} placeholder="e.g. 55"/>
                     <InputField label="Drying Time (h)" name="dryingTime" type="text" value={profile.dryingTime ?? ''} placeholder="e.g. 4-6h"/>
                 </div>
             </Section>
-            <Section title="Appearance">
-                 <div className="flex flex-col">
-                    <label htmlFor="colorHex" className="mb-1 text-sm font-medium text-gray-400">Color</label>
-                    <div className="flex items-center gap-2">
-                        <input
-                        type="color"
-                        id="colorHex"
-                        name="colorHex"
-                        value={profile.colorHex || '#ffffff'}
-                        onChange={handleChange}
-                        className="p-1 h-10 w-10 block bg-gray-700 border border-gray-600 cursor-pointer rounded-md"
-                        />
-                        <InputField label="" name="colorName" value={profile.colorName ?? ''} placeholder="e.g. Galaxy Black" />
+            <Section title="Economics & Appearance">
+                 <div className="grid grid-cols-2 gap-4 mb-4">
+                     <InputField label="Cost/Spool ($)" name="filamentCost" type="number" value={profile.filamentCost ?? ''} />
+                     <div className="flex flex-col">
+                        <label htmlFor="colorHex" className="mb-1 text-sm font-medium text-gray-400">Color</label>
+                        <div className="flex items-center gap-2">
+                            <input
+                            type="color"
+                            id="colorHex"
+                            name="colorHex"
+                            value={profile.colorHex || '#ffffff'}
+                            onChange={handleChange}
+                            className="p-1 h-10 w-10 block bg-gray-700 border border-gray-600 cursor-pointer rounded-md"
+                            />
+                            <input 
+                                name="colorName" 
+                                value={profile.colorName ?? ''} 
+                                onChange={handleChange}
+                                placeholder="Color Name" 
+                                className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            />
+                        </div>
                     </div>
-                </div>
+                 </div>
             </Section>
         </div>
 

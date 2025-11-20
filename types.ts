@@ -10,14 +10,27 @@ export interface FilamentProfile {
   filamentType: FilamentType;
   filamentDiameter: number;
   spoolWeight?: number; // in grams
+  filamentCost?: number; // cost per spool
   colorName?: string;
   colorHex?: string;
+  
+  // Temperature
+  nozzleTempInitial: number;
   nozzleTemp: number;
+  bedTempInitial: number;
   bedTemp: number;
+  
+  // Speed & Extrusion
   printSpeed: number;
+  maxVolumetricSpeed: number; // mm³/s - Critical for modern slicers
   retractionDistance: number;
   retractionSpeed: number;
-  fanSpeed: number;
+  
+  // Cooling
+  fanSpeedMin: number;
+  fanSpeedMax: number;
+  
+  // Material Properties
   dryingTemp?: number;
   dryingTime?: string; // e.g. "4h"
   density?: number; // in g/cm³
