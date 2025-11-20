@@ -26,6 +26,7 @@ const App: React.FC = () => {
     }
     return '/logo.svg';
   });
+  const [logoLoadError, setLogoLoadError] = useState(false);
   const logoInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -60,6 +61,10 @@ const App: React.FC = () => {
 
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
+    
+    // Reset input value to allow selecting the same file again if needed/retrying
+    e.target.value = '';
+
     if (file) {
         // Basic validation: Check size (limit to ~2MB for localStorage safety)
         if (file.size > 2 * 1024 * 1024) {
@@ -72,6 +77,7 @@ const App: React.FC = () => {
             if (typeof event.target?.result === 'string') {
                 const result = event.target.result;
                 setLogoSrc(result);
+                setLogoLoadError(false); // Reset error state on new upload
                 try {
                     localStorage.setItem('custom_logo', result);
                 } catch (error) {
@@ -86,6 +92,7 @@ const App: React.FC = () => {
 
   const handleResetLogo = () => {
       setLogoSrc('/logo.svg');
+      setLogoLoadError(false);
       localStorage.removeItem('custom_logo');
   };
 
@@ -109,13 +116,24 @@ const App: React.FC = () => {
         
         {/* Logo Section */}
         <div className="flex flex-col items-center justify-center mb-8">
-          <img 
-            src={logoSrc} 
-            alt="PrintProfiles.Org" 
-            className="max-h-40 w-auto object-contain drop-shadow-lg"
-          />
+          <div className="p-4 bg-gray-800/50 rounded-xl border border-gray-700/50 backdrop-blur-sm shadow-lg mb-2 transition-all duration-300 hover:bg-gray-800/80">
+            {logoLoadError ? (
+                <div className="h-20 w-40 flex items-center justify-center text-red-400 text-xs border border-red-900/50 rounded bg-red-900/20">
+                   Invalid Image
+                </div>
+            ) : (
+                <img 
+                    key={logoSrc} // Forces re-render when source changes
+                    src={logoSrc} 
+                    alt="PrintProfiles.Org" 
+                    onError={() => setLogoLoadError(true)}
+                    className="max-h-32 md:max-h-40 w-auto object-contain"
+                />
+            )}
+          </div>
+
           {isProducerAuthenticated && (
-            <div className="mt-2 flex items-center gap-3">
+            <div className="flex items-center gap-3">
                 <input
                     type="file"
                     ref={logoInputRef}
