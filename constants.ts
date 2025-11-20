@@ -18,7 +18,7 @@ export const PRINTER_MODELS: Record<PrinterBrand, string[]> = {
 export const NOZZLE_DIAMETERS = [0.2, 0.4, 0.6, 0.8];
 
 export const FILAMENT_MANUFACTURERS: string[] = [
-  'Atomic Filament', 'Bambu Lab', 'BASF Ultrafuse', 'ColorFabb', 'Creality', 'DSM Novamid', 'eSUN', 'Extrudr', 'Fiberlogy', 'Fillamentum', 'FiloAlfa', 'FormFutura', 'Geeetech', 'Hatchbox', 'IGUS', 'Kimya (Armor)', 'MatterHackers', 'NinjaTek', 'Overture', 'Polymaker', 'Priline', 'Proto-pasta', 'Prusa', 'Sakata', 'Siraya Tech', 'Spectrum', 'Sunlu', 'Taulman3D', 'XSTRAND (OwensCorning)', 'Other'
+  'Atomic Filament', 'Bambu Lab', 'BASF Ultrafuse', 'ColorFabb', 'Creality', 'DSM Novamid', 'Eryone', 'eSUN', 'Extrudr', 'Fiberlogy', 'Fillamentum', 'FiloAlfa', 'FormFutura', 'Geeetech', 'Hatchbox', 'IGUS', 'Kimya (Armor)', 'MatterHackers', 'NinjaTek', 'Overture', 'Polymaker', 'Priline', 'Proto-pasta', 'Prusa', 'Sakata', 'Siraya Tech', 'Spectrum', 'Sunlu', 'Taulman3D', 'XSTRAND (OwensCorning)', 'Other'
 ].sort();
 
 
@@ -44,8 +44,8 @@ const createPreset = (base: Partial<FilamentProfile> & { id: string, profileName
         nozzleTempInitial: base.nozzleTemp + 5,
         bedTempInitial: base.bedTemp,
         maxVolumetricSpeed: base.filamentType === 'TPU' ? 3 : (base.filamentType === 'PLA' ? 15 : 10),
-        fanSpeedMin: base.filamentType === 'ABS' || base.filamentType === 'ASA' || base.filamentType === 'PC' ? 0 : 100,
-        fanSpeedMax: base.filamentType === 'ABS' || base.filamentType === 'ASA' || base.filamentType === 'PC' ? 20 : 100,
+        fanSpeedMin: base.filamentType === 'ABS' || base.filamentType === 'ASA' || base.filamentType === 'PC' || base.filamentType === 'Nylon' || base.filamentType === 'PA-CF' ? 0 : 100,
+        fanSpeedMax: base.filamentType === 'ABS' || base.filamentType === 'ASA' || base.filamentType === 'PC' || base.filamentType === 'Nylon' || base.filamentType === 'PA-CF' ? 20 : 100,
         ...base
     } as FilamentProfile;
 };
@@ -76,10 +76,28 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'esun-4', profileName: 'eSUN PLA-Matte', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'PLA-Matte', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Matte surface finish." }),
   createPreset({ id: 'esun-5', profileName: 'eSUN eSilk-PLA', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'eSilk', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Silky shiny surface." }),
 
-  // Sunlu
-  createPreset({ id: 'preset-13', profileName: 'Sunlu PLA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
-  createPreset({ id: 'preset-14', profileName: 'Sunlu PETG', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 50, fanSpeedMax: 100, density: 1.27, dryingTemp: 65, dryingTime: '4h' }),
-  
+  // Eryone Additions
+  createPreset({ id: 'ery-1', profileName: 'Eryone PLA', printerBrand: 'Other', manufacturer: 'Eryone', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Standard PLA, easy to print." }),
+  createPreset({ id: 'ery-2', profileName: 'Eryone PETG', printerBrand: 'Other', manufacturer: 'Eryone', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 50, density: 1.27, dryingTemp: 65, dryingTime: '4h', notes: "Good adhesion, less warping." }),
+  createPreset({ id: 'ery-3', profileName: 'Eryone Silk PLA', printerBrand: 'Other', manufacturer: 'Eryone', brand: 'Silk PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Shiny metallic finish, high layer bonding." }),
+  createPreset({ id: 'ery-4', profileName: 'Eryone Matte PLA', printerBrand: 'Other', manufacturer: 'Eryone', brand: 'Matte PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Non-glossy finish, hides layer lines well." }),
+  createPreset({ id: 'ery-5', profileName: 'Eryone TPU', printerBrand: 'Other', manufacturer: 'Eryone', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 210, bedTemp: 50, maxVolumetricSpeed: 3, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21, retractionDistance: 2.0, retractionSpeed: 30, notes: "Flexible filament, print slow." }),
+
+  // Sunlu (Updated from Official Datasheet)
+  createPreset({ id: 'preset-13', profileName: 'Sunlu PLA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official Nozzle: 200-210°C, Bed: 50-60°C" }),
+  createPreset({ id: 'preset-14', profileName: 'Sunlu PETG', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.27, dryingTemp: 65, dryingTime: '4h', notes: "Official Nozzle: 230-240°C, Bed: 75-85°C. High fan recommended by manufacturer." }),
+  createPreset({ id: 'sunlu-1', profileName: 'Sunlu ABS', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 255, bedTemp: 90, maxVolumetricSpeed: 15, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04, dryingTemp: 80, dryingTime: '4h', notes: "Official Nozzle: 250-260°C, Bed: 80-100°C. Fan off." }),
+  createPreset({ id: 'sunlu-2', profileName: 'Sunlu ASA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'ASA', filamentType: 'ASA', nozzleTemp: 260, bedTemp: 85, maxVolumetricSpeed: 15, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07, dryingTemp: 80, dryingTime: '4h', notes: "Official Nozzle: 255-265°C, Bed: 75-95°C. UV resistant." }),
+  createPreset({ id: 'sunlu-3', profileName: 'Sunlu PLA+', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 16, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official Nozzle: 210-235°C, Bed: 55-65°C. Stronger than PLA." }),
+  createPreset({ id: 'sunlu-4', profileName: 'Sunlu PLA Meta', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PLA Meta', filamentType: 'PLA', nozzleTemp: 190, bedTemp: 55, maxVolumetricSpeed: 18, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official Nozzle: 185-195°C. High flow, low temp PLA." }),
+  createPreset({ id: 'sunlu-5', profileName: 'Sunlu High Speed PLA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'High Speed PLA', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 55, maxVolumetricSpeed: 24, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official Nozzle: 210-230°C. Designed for fast printing." }),
+  createPreset({ id: 'sunlu-6', profileName: 'Sunlu Silk PLA+', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'Silk PLA+', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 55, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official Nozzle: 205-215°C. Shiny finish." }),
+  createPreset({ id: 'sunlu-7', profileName: 'Sunlu Matte PLA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'Matte PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 55, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official Nozzle: 205-215°C. Matte finish." }),
+  createPreset({ id: 'sunlu-8', profileName: 'Sunlu Wood PLA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'Wood PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 55, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official Nozzle: 205-215°C. Contains wood fibers." }),
+  createPreset({ id: 'sunlu-9', profileName: 'Sunlu PLA-CF', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PLA-CF', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 55, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official Nozzle: 205-215°C. Carbon Fiber reinforced. Use hardened nozzle." }),
+  createPreset({ id: 'sunlu-10', profileName: 'Sunlu TPU', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21, notes: "Official Nozzle: 200-210°C. Flexible." }),
+  createPreset({ id: 'sunlu-11', profileName: 'Sunlu Easy PA (Nylon)', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'Easy PA', filamentType: 'Nylon', nozzleTemp: 260, bedTemp: 65, maxVolumetricSpeed: 10, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.15, dryingTemp: 80, dryingTime: '12h', notes: "Official Nozzle: 255-265°C, Bed: 60-70°C. Requires drying." }),
+
   // Polymaker (Existing & New)
   createPreset({ id: 'preset-16', profileName: 'Polymaker PolyLite PLA', printerBrand: 'Other', manufacturer: 'Polymaker', brand: 'PolyLite', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 16, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.23 }),
   createPreset({ id: 'preset-20', profileName: 'Polymaker PolyMax PC', printerBrand: 'Other', manufacturer: 'Polymaker', brand: 'PolyMax', filamentType: 'PC', nozzleTemp: 260, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.2, dryingTemp: 100, dryingTime: '12h' }),
