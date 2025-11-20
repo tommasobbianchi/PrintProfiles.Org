@@ -22,6 +22,9 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
   const [filterManufacturer, setFilterManufacturer] = useState<string>('All');
   const [filterMaterial, setFilterMaterial] = useState<string>('All');
   const [filterText, setFilterText] = useState('');
+  
+  // Track if filters have been applied
+  const hasFiltersApplied = filterBrand !== 'All' || filterModel !== 'All' || filterNozzle !== 'All' || filterManufacturer !== 'All' || filterMaterial !== 'All' || filterText.length > 0;
 
   // --- Filtering & Scoring Logic ---
   
@@ -305,10 +308,7 @@ cooling = 1
     <div>
       <h2 className="text-2xl font-bold text-center text-white mb-2">Download Profiles</h2>
       <p className="text-center text-gray-400 mb-6">
-        {isLoading
-          ? "Fetching the latest profiles from the community..."
-          : "Browse and download Official Brand Approved Profiles"
-        }
+        Browse and download Official Brand Approved Profiles. Use filters to find your perfect match.
       </p>
       
       {/* Smart Filter Bar */}
@@ -401,13 +401,23 @@ cooling = 1
 
       {isLoading ? (
         <LoadingSpinner />
+      ) : !hasFiltersApplied ? (
+        <div className="text-center py-20 bg-gray-800/30 rounded-lg border border-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-gray-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <h3 className="text-xl font-bold text-gray-300 mb-2">Search or Filter to view profiles</h3>
+            <p className="text-gray-500 max-w-md mx-auto">
+                Select a Printer Brand, Manufacturer, or type in the search bar to find the perfect filament profile for your setup.
+            </p>
+        </div>
       ) : filteredProfiles.length === 0 ? (
         <div className="text-center py-10 bg-gray-800/30 rounded-lg border border-dashed border-gray-700">
             <p className="text-gray-400 text-lg">No profiles match your specific criteria.</p>
             <p className="text-gray-500 text-sm mt-2">Try resetting the filters to see more results.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
           {filteredProfiles.map(p => <ProfileCard key={p.id} profile={p} />)}
         </div>
       )}
