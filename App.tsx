@@ -19,7 +19,13 @@ const App: React.FC = () => {
   const [authError, setAuthError] = useState('');
 
   // Logo State
-  const [logoSrc, setLogoSrc] = useState('/logo.svg');
+  const [logoSrc, setLogoSrc] = useState<string>(() => {
+    // Load from local storage if available
+    if (typeof window !== 'undefined') {
+        return localStorage.getItem('custom_logo') || '/logo.svg';
+    }
+    return '/logo.svg';
+  });
   const logoInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -55,14 +61,32 @@ const App: React.FC = () => {
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+        // Basic validation: Check size (limit to ~2MB for localStorage safety)
+        if (file.size > 2 * 1024 * 1024) {
+            alert("File is too large. Please select an image under 2MB.");
+            return;
+        }
+
         const reader = new FileReader();
         reader.onload = (event) => {
             if (typeof event.target?.result === 'string') {
-                setLogoSrc(event.target.result);
+                const result = event.target.result;
+                setLogoSrc(result);
+                try {
+                    localStorage.setItem('custom_logo', result);
+                } catch (error) {
+                    console.error("Failed to save logo to local storage", error);
+                    alert("Logo updated but could not be saved permanently (storage full).");
+                }
             }
         };
         reader.readAsDataURL(file);
     }
+  };
+
+  const handleResetLogo = () => {
+      setLogoSrc('/logo.svg');
+      localStorage.removeItem('custom_logo');
   };
 
   const TabButton: React.FC<{ tabName: Tab; label: string }> = ({ tabName, label }) => (
@@ -91,7 +115,7 @@ const App: React.FC = () => {
             className="max-h-40 w-auto object-contain drop-shadow-lg"
           />
           {isProducerAuthenticated && (
-            <div className="mt-2">
+            <div className="mt-2 flex items-center gap-3">
                 <input
                     type="file"
                     ref={logoInputRef}
@@ -108,6 +132,17 @@ const App: React.FC = () => {
                     </svg>
                     Change Logo
                 </button>
+                {logoSrc !== '/logo.svg' && (
+                    <button
+                        onClick={handleResetLogo}
+                        className="text-xs text-gray-500 hover:text-red-400 transition-colors flex items-center gap-1"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        Reset
+                    </button>
+                )}
             </div>
           )}
         </div>

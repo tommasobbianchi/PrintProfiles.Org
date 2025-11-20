@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from 'react';
 import { FilamentProfile, PrinterBrand, FilamentType } from '../types';
 import { PRINTER_BRANDS, FILAMENT_TYPES, FILAMENT_MANUFACTURERS, PRINTER_MODELS, NOZZLE_DIAMETERS } from '../constants';
@@ -155,14 +156,19 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
     if (name === 'printerBrand') {
          setProfile(prev => ({ 
             ...prev, 
-            [name]: value,
+            printerBrand: value as PrinterBrand,
             printerModel: 'Generic' // Reset model on brand change
+        }));
+    } else if (name === 'filamentType') {
+         setProfile(prev => ({ 
+            ...prev, 
+            filamentType: value as FilamentType
         }));
     } else {
         setProfile(prev => ({ 
             ...prev, 
             [name]: isNumber ? parseFloat(value) || 0 : value 
-        }));
+        } as Omit<FilamentProfile, 'id'>));
     }
   };
 
