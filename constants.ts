@@ -18,7 +18,7 @@ export const PRINTER_MODELS: Record<PrinterBrand, string[]> = {
 export const NOZZLE_DIAMETERS = [0.2, 0.4, 0.6, 0.8];
 
 export const FILAMENT_MANUFACTURERS: string[] = [
-  '3DJake', 'Anycubic', 'Atomic Filament', 'Bambu Lab', 'BASF Ultrafuse', 'ColorFabb', 'Creality', 'DSM Novamid', 'Elegoo', 'Eryone', 'eSUN', 'Extrudr', 'Fiberlogy', 'Fillamentum', 'FiloAlfa', 'FormFutura', 'GST3D', 'Geeetech', 'GratKit', 'Hatchbox', 'IGUS', 'JAMG HE', 'JAYO', 'Kimya (Armor)', 'MatterHackers', 'NinjaTek', 'Overture', 'Polymaker', 'Priline', 'Proto-pasta', 'Prusa', 'Qidi Tech', 'Recreus', 'Sakata', 'Siraya Tech', 'Spectrum', 'Sunlu', 'Taulman3D', 'TechInit', 'Treed Filaments', 'XSTRAND (OwensCorning)', 'Other'
+  '3DJake', 'AddNorth', 'Anycubic', 'Atomic Filament', 'Bambu Lab', 'BASF Ultrafuse', 'ColorFabb', 'Creality', 'DSM Novamid', 'Elegoo', 'Eryone', 'eSUN', 'Extrudr', 'Fiberlogy', 'Fillamentum', 'FiloAlfa', 'FormFutura', 'GST3D', 'Geeetech', 'GratKit', 'Hatchbox', 'IGUS', 'JAMG HE', 'JAYO', 'Kimya (Armor)', 'MatterHackers', 'NinjaTek', 'Overture', 'Polymaker', 'Priline', 'Printologist', 'Proto-pasta', 'Prusa', 'Qidi Tech', 'Recreus', 'Sakata', 'Siraya Tech', 'Spectrum', 'Sunlu', 'Taulman3D', 'TechInit', 'Treed Filaments', 'XSTRAND (OwensCorning)', 'Other'
 ].sort();
 
 
@@ -97,6 +97,24 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'fiber-1', profileName: 'Fiberlogy Easy PLA', printerBrand: 'Other', manufacturer: 'Fiberlogy', brand: 'Easy PLA', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'fiber-2', profileName: 'Fiberlogy FiberSilk', printerBrand: 'Other', manufacturer: 'Fiberlogy', brand: 'FiberSilk', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 14, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Metallic silk finish. High gloss." }),
   createPreset({ id: 'fiber-3', profileName: 'Fiberlogy PA12-CF15', printerBrand: 'Other', manufacturer: 'Fiberlogy', brand: 'PA12-CF', filamentType: 'PA-CF', nozzleTemp: 265, bedTemp: 100, maxVolumetricSpeed: 10, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.15, dryingTemp: 100, dryingTime: '6h', notes: "Nylon + 15% Carbon Fiber. Hardened nozzle required." }),
+  createPreset({ id: 'fiber-4', profileName: 'Fiberlogy Impact PLA', printerBrand: 'Other', manufacturer: 'Fiberlogy', brand: 'Impact PLA', filamentType: 'PLA', nozzleTemp: 230, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Higher impact resistance than ABS, prints like PLA." }),
+  createPreset({ id: 'fiber-5', profileName: 'Fiberlogy FiberSatin', printerBrand: 'Other', manufacturer: 'Fiberlogy', brand: 'FiberSatin', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 50, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Matte-satin finish. Hides layer lines." }),
+
+  // FormFutura
+  createPreset({ id: 'ff-1', profileName: 'FormFutura ApolloX (ASA)', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'ApolloX', filamentType: 'ASA', nozzleTemp: 245, bedTemp: 90, maxVolumetricSpeed: 15, fanSpeedMin: 0, fanSpeedMax: 30, density: 1.05, dryingTemp: 80, dryingTime: '4h', notes: "Professional UV-resistant ASA. Warp-free technology." }),
+  createPreset({ id: 'ff-2', profileName: 'FormFutura EasyFil PLA', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'EasyFil', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High-end impact modified PLA." }),
+  createPreset({ id: 'ff-3', profileName: 'FormFutura HDglass (PETG)', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'HDglass', filamentType: 'PETG', nozzleTemp: 215, bedTemp: 70, maxVolumetricSpeed: 14, fanSpeedMin: 30, fanSpeedMax: 80, density: 1.27, notes: "High transparency PETG." }),
+  createPreset({ id: 'ff-4', profileName: 'FormFutura CarbonFil', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'CarbonFil', filamentType: 'PETG', nozzleTemp: 245, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 50, density: 1.19, dryingTemp: 65, dryingTime: '4h', notes: "PETG reinforced with 20% carbon fiber. High stiffness." }),
+
+  // AddNorth (Swedish)
+  createPreset({ id: 'an-1', profileName: 'AddNorth E-PLA', printerBrand: 'Other', manufacturer: 'AddNorth', brand: 'E-PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Biodegradable standard PLA." }),
+  createPreset({ id: 'an-2', profileName: 'AddNorth Textura (Matte)', printerBrand: 'Other', manufacturer: 'AddNorth', brand: 'Textura', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.40, notes: "Matte finish cellulose-based PLA. Hides layer lines." }),
+  createPreset({ id: 'an-3', profileName: 'AddNorth Adura X (Nylon-CF)', printerBrand: 'Other', manufacturer: 'AddNorth', brand: 'Adura X', filamentType: 'PA-CF', nozzleTemp: 260, bedTemp: 60, maxVolumetricSpeed: 10, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.18, dryingTemp: 100, dryingTime: '6h', notes: "Nylon + Carbon Fiber. Tough and stiff. PVA glue recommended." }),
+
+  // Printologist (House Brand)
+  createPreset({ id: 'prt-1', profileName: 'Printologist PLA PRO', printerBrand: 'Other', manufacturer: 'Printologist', brand: 'PRO', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High quality consistent diameter." }),
+  createPreset({ id: 'prt-2', profileName: 'Printologist PETG', printerBrand: 'Other', manufacturer: 'Printologist', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27, dryingTemp: 65, dryingTime: '4h' }),
+  createPreset({ id: 'prt-3', profileName: 'Printologist ABS Pro', printerBrand: 'Other', manufacturer: 'Printologist', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 250, bedTemp: 100, maxVolumetricSpeed: 15, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.05, dryingTemp: 80, dryingTime: '4h', notes: "Low odor, high strength." }),
 
   // GST3D
   createPreset({ id: 'gst-1', profileName: 'GST3D PLA+', printerBrand: 'Other', manufacturer: 'GST3D', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Budget friendly PLA+." }),
