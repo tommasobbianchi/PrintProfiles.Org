@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FilamentProfile } from './types';
 import { PRESET_PROFILES } from './constants';
 import Header from './components/Header';
@@ -17,6 +17,10 @@ const App: React.FC = () => {
   const [isProducerAuthenticated, setIsProducerAuthenticated] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
   const [authError, setAuthError] = useState('');
+
+  // Logo State
+  const [logoSrc, setLogoSrc] = useState('/logo.svg');
+  const logoInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     // Simulate fetching community profiles
@@ -48,6 +52,19 @@ const App: React.FC = () => {
     }
   };
 
+  const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            if (typeof event.target?.result === 'string') {
+                setLogoSrc(event.target.result);
+            }
+        };
+        reader.readAsDataURL(file);
+    }
+  };
+
   const TabButton: React.FC<{ tabName: Tab; label: string }> = ({ tabName, label }) => (
     <button
       onClick={() => setActiveTab(tabName)}
@@ -67,12 +84,32 @@ const App: React.FC = () => {
       <main className="max-w-4xl mx-auto p-4 md:p-6">
         
         {/* Logo Section */}
-        <div className="flex justify-center mb-8">
+        <div className="flex flex-col items-center justify-center mb-8">
           <img 
-            src="/logo.svg" 
+            src={logoSrc} 
             alt="PrintProfiles.Org" 
             className="max-h-40 w-auto object-contain drop-shadow-lg"
           />
+          {isProducerAuthenticated && (
+            <div className="mt-2">
+                <input
+                    type="file"
+                    ref={logoInputRef}
+                    onChange={handleLogoUpload}
+                    accept=".svg,.png,.jpg,.jpeg"
+                    className="hidden"
+                />
+                <button
+                    onClick={() => logoInputRef.current?.click()}
+                    className="text-xs text-gray-500 hover:text-blue-400 transition-colors flex items-center gap-1"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                    Change Logo
+                </button>
+            </div>
+          )}
         </div>
 
         <div className="mb-2 flex justify-center space-x-4">
