@@ -136,24 +136,24 @@ cooling = 1
       
       <div className="mt-4 pt-3 border-t border-gray-600/30">
           <p className="text-xs text-gray-500 text-center mb-2">Download For:</p>
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2">
             <button
                 onClick={() => downloadFile(profile, 'bambu')}
-                className="flex-1 flex items-center justify-center gap-1 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
+                className="w-full flex items-center justify-center gap-1 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
                 title="Bambu Studio / Orca Slicer"
             >
                 <DownloadIcon /> Bambu/Orca
             </button>
              <button
                 onClick={() => downloadFile(profile, 'prusa')}
-                className="flex-1 flex items-center justify-center gap-1 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
+                className="w-full flex items-center justify-center gap-1 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
                 title="Prusa Slicer"
             >
                 <DownloadIcon /> Prusa
             </button>
              <button
                 onClick={() => downloadFile(profile, 'ideamaker')}
-                className="flex-1 flex items-center justify-center gap-1 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
+                className="w-full flex items-center justify-center gap-1 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
                 title="ideaMaker"
             >
                 <DownloadIcon /> Idea
@@ -178,7 +178,7 @@ cooling = 1
       <p className="text-center text-gray-400 mb-6">
         {isLoading
           ? "Fetching the latest profiles from the community..."
-          : "Browse and download profiles shared by other users."
+          : "Browse and download Official Brand Approved Profiles"
         }
       </p>
       {isLoading ? (
