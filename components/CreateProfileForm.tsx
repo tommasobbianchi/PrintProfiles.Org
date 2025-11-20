@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { FilamentProfile, PrinterBrand, FilamentType } from '../types';
-import { PRINTER_BRANDS, FILAMENT_TYPES, FILAMENT_MANUFACTURERS } from '../constants';
+import { PRINTER_BRANDS, FILAMENT_TYPES, FILAMENT_MANUFACTURERS, PRINTER_MODELS, NOZZLE_DIAMETERS } from '../constants';
 import { suggestFilamentSettings } from '../services/geminiService';
+import { downloadBulkTemplate, processBulkFile } from '../utils/bulkImport';
+import { parseNativeSlicerProfile } from '../utils/slicerImport'; // New utility
 import DownloadIcon from './icons/DownloadIcon';
 import ShareIcon from './icons/ShareIcon';
 import MagicIcon from './icons/MagicIcon';
@@ -9,16 +11,18 @@ import ImportIcon from './icons/ImportIcon';
 
 
 interface CreateProfileFormProps {
-  onShare: (profile: FilamentProfile) => void;
+  onShare: (profile: FilamentProfile | FilamentProfile[]) => void;
 }
 
 const initialProfileState: Omit<FilamentProfile, 'id'> = {
   profileName: '',
   printerBrand: 'Bambu Lab',
+  printerModel: 'Generic',
   manufacturer: '',
   brand: '',
   filamentType: 'PLA',
   filamentDiameter: 1.75,
+  nozzleDiameter: 0.4,
   nozzleTemp: 220,
   nozzleTempInitial: 225,
   bedTemp: 60,
@@ -62,6 +66,8 @@ const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
         filament_notes: profile.notes,
         // Extras
         printer_brand: profile.printerBrand,
+        printer_model: profile.printerModel,
+        nozzle_diameter: profile.nozzleDiameter,
         filament_diameter: profile.filamentDiameter,
         filament_brand_name: profile.brand,
         spool_weight: profile.spoolWeight,
@@ -88,7 +94,7 @@ bed_temperature = ${profile.bedTemp}
 temperature = ${profile.nozzleTemp}
 min_fan_speed = ${profile.fanSpeedMin}
 max_fan_speed = ${profile.fanSpeedMax}
-filament_notes = "${profile.notes || ''}"
+filament_notes = "${profile.notes || ''} - Model: ${profile.printerModel}, Nozzle: ${profile.nozzleDiameter}"
 filament_colour = ${profile.colorHex || '#FF0000'}
 extrusion_multiplier = 1
 fan_always_on = 1
@@ -124,15 +130,35 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
   const [profile, setProfile] = useState<Omit<FilamentProfile, 'id'>>(initialProfileState);
   const [isSuggesting, setIsSuggesting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  
+  // Import Modes
+  const [importMode, setImportMode] = useState<'none' | 'excel' | 'raw'>('none');
+  
+  const [bulkErrors, setBulkErrors] = useState<string[]>([]);
+  const [bulkSuccessCount, setBulkSuccessCount] = useState(0);
+  const [rawFilesStatus, setRawFilesStatus] = useState<string>('');
+  
+  const fileInputRef = useRef<HTMLInputElement>(null); // Single file import
+  const bulkInputRef = useRef<HTMLInputElement>(null); // Excel import
+  const rawFolderInputRef = useRef<HTMLInputElement>(null); // Raw files import
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     const isNumber = ['Temp', 'Speed', 'Distance', 'Diameter', 'Weight', 'Density', 'Cost'].some(key => name.includes(key));
-    setProfile(prev => ({ 
-        ...prev, 
-        [name]: isNumber ? parseFloat(value) || 0 : value 
-    }));
+    
+    // Special handling for printerBrand change to reset model
+    if (name === 'printerBrand') {
+         setProfile(prev => ({ 
+            ...prev, 
+            [name]: value,
+            printerModel: 'Generic' // Reset model on brand change
+        }));
+    } else {
+        setProfile(prev => ({ 
+            ...prev, 
+            [name]: isNumber ? parseFloat(value) || 0 : value 
+        }));
+    }
   };
 
   const handleAISuggest = async () => {
@@ -214,7 +240,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
     fileInputRef.current?.click();
   };
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSingleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
 
@@ -224,9 +250,8 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
         const text = e.target?.result;
         if (typeof text !== 'string') throw new Error("Failed to read file.");
         
-        // Rudimentary check for JSON vs INI
         if (text.trim().startsWith('[')) {
-             alert("Importing INI files is not fully supported yet. Please use JSON.");
+             alert("Importing INI files is not fully supported in Single Mode. Use Mass Import for INI.");
              return;
         }
 
@@ -235,6 +260,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
 
         const mappedState: any = { ...initialProfileState };
         
+        // Mapping basic fields
         if (imported.nozzle_temperature) mappedState.nozzleTemp = imported.nozzle_temperature;
         if (imported.nozzle_temperature_initial_layer) mappedState.nozzleTempInitial = imported.nozzle_temperature_initial_layer;
         if (imported.hot_plate_temp) mappedState.bedTemp = imported.hot_plate_temp;
@@ -242,6 +268,9 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
         if (imported.filament_max_volumetric_speed) mappedState.maxVolumetricSpeed = imported.filament_max_volumetric_speed;
         if (imported.fan_min_speed) mappedState.fanSpeedMin = imported.fan_min_speed;
         if (imported.fan_max_speed) mappedState.fanSpeedMax = imported.fan_max_speed;
+        // Map new fields if present
+        if (imported.printer_model) mappedState.printerModel = imported.printer_model;
+        if (imported.nozzle_diameter) mappedState.nozzleDiameter = imported.nozzle_diameter;
         
         Object.keys(imported).forEach(key => {
             if (key in mappedState) mappedState[key] = imported[key];
@@ -257,6 +286,59 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
     reader.readAsText(file);
     event.target.value = '';
   };
+
+  // --- Excel Import Handlers ---
+  const handleBulkFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      
+      setBulkErrors([]);
+      setBulkSuccessCount(0);
+
+      try {
+          const result = await processBulkFile(file);
+          if (result.errors.length > 0) {
+              setBulkErrors(result.errors);
+          }
+          if (result.success.length > 0) {
+              onShare(result.success);
+              setBulkSuccessCount(result.success.length);
+          }
+      } catch (e: any) {
+          setBulkErrors(["Failed to process file. Ensure it is a valid XLSX file."]);
+      }
+      event.target.value = '';
+  };
+
+  // --- Raw Files Import Handlers ---
+  const handleRawFilesChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+      const files = event.target.files;
+      if (!files || files.length === 0) return;
+
+      setRawFilesStatus('Processing files...');
+      let successCount = 0;
+      let failCount = 0;
+      const newProfiles: FilamentProfile[] = [];
+
+      for (let i = 0; i < files.length; i++) {
+          try {
+              const profile = await parseNativeSlicerProfile(files[i]);
+              newProfiles.push(profile);
+              successCount++;
+          } catch (e) {
+              failCount++;
+              console.error(`Failed to parse ${files[i].name}`, e);
+          }
+      }
+
+      if (newProfiles.length > 0) {
+          onShare(newProfiles);
+      }
+      
+      setRawFilesStatus(`Import Completed: ${successCount} successful, ${failCount} failed.`);
+      event.target.value = '';
+  };
+
 
   const InputField: React.FC<{label: string, name: keyof Omit<FilamentProfile, 'id'>, type?: string, value: any, step?: string, placeholder?: string, children?: React.ReactNode}> = ({ label, name, type = 'text', value, step, placeholder, children }) => (
     <div className="flex flex-col">
@@ -285,18 +367,136 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
 
   return (
     <div className="space-y-6">
-       <h2 className="text-2xl font-bold text-center text-white mb-2">Create a New Filament Profile</h2>
+       <div className="flex flex-wrap justify-between items-center mb-2 gap-2">
+         <h2 className="text-2xl font-bold text-white">Create Filament Profile</h2>
+         <div className="flex gap-2">
+             <button
+                 onClick={() => setImportMode(importMode === 'excel' ? 'none' : 'excel')}
+                 className={`text-sm py-1 px-3 rounded-md border border-gray-600 transition-colors ${importMode === 'excel' ? 'bg-blue-900 text-white' : 'bg-gray-700 text-blue-300 hover:bg-gray-600'}`}
+             >
+                 Excel Import
+             </button>
+             <button
+                 onClick={() => setImportMode(importMode === 'raw' ? 'none' : 'raw')}
+                 className={`text-sm py-1 px-3 rounded-md border border-gray-600 transition-colors ${importMode === 'raw' ? 'bg-purple-900 text-white' : 'bg-gray-700 text-purple-300 hover:bg-gray-600'}`}
+             >
+                 Mass Import (Raw Files)
+             </button>
+         </div>
+       </div>
+       
+       {/* --- Excel Import UI --- */}
+       {importMode === 'excel' && (
+           <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 animate-fadeIn">
+               <h3 className="text-xl font-semibold text-white mb-4">Batch Import (Excel)</h3>
+               <p className="text-gray-400 mb-6 text-sm">
+                   Upload an Excel (.xlsx) file containing multiple filament profiles. 
+                   Ensure your file matches the template format.
+               </p>
+               
+               <div className="flex flex-col gap-4">
+                   <button 
+                       onClick={downloadBulkTemplate}
+                       className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-colors"
+                   >
+                       <DownloadIcon /> Download Excel Template
+                   </button>
+                   
+                   <div className="border-t border-gray-700 my-2"></div>
+                   
+                   <div className="flex flex-col gap-2">
+                       <label className="text-sm font-medium text-gray-300">Upload Completed Template:</label>
+                       <input 
+                           type="file" 
+                           ref={bulkInputRef}
+                           onChange={handleBulkFileChange}
+                           accept=".xlsx, .xls"
+                           className="block w-full text-sm text-gray-400
+                             file:mr-4 file:py-2 file:px-4
+                             file:rounded-md file:border-0
+                             file:text-sm file:font-semibold
+                             file:bg-gray-700 file:text-blue-300
+                             hover:file:bg-gray-600
+                           "
+                       />
+                   </div>
+
+                   {bulkSuccessCount > 0 && (
+                       <div className="bg-green-900/30 border border-green-600 text-green-200 p-3 rounded-md mt-2">
+                           Successfully imported {bulkSuccessCount} profiles to the Download list!
+                       </div>
+                   )}
+
+                   {bulkErrors.length > 0 && (
+                       <div className="bg-red-900/30 border border-red-600 text-red-200 p-4 rounded-md mt-2 max-h-60 overflow-y-auto">
+                           <p className="font-bold mb-2">Import Errors:</p>
+                           <ul className="list-disc pl-5 space-y-1 text-sm">
+                               {bulkErrors.map((err, i) => <li key={i}>{err}</li>)}
+                           </ul>
+                       </div>
+                   )}
+               </div>
+           </div>
+       )}
+
+       {/* --- Raw Files Import UI --- */}
+       {importMode === 'raw' && (
+           <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 animate-fadeIn">
+               <h3 className="text-xl font-semibold text-white mb-4">Mass Import (Raw Files)</h3>
+               <p className="text-gray-400 mb-6 text-sm">
+                   Select multiple <strong>.json</strong> (Bambu/Orca/IdeaMaker) or <strong>.ini</strong> (Prusa) files from your computer to import them all at once.
+               </p>
+               
+               <div className="flex flex-col gap-4">
+                   <div className="flex flex-col gap-2">
+                       <label className="text-sm font-medium text-gray-300">Select Files:</label>
+                       <input 
+                           type="file" 
+                           ref={rawFolderInputRef}
+                           onChange={handleRawFilesChange}
+                           multiple
+                           accept=".json,.ini,.filament"
+                           className="block w-full text-sm text-gray-400
+                             file:mr-4 file:py-2 file:px-4
+                             file:rounded-md file:border-0
+                             file:text-sm file:font-semibold
+                             file:bg-gray-700 file:text-purple-300
+                             hover:file:bg-gray-600
+                           "
+                       />
+                   </div>
+
+                   {rawFilesStatus && (
+                       <div className={`p-3 rounded-md mt-2 border ${rawFilesStatus.includes('failed') && !rawFilesStatus.includes('0 failed') ? 'bg-yellow-900/30 border-yellow-600 text-yellow-200' : 'bg-green-900/30 border-green-600 text-green-200'}`}>
+                           {rawFilesStatus}
+                       </div>
+                   )}
+               </div>
+           </div>
+       )}
+
+       {/* --- Single Editor UI (Default) --- */}
+       {importMode === 'none' && (
+       <>
        <p className="text-center text-gray-400 mb-6">Fill in the details below, use AI to suggest settings, or import an existing profile.</p>
 
         {error && <div className="bg-red-900/50 border border-red-700 text-red-200 px-4 py-3 rounded-md text-center animate-pulse">{error}</div>}
 
        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <InputField label="Profile Name" name="profileName" value={profile.profileName} placeholder="e.g. My Favorite PETG"/>
+            
+            {/* Printer Brand & Model Selection */}
             <InputField label="Printer Brand" name="printerBrand" value={profile.printerBrand}>
                 <select id="printerBrand" name="printerBrand" value={profile.printerBrand} onChange={handleChange} className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
                     {PRINTER_BRANDS.map(brand => <option key={brand} value={brand}>{brand}</option>)}
                 </select>
             </InputField>
+             <InputField label="Printer Model" name="printerModel" value={profile.printerModel || 'Generic'}>
+                <select id="printerModel" name="printerModel" value={profile.printerModel || 'Generic'} onChange={handleChange} className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    {(PRINTER_MODELS[profile.printerBrand] || ['Generic']).map(model => <option key={model} value={model}>{model}</option>)}
+                </select>
+            </InputField>
+            
             <InputField label="Manufacturer" name="manufacturer" value={profile.manufacturer}>
                 <select id="manufacturer" name="manufacturer" value={profile.manufacturer} onChange={handleChange} className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
                     <option value="">Select a manufacturer...</option>
@@ -309,7 +509,15 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                     {FILAMENT_TYPES.map(type => <option key={type} value={type}>{type}</option>)}
                 </select>
             </InputField>
-            <InputField label="Filament Diameter (mm)" name="filamentDiameter" type="number" value={profile.filamentDiameter} step="0.01"/>
+            
+            <div className="grid grid-cols-2 gap-4">
+                <InputField label="Filament Diam. (mm)" name="filamentDiameter" type="number" value={profile.filamentDiameter} step="0.01"/>
+                <InputField label="Nozzle Diam. (mm)" name="nozzleDiameter" value={profile.nozzleDiameter || 0.4}>
+                     <select id="nozzleDiameter" name="nozzleDiameter" value={profile.nozzleDiameter || 0.4} onChange={handleChange} className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        {NOZZLE_DIAMETERS.map(dia => <option key={dia} value={dia}>{dia}</option>)}
+                    </select>
+                </InputField>
+            </div>
        </div>
 
         <Section title="Temperature Settings">
@@ -387,7 +595,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
         {/* Action Buttons */}
         <div className="flex flex-col space-y-4 pt-4">
             <div className="flex flex-wrap justify-center gap-4">
-                 <input type="file" ref={fileInputRef} onChange={handleFileChange} accept=".json" className="hidden" />
+                 <input type="file" ref={fileInputRef} onChange={handleSingleFileChange} accept=".json" className="hidden" />
                 <button
                     onClick={handleAISuggest}
                     disabled={isSuggesting}
@@ -427,7 +635,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                 <div className="flex flex-wrap justify-center gap-3">
                     <button
                         onClick={() => downloadFile('bambu')}
-                        className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md"
+                        className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md"
                     >
                         <DownloadIcon />
                         Bambu / Orca (.json)
@@ -441,7 +649,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                     </button>
                      <button
                         onClick={() => downloadFile('ideamaker')}
-                        className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md"
+                        className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md"
                     >
                         <DownloadIcon />
                         ideaMaker (.json)
@@ -449,6 +657,8 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                 </div>
             </div>
         </div>
+        </>
+       )}
     </div>
   );
 };

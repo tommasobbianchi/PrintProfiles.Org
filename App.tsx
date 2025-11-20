@@ -29,8 +29,12 @@ const App: React.FC = () => {
   }, []);
 
 
-  const addProfileToCommunity = (profile: FilamentProfile) => {
-    setCommunityProfiles(prevProfiles => [profile, ...prevProfiles]);
+  const addProfileToCommunity = (profileOrProfiles: FilamentProfile | FilamentProfile[]) => {
+    if (Array.isArray(profileOrProfiles)) {
+        setCommunityProfiles(prevProfiles => [...profileOrProfiles, ...prevProfiles]);
+    } else {
+        setCommunityProfiles(prevProfiles => [profileOrProfiles, ...prevProfiles]);
+    }
     setActiveTab('community');
   };
 
