@@ -135,7 +135,7 @@ const App: React.FC = () => {
                     onClick={() => setActiveTab('create')}
                 >
                     {!isAuthenticated && <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>}
-                    Creator Area
+                    Producer Area
                 </button>
             </div>
         </div>
@@ -153,7 +153,7 @@ const App: React.FC = () => {
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                                 </div>
                                 <h2 className="text-xl font-bold text-stone-800">Restricted Access</h2>
-                                <p className="text-stone-500 text-sm mt-2">Please enter the password to access the Profile Creator and Admin settings.</p>
+                                <p className="text-stone-500 text-sm mt-2">Please enter the password to access the Producer and Admin settings.</p>
                             </div>
                             <form onSubmit={handleLogin} className="space-y-4">
                                 <input 
