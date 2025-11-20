@@ -18,7 +18,7 @@ export const PRINTER_MODELS: Record<PrinterBrand, string[]> = {
 export const NOZZLE_DIAMETERS = [0.2, 0.4, 0.6, 0.8];
 
 export const FILAMENT_MANUFACTURERS: string[] = [
-  'Atomic Filament', 'Bambu Lab', 'BASF Ultrafuse', 'ColorFabb', 'Creality', 'DSM Novamid', 'Eryone', 'eSUN', 'Extrudr', 'Fiberlogy', 'Fillamentum', 'FiloAlfa', 'FormFutura', 'Geeetech', 'GratKit', 'Hatchbox', 'IGUS', 'JAMG HE', 'JAYO', 'Kimya (Armor)', 'MatterHackers', 'NinjaTek', 'Overture', 'Polymaker', 'Priline', 'Proto-pasta', 'Prusa', 'Sakata', 'Siraya Tech', 'Spectrum', 'Sunlu', 'Taulman3D', 'XSTRAND (OwensCorning)', 'Other'
+  'Anycubic', 'Atomic Filament', 'Bambu Lab', 'BASF Ultrafuse', 'ColorFabb', 'Creality', 'DSM Novamid', 'Elegoo', 'Eryone', 'eSUN', 'Extrudr', 'Fiberlogy', 'Fillamentum', 'FiloAlfa', 'FormFutura', 'Geeetech', 'GratKit', 'Hatchbox', 'IGUS', 'JAMG HE', 'JAYO', 'Kimya (Armor)', 'MatterHackers', 'NinjaTek', 'Overture', 'Polymaker', 'Priline', 'Proto-pasta', 'Prusa', 'Qidi Tech', 'Sakata', 'Siraya Tech', 'Spectrum', 'Sunlu', 'Taulman3D', 'XSTRAND (OwensCorning)', 'Other'
 ].sort();
 
 
@@ -58,11 +58,33 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'preset-4', profileName: 'Bambu Lab ABS', printerBrand: 'Bambu Lab', manufacturer: 'Bambu Lab', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 260, bedTemp: 90, maxVolumetricSpeed: 18, fanSpeedMin: 0, fanSpeedMax: 40, density: 1.04 }),
   createPreset({ id: 'preset-5', profileName: 'Bambu Lab TPU (Flex 95A)', printerBrand: 'Bambu Lab', manufacturer: 'Bambu Lab', brand: 'TPU 95A', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 35, maxVolumetricSpeed: 3.5, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.21, dryingTemp: 70, dryingTime: '12h' }),
   
-  // Prusa
+  // Prusa (Expanded)
   createPreset({ id: 'preset-6', profileName: 'Prusament PLA', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'preset-7', profileName: 'Prusament PETG', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 85, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 50, density: 1.27, dryingTemp: 65, dryingTime: '4h' }),
   createPreset({ id: 'preset-8', profileName: 'Prusament ASA', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'ASA', nozzleTemp: 260, bedTemp: 105, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07, dryingTemp: 80, dryingTime: '4h' }),
-  
+  createPreset({ id: 'prusa-pc', profileName: 'Prusament PC Blend', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'PC', nozzleTemp: 275, bedTemp: 110, maxVolumetricSpeed: 10, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.22, dryingTemp: 90, dryingTime: '6h', notes: "Requires Glue Stick/Separator. Magigoo recommended." }),
+  createPreset({ id: 'prusa-pvb', profileName: 'Prusament PVB', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'Other', nozzleTemp: 215, bedTemp: 75, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.09, dryingTemp: 50, dryingTime: '4h', notes: "IPA Smoothable filament." }),
+
+  // Elegoo (Official Specs)
+  createPreset({ id: 'elegoo-1', profileName: 'Elegoo PLA', printerBrand: 'Elegoo', manufacturer: 'Elegoo', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official range: 205-230°C" }),
+  createPreset({ id: 'elegoo-2', profileName: 'Elegoo Rapid PLA+', printerBrand: 'Elegoo', manufacturer: 'Elegoo', brand: 'Rapid PLA+', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 24, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.25, notes: "Designed for high speed printing (Neptune 4 series)." }),
+  createPreset({ id: 'elegoo-3', profileName: 'Elegoo PETG', printerBrand: 'Elegoo', manufacturer: 'Elegoo', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 15, fanSpeedMin: 30, fanSpeedMax: 80, density: 1.27, dryingTemp: 65, dryingTime: '4h' }),
+  createPreset({ id: 'elegoo-4', profileName: 'Elegoo ABS-Like', printerBrand: 'Elegoo', manufacturer: 'Elegoo', brand: 'ABS-Like', filamentType: 'ABS', nozzleTemp: 250, bedTemp: 95, maxVolumetricSpeed: 16, fanSpeedMin: 0, fanSpeedMax: 30, density: 1.06, notes: "Less odor than standard ABS." }),
+  createPreset({ id: 'elegoo-5', profileName: 'Elegoo TPU 95A', printerBrand: 'Elegoo', manufacturer: 'Elegoo', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+
+  // Anycubic (Official Specs)
+  createPreset({ id: 'any-1', profileName: 'Anycubic PLA', printerBrand: 'Anycubic', manufacturer: 'Anycubic', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Official range: 190-230°C" }),
+  createPreset({ id: 'any-2', profileName: 'Anycubic High Speed PLA', printerBrand: 'Anycubic', manufacturer: 'Anycubic', brand: 'High Speed PLA', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 25, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Optimized for Kobra 2/3 Series." }),
+  createPreset({ id: 'any-3', profileName: 'Anycubic PETG', printerBrand: 'Anycubic', manufacturer: 'Anycubic', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 230, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27, dryingTemp: 65, dryingTime: '4h' }),
+  createPreset({ id: 'any-4', profileName: 'Anycubic ABS+', printerBrand: 'Anycubic', manufacturer: 'Anycubic', brand: 'ABS+', filamentType: 'ABS', nozzleTemp: 245, bedTemp: 90, maxVolumetricSpeed: 15, fanSpeedMin: 0, fanSpeedMax: 30, density: 1.04, notes: "Recommended enclosure." }),
+  createPreset({ id: 'any-5', profileName: 'Anycubic TPU', printerBrand: 'Anycubic', manufacturer: 'Anycubic', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 3.5, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.20 }),
+
+  // Qidi Tech (Engineering & Standard)
+  createPreset({ id: 'qidi-1', profileName: 'Qidi PLA Rapido', printerBrand: 'Other', manufacturer: 'Qidi Tech', brand: 'Rapido', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 22, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High flow PLA for X-Max/Plus/Smart 3 series." }),
+  createPreset({ id: 'qidi-2', profileName: 'Qidi ABS-GF25', printerBrand: 'Other', manufacturer: 'Qidi Tech', brand: 'ABS-GF25', filamentType: 'ABS', nozzleTemp: 260, bedTemp: 100, maxVolumetricSpeed: 16, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.15, dryingTemp: 70, dryingTime: '8h', notes: "Glass Fiber reinforced ABS. Hardened nozzle required. 250-270°C." }),
+  createPreset({ id: 'qidi-3', profileName: 'Qidi PA12-CF', printerBrand: 'Other', manufacturer: 'Qidi Tech', brand: 'PA12-CF', filamentType: 'PA-CF', nozzleTemp: 285, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.20, dryingTemp: 90, dryingTime: '12h', notes: "Carbon Fiber Nylon. Hardened nozzle, drybox active printing required." }),
+  createPreset({ id: 'qidi-4', profileName: 'Qidi PETG-Tough', printerBrand: 'Other', manufacturer: 'Qidi Tech', brand: 'PETG-Tough', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 14, fanSpeedMin: 30, fanSpeedMax: 60, density: 1.27 }),
+
   // eSUN (Existing)
   createPreset({ id: 'preset-9', profileName: 'eSUN PLA+', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 18, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'preset-10', profileName: 'eSUN PETG', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 50, fanSpeedMax: 100, density: 1.27, dryingTemp: 65, dryingTime: '6h' }),
