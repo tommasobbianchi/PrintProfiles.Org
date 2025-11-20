@@ -40,8 +40,10 @@ const initialProfileState: Omit<FilamentProfile, 'id'> = {
   tensileStrength: '',
 };
 
-// Helper to map internal camelCase to industry standard snake_case for JSON export
-const mapToStandardJson = (profile: Omit<FilamentProfile, 'id'>) => {
+// --- Export Generators ---
+
+// 1. Bambu Studio / Orca Slicer (Standard JSON)
+const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
     return {
         profile_name: profile.profileName,
         filament_type: profile.filamentType,
@@ -69,6 +71,54 @@ const mapToStandardJson = (profile: Omit<FilamentProfile, 'id'>) => {
         drying_time: profile.dryingTime
     };
 };
+
+// 2. PrusaSlicer (.ini)
+const generatePrusaIni = (profile: Omit<FilamentProfile, 'id'>) => {
+    // Simplified INI generation based on PrusaSlicer keys
+    return `[filament:${profile.profileName}]
+filament_vendor = ${profile.manufacturer}
+filament_type = ${profile.filamentType}
+filament_density = ${profile.density || 1.24}
+filament_cost = ${profile.filamentCost || 0}
+filament_diameter = ${profile.filamentDiameter}
+filament_max_volumetric_speed = ${profile.maxVolumetricSpeed}
+first_layer_bed_temperature = ${profile.bedTempInitial}
+first_layer_temperature = ${profile.nozzleTempInitial}
+bed_temperature = ${profile.bedTemp}
+temperature = ${profile.nozzleTemp}
+min_fan_speed = ${profile.fanSpeedMin}
+max_fan_speed = ${profile.fanSpeedMax}
+filament_notes = "${profile.notes || ''}"
+filament_colour = ${profile.colorHex || '#FF0000'}
+extrusion_multiplier = 1
+fan_always_on = 1
+cooling = 1
+`;
+};
+
+// 3. ideaMaker (.json)
+const generateIdeaMakerJson = (profile: Omit<FilamentProfile, 'id'>) => {
+    return {
+        header: {
+            machine_type: profile.printerBrand,
+            filament_name: profile.profileName,
+            created_by: "PrintProfiles.Org"
+        },
+        settings: {
+            filament_diameter: profile.filamentDiameter,
+            filament_price: profile.filamentCost,
+            filament_density: profile.density,
+            extruder_temp_degree_0: profile.nozzleTemp,
+            platform_temp_degree_0: profile.bedTemp,
+            fan_speed_min: profile.fanSpeedMin,
+            fan_speed_max: profile.fanSpeedMax,
+            flow_rate: 100,
+            retraction_speed: profile.retractionSpeed,
+            retraction_amount: profile.retractionDistance
+        }
+    };
+};
+
 
 const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
   const [profile, setProfile] = useState<Omit<FilamentProfile, 'id'>>(initialProfileState);
@@ -106,20 +156,44 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
     }
   };
 
-  const downloadJson = () => {
+  const downloadFile = (type: 'bambu' | 'prusa' | 'ideamaker') => {
     if (!profile.profileName) {
         setError("Please provide a profile name before downloading.");
         return;
     }
     setError(null);
-    // Export using standard structure
-    const standardData = mapToStandardJson(profile);
-    const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(standardData, null, 2))}`;
+    
+    let content = '';
+    let mimeType = 'text/plain';
+    let extension = '';
+    let prefix = '';
+
+    if (type === 'bambu') {
+        content = JSON.stringify(generateBambuJson(profile), null, 2);
+        mimeType = 'text/json';
+        extension = 'json';
+        prefix = 'BambuOrca';
+    } else if (type === 'prusa') {
+        content = generatePrusaIni(profile);
+        mimeType = 'text/plain'; // INI is plain text
+        extension = 'ini';
+        prefix = 'Prusa';
+    } else if (type === 'ideamaker') {
+        content = JSON.stringify(generateIdeaMakerJson(profile), null, 2);
+        mimeType = 'text/json';
+        extension = 'json'; // ideaMaker can import json structure or .filament
+        prefix = 'IdeaMaker';
+    }
+
+    const blob = new Blob([content], { type: `${mimeType};charset=utf-8` });
+    const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.href = jsonString;
+    link.href = url;
+    
     const safeName = profile.profileName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-    link.download = `${safeName}_${profile.printerBrand.replace(' ','')}_${profile.filamentType}.json`;
+    link.download = `${safeName}_${prefix}.${extension}`;
     link.click();
+    URL.revokeObjectURL(url);
   };
 
   const handleShare = () => {
@@ -150,13 +224,17 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
         const text = e.target?.result;
         if (typeof text !== 'string') throw new Error("Failed to read file.");
         
-        const parsed = JSON.parse(text);
-        const imported = parsed.filament_profile || parsed; // Support both wrapped and unwrapped
+        // Rudimentary check for JSON vs INI
+        if (text.trim().startsWith('[')) {
+             alert("Importing INI files is not fully supported yet. Please use JSON.");
+             return;
+        }
 
-        // Map standard keys back to internal state if needed
+        const parsed = JSON.parse(text);
+        const imported = parsed.filament_profile || parsed; 
+
         const mappedState: any = { ...initialProfileState };
         
-        // Heuristic mapping for import
         if (imported.nozzle_temperature) mappedState.nozzleTemp = imported.nozzle_temperature;
         if (imported.nozzle_temperature_initial_layer) mappedState.nozzleTempInitial = imported.nozzle_temperature_initial_layer;
         if (imported.hot_plate_temp) mappedState.bedTemp = imported.hot_plate_temp;
@@ -165,16 +243,15 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
         if (imported.fan_min_speed) mappedState.fanSpeedMin = imported.fan_min_speed;
         if (imported.fan_max_speed) mappedState.fanSpeedMax = imported.fan_max_speed;
         
-        // Fallback to direct copy for matching keys
         Object.keys(imported).forEach(key => {
             if (key in mappedState) mappedState[key] = imported[key];
         });
 
         setProfile(mappedState);
         setError(null);
-        alert("Profile imported successfully! Note: Some fields might need manual verification.");
+        alert("Profile imported successfully!");
       } catch (err) {
-        setError("Invalid JSON file.");
+        setError("Invalid file format.");
       }
     };
     reader.readAsText(file);
@@ -295,14 +372,6 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
             </Section>
         </div>
 
-        <Section title="Physical Properties">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <InputField label="Spool Weight (g)" name="spoolWeight" type="number" value={profile.spoolWeight ?? ''} />
-                <InputField label="Density (g/cm³)" name="density" type="number" step="0.01" value={profile.density ?? ''} placeholder="e.g. 1.24"/>
-                <InputField label="Tensile Strength" name="tensileStrength" type="text" value={profile.tensileStrength ?? ''} placeholder="e.g. 50 MPa"/>
-            </div>
-        </Section>
-
         <Section title="Notes">
             <textarea
                 id="notes"
@@ -315,46 +384,70 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
             ></textarea>
         </Section>
         
-        <div className="flex flex-wrap justify-center items-center gap-4 pt-4">
-             <input type="file" ref={fileInputRef} onChange={handleFileChange} accept=".json" className="hidden" />
-            <button
-                onClick={handleAISuggest}
-                disabled={isSuggesting}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 disabled:bg-purple-800 disabled:cursor-not-allowed"
-            >
-                {isSuggesting ? (
-                    <>
-                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                        Optimizing...
-                    </>
-                ) : (
-                    <>
-                        <MagicIcon />
-                        Suggest Settings
-                    </>
-                )}
-            </button>
-             <button
-                onClick={handleImportClick}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105"
-            >
-                <ImportIcon />
-                Import JSON
-            </button>
-             <button
-                onClick={downloadJson}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105"
-            >
-                <DownloadIcon />
-                Download JSON
-            </button>
-            <button
-                onClick={handleShare}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105"
-            >
-                <ShareIcon />
-                Share
-            </button>
+        {/* Action Buttons */}
+        <div className="flex flex-col space-y-4 pt-4">
+            <div className="flex flex-wrap justify-center gap-4">
+                 <input type="file" ref={fileInputRef} onChange={handleFileChange} accept=".json" className="hidden" />
+                <button
+                    onClick={handleAISuggest}
+                    disabled={isSuggesting}
+                    className="flex-1 min-w-[200px] flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 disabled:bg-purple-800 disabled:cursor-not-allowed shadow-lg"
+                >
+                    {isSuggesting ? (
+                        <>
+                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            Optimizing...
+                        </>
+                    ) : (
+                        <>
+                            <MagicIcon />
+                            Suggest Settings
+                        </>
+                    )}
+                </button>
+                 <button
+                    onClick={handleImportClick}
+                    className="flex-1 min-w-[150px] flex items-center justify-center gap-2 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 shadow-lg"
+                >
+                    <ImportIcon />
+                    Import JSON
+                </button>
+                <button
+                    onClick={handleShare}
+                    className="flex-1 min-w-[150px] flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 shadow-lg"
+                >
+                    <ShareIcon />
+                    Share Profile
+                </button>
+            </div>
+
+            {/* Download Section */}
+            <div className="border-t border-gray-700 pt-4 mt-2">
+                <p className="text-sm text-gray-400 text-center mb-3">Export Profile For:</p>
+                <div className="flex flex-wrap justify-center gap-3">
+                    <button
+                        onClick={() => downloadFile('bambu')}
+                        className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md"
+                    >
+                        <DownloadIcon />
+                        Bambu / Orca (.json)
+                    </button>
+                    <button
+                        onClick={() => downloadFile('prusa')}
+                        className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md"
+                    >
+                        <DownloadIcon />
+                        Prusa Slicer (.ini)
+                    </button>
+                     <button
+                        onClick={() => downloadFile('ideamaker')}
+                        className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md"
+                    >
+                        <DownloadIcon />
+                        ideaMaker (.json)
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
   );

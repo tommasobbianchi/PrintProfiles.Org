@@ -16,28 +16,100 @@ const Detail: React.FC<{ label: string; value: string | number }> = ({ label, va
 
 const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoading }) => {
 
-  const downloadJson = (profile: FilamentProfile) => {
-    // Use the standard export structure here too, or keep simpler for community share
-    // For consistency, let's keep the internal structure for re-upload, but mapped for download
-    const standardData = {
-        profile_name: profile.profileName,
-        filament_type: profile.filamentType,
-        filament_vendor: profile.manufacturer,
-        nozzle_temperature: profile.nozzleTemp,
-        hot_plate_temp: profile.bedTemp,
-        filament_max_volumetric_speed: profile.maxVolumetricSpeed,
-        fan_min_speed: profile.fanSpeedMin,
-        fan_max_speed: profile.fanSpeedMax,
-        // ... add full mapping if needed, or just dump profile
-        ...profile 
-    };
+  const generateBambuJson = (profile: FilamentProfile) => {
+      return {
+          profile_name: profile.profileName,
+          filament_type: profile.filamentType,
+          filament_vendor: profile.manufacturer,
+          filament_density: profile.density,
+          filament_cost: profile.filamentCost,
+          nozzle_temperature: profile.nozzleTemp,
+          nozzle_temperature_initial_layer: profile.nozzleTempInitial,
+          hot_plate_temp: profile.bedTemp,
+          hot_plate_temp_initial_layer: profile.bedTempInitial,
+          filament_max_volumetric_speed: profile.maxVolumetricSpeed,
+          fan_min_speed: profile.fanSpeedMin,
+          fan_max_speed: profile.fanSpeedMax,
+          retraction_length: profile.retractionDistance,
+          retraction_speed: profile.retractionSpeed,
+          filament_notes: profile.notes,
+          printer_brand: profile.printerBrand,
+          filament_diameter: profile.filamentDiameter,
+      };
+  };
+
+  const generatePrusaIni = (profile: FilamentProfile) => {
+      return `[filament:${profile.profileName}]
+filament_vendor = ${profile.manufacturer}
+filament_type = ${profile.filamentType}
+filament_density = ${profile.density || 1.24}
+filament_cost = ${profile.filamentCost || 0}
+filament_diameter = ${profile.filamentDiameter}
+filament_max_volumetric_speed = ${profile.maxVolumetricSpeed}
+first_layer_bed_temperature = ${profile.bedTempInitial}
+first_layer_temperature = ${profile.nozzleTempInitial}
+bed_temperature = ${profile.bedTemp}
+temperature = ${profile.nozzleTemp}
+min_fan_speed = ${profile.fanSpeedMin}
+max_fan_speed = ${profile.fanSpeedMax}
+filament_notes = "${profile.notes || ''}"
+filament_colour = ${profile.colorHex || '#FF0000'}
+extrusion_multiplier = 1
+cooling = 1
+`;
+  };
+
+  const generateIdeaMakerJson = (profile: FilamentProfile) => {
+      return {
+          header: {
+              machine_type: profile.printerBrand,
+              filament_name: profile.profileName,
+              created_by: "PrintProfiles.Org"
+          },
+          settings: {
+              filament_diameter: profile.filamentDiameter,
+              filament_price: profile.filamentCost,
+              filament_density: profile.density,
+              extruder_temp_degree_0: profile.nozzleTemp,
+              platform_temp_degree_0: profile.bedTemp,
+              fan_speed_min: profile.fanSpeedMin,
+              fan_speed_max: profile.fanSpeedMax,
+              flow_rate: 100
+          }
+      };
+  };
+
+  const downloadFile = (profile: FilamentProfile, type: 'bambu' | 'prusa' | 'ideamaker') => {
+    let content = '';
+    let mimeType = 'text/plain';
+    let extension = '';
+    let prefix = '';
+
+    if (type === 'bambu') {
+        content = JSON.stringify(generateBambuJson(profile), null, 2);
+        mimeType = 'text/json';
+        extension = 'json';
+        prefix = 'BambuOrca';
+    } else if (type === 'prusa') {
+        content = generatePrusaIni(profile);
+        mimeType = 'text/plain';
+        extension = 'ini';
+        prefix = 'Prusa';
+    } else if (type === 'ideamaker') {
+        content = JSON.stringify(generateIdeaMakerJson(profile), null, 2);
+        mimeType = 'text/json';
+        extension = 'json';
+        prefix = 'IdeaMaker';
+    }
     
-    const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(standardData, null, 2))}`;
+    const blob = new Blob([content], { type: `${mimeType};charset=utf-8` });
+    const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.href = jsonString;
+    link.href = url;
     const safeName = profile.profileName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-    link.download = `${safeName}_${profile.printerBrand.replace(' ','')}_${profile.filamentType}.json`;
+    link.download = `${safeName}_${prefix}.${extension}`;
     link.click();
+    URL.revokeObjectURL(url);
   };
 
   const ProfileCard: React.FC<{ profile: FilamentProfile }> = ({ profile }) => (
@@ -61,13 +133,33 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
         
         {profile.notes && <p className="text-xs text-gray-300 italic bg-gray-800 p-2 rounded-md mt-2">"{profile.notes}"</p>}
       </div>
-      <button
-        onClick={() => downloadJson(profile)}
-        className="mt-4 w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors"
-      >
-        <DownloadIcon />
-        Download
-      </button>
+      
+      <div className="mt-4 pt-3 border-t border-gray-600/30">
+          <p className="text-xs text-gray-500 text-center mb-2">Download For:</p>
+          <div className="flex gap-2">
+            <button
+                onClick={() => downloadFile(profile, 'bambu')}
+                className="flex-1 flex items-center justify-center gap-1 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
+                title="Bambu Studio / Orca Slicer"
+            >
+                <DownloadIcon /> Bambu/Orca
+            </button>
+             <button
+                onClick={() => downloadFile(profile, 'prusa')}
+                className="flex-1 flex items-center justify-center gap-1 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
+                title="Prusa Slicer"
+            >
+                <DownloadIcon /> Prusa
+            </button>
+             <button
+                onClick={() => downloadFile(profile, 'ideamaker')}
+                className="flex-1 flex items-center justify-center gap-1 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors"
+                title="ideaMaker"
+            >
+                <DownloadIcon /> Idea
+            </button>
+          </div>
+      </div>
     </div>
   );
 
@@ -82,7 +174,7 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-center text-white mb-2">Community Profiles</h2>
+      <h2 className="text-2xl font-bold text-center text-white mb-2">Download Profiles</h2>
       <p className="text-center text-gray-400 mb-6">
         {isLoading
           ? "Fetching the latest profiles from the community..."

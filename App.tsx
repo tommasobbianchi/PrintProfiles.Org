@@ -73,7 +73,7 @@ const App: React.FC = () => {
 
         <div className="mb-2 flex justify-center space-x-4">
           <TabButton tabName="create" label="Access for Filament Producers" />
-          <TabButton tabName="community" label="Community Profiles" />
+          <TabButton tabName="community" label="Download Profiles" />
         </div>
 
         {/* Contact Email */}
