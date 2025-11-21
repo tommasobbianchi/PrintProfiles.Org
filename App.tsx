@@ -25,6 +25,8 @@ const App: React.FC = () => {
     }
     return '/logo.svg';
   });
+  // Force re-render of image when updated
+  const [logoKey, setLogoKey] = useState(0);
   const logoInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -96,6 +98,7 @@ const App: React.FC = () => {
                 } catch (e) { /* ignore */ }
 
                 setLogoSrc(finalResult);
+                setLogoKey(prev => prev + 1);
                 
                 try {
                     localStorage.setItem('custom_app_logo', finalResult);
@@ -112,12 +115,13 @@ const App: React.FC = () => {
       if(confirm("Reset app logo to default?")) {
         localStorage.removeItem('custom_app_logo');
         setLogoSrc('/logo.svg');
+        setLogoKey(prev => prev + 1);
       }
   };
 
   return (
     <div className="min-h-screen bg-[#fdfbf7]">
-      <Header logoSrc={logoSrc} />
+      <Header logoSrc={`${logoSrc}${logoSrc.startsWith('data:') ? '' : `?v=${logoKey}`}`} />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
