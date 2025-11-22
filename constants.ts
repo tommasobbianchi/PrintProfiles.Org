@@ -23,7 +23,7 @@ export const FILAMENT_MANUFACTURERS: string[] = [
 
 
 export const FILAMENT_TYPES: FilamentType[] = [
-  'PLA', 'ABS', 'PETG', 'TPU', 'ASA', 'PC', 'PA-CF', 'PA-GF', 'Copolyester', 'PETT', 'Nylon', 'TPE', 'Other'
+  'PLA', 'ABS', 'PETG', 'TPU', 'ASA', 'PC', 'PA-CF', 'PA-GF', 'Copolyester', 'PETT', 'Nylon', 'TPE', 'PEBA', 'Other'
 ];
 
 const GENERIC_NOTE = "Default volumetric speed and retraction are generic; please tune for your printer.";
@@ -43,7 +43,7 @@ const createPreset = (base: Partial<FilamentProfile> & { id: string, profileName
         // Defaults for new fields if not provided
         nozzleTempInitial: base.nozzleTemp + 5,
         bedTempInitial: base.bedTemp,
-        maxVolumetricSpeed: base.filamentType === 'TPU' ? 3 : (base.filamentType === 'PLA' ? 15 : 10),
+        maxVolumetricSpeed: base.filamentType === 'TPU' || base.filamentType === 'TPE' || base.filamentType === 'PEBA' ? 3 : (base.filamentType === 'PLA' ? 15 : 10),
         fanSpeedMin: base.filamentType === 'ABS' || base.filamentType === 'ASA' || base.filamentType === 'PC' || base.filamentType === 'Nylon' || base.filamentType === 'PA-CF' ? 0 : 100,
         fanSpeedMax: base.filamentType === 'ABS' || base.filamentType === 'ASA' || base.filamentType === 'PC' || base.filamentType === 'Nylon' || base.filamentType === 'PA-CF' ? 20 : 100,
         ...base
@@ -198,6 +198,7 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'esun-3', profileName: 'eSUN PLA-LW', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'PLA-LW', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 50, maxVolumetricSpeed: 8, fanSpeedMin: 100, fanSpeedMax: 100, density: 0.54, notes: "Lightweight foaming PLA. Flow rate needs calibration (~50-60% flow usually)." }),
   createPreset({ id: 'esun-4', profileName: 'eSUN PLA-Matte', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'PLA-Matte', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Matte surface finish." }),
   createPreset({ id: 'esun-5', profileName: 'eSUN eSilk-PLA', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'eSilk', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Silky shiny surface." }),
+  createPreset({ id: 'esun-6', profileName: 'eSUN ePEBA-90A', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'ePEBA', filamentType: 'PEBA', nozzleTemp: 250, bedTemp: 70, maxVolumetricSpeed: 4, fanSpeedMin: 50, fanSpeedMax: 100, density: 1.03, notes: "Polyether Block Amide. High resilience, low temp flexible. Print slow." }),
 
   // EUMAKERS
   createPreset({ id: 'eum-1', profileName: 'EUMAKERS PLA', printerBrand: 'Other', manufacturer: 'EUMAKERS', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
@@ -234,6 +235,7 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'fill-4', profileName: 'Fillamentum Flexfill 98A', printerBrand: 'Other', manufacturer: 'Fillamentum', brand: 'Flexfill', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 50, maxVolumetricSpeed: 5, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.23 }),
   createPreset({ id: 'fill-5', profileName: 'Fillamentum Nylon AF80 Aramid', printerBrand: 'Other', manufacturer: 'Fillamentum', brand: 'Nylon AF80', filamentType: 'Nylon', nozzleTemp: 245, bedTemp: 100, maxVolumetricSpeed: 8, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.03, notes: "Aramid Fiber (Kevlar) reinforced. Tribological." }),
   createPreset({ id: 'fill-6', profileName: 'Fillamentum NonOilen', printerBrand: 'Other', manufacturer: 'Fillamentum', brand: 'NonOilen', filamentType: 'PLA', nozzleTemp: 185, bedTemp: 50, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.28, notes: "100% Biodegradable, temp resist 110°C. Food safe." }),
+  createPreset({ id: 'fill-7', profileName: 'Fillamentum Flexfill PEBA 90A', printerBrand: 'Other', manufacturer: 'Fillamentum', brand: 'Flexfill', filamentType: 'PEBA', nozzleTemp: 235, bedTemp: 80, maxVolumetricSpeed: 3, fanSpeedMin: 50, fanSpeedMax: 100, density: 1.01, notes: "PEBA. High energy return, lightweight. Print slow (20-30mm/s)." }),
 
   // FiloAlfa (Italy)
   createPreset({ id: 'fa-1', profileName: 'FiloAlfa PLA', printerBrand: 'Other', manufacturer: 'FiloAlfa', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Easy to print, Italian made." }),
@@ -440,6 +442,7 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'rosa-4', profileName: 'Rosa3D BioWOOD', printerBrand: 'Other', manufacturer: 'Rosa3D', brand: 'BioWOOD', filamentType: 'PLA', nozzleTemp: 195, bedTemp: 50, maxVolumetricSpeed: 8, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.15, notes: "Wood fiber filled. Use 0.5mm+ nozzle. Print cool." }),
   createPreset({ id: 'rosa-5', profileName: 'Rosa3D PA12+CF15', printerBrand: 'Other', manufacturer: 'Rosa3D', brand: 'PA12+CF15', filamentType: 'PA-CF', nozzleTemp: 270, bedTemp: 100, maxVolumetricSpeed: 8, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.15, dryingTemp: 100, dryingTime: '6h', notes: "Nylon 12 with 15% Carbon. Hardened nozzle required." }),
   createPreset({ id: 'rosa-6', profileName: 'Rosa3D Silk', printerBrand: 'Other', manufacturer: 'Rosa3D', brand: 'Silk', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 14, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Shiny silk finish." }),
+  createPreset({ id: 'rosa-7', profileName: 'Rosa3D PEBA', printerBrand: 'Other', manufacturer: 'Rosa3D', brand: 'PEBA', filamentType: 'PEBA', nozzleTemp: 230, bedTemp: 60, maxVolumetricSpeed: 4, fanSpeedMin: 50, fanSpeedMax: 100, density: 1.02, notes: "Flexible, low density, high energy return. Print slow." }),
 
   // SainSmart
   createPreset({ id: 'ss-1', profileName: 'SainSmart TPU 95A', printerBrand: 'Other', manufacturer: 'SainSmart', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21, notes: "Popular flexible filament." }),

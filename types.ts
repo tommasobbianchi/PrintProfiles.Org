@@ -1,5 +1,6 @@
 
-export type FilamentType = 'PLA' | 'ABS' | 'PETG' | 'TPU' | 'ASA' | 'PC' | 'PA-CF' | 'PA-GF' | 'Copolyester' | 'PETT' | 'Nylon' | 'TPE' | 'Other';
+
+export type FilamentType = 'PLA' | 'ABS' | 'PETG' | 'TPU' | 'ASA' | 'PC' | 'PA-CF' | 'PA-GF' | 'Copolyester' | 'PETT' | 'Nylon' | 'TPE' | 'PEBA' | 'Other';
 export type PrinterBrand = 'Bambu Lab' | 'Anycubic' | 'Creality' | 'Prusa' | 'Ultimaker' | 'Elegoo' | 'Other';
 
 export interface FilamentProfile {
