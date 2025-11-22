@@ -18,7 +18,7 @@ export const PRINTER_MODELS: Record<PrinterBrand, string[]> = {
 export const NOZZLE_DIAMETERS = [0.2, 0.4, 0.6, 0.8];
 
 export const FILAMENT_MANUFACTURERS: string[] = [
-  '3DJake', '3DQF', '3DTrček', '3DXTech', 'AddNorth', 'Amolen', 'Anycubic', 'Arianeplast', 'Atomic Filament', 'AzureFilm', 'Bambu Lab', 'BASF Forward AM', 'Cliever', 'ColorFabb', 'Creality', 'Devil Design', 'DSM Novamid', 'EUMAKERS', 'Elegoo', 'Eryone', 'eSUN', 'Extrudr', 'FiberForce', 'Fiberlogy', 'Filamentive', 'Filamentum', 'Fillamentum', 'FiloAlfa', 'FlashForge', 'FormFutura', 'Francofil', 'GST3D', 'Geeetech', 'GiantArm', 'GratKit', 'Hatchbox', 'IGUS', 'Innofil3D', 'JAMG HE', 'JAYO', 'Kexcelled', 'Kimya (Armor)', 'MakeShaper', 'MatterHackers', 'Microzey', 'Nanovia', 'NinjaTek', 'Overture', 'Polymaker', 'Porima', 'Priline', 'PrintaMent', 'Printologist', 'Proto-pasta', 'Prusa', 'Qidi Tech', 'Recreus', 'Rosa3D', 'SainSmart', 'Sakata 3D', 'Siraya Tech', 'Smart Materials 3D', 'Spectrum Filaments', 'Stratasys', 'Sunlu', 'TECBears', 'Taulman3D', 'TechInit', 'Tianse', 'Treed Filaments', 'Ultimaker', 'Verbatim', 'Winkle', 'XSTRAND (OwensCorning)', 'XYZprinting', 'Other'
+  '3DJake', '3DQF', '3DTrček', '3DXTech', 'AddNorth', 'Amolen', 'Anycubic', 'Arianeplast', 'Atomic Filament', 'AzureFilm', 'Bambu Lab', 'BASF Forward AM', 'Cliever', 'Conjure', 'ColorFabb', 'Creality', 'Devil Design', 'DSM Novamid', 'EUMAKERS', 'Elegoo', 'Eryone', 'eSUN', 'Extrudr', 'FiberForce', 'Fiberlogy', 'Filamentive', 'Filamentum', 'Fillamentum', 'FiloAlfa', 'FlashForge', 'FormFutura', 'Francofil', 'GST3D', 'Geeetech', 'GiantArm', 'GratKit', 'Hatchbox', 'IGUS', 'Innofil3D', 'JAMG HE', 'JAYO', 'Kexcelled', 'Kimya (Armor)', 'MakeShaper', 'MatterHackers', 'Microzey', 'Nanovia', 'NinjaTek', 'Overture', 'Polymaker', 'Porima', 'Priline', 'PrintaMent', 'Printologist', 'Proto-pasta', 'Prusa', 'Qidi Tech', 'Recreus', 'Rosa3D', 'SainSmart', 'Sakata 3D', 'Siraya Tech', 'Smart Materials 3D', 'Spectrum Filaments', 'Stratasys', 'Sunlu', 'TECBears', 'Taulman3D', 'TechInit', 'Tianse', 'Torupy', 'Treed Filaments', 'Ultimaker', 'Verbatim', 'Winkle', 'XSTRAND (OwensCorning)', 'XYZprinting', 'Other'
 ].sort();
 
 
@@ -127,6 +127,13 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'clv-1', profileName: 'Cliever PLA', printerBrand: 'Other', manufacturer: 'Cliever', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'clv-2', profileName: 'Cliever PETG', printerBrand: 'Other', manufacturer: 'Cliever', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
   createPreset({ id: 'clv-3', profileName: 'Cliever ABS', printerBrand: 'Other', manufacturer: 'Cliever', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 250, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
+
+  // Conjure (Chitu Systems)
+  createPreset({ id: 'con-1', profileName: 'Conjure Rigid PLA', printerBrand: 'Other', manufacturer: 'Conjure', brand: 'Rigid', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High stiffness, low shrinkage. Engineering grade." }),
+  createPreset({ id: 'con-2', profileName: 'Conjure Tough PLA', printerBrand: 'Other', manufacturer: 'Conjure', brand: 'Tough', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High impact resistance. Non-brittle." }),
+  createPreset({ id: 'con-3', profileName: 'Conjure Sculpt PLA', printerBrand: 'Other', manufacturer: 'Conjure', brand: 'Sculpt', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.25, notes: "Matte finish, easy to sand. Best for statues." }),
+  createPreset({ id: 'con-4', profileName: 'Conjure PETG', printerBrand: 'Other', manufacturer: 'Conjure', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+  createPreset({ id: 'con-5', profileName: 'Conjure TPU 95A', printerBrand: 'Other', manufacturer: 'Conjure', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
 
   // ColorFabb
   createPreset({ id: 'cf-1', profileName: 'ColorFabb PLA/PHA', printerBrand: 'Other', manufacturer: 'ColorFabb', brand: 'PLA/PHA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 55, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Tougher than standard PLA." }),
@@ -444,6 +451,12 @@ export const PRESET_PROFILES: FilamentProfile[] = [
 
   // Tianse
   createPreset({ id: 'tia-1', profileName: 'Tianse PLA', printerBrand: 'Other', manufacturer: 'Tianse', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+
+  // Torupy
+  createPreset({ id: 'tor-1', profileName: 'Torupy PLA', printerBrand: 'Other', manufacturer: 'Torupy', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'tor-2', profileName: 'Torupy PETG', printerBrand: 'Other', manufacturer: 'Torupy', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27, notes: "Optimized for less stringing." }),
+  createPreset({ id: 'tor-3', profileName: 'Torupy Silk PLA', printerBrand: 'Other', manufacturer: 'Torupy', brand: 'Silk', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Shiny finish." }),
+  createPreset({ id: 'tor-4', profileName: 'Torupy TPU', printerBrand: 'Other', manufacturer: 'Torupy', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 55, maxVolumetricSpeed: 3.5, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
 
   // Treed Filaments
   createPreset({ id: 'treed-1', profileName: 'Treed Carbonium (PA-CF)', printerBrand: 'Other', manufacturer: 'Treed Filaments', brand: 'Carbonium', filamentType: 'PA-CF', nozzleTemp: 260, bedTemp: 110, maxVolumetricSpeed: 8, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.30, dryingTemp: 100, dryingTime: '6h', notes: "Hardened nozzle mandatory. High rigidity." }),
