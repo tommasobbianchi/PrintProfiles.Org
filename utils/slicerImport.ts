@@ -1,5 +1,6 @@
 
-import { FilamentProfile } from '../types';
+import { FilamentProfile, PrinterBrand } from '../types';
+import { PRINTER_BRANDS } from '../constants';
 
 export const parseNativeSlicerProfile = async (file: File): Promise<FilamentProfile> => {
     return new Promise((resolve, reject) => {
@@ -32,19 +33,60 @@ export const parseNativeSlicerProfile = async (file: File): Promise<FilamentProf
                     const root = data.filament_profile || data.settings || data; // Handle different structures
 
                     // Bambu / Orca mapping
-                    if (root.filament_type) profile.filamentType = root.filament_type;
-                    if (root.filament_vendor) profile.manufacturer = root.filament_vendor;
-                    if (root.nozzle_temperature) profile.nozzleTemp = Number(root.nozzle_temperature);
-                    if (root.nozzle_temperature_initial_layer) profile.nozzleTempInitial = Number(root.nozzle_temperature_initial_layer);
-                    if (root.hot_plate_temp) profile.bedTemp = Number(root.hot_plate_temp);
-                    if (root.hot_plate_temp_initial_layer) profile.bedTempInitial = Number(root.hot_plate_temp_initial_layer);
-                    if (root.filament_max_volumetric_speed) profile.maxVolumetricSpeed = Number(root.filament_max_volumetric_speed);
-                    if (root.fan_min_speed) profile.fanSpeedMin = Number(root.fan_min_speed);
-                    if (root.fan_max_speed) profile.fanSpeedMax = Number(root.fan_max_speed);
-                    if (root.filament_density) profile.density = Number(root.filament_density);
-                    if (root.filament_cost) profile.filamentCost = Number(root.filament_cost);
-                    if (root.retraction_length) profile.retractionDistance = Number(root.retraction_length);
-                    if (root.retraction_speed) profile.retractionSpeed = Number(root.retraction_speed);
+                    if (root.filament_type) profile.filamentType = Array.isArray(root.filament_type) ? root.filament_type[0] : root.filament_type;
+                    if (root.filament_vendor) profile.manufacturer = Array.isArray(root.filament_vendor) ? root.filament_vendor[0] : root.filament_vendor;
+                    
+                    const getNum = (val: any) => {
+                        if (Array.isArray(val)) return Number(val[0]);
+                        return Number(val);
+                    };
+
+                    if (root.nozzle_temperature) profile.nozzleTemp = getNum(root.nozzle_temperature);
+                    if (root.nozzle_temperature_initial_layer) profile.nozzleTempInitial = getNum(root.nozzle_temperature_initial_layer);
+                    if (root.hot_plate_temp) profile.bedTemp = getNum(root.hot_plate_temp);
+                    if (root.hot_plate_temp_initial_layer) profile.bedTempInitial = getNum(root.hot_plate_temp_initial_layer);
+                    if (root.filament_max_volumetric_speed) profile.maxVolumetricSpeed = getNum(root.filament_max_volumetric_speed);
+                    if (root.fan_min_speed) profile.fanSpeedMin = getNum(root.fan_min_speed);
+                    if (root.fan_max_speed) profile.fanSpeedMax = getNum(root.fan_max_speed);
+                    if (root.filament_density) profile.density = getNum(root.filament_density);
+                    if (root.filament_cost) profile.filamentCost = getNum(root.filament_cost);
+                    if (root.filament_retraction_length) profile.retractionDistance = getNum(root.filament_retraction_length);
+                    if (root.retraction_length) profile.retractionDistance = getNum(root.retraction_length); // Fallback
+                    if (root.filament_retraction_speed) profile.retractionSpeed = getNum(root.filament_retraction_speed);
+                    if (root.retraction_speed) profile.retractionSpeed = getNum(root.retraction_speed); // Fallback
+                    
+                    // Smart Detection from compatible_printers
+                    if (root.compatible_printers && Array.isArray(root.compatible_printers) && root.compatible_printers.length > 0) {
+                        const compatString = root.compatible_printers[0];
+                        // Logic to infer Brand
+                        for (const brand of PRINTER_BRANDS) {
+                            if (compatString.toLowerCase().includes(brand.toLowerCase())) {
+                                profile.printerBrand = brand;
+                                break;
+                            }
+                        }
+                        
+                        // Logic to infer Nozzle (e.g. "0.4 nozzle")
+                        const nozzleMatch = compatString.match(/(\d+\.\d+)\s*nozzle/i);
+                        if (nozzleMatch) {
+                            profile.nozzleDiameter = parseFloat(nozzleMatch[1]);
+                        }
+
+                        // Logic to infer Model (Basic)
+                        // This is heuristic as model names vary wildly
+                        if (profile.printerBrand === 'Bambu Lab') {
+                            if (compatString.includes('X1C')) profile.printerModel = 'X1C';
+                            else if (compatString.includes('P1S')) profile.printerModel = 'P1S';
+                            else if (compatString.includes('P1P')) profile.printerModel = 'P1P';
+                            else if (compatString.includes('A1 Mini')) profile.printerModel = 'A1 Mini';
+                            else if (compatString.includes('A1')) profile.printerModel = 'A1';
+                        } else if (profile.printerBrand === 'Prusa') {
+                             if (compatString.includes('MK3')) profile.printerModel = 'MK3S+';
+                             else if (compatString.includes('MK4')) profile.printerModel = 'MK4';
+                             else if (compatString.includes('Mini')) profile.printerModel = 'Mini+';
+                             else if (compatString.includes('XL')) profile.printerModel = 'XL';
+                        }
+                    }
                     
                     // IdeaMaker mapping fallback
                     if (root.extruder_temp_degree_0 && !profile.nozzleTemp) profile.nozzleTemp = Number(root.extruder_temp_degree_0);

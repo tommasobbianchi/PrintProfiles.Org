@@ -120,26 +120,60 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
 
   // --- Export Generators ---
   const generateBambuJson = (profile: FilamentProfile) => {
+      // Construct compatibility string if specific model is defined
+      // e.g. "Bambu Lab X1 Carbon 0.4 nozzle"
+      const compatibilityList: string[] = [];
+      if (profile.printerBrand !== 'Other' && profile.printerModel !== 'Generic') {
+          const nozzleStr = profile.nozzleDiameter ? ` ${profile.nozzleDiameter} nozzle` : '';
+          compatibilityList.push(`${profile.printerBrand} ${profile.printerModel}${nozzleStr}`);
+      }
+
+    // Bambu/Orca expect strict string arrays for most values
       return {
-          profile_name: profile.profileName,
-          filament_type: profile.filamentType,
-          filament_vendor: profile.manufacturer,
-          filament_density: profile.density,
-          filament_cost: profile.filamentCost,
-          nozzle_temperature: profile.nozzleTemp,
-          nozzle_temperature_initial_layer: profile.nozzleTempInitial,
-          hot_plate_temp: profile.bedTemp,
-          hot_plate_temp_initial_layer: profile.bedTempInitial,
-          filament_max_volumetric_speed: profile.maxVolumetricSpeed,
-          fan_min_speed: profile.fanSpeedMin,
-          fan_max_speed: profile.fanSpeedMax,
-          retraction_length: profile.retractionDistance,
-          retraction_speed: profile.retractionSpeed,
-          filament_notes: profile.notes,
-          printer_brand: profile.printerBrand,
-          printer_model: profile.printerModel,
-          nozzle_diameter: profile.nozzleDiameter,
-          filament_diameter: profile.filamentDiameter,
+          type: "filament",
+          name: profile.profileName,
+          from: "User",
+          instantiation: "true",
+          filament_id: "",
+          version: "1.6",
+          compatible_printers: compatibilityList,
+          
+          // Arrays of Strings
+          filament_type: [profile.filamentType],
+          filament_vendor: [profile.manufacturer],
+          filament_density: [String(profile.density || "1.24")],
+          filament_cost: [String(profile.filamentCost || "0")],
+          
+          nozzle_temperature: [String(profile.nozzleTemp)],
+          nozzle_temperature_initial_layer: [String(profile.nozzleTempInitial)],
+          
+          hot_plate_temp: [String(profile.bedTemp)],
+          hot_plate_temp_initial_layer: [String(profile.bedTempInitial)],
+          // Map all plate types to bed temp
+          cool_plate_temp: [String(profile.bedTemp)],
+          cool_plate_temp_initial_layer: [String(profile.bedTempInitial)],
+          eng_plate_temp: [String(profile.bedTemp)],
+          eng_plate_temp_initial_layer: [String(profile.bedTempInitial)],
+          textured_plate_temp: [String(profile.bedTemp)],
+          textured_plate_temp_initial_layer: [String(profile.bedTempInitial)],
+
+          filament_max_volumetric_speed: [String(profile.maxVolumetricSpeed)],
+          
+          fan_min_speed: [String(profile.fanSpeedMin)],
+          fan_max_speed: [String(profile.fanSpeedMax)],
+          
+          filament_retraction_length: [String(profile.retractionDistance)],
+          filament_retraction_speed: [String(profile.retractionSpeed)],
+          filament_deretraction_speed: [String(profile.retractionSpeed)],
+          
+          filament_notes: profile.notes || "",
+          
+          // Metadata for this app (ignored by Slicer)
+          app_metadata: {
+              printer_brand: profile.printerBrand,
+              printer_model: profile.printerModel,
+              nozzle_diameter: profile.nozzleDiameter,
+          }
       };
   };
 

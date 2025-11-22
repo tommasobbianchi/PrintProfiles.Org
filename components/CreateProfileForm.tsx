@@ -47,35 +47,68 @@ const initialProfileState: Omit<FilamentProfile, 'id'> = {
 
 // --- Export Generators ---
 
-// 1. Bambu Studio / Orca Slicer (Standard JSON)
+// 1. Bambu Studio / Orca Slicer (Standard JSON with Arrays)
 const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
+    // Construct compatibility string if specific model is selected
+    // e.g. "Bambu Lab X1 Carbon 0.4 nozzle"
+    const compatibilityList: string[] = [];
+    if (profile.printerBrand !== 'Other' && profile.printerModel !== 'Generic') {
+        const nozzleStr = profile.nozzleDiameter ? ` ${profile.nozzleDiameter} nozzle` : '';
+        compatibilityList.push(`${profile.printerBrand} ${profile.printerModel}${nozzleStr}`);
+    }
+
+    // Bambu/Orca expect strict string arrays for most values
     return {
-        profile_name: profile.profileName,
-        filament_type: profile.filamentType,
-        filament_vendor: profile.manufacturer,
-        filament_density: profile.density,
-        filament_cost: profile.filamentCost,
-        nozzle_temperature: profile.nozzleTemp,
-        nozzle_temperature_initial_layer: profile.nozzleTempInitial,
-        hot_plate_temp: profile.bedTemp,
-        hot_plate_temp_initial_layer: profile.bedTempInitial,
-        filament_max_volumetric_speed: profile.maxVolumetricSpeed,
-        fan_min_speed: profile.fanSpeedMin,
-        fan_max_speed: profile.fanSpeedMax,
-        retraction_length: profile.retractionDistance,
-        retraction_speed: profile.retractionSpeed,
-        filament_notes: profile.notes,
-        // Extras
-        printer_brand: profile.printerBrand,
-        printer_model: profile.printerModel,
-        nozzle_diameter: profile.nozzleDiameter,
-        filament_diameter: profile.filamentDiameter,
-        filament_brand_name: profile.brand,
-        spool_weight: profile.spoolWeight,
-        color_hex: profile.colorHex,
-        color_name: profile.colorName,
-        drying_temperature: profile.dryingTemp,
-        drying_time: profile.dryingTime
+        type: "filament",
+        name: profile.profileName,
+        from: "User",
+        instantiation: "true",
+        filament_id: "",
+        version: "1.6",
+        compatible_printers: compatibilityList,
+        
+        // Arrays of Strings
+        filament_type: [profile.filamentType],
+        filament_vendor: [profile.manufacturer],
+        filament_density: [String(profile.density || "1.24")],
+        filament_cost: [String(profile.filamentCost || "0")],
+        
+        nozzle_temperature: [String(profile.nozzleTemp)],
+        nozzle_temperature_initial_layer: [String(profile.nozzleTempInitial)],
+        
+        hot_plate_temp: [String(profile.bedTemp)],
+        hot_plate_temp_initial_layer: [String(profile.bedTempInitial)],
+        // Map all plate types to bed temp for consistency
+        cool_plate_temp: [String(profile.bedTemp)],
+        cool_plate_temp_initial_layer: [String(profile.bedTempInitial)],
+        eng_plate_temp: [String(profile.bedTemp)],
+        eng_plate_temp_initial_layer: [String(profile.bedTempInitial)],
+        textured_plate_temp: [String(profile.bedTemp)],
+        textured_plate_temp_initial_layer: [String(profile.bedTempInitial)],
+
+        filament_max_volumetric_speed: [String(profile.maxVolumetricSpeed)],
+        
+        fan_min_speed: [String(profile.fanSpeedMin)],
+        fan_max_speed: [String(profile.fanSpeedMax)],
+        
+        // Specific key for filament override retraction
+        filament_retraction_length: [String(profile.retractionDistance)],
+        filament_retraction_speed: [String(profile.retractionSpeed)],
+        filament_deretraction_speed: [String(profile.retractionSpeed)],
+        
+        filament_notes: profile.notes || "",
+        
+        // Metadata for this app (ignored by Slicer)
+        app_metadata: {
+            printer_brand: profile.printerBrand,
+            printer_model: profile.printerModel,
+            nozzle_diameter: profile.nozzleDiameter,
+            brand_name: profile.brand,
+            color_hex: profile.colorHex,
+            color_name: profile.colorName,
+            drying_temperature: profile.dryingTemp,
+            drying_time: profile.dryingTime
+        }
     };
 };
 
@@ -251,50 +284,28 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
     fileInputRef.current?.click();
   };
 
-  const handleSingleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSingleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const text = e.target?.result;
-        if (typeof text !== 'string') throw new Error("Failed to read file.");
+    
+    try {
+        // Use the enhanced parser that detects printer models
+        const imported = await parseNativeSlicerProfile(file);
         
-        if (text.trim().startsWith('[')) {
-             alert("Importing INI files is not fully supported in Single Mode. Use Mass Import for INI.");
-             return;
-        }
+        // Convert to form state (Omit 'id')
+        const formState: Omit<FilamentProfile, 'id'> = {
+            ...imported,
+        } as any;
+        delete (formState as any).id;
 
-        const parsed = JSON.parse(text);
-        const imported = parsed.filament_profile || parsed; 
-
-        const mappedState: any = { ...initialProfileState };
-        
-        // Mapping basic fields
-        if (imported.nozzle_temperature) mappedState.nozzleTemp = imported.nozzle_temperature;
-        if (imported.nozzle_temperature_initial_layer) mappedState.nozzleTempInitial = imported.nozzle_temperature_initial_layer;
-        if (imported.hot_plate_temp) mappedState.bedTemp = imported.hot_plate_temp;
-        if (imported.hot_plate_temp_initial_layer) mappedState.bedTempInitial = imported.hot_plate_temp_initial_layer;
-        if (imported.filament_max_volumetric_speed) mappedState.maxVolumetricSpeed = imported.filament_max_volumetric_speed;
-        if (imported.fan_min_speed) mappedState.fanSpeedMin = imported.fan_min_speed;
-        if (imported.fan_max_speed) mappedState.fanSpeedMax = imported.fan_max_speed;
-        // Map new fields if present
-        if (imported.printer_model) mappedState.printerModel = imported.printer_model;
-        if (imported.nozzle_diameter) mappedState.nozzleDiameter = imported.nozzle_diameter;
-        
-        Object.keys(imported).forEach(key => {
-            if (key in mappedState) mappedState[key] = imported[key];
-        });
-
-        setProfile(mappedState);
+        setProfile(formState);
         setError(null);
         alert("Profile imported successfully!");
-      } catch (err) {
-        setError("Invalid file format.");
-      }
-    };
-    reader.readAsText(file);
+    } catch (err) {
+        console.error(err);
+        setError("Failed to import file. Ensure it is a valid Slicer JSON or INI file.");
+    }
+    
     event.target.value = '';
   };
 
@@ -338,17 +349,14 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
               // Apply Overrides
               if (overrideBrand !== 'Auto') {
                   profile.printerBrand = overrideBrand;
-                  // Clean up Profile Name if needed (remove Model from name if forcing Model)
               }
               
               if (overrideModel !== 'Auto') {
                   profile.printerModel = overrideModel;
                   
                   // Clean Name Logic: Remove Model string from Name if present
-                  // e.g. "eSUN PLA+ @Bambu Lab A1" -> "eSUN PLA+"
                   const regex = new RegExp(`\\s*@?${overrideModel}`, 'gi');
                   profile.profileName = profile.profileName.replace(regex, '').trim();
-                   // Also remove simple "A1" or "X1C" if standalone in name
                    const simpleRegex = new RegExp(`\\b${overrideModel}\\b`, 'gi');
                    profile.profileName = profile.profileName.replace(simpleRegex, '').replace(/\s+/g, ' ').trim();
               }
