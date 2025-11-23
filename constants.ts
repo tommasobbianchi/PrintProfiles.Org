@@ -278,9 +278,48 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'giant-2', profileName: 'GiantArm PETG', printerBrand: 'Other', manufacturer: 'GiantArm', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
   createPreset({ id: 'giant-3', profileName: 'GiantArm TPU', printerBrand: 'Other', manufacturer: 'GiantArm', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 3.5, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.21 }),
 
+  // GratKit
+  createPreset({ id: 'grat-1', profileName: 'GratKit PLA+', printerBrand: 'Other', manufacturer: 'GratKit', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Industrial formula PLA+." }),
+  createPreset({ id: 'grat-2', profileName: 'GratKit PETG', printerBrand: 'Other', manufacturer: 'GratKit', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
+  createPreset({ id: 'grat-3', profileName: 'GratKit ABS', printerBrand: 'Other', manufacturer: 'GratKit', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 250, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
+  createPreset({ id: 'grat-4', profileName: 'GratKit TPU 95A', printerBrand: 'Other', manufacturer: 'GratKit', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 210, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+
+  // GST3D
+  createPreset({ id: 'gst-1', profileName: 'GST3D PLA+', printerBrand: 'Other', manufacturer: 'GST3D', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Requires stable temp. Good layer adhesion." }),
+  createPreset({ id: 'gst-2', profileName: 'GST3D PETG', printerBrand: 'Other', manufacturer: 'GST3D', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+  createPreset({ id: 'gst-3', profileName: 'GST3D TPU', printerBrand: 'Other', manufacturer: 'GST3D', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+  createPreset({ id: 'gst-4', profileName: 'GST3D ABS', printerBrand: 'Other', manufacturer: 'GST3D', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 245, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
+
+  // HZST3D
+  createPreset({ id: 'hzst-1', profileName: 'HZST3D PLA', printerBrand: 'Other', manufacturer: 'HZST3D', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'hzst-2', profileName: 'HZST3D Wood PLA', printerBrand: 'Other', manufacturer: 'HZST3D', brand: 'Wood', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 50, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.20, notes: "Real wood feel. 0.5mm nozzle min." }),
+  createPreset({ id: 'hzst-3', profileName: 'HZST3D Marble PLA', printerBrand: 'Other', manufacturer: 'HZST3D', brand: 'Marble', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+
   // Hatchbox
   createPreset({ id: 'hatch-1', profileName: 'Hatchbox PLA', printerBrand: 'Other', manufacturer: 'Hatchbox', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'hatch-2', profileName: 'Hatchbox ABS', printerBrand: 'Other', manufacturer: 'Hatchbox', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 235, bedTemp: 95, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
+  createPreset({ id: 'hatch-3', profileName: 'Hatchbox PETG', printerBrand: 'Other', manufacturer: 'Hatchbox', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+  createPreset({ id: 'hatch-4', profileName: 'Hatchbox TPU 95A', printerBrand: 'Other', manufacturer: 'Hatchbox', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 225, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+  createPreset({ id: 'hatch-5', profileName: 'Hatchbox Wood PLA', printerBrand: 'Other', manufacturer: 'Hatchbox', brand: 'Wood', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 50, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.20, notes: "Real wood particles. Sandable." }),
+  createPreset({ id: 'hatch-6', profileName: 'Hatchbox Matte PLA', printerBrand: 'Other', manufacturer: 'Hatchbox', brand: 'Matte', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.30, notes: "Low gloss finish." }),
+
+  // IGUS
+  createPreset({ id: 'igus-1', profileName: 'iglidur I150-PF', printerBrand: 'Other', manufacturer: 'IGUS', brand: 'iglidur', filamentType: 'Other', nozzleTemp: 240, bedTemp: 60, maxVolumetricSpeed: 4, fanSpeedMin: 20, fanSpeedMax: 50, density: 1.30, notes: "Tribological filament. Wear resistant. Ease of print." }),
+  createPreset({ id: 'igus-2', profileName: 'iglidur I180-PF', printerBrand: 'Other', manufacturer: 'IGUS', brand: 'iglidur', filamentType: 'Other', nozzleTemp: 250, bedTemp: 90, maxVolumetricSpeed: 4, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.25, notes: "High wear resistance. Enclosure recommended." }),
+
+  // IIID MAX
+  createPreset({ id: 'iiid-1', profileName: 'IIID MAX PLA+', printerBrand: 'Other', manufacturer: 'IIID MAX', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'iiid-2', profileName: 'IIID MAX ASA', printerBrand: 'Other', manufacturer: 'IIID MAX', brand: 'ASA', filamentType: 'ASA', nozzleTemp: 245, bedTemp: 100, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07 }),
+  createPreset({ id: 'iiid-3', profileName: 'IIID MAX PETG', printerBrand: 'Other', manufacturer: 'IIID MAX', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
+
+  // Innofil3D
+  createPreset({ id: 'inno-1', profileName: 'Innofil3D PLA', printerBrand: 'Other', manufacturer: 'Innofil3D', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'inno-2', profileName: 'Innofil3D EPR InnoPET', printerBrand: 'Other', manufacturer: 'Innofil3D', brand: 'EPR InnoPET', filamentType: 'PETG', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27, notes: "Low temp PET." }),
+  createPreset({ id: 'inno-3', profileName: 'Innofil3D ABS', printerBrand: 'Other', manufacturer: 'Innofil3D', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 245, bedTemp: 95, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 10, density: 1.04 }),
+
+  // JAMG HE
+  createPreset({ id: 'jamg-1', profileName: 'JAMG HE Hi-Speed PLA+', printerBrand: 'Other', manufacturer: 'JAMG HE', brand: 'Hi-Speed', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 20, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'jamg-2', profileName: 'JAMG HE Silk PLA', printerBrand: 'Other', manufacturer: 'JAMG HE', brand: 'Silk', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
 
   // NinjaTek
   createPreset({ id: 'nt-1', profileName: 'NinjaTek NinjaFlex 85A', printerBrand: 'Other', manufacturer: 'NinjaTek', brand: 'NinjaFlex', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 40, maxVolumetricSpeed: 3, fanSpeedMin: 60, fanSpeedMax: 100, density: 1.19 }),
