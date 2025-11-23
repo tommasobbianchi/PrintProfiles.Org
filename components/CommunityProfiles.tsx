@@ -120,11 +120,22 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
 
   // --- Export Generators ---
   const generateBambuJson = (profile: FilamentProfile) => {
-      // Construct compatibility string if specific model is defined
-      // e.g. "Bambu Lab X1 Carbon 0.4 nozzle"
-      const compatibilityList: string[] = [];
-      if (profile.printerBrand !== 'Other' && profile.printerModel !== 'Generic') {
-          const nozzleStr = profile.nozzleDiameter ? ` ${profile.nozzleDiameter} nozzle` : '';
+      // Construct compatibility string
+      // FIX: Ensure broad compatibility for generic profiles to avoid import errors
+      let compatibilityList: string[] = [];
+      const nozzleStr = profile.nozzleDiameter ? ` ${profile.nozzleDiameter} nozzle` : '';
+
+      if (profile.printerBrand === 'Bambu Lab') {
+        if (profile.printerModel && profile.printerModel !== 'Generic') {
+            // Specific model
+            compatibilityList.push(`Bambu Lab ${profile.printerModel}${nozzleStr}`);
+        } else {
+            // Generic Bambu -> expand to all models to ensure visibility
+            const commonBambuModels = ['X1 Carbon', 'X1', 'X1E', 'P1S', 'P1P', 'A1', 'A1 Mini'];
+            compatibilityList = commonBambuModels.map(m => `Bambu Lab ${m}${nozzleStr}`);
+        }
+      } else if (profile.printerBrand !== 'Other' && profile.printerModel !== 'Generic') {
+          // Other specific
           compatibilityList.push(`${profile.printerBrand} ${profile.printerModel}${nozzleStr}`);
       }
 
@@ -135,6 +146,8 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
           from: "User",
           instantiation: "true",
           filament_id: "",
+          filament_settings_id: [profile.profileName],
+          setting_id: profile.profileName,
           version: "1.6",
           compatible_printers: compatibilityList,
           

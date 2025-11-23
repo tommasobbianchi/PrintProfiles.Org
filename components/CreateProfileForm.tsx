@@ -49,12 +49,29 @@ const initialProfileState: Omit<FilamentProfile, 'id'> = {
 
 // 1. Bambu Studio / Orca Slicer (Standard JSON with Arrays)
 const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
-    // Construct compatibility string if specific model is selected
-    // e.g. "Bambu Lab X1 Carbon 0.4 nozzle"
-    const compatibilityList: string[] = [];
-    if (profile.printerBrand !== 'Other' && profile.printerModel !== 'Generic') {
-        const nozzleStr = profile.nozzleDiameter ? ` ${profile.nozzleDiameter} nozzle` : '';
-        compatibilityList.push(`${profile.printerBrand} ${profile.printerModel}${nozzleStr}`);
+    // Construct compatibility string
+    // CRITICAL FIX: If "Generic" model is selected for Bambu Lab, we must explicitly list ALL Bambu printers
+    // otherwise the importer ignores the profile because it doesn't match the current active machine.
+    let compatibilityList: string[] = [];
+    const nozzleStr = profile.nozzleDiameter ? ` ${profile.nozzleDiameter} nozzle` : '';
+
+    if (profile.printerBrand === 'Bambu Lab') {
+        if (profile.printerModel && profile.printerModel !== 'Generic') {
+            // Specific model selected
+            compatibilityList.push(`Bambu Lab ${profile.printerModel}${nozzleStr}`);
+        } else {
+            // Generic Bambu selected -> Add ALL common models to ensure visibility
+            const commonBambuModels = ['X1 Carbon', 'X1', 'X1E', 'P1S', 'P1P', 'A1', 'A1 Mini'];
+            compatibilityList = commonBambuModels.map(m => `Bambu Lab ${m}${nozzleStr}`);
+        }
+    } else if (profile.printerBrand !== 'Other') {
+        // Other specific brand
+        const modelStr = profile.printerModel !== 'Generic' ? ` ${profile.printerModel}` : '';
+        compatibilityList.push(`${profile.printerBrand}${modelStr}${nozzleStr}`);
+    } else {
+        // Truly generic (Brand "Other")
+        // Leave empty or add a generic wildcard if supported, but empty usually means "All" or "None" depending on version.
+        // For safety, we don't restrict it if it's generic.
     }
 
     // Bambu/Orca expect strict string arrays for most values
@@ -63,7 +80,9 @@ const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
         name: profile.profileName,
         from: "User",
         instantiation: "true",
-        filament_id: "",
+        filament_id: "", // ID can be empty for new imports
+        filament_settings_id: [profile.profileName], // Match name
+        setting_id: profile.profileName,
         version: "1.6",
         compatible_printers: compatibilityList,
         
