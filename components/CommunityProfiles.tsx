@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { FilamentProfile, PrinterBrand } from '../types';
-import { PRINTER_BRANDS, PRINTER_MODELS, NOZZLE_DIAMETERS, FILAMENT_MANUFACTURERS, FILAMENT_TYPES } from '../constants';
+import { PRINTER_BRANDS, PRINTER_MODELS, NOZZLE_DIAMETERS, FILAMENT_MANUFACTURERS, FILAMENT_TYPES, BAMBU_PRINTER_MAP } from '../constants';
 import DownloadIcon from './icons/DownloadIcon';
 
 interface CommunityProfilesProps {
@@ -121,18 +121,19 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
   // --- Export Generators ---
   const generateBambuJson = (profile: FilamentProfile) => {
       // Construct compatibility string
-      // FIX: Ensure broad compatibility for generic profiles to avoid import errors
       let compatibilityList: string[] = [];
       const nozzleStr = profile.nozzleDiameter ? ` ${profile.nozzleDiameter} nozzle` : '';
 
       if (profile.printerBrand === 'Bambu Lab') {
         if (profile.printerModel && profile.printerModel !== 'Generic') {
-            // Specific model
-            compatibilityList.push(`Bambu Lab ${profile.printerModel}${nozzleStr}`);
+            // Specific model: Map to internal name
+            const internalName = BAMBU_PRINTER_MAP[profile.printerModel] || BAMBU_PRINTER_MAP['Generic'];
+            compatibilityList.push(`${internalName}${nozzleStr}`);
         } else {
             // Generic Bambu -> expand to all models to ensure visibility
-            const commonBambuModels = ['X1 Carbon', 'X1', 'X1E', 'P1S', 'P1P', 'A1', 'A1 Mini'];
-            compatibilityList = commonBambuModels.map(m => `Bambu Lab ${m}${nozzleStr}`);
+            Object.values(BAMBU_PRINTER_MAP).forEach(internalName => {
+                compatibilityList.push(`${internalName}${nozzleStr}`);
+            });
         }
       } else if (profile.printerBrand !== 'Other' && profile.printerModel !== 'Generic') {
           // Other specific

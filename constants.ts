@@ -15,6 +15,17 @@ export const PRINTER_MODELS: Record<PrinterBrand, string[]> = {
     'Other': ['Generic']
 };
 
+// Mapping from UI model names to Official Slicer Internal Names
+export const BAMBU_PRINTER_MAP: Record<string, string> = {
+    'Generic': 'Bambu Lab P1P', // Fallback
+    'X1C': 'Bambu Lab X1 Carbon',
+    'X1E': 'Bambu Lab X1E',
+    'P1S': 'Bambu Lab P1S',
+    'P1P': 'Bambu Lab P1P',
+    'A1': 'Bambu Lab A1',
+    'A1 Mini': 'Bambu Lab A1 Mini'
+};
+
 export const NOZZLE_DIAMETERS = [0.2, 0.4, 0.6, 0.8];
 
 export const FILAMENT_MANUFACTURERS: string[] = [

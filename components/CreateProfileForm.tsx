@@ -1,7 +1,7 @@
 
 import React, { useState, useRef } from 'react';
 import { FilamentProfile, PrinterBrand, FilamentType } from '../types';
-import { PRINTER_BRANDS, FILAMENT_TYPES, FILAMENT_MANUFACTURERS, PRINTER_MODELS, NOZZLE_DIAMETERS } from '../constants';
+import { PRINTER_BRANDS, FILAMENT_TYPES, FILAMENT_MANUFACTURERS, PRINTER_MODELS, NOZZLE_DIAMETERS, BAMBU_PRINTER_MAP } from '../constants';
 import { suggestFilamentSettings } from '../services/geminiService';
 import { downloadBulkTemplate, processBulkFile } from '../utils/bulkImport';
 import { parseNativeSlicerProfile } from '../utils/slicerImport'; // New utility
@@ -50,19 +50,21 @@ const initialProfileState: Omit<FilamentProfile, 'id'> = {
 // 1. Bambu Studio / Orca Slicer (Standard JSON with Arrays)
 const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
     // Construct compatibility string
-    // CRITICAL FIX: If "Generic" model is selected for Bambu Lab, we must explicitly list ALL Bambu printers
-    // otherwise the importer ignores the profile because it doesn't match the current active machine.
     let compatibilityList: string[] = [];
     const nozzleStr = profile.nozzleDiameter ? ` ${profile.nozzleDiameter} nozzle` : '';
 
     if (profile.printerBrand === 'Bambu Lab') {
         if (profile.printerModel && profile.printerModel !== 'Generic') {
-            // Specific model selected
-            compatibilityList.push(`Bambu Lab ${profile.printerModel}${nozzleStr}`);
+            // Specific model selected: map to internal name
+            const internalName = BAMBU_PRINTER_MAP[profile.printerModel] || BAMBU_PRINTER_MAP['Generic'];
+            compatibilityList.push(`${internalName}${nozzleStr}`);
         } else {
             // Generic Bambu selected -> Add ALL common models to ensure visibility
-            const commonBambuModels = ['X1 Carbon', 'X1', 'X1E', 'P1S', 'P1P', 'A1', 'A1 Mini'];
-            compatibilityList = commonBambuModels.map(m => `Bambu Lab ${m}${nozzleStr}`);
+            const commonBambuModels = Object.values(BAMBU_PRINTER_MAP).filter(v => v !== 'Bambu Lab P1P'); // Avoid duplicate if P1P is default
+            // Add P1P explicitly or just use the whole map values
+            Object.values(BAMBU_PRINTER_MAP).forEach(internalName => {
+                 compatibilityList.push(`${internalName}${nozzleStr}`);
+            });
         }
     } else if (profile.printerBrand !== 'Other') {
         // Other specific brand
@@ -70,11 +72,11 @@ const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
         compatibilityList.push(`${profile.printerBrand}${modelStr}${nozzleStr}`);
     } else {
         // Truly generic (Brand "Other")
-        // Leave empty or add a generic wildcard if supported, but empty usually means "All" or "None" depending on version.
-        // For safety, we don't restrict it if it's generic.
+        // Leave empty or add a generic wildcard if supported
     }
 
     // Bambu/Orca expect strict string arrays for most values
+    // Using explicit String() conversion to prevent 0 -> "0" issues
     return {
         type: "filament",
         name: profile.profileName,
