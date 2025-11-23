@@ -486,10 +486,62 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'spec-3', profileName: 'Spectrum PA6 Low Warp', printerBrand: 'Other', manufacturer: 'Spectrum Filaments', brand: 'PA6', filamentType: 'Nylon', nozzleTemp: 255, bedTemp: 85, maxVolumetricSpeed: 8, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.14, dryingTemp: 80, dryingTime: '8h', notes: "Low warp Nylon blend." }),
   createPreset({ id: 'spec-4', profileName: 'Spectrum Stone Age PLA', printerBrand: 'Other', manufacturer: 'Spectrum Filaments', brand: 'Stone Age', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.30, notes: "Stone texture effect." }),
 
-  // Sunlu
+  // Stratasys (Generic Compatible Profiles)
+  createPreset({ id: 'str-1', profileName: 'Stratasys-Compatible ABS-M30', printerBrand: 'Other', manufacturer: 'Stratasys', brand: 'ABS-M30', filamentType: 'ABS', nozzleTemp: 270, bedTemp: 110, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 10, density: 1.04, notes: "High strength ABS. Requires high temp chamber." }),
+  createPreset({ id: 'str-2', profileName: 'Stratasys-Compatible ASA', printerBrand: 'Other', manufacturer: 'Stratasys', brand: 'ASA', filamentType: 'ASA', nozzleTemp: 270, bedTemp: 110, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07, notes: "UV stable industrial ASA." }),
+  createPreset({ id: 'str-3', profileName: 'Stratasys-Compatible ULTEM 9085', printerBrand: 'Other', manufacturer: 'Stratasys', brand: 'ULTEM', filamentType: 'Other', nozzleTemp: 375, bedTemp: 160, maxVolumetricSpeed: 6, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.34, notes: "PEI Aerospace grade. Extreme temp requirements." }),
+
+  // Sunlu (Expanded)
   createPreset({ id: 'sun-1', profileName: 'Sunlu PLA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'sun-2', profileName: 'Sunlu PETG', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
   createPreset({ id: 'sun-3', profileName: 'Sunlu ABS', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 245, bedTemp: 95, maxVolumetricSpeed: 15, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
+  createPreset({ id: 'sun-4', profileName: 'Sunlu PLA+', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 16, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Enhanced toughness." }),
+  createPreset({ id: 'sun-5', profileName: 'Sunlu PLA Meta', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'Meta', filamentType: 'PLA', nozzleTemp: 190, bedTemp: 55, maxVolumetricSpeed: 18, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High flow, low temp, high impact." }),
+  createPreset({ id: 'sun-6', profileName: 'Sunlu Silk PLA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'Silk', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Shiny finish." }),
+  createPreset({ id: 'sun-7', profileName: 'Sunlu Matte PLA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'Matte', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 14, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.28, notes: "Matte surface." }),
+  createPreset({ id: 'sun-8', profileName: 'Sunlu TPU', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 225, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+  createPreset({ id: 'sun-9', profileName: 'Sunlu ASA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'ASA', filamentType: 'ASA', nozzleTemp: 250, bedTemp: 90, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07 }),
+  createPreset({ id: 'sun-10', profileName: 'Sunlu Wood PLA', printerBrand: 'Other', manufacturer: 'Sunlu', brand: 'Wood', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.20 }),
+
+  // Taulman3D (USA - Nylon Specialists)
+  createPreset({ id: 'taul-1', profileName: 'Taulman Bridge Nylon', printerBrand: 'Other', manufacturer: 'Taulman3D', brand: 'Bridge', filamentType: 'Nylon', nozzleTemp: 250, bedTemp: 50, maxVolumetricSpeed: 10, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.13, dryingTemp: 80, dryingTime: '12h', notes: "Easy printing Nylon PA6/66." }),
+  createPreset({ id: 'taul-2', profileName: 'Taulman Alloy 910', printerBrand: 'Other', manufacturer: 'Taulman3D', brand: 'Alloy 910', filamentType: 'Nylon', nozzleTemp: 255, bedTemp: 50, maxVolumetricSpeed: 10, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.14, notes: "High tensile strength. Low shrinkage." }),
+  createPreset({ id: 'taul-3', profileName: 'Taulman T-Glase', printerBrand: 'Other', manufacturer: 'Taulman3D', brand: 'T-Glase', filamentType: 'PETT', nozzleTemp: 240, bedTemp: 65, maxVolumetricSpeed: 10, fanSpeedMin: 20, fanSpeedMax: 50, density: 1.27, notes: "High optical clarity PETT. Print slow for clear parts." }),
+  createPreset({ id: 'taul-4', profileName: 'Taulman PCTPE', printerBrand: 'Other', manufacturer: 'Taulman3D', brand: 'PCTPE', filamentType: 'Nylon', nozzleTemp: 235, bedTemp: 45, maxVolumetricSpeed: 8, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.10, notes: "Flexible Nylon. Nylon/TPE blend." }),
+  createPreset({ id: 'taul-5', profileName: 'Taulman Nylon 230', printerBrand: 'Other', manufacturer: 'Taulman3D', brand: 'Nylon 230', filamentType: 'Nylon', nozzleTemp: 230, bedTemp: 50, maxVolumetricSpeed: 10, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.14, notes: "Low temp Nylon. Printable on non-all-metal hotends." }),
+
+  // TECBears
+  createPreset({ id: 'tec-1', profileName: 'TECBears PLA', printerBrand: 'Other', manufacturer: 'TECBears', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'tec-2', profileName: 'TECBears PETG', printerBrand: 'Other', manufacturer: 'TECBears', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+
+  // TechInit (Italy)
+  createPreset({ id: 'tech-1', profileName: 'TechInit Carbon PA', printerBrand: 'Other', manufacturer: 'TechInit', brand: 'Carbon', filamentType: 'PA-CF', nozzleTemp: 260, bedTemp: 90, maxVolumetricSpeed: 8, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.22, notes: "Technical Carbon Nylon." }),
+  createPreset({ id: 'tech-2', profileName: 'TechInit PC-ABS', printerBrand: 'Other', manufacturer: 'TechInit', brand: 'PC-ABS', filamentType: 'ABS', nozzleTemp: 270, bedTemp: 100, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.15 }),
+  createPreset({ id: 'tech-3', profileName: 'TechInit ASA', printerBrand: 'Other', manufacturer: 'TechInit', brand: 'ASA', filamentType: 'ASA', nozzleTemp: 250, bedTemp: 95, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07 }),
+  createPreset({ id: 'tech-4', profileName: 'TechInit PETG Technical', printerBrand: 'Other', manufacturer: 'TechInit', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+
+  // Tianse
+  createPreset({ id: 'tian-1', profileName: 'Tianse PLA', printerBrand: 'Other', manufacturer: 'Tianse', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'tian-2', profileName: 'Tianse TPU', printerBrand: 'Other', manufacturer: 'Tianse', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+
+  // Tinmorry
+  createPreset({ id: 'tin-1', profileName: 'Tinmorry PLA', printerBrand: 'Other', manufacturer: 'Tinmorry', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'tin-2', profileName: 'Tinmorry Matte PLA', printerBrand: 'Other', manufacturer: 'Tinmorry', brand: 'Matte', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 14, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.28 }),
+  createPreset({ id: 'tin-3', profileName: 'Tinmorry Silk PLA', printerBrand: 'Other', manufacturer: 'Tinmorry', brand: 'Silk', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'tin-4', profileName: 'Tinmorry PETG', printerBrand: 'Other', manufacturer: 'Tinmorry', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+
+  // Torupy
+  createPreset({ id: 'tor-1', profileName: 'Torupy PLA', printerBrand: 'Other', manufacturer: 'Torupy', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'tor-2', profileName: 'Torupy PETG', printerBrand: 'Other', manufacturer: 'Torupy', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
+  createPreset({ id: 'tor-3', profileName: 'Torupy Silk PLA', printerBrand: 'Other', manufacturer: 'Torupy', brand: 'Silk', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'tor-4', profileName: 'Torupy TPU', printerBrand: 'Other', manufacturer: 'Torupy', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+
+  // Treed Filaments (Italy - Technical/Architectural)
+  createPreset({ id: 'tree-1', profileName: 'Treed Kyotoflex (Bio TPE)', printerBrand: 'Other', manufacturer: 'Treed Filaments', brand: 'Kyotoflex', filamentType: 'TPE', nozzleTemp: 230, bedTemp: 40, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.15, notes: "Biodegradable flexible." }),
+  createPreset({ id: 'tree-2', profileName: 'Treed Caementum (Cement)', printerBrand: 'Other', manufacturer: 'Treed Filaments', brand: 'Architectural', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.60, notes: "Mineral filled, cement look. 0.6mm nozzle recommended." }),
+  createPreset({ id: 'tree-3', profileName: 'Treed Heritage (Brick)', printerBrand: 'Other', manufacturer: 'Treed Filaments', brand: 'Architectural', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.50, notes: "Brick powder filled. 0.6mm nozzle recommended." }),
+  createPreset({ id: 'tree-4', profileName: 'Treed Pneumatique (Recycled Tire)', printerBrand: 'Other', manufacturer: 'Treed Filaments', brand: 'Pneumatique', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.20, notes: "Made from recycled tires. Matte black rubber." }),
+  createPreset({ id: 'tree-5', profileName: 'Treed Carbon PA', printerBrand: 'Other', manufacturer: 'Treed Filaments', brand: 'Carbon', filamentType: 'PA-CF', nozzleTemp: 255, bedTemp: 90, maxVolumetricSpeed: 8, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.20, notes: "Carbon fiber reinforced Nylon." }),
 
   // VoxelPLA (VOXEL)
   createPreset({ id: 'vox-1', profileName: 'VoxelPLA PLA+', printerBrand: 'Other', manufacturer: 'VoxelPLA', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 20, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High Speed optimized PLA+. Great for Bambu/K1." }),
