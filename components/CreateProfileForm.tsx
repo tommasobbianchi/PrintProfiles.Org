@@ -161,8 +161,10 @@ cooling = 1
 const generateIdeaMakerJson = (profile: Omit<FilamentProfile, 'id'>) => {
     return {
         header: {
-            machine_type: profile.printerBrand,
+            machine_type: profile.printerBrand === 'Other' ? 'Generic' : profile.printerBrand,
             filament_name: profile.profileName,
+            brand: profile.manufacturer,
+            material: profile.filamentType,
             created_by: "PrintProfiles.Org"
         },
         settings: {

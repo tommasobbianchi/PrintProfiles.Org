@@ -215,8 +215,10 @@ cooling = 1
   const generateIdeaMakerJson = (profile: FilamentProfile) => {
       return {
           header: {
-              machine_type: profile.printerBrand,
+              machine_type: profile.printerBrand === 'Other' ? 'Generic' : profile.printerBrand,
               filament_name: profile.profileName,
+              brand: profile.manufacturer,
+              material: profile.filamentType,
               created_by: "PrintProfiles.Org"
           },
           settings: {
@@ -227,7 +229,9 @@ cooling = 1
               platform_temp_degree_0: profile.bedTemp,
               fan_speed_min: profile.fanSpeedMin,
               fan_speed_max: profile.fanSpeedMax,
-              flow_rate: 100
+              flow_rate: 100,
+              retraction_speed: profile.retractionSpeed,
+              retraction_amount: profile.retractionDistance
           }
       };
   };
