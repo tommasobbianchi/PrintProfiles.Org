@@ -256,6 +256,27 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   // FormFutura
   createPreset({ id: 'ff-1', profileName: 'FormFutura ApolloX (ASA)', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'ApolloX', filamentType: 'ASA', nozzleTemp: 245, bedTemp: 90, maxVolumetricSpeed: 15, fanSpeedMin: 0, fanSpeedMax: 30, density: 1.07, notes: "Engineering ASA. Low warp." }),
   createPreset({ id: 'ff-2', profileName: 'FormFutura StoneFil', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'StoneFil', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.70, notes: "Stone effect. 0.5mm nozzle recommended." }),
+  createPreset({ id: 'ff-3', profileName: 'FormFutura TitanX', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'TitanX', filamentType: 'ABS', nozzleTemp: 245, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 10, fanSpeedMax: 30, density: 1.04, notes: "Industrial ABS. Zero warp technology." }),
+  createPreset({ id: 'ff-4', profileName: 'FormFutura Galaxy PLA', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'Galaxy', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High glitter content. Space look." }),
+  createPreset({ id: 'ff-5', profileName: 'FormFutura ReForm rPLA', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'ReForm', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "100% Recycled PLA." }),
+  createPreset({ id: 'ff-6', profileName: 'FormFutura Volcano PLA', printerBrand: 'Other', manufacturer: 'FormFutura', brand: 'Volcano', filamentType: 'PLA', nozzleTemp: 235, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Heat resistant PLA. Annealable." }),
+
+  // Francofil (France)
+  createPreset({ id: 'fr-1', profileName: 'Francofil PLA Blé (Wheat)', printerBrand: 'Other', manufacturer: 'Francofil', brand: 'Bio-Composite', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Wheat shell filled. Use 0.5/0.6 nozzle." }),
+  createPreset({ id: 'fr-2', profileName: 'Francofil PLA Coquille St Jacques', printerBrand: 'Other', manufacturer: 'Francofil', brand: 'Bio-Composite', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Scallop shell filled. Creamy texture. 0.5mm nozzle min." }),
+  createPreset({ id: 'fr-3', profileName: 'Francofil PLA Café', printerBrand: 'Other', manufacturer: 'Francofil', brand: 'Bio-Composite', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Coffee grounds filled. Dark brown texture." }),
+
+  // Geeetech
+  createPreset({ id: 'gee-1', profileName: 'Geeetech PLA', printerBrand: 'Other', manufacturer: 'Geeetech', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'gee-2', profileName: 'Geeetech PETG', printerBrand: 'Other', manufacturer: 'Geeetech', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+  createPreset({ id: 'gee-3', profileName: 'Geeetech Wood PLA', printerBrand: 'Other', manufacturer: 'Geeetech', brand: 'Wood', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 50, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.20, notes: "Wood texture. 0.5mm+ nozzle." }),
+  createPreset({ id: 'gee-4', profileName: 'Geeetech Silk PLA', printerBrand: 'Other', manufacturer: 'Geeetech', brand: 'Silk', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Shiny finish." }),
+  createPreset({ id: 'gee-5', profileName: 'Geeetech Marble PLA', printerBrand: 'Other', manufacturer: 'Geeetech', brand: 'Marble', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+
+  // GiantArm
+  createPreset({ id: 'giant-1', profileName: 'GiantArm PLA', printerBrand: 'Other', manufacturer: 'GiantArm', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'giant-2', profileName: 'GiantArm PETG', printerBrand: 'Other', manufacturer: 'GiantArm', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+  createPreset({ id: 'giant-3', profileName: 'GiantArm TPU', printerBrand: 'Other', manufacturer: 'GiantArm', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 3.5, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.21 }),
 
   // Hatchbox
   createPreset({ id: 'hatch-1', profileName: 'Hatchbox PLA', printerBrand: 'Other', manufacturer: 'Hatchbox', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
