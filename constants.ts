@@ -367,14 +367,35 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'mzy-2', profileName: 'Microzey ABS', printerBrand: 'Other', manufacturer: 'Microzey', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 245, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
   createPreset({ id: 'mzy-3', profileName: 'Microzey PETG', printerBrand: 'Other', manufacturer: 'Microzey', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
 
-  // NinjaTek
+  // Nanovia (France - Technical)
+  createPreset({ id: 'nano-1', profileName: 'Nanovia PLA EF', printerBrand: 'Other', manufacturer: 'Nanovia', brand: 'PLA EF', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Bio-sourced, easy print." }),
+  createPreset({ id: 'nano-2', profileName: 'Nanovia PETG CF', printerBrand: 'Other', manufacturer: 'Nanovia', brand: 'CF', filamentType: 'PETG', nozzleTemp: 245, bedTemp: 80, maxVolumetricSpeed: 10, fanSpeedMin: 20, fanSpeedMax: 50, density: 1.29, notes: "Carbon fiber reinforced PETG. Hardened nozzle." }),
+  createPreset({ id: 'nano-3', profileName: 'Nanovia PA-6 CF', printerBrand: 'Other', manufacturer: 'Nanovia', brand: 'PA-6 CF', filamentType: 'PA-CF', nozzleTemp: 260, bedTemp: 90, maxVolumetricSpeed: 8, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.19, dryingTemp: 80, dryingTime: '6h', notes: "Nylon 6 Carbon Fiber. Engineering grade." }),
+  createPreset({ id: 'nano-4', profileName: 'Nanovia Mt (Basalt)', printerBrand: 'Other', manufacturer: 'Nanovia', brand: 'Mt', filamentType: 'Other', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 8, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.40, notes: "Basalt reinforced. Highly rigid and ceramic touch." }),
+  createPreset({ id: 'nano-5', profileName: 'Nanovia PC-V0', printerBrand: 'Other', manufacturer: 'Nanovia', brand: 'PC-V0', filamentType: 'PC', nozzleTemp: 270, bedTemp: 110, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.20, notes: "Fire resistant UL94 V0." }),
+
+  // NinjaTek (Expanded)
   createPreset({ id: 'nt-1', profileName: 'NinjaTek NinjaFlex 85A', printerBrand: 'Other', manufacturer: 'NinjaTek', brand: 'NinjaFlex', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 40, maxVolumetricSpeed: 3, fanSpeedMin: 60, fanSpeedMax: 100, density: 1.19 }),
   createPreset({ id: 'nt-2', profileName: 'NinjaTek Armadillo', printerBrand: 'Other', manufacturer: 'NinjaTek', brand: 'Armadillo', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 50, maxVolumetricSpeed: 5, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.18, notes: "Rigid TPU (75D). Tough as Nylon." }),
+  createPreset({ id: 'nt-3', profileName: 'NinjaTek Cheetah 95A', printerBrand: 'Other', manufacturer: 'NinjaTek', brand: 'Cheetah', filamentType: 'TPU', nozzleTemp: 235, bedTemp: 40, maxVolumetricSpeed: 8, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.22, notes: "High speed flexible filament." }),
+  createPreset({ id: 'nt-4', profileName: 'NinjaTek Chinchilla 75A', printerBrand: 'Other', manufacturer: 'NinjaTek', brand: 'Chinchilla', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 40, maxVolumetricSpeed: 2.5, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.15, notes: "Skin safe, very soft touch." }),
+  createPreset({ id: 'nt-5', profileName: 'NinjaTek Eel (Conductive)', printerBrand: 'Other', manufacturer: 'NinjaTek', brand: 'Eel', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 45, maxVolumetricSpeed: 3, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.20, notes: "Conductive TPU." }),
 
-  // Overture
+  // Numakers (USA)
+  createPreset({ id: 'num-1', profileName: 'Numakers PLA+', printerBrand: 'Other', manufacturer: 'Numakers', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 16, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High flow, good layer adhesion." }),
+  createPreset({ id: 'num-2', profileName: 'Numakers PETG', printerBrand: 'Other', manufacturer: 'Numakers', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+  createPreset({ id: 'num-3', profileName: 'Numakers ASA', printerBrand: 'Other', manufacturer: 'Numakers', brand: 'ASA', filamentType: 'ASA', nozzleTemp: 250, bedTemp: 95, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07 }),
+  createPreset({ id: 'num-4', profileName: 'Numakers TPU', printerBrand: 'Other', manufacturer: 'Numakers', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 225, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+
+  // Overture (Expanded)
   createPreset({ id: 'ov-1', profileName: 'Overture PLA', printerBrand: 'Other', manufacturer: 'Overture', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'ov-2', profileName: 'Overture PETG', printerBrand: 'Other', manufacturer: 'Overture', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
   createPreset({ id: 'ov-3', profileName: 'Overture TPU 95A', printerBrand: 'Other', manufacturer: 'Overture', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 55, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+  createPreset({ id: 'ov-4', profileName: 'Overture Matte PLA', printerBrand: 'Other', manufacturer: 'Overture', brand: 'Matte', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 55, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.30, notes: "Matte finish. Can be brittle." }),
+  createPreset({ id: 'ov-5', profileName: 'Overture Rock PLA', printerBrand: 'Other', manufacturer: 'Overture', brand: 'Rock', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.28, notes: "Stone/Marble texture." }),
+  createPreset({ id: 'ov-6', profileName: 'Overture Easy Nylon', printerBrand: 'Other', manufacturer: 'Overture', brand: 'Easy Nylon', filamentType: 'Nylon', nozzleTemp: 255, bedTemp: 55, maxVolumetricSpeed: 6, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.12, dryingTemp: 75, dryingTime: '12h', notes: "PA6 based. Low warp." }),
+  createPreset({ id: 'ov-7', profileName: 'Overture PC', printerBrand: 'Other', manufacturer: 'Overture', brand: 'PC', filamentType: 'PC', nozzleTemp: 260, bedTemp: 100, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.19, notes: "Polycarbonate. BuildTak recommended." }),
+  createPreset({ id: 'ov-8', profileName: 'Overture High Speed TPU', printerBrand: 'Other', manufacturer: 'Overture', brand: 'HS-TPU', filamentType: 'TPU', nozzleTemp: 225, bedTemp: 55, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21, notes: "Can print faster than standard TPU." }),
 
   // Polymaker
   createPreset({ id: 'poly-1', profileName: 'Polymaker PolyLite PLA', printerBrand: 'Other', manufacturer: 'Polymaker', brand: 'PolyLite', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 55, maxVolumetricSpeed: 18, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.20 }),
@@ -391,12 +412,33 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'poly-fib-4', profileName: 'Polymaker Fiberon ABS-CF', printerBrand: 'Other', manufacturer: 'Polymaker', brand: 'Fiberon', filamentType: 'ABS', nozzleTemp: 260, bedTemp: 100, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.08, notes: "Carbon Fiber ABS." }),
   createPreset({ id: 'poly-fib-5', profileName: 'Polymaker Fiberon ASA-CF', printerBrand: 'Other', manufacturer: 'Polymaker', brand: 'Fiberon', filamentType: 'ASA', nozzleTemp: 260, bedTemp: 100, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.10, notes: "Carbon Fiber ASA." }),
 
+  // Priline (Marketplace)
+  createPreset({ id: 'pril-1', profileName: 'Priline Carbon Fiber PC', printerBrand: 'Other', manufacturer: 'Priline', brand: 'CF-PC', filamentType: 'PC', nozzleTemp: 255, bedTemp: 100, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.25, notes: "Popular Carbon Fiber Polycarbonate. Stiff and strong." }),
+  createPreset({ id: 'pril-2', profileName: 'Priline TPU', printerBrand: 'Other', manufacturer: 'Priline', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+
+  // PrintaMent (AprintaPro - Austria)
+  createPreset({ id: 'printm-1', profileName: 'PrintaMent PLA Soft-Touch', printerBrand: 'Other', manufacturer: 'PrintaMent', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Matte finish, less brittle." }),
+  createPreset({ id: 'printm-2', profileName: 'PrintaMent PETG', printerBrand: 'Other', manufacturer: 'PrintaMent', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
+  createPreset({ id: 'printm-3', profileName: 'PrintaMent PC-ABS', printerBrand: 'Other', manufacturer: 'PrintaMent', brand: 'PC-ABS', filamentType: 'ABS', nozzleTemp: 270, bedTemp: 110, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.15, notes: "Strong alloy. Enclosure required." }),
+
+  // Proto-pasta (USA - Exotics)
+  createPreset({ id: 'proto-1', profileName: 'Proto-pasta CF HTPLA', printerBrand: 'Other', manufacturer: 'Proto-pasta', brand: 'HTPLA', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.30, notes: "Carbon Fiber PLA. Annealable. Hardened Nozzle." }),
+  createPreset({ id: 'proto-2', profileName: 'Proto-pasta Conductive PLA', printerBrand: 'Other', manufacturer: 'Proto-pasta', brand: 'Conductive', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.25, notes: "Electrically conductive. Low resistance." }),
+  createPreset({ id: 'proto-3', profileName: 'Proto-pasta Magnetic Iron PLA', printerBrand: 'Other', manufacturer: 'Proto-pasta', brand: 'Magnetic', filamentType: 'PLA', nozzleTemp: 195, bedTemp: 60, maxVolumetricSpeed: 8, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.80, notes: "Ferromagnetic. Rustable. 0.6mm nozzle required." }),
+  createPreset({ id: 'proto-4', profileName: 'Proto-pasta Stainless Steel PLA', printerBrand: 'Other', manufacturer: 'Proto-pasta', brand: 'Metal', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 8, fanSpeedMin: 100, fanSpeedMax: 100, density: 2.40, notes: "Heavy, polishable. 0.6mm nozzle." }),
+
   // Prusa (Prusament)
   createPreset({ id: 'pru-1', profileName: 'Prusament PLA', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'pru-2', profileName: 'Prusament PETG', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'PETG', nozzleTemp: 250, bedTemp: 85, maxVolumetricSpeed: 13, fanSpeedMin: 30, fanSpeedMax: 50, density: 1.27 }),
   createPreset({ id: 'pru-3', profileName: 'Prusament ASA', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'ASA', nozzleTemp: 260, bedTemp: 105, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07 }),
   createPreset({ id: 'pru-4', profileName: 'Prusament PC Blend', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'PC', nozzleTemp: 275, bedTemp: 110, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 10, density: 1.20, notes: "Easy print PC." }),
   createPreset({ id: 'pru-5', profileName: 'Prusament PETG Magnetite', printerBrand: 'Prusa', manufacturer: 'Prusa', brand: 'Prusament', filamentType: 'PETG', nozzleTemp: 250, bedTemp: 90, maxVolumetricSpeed: 10, fanSpeedMin: 30, fanSpeedMax: 60, density: 2.30, notes: "Magnetic PETG. 0.6mm nozzle recommended." }),
+
+  // Qidi Tech
+  createPreset({ id: 'qidi-1', profileName: 'Qidi Tech PLA Rapido', printerBrand: 'Other', manufacturer: 'Qidi Tech', brand: 'Rapido', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 25, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High speed formula." }),
+  createPreset({ id: 'qidi-2', profileName: 'Qidi Tech ABS-GF25', printerBrand: 'Other', manufacturer: 'Qidi Tech', brand: 'ABS-GF', filamentType: 'ABS', nozzleTemp: 260, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.15, notes: "Glass Fiber reinforced ABS. High strength." }),
+  createPreset({ id: 'qidi-3', profileName: 'Qidi Tech PA12-CF', printerBrand: 'Other', manufacturer: 'Qidi Tech', brand: 'PA12-CF', filamentType: 'PA-CF', nozzleTemp: 290, bedTemp: 80, maxVolumetricSpeed: 10, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.05, dryingTemp: 100, dryingTime: '8h', notes: "Nylon 12 Carbon Fiber. Low moisture absorption." }),
+  createPreset({ id: 'qidi-4', profileName: 'Qidi Tech PETG-Tough', printerBrand: 'Other', manufacturer: 'Qidi Tech', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
 
   // SainSmart
   createPreset({ id: 'ss-1', profileName: 'SainSmart TPU 95A', printerBrand: 'Other', manufacturer: 'SainSmart', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 3.5, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.21 }),
