@@ -29,7 +29,7 @@ export const BAMBU_PRINTER_MAP: Record<string, string> = {
 export const NOZZLE_DIAMETERS = [0.2, 0.4, 0.6, 0.8];
 
 export const FILAMENT_MANUFACTURERS: string[] = [
-  '3DJake', '3DQF', '3DTrček', '3DXTech', 'AddNorth', 'Amolen', 'Anycubic', 'Arianeplast', 'Atomic Filament', 'AzureFilm', 'Bambu Lab', 'BASF Forward AM', 'BIQU', 'CC3D', 'Cliever', 'Conjure', 'ColorFabb', 'Creality', 'Deeplee', 'Devil Design', 'Dikale', 'DSM Novamid', 'Duramic 3D', 'EUMAKERS', 'Elegoo', 'Eryone', 'eSUN', 'Extrudr', 'FiberForce', 'Fiberlogy', 'FilaCube', 'Filamentive', 'Filamentum', 'Fillamentum', 'FiloAlfa', 'FlashForge', 'FormFutura', 'Francofil', 'GST3D', 'Geeetech', 'GiantArm', 'GratKit', 'HZST3D', 'Hatchbox', 'IGUS', 'IIID MAX', 'Innofil3D', 'JAMG HE', 'JAYO', 'Kaige', 'Kexcelled', 'Kimya (Armor)', 'Kingroon', 'MakeShaper', 'MatterHackers', 'Microzey', 'NEVSBYE', 'Nanovia', 'NinjaTek', 'Numakers', 'Overture', 'Polymaker', 'Porima', 'Priline', 'PrintaMent', 'Printologist', 'Proto-pasta', 'Prusa', 'Qidi Tech', 'R3D', 'Recreus', 'Rosa3D', 'SainSmart', 'Sakata 3D', 'Siraya Tech', 'Smart Materials 3D', 'Soleiyn', 'Sovol', 'Spectrum Filaments', 'Stratasys', 'Sunlu', 'TECBears', 'Taulman3D', 'TechInit', 'Tianse', 'Tinmorry', 'Torupy', 'Treed Filaments', 'Tronxy', 'Ultimaker', 'Verbatim', 'VoxelPLA', 'Voxelab', 'Winkle', 'XSTRAND (OwensCorning)', 'XYZprinting', 'Yousu', 'Ziro', 'Other'
+  '3DJake', '3DQF', '3DTrček', '3DXTech', 'AddNorth', 'Amolen', 'Anycubic', 'Arianeplast', 'Atomic Filament', 'AzureFilm', 'Bambu Lab', 'BASF Forward AM', 'BCN3D', 'BIQU', 'CC3D', 'Cliever', 'Conjure', 'ColorFabb', 'Creality', 'Deeplee', 'Devil Design', 'Dikale', 'DSM Novamid', 'Duramic 3D', 'Essentium', 'EUMAKERS', 'Elegoo', 'Eryone', 'eSUN', 'Extrudr', 'FiberForce', 'Fiberlogy', 'FilaCube', 'Filamentive', 'Filamentum', 'Fillamentum', 'FiloAlfa', 'FlashForge', 'FormFutura', 'Francofil', 'Fusion Filaments', 'GST3D', 'Geeetech', 'GiantArm', 'GratKit', 'HZST3D', 'Hatchbox', 'IGUS', 'IIID MAX', 'Inland', 'Innofil3D', 'JAMG HE', 'JAYO', 'Jessie', 'Kaige', 'Kexcelled', 'Kimya (Armor)', 'Kingroon', 'MakeShaper', 'MatterHackers', 'Microzey', 'NEVSBYE', 'Nanovia', 'NinjaTek', 'Numakers', 'Overture', 'Paramount 3D', 'Polymaker', 'Porima', 'Priline', 'PrintaMent', 'Printologist', 'Proto-pasta', 'Prusa', 'Qidi Tech', 'R3D', 'Raise3D', 'Real Filament', 'Recreus', 'Rosa3D', 'SainSmart', 'Sakata 3D', 'Siraya Tech', 'Smart Materials 3D', 'Soleiyn', 'Sovol', 'Spectrum Filaments', 'SpiderMaker', 'Stratasys', 'Sunlu', 'TECBears', 'Taulman3D', 'TechInit', 'Tianse', 'Tinmorry', 'Torupy', 'Treed Filaments', 'Tronxy', 'Ultimaker', 'Verbatim', 'VoxelPLA', 'Voxelab', 'Winkle', 'XSTRAND (OwensCorning)', 'XYZprinting', 'Yousu', 'Ziro', 'Zortrax', 'Other'
 ].sort();
 
 
@@ -139,6 +139,12 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'basf-3', profileName: 'BASF Ultrafuse TPU 85A', printerBrand: 'Other', manufacturer: 'BASF Forward AM', brand: 'Ultrafuse', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 40, maxVolumetricSpeed: 3, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.22 }),
   createPreset({ id: 'basf-4', profileName: 'BASF Ultrafuse rPET', printerBrand: 'Other', manufacturer: 'BASF Forward AM', brand: 'Ultrafuse', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27, notes: "Recycled PET." }),
   
+  // BCN3D
+  createPreset({ id: 'bcn-1', profileName: 'BCN3D PLA', printerBrand: 'Other', manufacturer: 'BCN3D', brand: 'BCN3D', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'bcn-2', profileName: 'BCN3D PETG', printerBrand: 'Other', manufacturer: 'BCN3D', brand: 'BCN3D', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+  createPreset({ id: 'bcn-3', profileName: 'BCN3D ABS', printerBrand: 'Other', manufacturer: 'BCN3D', brand: 'BCN3D', filamentType: 'ABS', nozzleTemp: 245, bedTemp: 100, maxVolumetricSpeed: 15, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
+  createPreset({ id: 'bcn-4', profileName: 'BCN3D TPU 98A', printerBrand: 'Other', manufacturer: 'BCN3D', brand: 'BCN3D', filamentType: 'TPU', nozzleTemp: 225, bedTemp: 55, maxVolumetricSpeed: 5, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.22 }),
+
   // BIQU (BigTreeTech)
   createPreset({ id: 'biq-1', profileName: 'BIQU PLA Basic', printerBrand: 'Other', manufacturer: 'BIQU', brand: 'Basic', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'biq-2', profileName: 'BIQU Matte PLA', printerBrand: 'Other', manufacturer: 'BIQU', brand: 'Matte', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
@@ -215,6 +221,10 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'ery-5', profileName: 'Eryone PETG', printerBrand: 'Other', manufacturer: 'Eryone', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
   createPreset({ id: 'ery-6', profileName: 'Eryone TPU 95A', printerBrand: 'Other', manufacturer: 'Eryone', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.21 }),
   
+  // Essentium
+  createPreset({ id: 'ess-1', profileName: 'Essentium PCTG', printerBrand: 'Other', manufacturer: 'Essentium', brand: 'PCTG', filamentType: 'Other', nozzleTemp: 260, bedTemp: 80, maxVolumetricSpeed: 14, fanSpeedMin: 20, fanSpeedMax: 50, density: 1.23, notes: "Superior impact resistance to PETG. High clarity." }),
+  createPreset({ id: 'ess-2', profileName: 'Essentium TPU 74D', printerBrand: 'Other', manufacturer: 'Essentium', brand: 'TPU 74D', filamentType: 'TPU', nozzleTemp: 240, bedTemp: 50, maxVolumetricSpeed: 8, fanSpeedMin: 80, fanSpeedMax: 100, density: 1.21, notes: "Semi-rigid TPU. High durability." }),
+
   // eSUN
   createPreset({ id: 'esun-1', profileName: 'eSUN PLA+', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 18, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Industry standard PLA+." }),
   createPreset({ id: 'esun-2', profileName: 'eSUN PETG', printerBrand: 'Other', manufacturer: 'eSUN', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
@@ -300,6 +310,9 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'fr-2', profileName: 'Francofil PLA Coquille St Jacques', printerBrand: 'Other', manufacturer: 'Francofil', brand: 'Bio-Composite', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Scallop shell filled. Creamy texture. 0.5mm nozzle min." }),
   createPreset({ id: 'fr-3', profileName: 'Francofil PLA Café', printerBrand: 'Other', manufacturer: 'Francofil', brand: 'Bio-Composite', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 55, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Coffee grounds filled. Dark brown texture." }),
 
+  // Fusion Filaments (USA)
+  createPreset({ id: 'fus-1', profileName: 'Fusion Filaments HTPLA', printerBrand: 'Other', manufacturer: 'Fusion Filaments', brand: 'HTPLA', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "High Performance PLA. Annealable for strength." }),
+
   // Geeetech
   createPreset({ id: 'gee-1', profileName: 'Geeetech PLA', printerBrand: 'Other', manufacturer: 'Geeetech', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'gee-2', profileName: 'Geeetech PETG', printerBrand: 'Other', manufacturer: 'Geeetech', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
@@ -346,6 +359,13 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'iiid-2', profileName: 'IIID MAX ASA', printerBrand: 'Other', manufacturer: 'IIID MAX', brand: 'ASA', filamentType: 'ASA', nozzleTemp: 245, bedTemp: 100, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07 }),
   createPreset({ id: 'iiid-3', profileName: 'IIID MAX PETG', printerBrand: 'Other', manufacturer: 'IIID MAX', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
 
+  // Inland (Micro Center)
+  createPreset({ id: 'inl-1', profileName: 'Inland PLA', printerBrand: 'Other', manufacturer: 'Inland', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Reliable standard PLA." }),
+  createPreset({ id: 'inl-2', profileName: 'Inland PLA+', printerBrand: 'Other', manufacturer: 'Inland', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 18, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Tougher PLA." }),
+  createPreset({ id: 'inl-3', profileName: 'Inland PETG', printerBrand: 'Other', manufacturer: 'Inland', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+  createPreset({ id: 'inl-4', profileName: 'Inland ABS', printerBrand: 'Other', manufacturer: 'Inland', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 245, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
+  createPreset({ id: 'inl-5', profileName: 'Inland TPU', printerBrand: 'Other', manufacturer: 'Inland', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+
   // Innofil3D
   createPreset({ id: 'inno-1', profileName: 'Innofil3D PLA', printerBrand: 'Other', manufacturer: 'Innofil3D', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'inno-2', profileName: 'Innofil3D EPR InnoPET', printerBrand: 'Other', manufacturer: 'Innofil3D', brand: 'EPR InnoPET', filamentType: 'PETG', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27, notes: "Low temp PET." }),
@@ -358,6 +378,10 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   // JAYO (Sunlu Sub-brand)
   createPreset({ id: 'jayo-1', profileName: 'JAYO PLA+', printerBrand: 'Other', manufacturer: 'JAYO', brand: 'PLA+', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Similar to Sunlu PLA+." }),
   createPreset({ id: 'jayo-2', profileName: 'JAYO PETG', printerBrand: 'Other', manufacturer: 'JAYO', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 70, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+
+  // Jessie (Printed Solid)
+  createPreset({ id: 'jes-1', profileName: 'Jessie PLA', printerBrand: 'Other', manufacturer: 'Jessie', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Made in USA." }),
+  createPreset({ id: 'jes-2', profileName: 'Jessie PETG', printerBrand: 'Other', manufacturer: 'Jessie', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
 
   // Kaige (China)
   createPreset({ id: 'kg-1', profileName: 'Kaige PLA', printerBrand: 'Other', manufacturer: 'Kaige', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
@@ -431,6 +455,11 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'ov-7', profileName: 'Overture PC', printerBrand: 'Other', manufacturer: 'Overture', brand: 'PC', filamentType: 'PC', nozzleTemp: 260, bedTemp: 100, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.19, notes: "Polycarbonate. BuildTak recommended." }),
   createPreset({ id: 'ov-8', profileName: 'Overture High Speed TPU', printerBrand: 'Other', manufacturer: 'Overture', brand: 'HS-TPU', filamentType: 'TPU', nozzleTemp: 225, bedTemp: 55, maxVolumetricSpeed: 10, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21, notes: "Can print faster than standard TPU." }),
 
+  // Paramount 3D
+  createPreset({ id: 'param-1', profileName: 'Paramount 3D PLA', printerBrand: 'Other', manufacturer: 'Paramount 3D', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Known for Pantone colors." }),
+  createPreset({ id: 'param-2', profileName: 'Paramount 3D ABS', printerBrand: 'Other', manufacturer: 'Paramount 3D', brand: 'ABS', filamentType: 'ABS', nozzleTemp: 240, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
+  createPreset({ id: 'param-3', profileName: 'Paramount 3D PETG', printerBrand: 'Other', manufacturer: 'Paramount 3D', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+
   // Polymaker
   createPreset({ id: 'poly-1', profileName: 'Polymaker PolyLite PLA', printerBrand: 'Other', manufacturer: 'Polymaker', brand: 'PolyLite', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 55, maxVolumetricSpeed: 18, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.20 }),
   createPreset({ id: 'poly-2', profileName: 'Polymaker PolyTerra PLA', printerBrand: 'Other', manufacturer: 'Polymaker', brand: 'PolyTerra', filamentType: 'PLA', nozzleTemp: 200, bedTemp: 55, maxVolumetricSpeed: 16, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.30, notes: "Matte finish. Bioplastic." }),
@@ -478,6 +507,16 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'r3d-1', profileName: 'R3D PLA', printerBrand: 'Other', manufacturer: 'R3D', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'r3d-2', profileName: 'R3D PETG', printerBrand: 'Other', manufacturer: 'R3D', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 235, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
   createPreset({ id: 'r3d-3', profileName: 'R3D PLA-CF', printerBrand: 'Other', manufacturer: 'R3D', brand: 'PLA-CF', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.28, notes: "Carbon Fiber PLA. Budget option." }),
+
+  // Raise3D
+  createPreset({ id: 'raise-1', profileName: 'Raise3D Premium PLA', printerBrand: 'Other', manufacturer: 'Raise3D', brand: 'Premium', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'raise-2', profileName: 'Raise3D Hyper Speed PLA', printerBrand: 'Other', manufacturer: 'Raise3D', brand: 'Hyper Speed', filamentType: 'PLA', nozzleTemp: 220, bedTemp: 60, maxVolumetricSpeed: 25, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24, notes: "Optimized for Hyper FFF." }),
+  createPreset({ id: 'raise-3', profileName: 'Raise3D Premium ABS', printerBrand: 'Other', manufacturer: 'Raise3D', brand: 'Premium', filamentType: 'ABS', nozzleTemp: 250, bedTemp: 100, maxVolumetricSpeed: 15, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.04 }),
+  createPreset({ id: 'raise-4', profileName: 'Raise3D Premium PETG', printerBrand: 'Other', manufacturer: 'Raise3D', brand: 'Premium', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 80, maxVolumetricSpeed: 13, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
+
+  // Real Filament
+  createPreset({ id: 'real-1', profileName: 'Real Filament PLA', printerBrand: 'Other', manufacturer: 'Real Filament', brand: 'PLA', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'real-2', profileName: 'Real Filament PETG', printerBrand: 'Other', manufacturer: 'Real Filament', brand: 'PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 40, fanSpeedMax: 80, density: 1.27 }),
 
   // Recreus (Spain - FilaFlex)
   createPreset({ id: 'rec-1', profileName: 'Recreus FilaFlex 82A', printerBrand: 'Other', manufacturer: 'Recreus', brand: 'FilaFlex', filamentType: 'TPU', nozzleTemp: 230, bedTemp: 50, maxVolumetricSpeed: 2.5, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.20, notes: "Original flexible filament. Slow print speed." }),
@@ -531,6 +570,9 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'spec-2', profileName: 'Spectrum ASA 275', printerBrand: 'Other', manufacturer: 'Spectrum Filaments', brand: 'ASA 275', filamentType: 'ASA', nozzleTemp: 240, bedTemp: 90, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.07, notes: "Optimized for easier printing." }),
   createPreset({ id: 'spec-3', profileName: 'Spectrum PA6 Low Warp', printerBrand: 'Other', manufacturer: 'Spectrum Filaments', brand: 'PA6', filamentType: 'Nylon', nozzleTemp: 255, bedTemp: 85, maxVolumetricSpeed: 8, fanSpeedMin: 0, fanSpeedMax: 0, density: 1.14, dryingTemp: 80, dryingTime: '8h', notes: "Low warp Nylon blend." }),
   createPreset({ id: 'spec-4', profileName: 'Spectrum Stone Age PLA', printerBrand: 'Other', manufacturer: 'Spectrum Filaments', brand: 'Stone Age', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.30, notes: "Stone texture effect." }),
+
+  // SpiderMaker (Taiwan)
+  createPreset({ id: 'spider-1', profileName: 'SpiderMaker Matte PLA', printerBrand: 'Other', manufacturer: 'SpiderMaker', brand: 'Matte', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 50, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.30, notes: "Pastel matte finish. Low stringing." }),
 
   // Stratasys (Generic Compatible Profiles)
   createPreset({ id: 'str-1', profileName: 'Stratasys-Compatible ABS-M30', printerBrand: 'Other', manufacturer: 'Stratasys', brand: 'ABS-M30', filamentType: 'ABS', nozzleTemp: 270, bedTemp: 110, maxVolumetricSpeed: 12, fanSpeedMin: 0, fanSpeedMax: 10, density: 1.04, notes: "High strength ABS. Requires high temp chamber." }),
@@ -653,6 +695,12 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: 'ziro-2', profileName: 'Ziro Silk PLA', printerBrand: 'Other', manufacturer: 'Ziro', brand: 'Silk', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'ziro-3', profileName: 'Ziro Marble PLA', printerBrand: 'Other', manufacturer: 'Ziro', brand: 'Marble', filamentType: 'PLA', nozzleTemp: 205, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
   createPreset({ id: 'ziro-4', profileName: 'Ziro Carbon Fiber PLA', printerBrand: 'Other', manufacturer: 'Ziro', brand: 'CF-PLA', filamentType: 'PLA', nozzleTemp: 215, bedTemp: 60, maxVolumetricSpeed: 12, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.28, notes: "Carbon Fiber filled. Matte black." }),
-  createPreset({ id: 'ziro-5', profileName: 'Ziro TPU', printerBrand: 'Other', manufacturer: 'Ziro', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 })
+  createPreset({ id: 'ziro-5', profileName: 'Ziro TPU', printerBrand: 'Other', manufacturer: 'Ziro', brand: 'TPU', filamentType: 'TPU', nozzleTemp: 220, bedTemp: 50, maxVolumetricSpeed: 4, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.21 }),
+
+  // Zortrax (Poland)
+  createPreset({ id: 'zor-1', profileName: 'Zortrax Z-PLA Pro', printerBrand: 'Other', manufacturer: 'Zortrax', brand: 'Z-PLA', filamentType: 'PLA', nozzleTemp: 210, bedTemp: 60, maxVolumetricSpeed: 15, fanSpeedMin: 100, fanSpeedMax: 100, density: 1.24 }),
+  createPreset({ id: 'zor-2', profileName: 'Zortrax Z-ABS', printerBrand: 'Other', manufacturer: 'Zortrax', brand: 'Z-ABS', filamentType: 'ABS', nozzleTemp: 275, bedTemp: 100, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 20, density: 1.05 }),
+  createPreset({ id: 'zor-3', profileName: 'Zortrax Z-PETG', printerBrand: 'Other', manufacturer: 'Zortrax', brand: 'Z-PETG', filamentType: 'PETG', nozzleTemp: 240, bedTemp: 75, maxVolumetricSpeed: 12, fanSpeedMin: 30, fanSpeedMax: 70, density: 1.27 }),
+  createPreset({ id: 'zor-4', profileName: 'Zortrax Z-ULTRAT', printerBrand: 'Other', manufacturer: 'Zortrax', brand: 'Z-ULTRAT', filamentType: 'ABS', nozzleTemp: 265, bedTemp: 105, maxVolumetricSpeed: 14, fanSpeedMin: 0, fanSpeedMax: 10, density: 1.07, notes: "High impact ABS blend. Requires raft usually." })
 
 ];
