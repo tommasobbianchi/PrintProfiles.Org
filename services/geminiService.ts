@@ -44,8 +44,16 @@ const responseSchema = {
             type: Type.NUMBER,
             description: "Maximum part cooling fan speed percentage.",
         },
+        dryingTemp: {
+            type: Type.NUMBER,
+            description: "Recommended drying temperature in Celsius (e.g. 50 for PLA, 80 for Nylon). Return 0 if drying is rarely needed.",
+        },
+        dryingTime: {
+            type: Type.STRING,
+            description: "Recommended drying time duration string (e.g. '4-6h').",
+        },
     },
-    required: ["nozzleTemp", "nozzleTempInitial", "bedTemp", "bedTempInitial", "printSpeed", "maxVolumetricSpeed", "retractionDistance", "retractionSpeed", "fanSpeedMin", "fanSpeedMax"],
+    required: ["nozzleTemp", "nozzleTempInitial", "bedTemp", "bedTempInitial", "printSpeed", "maxVolumetricSpeed", "retractionDistance", "retractionSpeed", "fanSpeedMin", "fanSpeedMax", "dryingTemp", "dryingTime"],
 };
 
 export const suggestFilamentSettings = async (
@@ -73,6 +81,7 @@ export const suggestFilamentSettings = async (
 
       Crucial: Determine the 'Max Volumetric Speed' (Flow Rate) in mm³/s accurately. This is critical for modern slicers like Orca Slicer and Bambu Studio.
       Also distinguish between initial layer temperatures and standard temperatures.
+      Include drying recommendations if the material is hygroscopic.
     `;
     
     const response = await ai.models.generateContent({

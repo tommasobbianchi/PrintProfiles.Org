@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { FilamentProfile, PrinterBrand } from '../types';
 import { PRINTER_BRANDS, PRINTER_MODELS, NOZZLE_DIAMETERS, FILAMENT_MANUFACTURERS, FILAMENT_TYPES, BAMBU_PRINTER_MAP } from '../constants';
@@ -312,6 +311,7 @@ cooling = 1
                 <Detail label="Max Flow" value={`${profile.maxVolumetricSpeed} mm³/s`} />
                 <Detail label="Fan" value={`${profile.fanSpeedMin}-${profile.fanSpeedMax}%`} />
                 {profile.density && <Detail label="Density" value={`${profile.density} g/cm³`} />}
+                {profile.dryingTemp && <Detail label="Drying" value={`${profile.dryingTemp}°C ${profile.dryingTime ? `(${profile.dryingTime})` : ''}`} />}
             </div>
             </div>
             
