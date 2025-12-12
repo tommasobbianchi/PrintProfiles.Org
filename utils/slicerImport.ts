@@ -24,7 +24,8 @@ export const parseNativeSlicerProfile = async (file: File): Promise<FilamentProf
                     spoolWeight: 1000,
                     filamentCost: 0,
                     notes: `Imported from ${file.name}`,
-                    colorHex: '#888888'
+                    colorHex: '#888888',
+                    flowRatio: 0.98 // Default
                 };
 
                 if (fileName.endsWith('.json') || fileName.endsWith('.filament')) {
@@ -46,6 +47,7 @@ export const parseNativeSlicerProfile = async (file: File): Promise<FilamentProf
                     if (root.hot_plate_temp) profile.bedTemp = getNum(root.hot_plate_temp);
                     if (root.hot_plate_temp_initial_layer) profile.bedTempInitial = getNum(root.hot_plate_temp_initial_layer);
                     if (root.filament_max_volumetric_speed) profile.maxVolumetricSpeed = getNum(root.filament_max_volumetric_speed);
+                    if (root.filament_flow_ratio) profile.flowRatio = getNum(root.filament_flow_ratio); // Orca support
                     if (root.fan_min_speed) profile.fanSpeedMin = getNum(root.fan_min_speed);
                     if (root.fan_max_speed) profile.fanSpeedMax = getNum(root.fan_max_speed);
                     if (root.filament_density) profile.density = getNum(root.filament_density);
@@ -115,6 +117,7 @@ export const parseNativeSlicerProfile = async (file: File): Promise<FilamentProf
                         if (key === 'filament_density') profile.density = numVal;
                         if (key === 'filament_cost') profile.filamentCost = numVal;
                         if (key === 'filament_colour') profile.colorHex = cleanVal;
+                        if (key === 'extrusion_multiplier') profile.flowRatio = numVal;
                     });
                 }
 

@@ -1,5 +1,4 @@
 
-
 export type FilamentType = 'PLA' | 'ABS' | 'PETG' | 'TPU' | 'ASA' | 'PC' | 'PA-CF' | 'PA-GF' | 'Copolyester' | 'PETT' | 'Nylon' | 'TPE' | 'PEBA' | 'Other';
 export type PrinterBrand = 'Bambu Lab' | 'Anycubic' | 'Creality' | 'Prusa' | 'Ultimaker' | 'Elegoo' | 'Other';
 
@@ -28,6 +27,7 @@ export interface FilamentProfile {
   // Speed & Extrusion
   printSpeed: number;
   maxVolumetricSpeed: number; // mm³/s - Critical for modern slicers
+  flowRatio?: number; // Extrusion multiplier (e.g. 0.98)
   retractionDistance: number;
   retractionSpeed: number;
   

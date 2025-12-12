@@ -30,6 +30,7 @@ const initialProfileState: Omit<FilamentProfile, 'id'> = {
   bedTempInitial: 60,
   printSpeed: 60,
   maxVolumetricSpeed: 15,
+  flowRatio: 0.98,
   retractionDistance: 1,
   retractionSpeed: 40,
   fanSpeedMin: 100,
@@ -60,8 +61,6 @@ const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
             compatibilityList.push(`${internalName}${nozzleStr}`);
         } else {
             // Generic Bambu selected -> Add ALL common models to ensure visibility
-            const commonBambuModels = Object.values(BAMBU_PRINTER_MAP).filter(v => v !== 'Bambu Lab P1P'); // Avoid duplicate if P1P is default
-            // Add P1P explicitly or just use the whole map values
             Object.values(BAMBU_PRINTER_MAP).forEach(internalName => {
                  compatibilityList.push(`${internalName}${nozzleStr}`);
             });
@@ -70,20 +69,15 @@ const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
         // Other specific brand
         const modelStr = profile.printerModel !== 'Generic' ? ` ${profile.printerModel}` : '';
         compatibilityList.push(`${profile.printerBrand}${modelStr}${nozzleStr}`);
-    } else {
-        // Truly generic (Brand "Other")
-        // Leave empty or add a generic wildcard if supported
     }
 
-    // Bambu/Orca expect strict string arrays for most values
-    // Using explicit String() conversion to prevent 0 -> "0" issues
     return {
         type: "filament",
         name: profile.profileName,
         from: "User",
         instantiation: "true",
-        filament_id: "", // ID can be empty for new imports
-        filament_settings_id: [profile.profileName], // Match name
+        filament_id: "", 
+        filament_settings_id: [profile.profileName],
         setting_id: profile.profileName,
         version: "1.6",
         compatible_printers: compatibilityList,
@@ -93,6 +87,7 @@ const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
         filament_vendor: [profile.manufacturer],
         filament_density: [String(profile.density || "1.24")],
         filament_cost: [String(profile.filamentCost || "0")],
+        filament_flow_ratio: [String(profile.flowRatio || "0.98")],
         
         nozzle_temperature: [String(profile.nozzleTemp)],
         nozzle_temperature_initial_layer: [String(profile.nozzleTempInitial)],
@@ -149,9 +144,9 @@ bed_temperature = ${profile.bedTemp}
 temperature = ${profile.nozzleTemp}
 min_fan_speed = ${profile.fanSpeedMin}
 max_fan_speed = ${profile.fanSpeedMax}
-filament_notes = "${profile.notes || ''} - Model: ${profile.printerModel}, Nozzle: ${profile.nozzleDiameter}"
+filament_notes = "${profile.notes || ''}"
 filament_colour = ${profile.colorHex || '#FF0000'}
-extrusion_multiplier = 1
+extrusion_multiplier = ${profile.flowRatio || 1}
 fan_always_on = 1
 cooling = 1
 `;
@@ -175,7 +170,7 @@ const generateIdeaMakerJson = (profile: Omit<FilamentProfile, 'id'>) => {
             platform_temp_degree_0: profile.bedTemp,
             fan_speed_min: profile.fanSpeedMin,
             fan_speed_max: profile.fanSpeedMax,
-            flow_rate: 100,
+            flow_rate: (profile.flowRatio || 0.98) * 100,
             retraction_speed: profile.retractionSpeed,
             retraction_amount: profile.retractionDistance
         }
@@ -206,7 +201,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    const isNumber = ['Temp', 'Speed', 'Distance', 'Diameter', 'Weight', 'Density', 'Cost'].some(key => name.includes(key));
+    const isNumber = ['Temp', 'Speed', 'Distance', 'Diameter', 'Weight', 'Density', 'Cost', 'flowRatio'].some(key => name.includes(key));
     
     // Special handling for printerBrand change to reset model
     if (name === 'printerBrand') {
@@ -283,8 +278,10 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
     const link = document.createElement('a');
     link.href = url;
     
-    const safeName = profile.profileName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-    link.download = `${safeName}_${prefix}.${extension}`;
+    // Naming convention: Manufacturer_Material_ProfileName.json
+    const manufacturerSafe = profile.manufacturer.replace(/[^a-z0-9]/gi, '');
+    const profileSafe = profile.profileName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    link.download = `${manufacturerSafe}_${profile.filamentType}_${profileSafe}.${extension}`;
     link.click();
     URL.revokeObjectURL(url);
   };
@@ -300,7 +297,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
       id: `user-${new Date().getTime()}`,
     };
     onShare(newProfile);
-    alert("Profile shared to the community tab!");
+    alert("Profile shared to the repository list!");
   };
 
   const handleImportClick = () => {
@@ -433,7 +430,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
   return (
     <div className="space-y-6">
        <div className="flex flex-wrap justify-between items-center mb-2 gap-2">
-         <h2 className="text-2xl font-bold text-stone-800">Create Filament Profile</h2>
+         <h2 className="text-2xl font-bold text-stone-800">Filament Data Input</h2>
          <div className="flex gap-2">
              <button
                  onClick={() => setImportMode(importMode === 'excel' ? 'none' : 'excel')}
@@ -586,7 +583,7 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
        {/* --- Single Editor UI (Default) --- */}
        {importMode === 'none' && (
        <>
-       <p className="text-center text-stone-500 mb-6">Fill in the details below, use AI to suggest settings, or import an existing profile.</p>
+       <p className="text-center text-stone-500 mb-6">Input your filament data below to automatically generate Orca/Bambu Slicer JSON files.</p>
 
         {error && <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-md text-center animate-pulse">{error}</div>}
 
@@ -640,8 +637,11 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
         <Section title="Speed & Cooling">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 <InputField label="Max Flow (mm³/s)" name="maxVolumetricSpeed" type="number" value={profile.maxVolumetricSpeed} step="0.1" />
+                <InputField label="Flow Ratio" name="flowRatio" type="number" value={profile.flowRatio} step="0.01" placeholder="0.98" />
                 <InputField label="Print Speed (mm/s)" name="printSpeed" type="number" value={profile.printSpeed} />
-                <div className="hidden md:block"></div>
+                
+                <div className="hidden md:block"></div> {/* Spacer */}
+                
                 <InputField label="Min Fan Speed (%)" name="fanSpeedMin" type="number" value={profile.fanSpeedMin} />
                 <InputField label="Max Fan Speed (%)" name="fanSpeedMax" type="number" value={profile.fanSpeedMax} />
             </div>
@@ -733,13 +733,13 @@ const CreateProfileForm: React.FC<CreateProfileFormProps> = ({ onShare }) => {
                     className="flex-1 min-w-[150px] flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105 shadow-md"
                 >
                     <ShareIcon />
-                    Share Profile
+                    Add to Repository
                 </button>
             </div>
 
             {/* Download Section */}
             <div className="border-t border-stone-200 pt-4 mt-2">
-                <p className="text-sm text-stone-500 text-center mb-3">Export Profile For:</p>
+                <p className="text-sm text-stone-500 text-center mb-3">Generate File:</p>
                 <div className="flex flex-wrap justify-center gap-3">
                     <button
                         onClick={() => downloadFile('bambu')}

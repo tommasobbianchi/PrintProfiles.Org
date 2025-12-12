@@ -9,7 +9,7 @@ import CommunityProfiles from './components/CommunityProfiles';
 type Tab = 'community' | 'create';
 
 const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<Tab>('community');
+  const [activeTab, setActiveTab] = useState<Tab>('create');
   const [communityProfiles, setCommunityProfiles] = useState<FilamentProfile[]>([]);
   const [isLoadingProfiles, setIsLoadingProfiles] = useState(true);
 
@@ -129,17 +129,17 @@ const App: React.FC = () => {
         <div className="flex justify-center mb-8">
             <div className="flex bg-white p-1 rounded-xl border border-stone-200 shadow-sm">
                 <button
-                    className={`py-2 px-6 font-medium text-sm rounded-lg transition-all duration-200 ${activeTab === 'community' ? 'bg-stone-800 text-white shadow-md' : 'text-stone-500 hover:text-stone-700 hover:bg-stone-50'}`}
-                    onClick={() => setActiveTab('community')}
-                >
-                    Download Profiles
-                </button>
-                <button
                     className={`py-2 px-6 font-medium text-sm rounded-lg transition-all duration-200 flex items-center gap-2 ${activeTab === 'create' ? 'bg-stone-800 text-white shadow-md' : 'text-stone-500 hover:text-stone-700 hover:bg-stone-50'}`}
                     onClick={() => setActiveTab('create')}
                 >
-                    {!isAuthenticated && <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>}
-                    Producer Area
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                    Input Data
+                </button>
+                <button
+                    className={`py-2 px-6 font-medium text-sm rounded-lg transition-all duration-200 ${activeTab === 'community' ? 'bg-stone-800 text-white shadow-md' : 'text-stone-500 hover:text-stone-700 hover:bg-stone-50'}`}
+                    onClick={() => setActiveTab('community')}
+                >
+                    Repository
                 </button>
             </div>
         </div>
@@ -148,74 +148,14 @@ const App: React.FC = () => {
             {activeTab === 'community' ? (
                 <CommunityProfiles profiles={communityProfiles} isLoading={isLoadingProfiles} />
             ) : (
-                /* Protected Create / Admin Area */
+                /* Create Area (Input Data) */
                 <div className="max-w-4xl mx-auto">
-                    {!isAuthenticated ? (
-                         <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-sm border border-stone-200 mt-10 text-center">
-                            <div className="mb-6">
-                                <div className="h-12 w-12 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                                </div>
-                                <h2 className="text-xl font-bold text-stone-800">Restricted Access</h2>
-                                <p className="text-stone-500 text-sm mt-2">Please enter the password to access the Producer and Admin settings.</p>
-                            </div>
-                            <form onSubmit={handleLogin} className="space-y-4">
-                                <input 
-                                    type="password" 
-                                    value={passwordInput}
-                                    onChange={(e) => setPasswordInput(e.target.value)}
-                                    placeholder="Enter Password"
-                                    className="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-stone-500 focus:border-stone-500 outline-none transition-all"
-                                />
-                                {authError && <p className="text-red-500 text-xs">{authError}</p>}
-                                <button type="submit" className="w-full bg-stone-800 text-white py-2.5 rounded-lg font-medium hover:bg-stone-700 transition-colors">
-                                    Unlock Access
-                                </button>
-                            </form>
-                        </div>
-                    ) : (
                         <div className="space-y-8">
-                            {/* Admin Toolbar */}
-                            <div className="bg-stone-800 text-stone-200 p-4 rounded-lg flex flex-wrap items-center justify-between gap-4 shadow-md">
-                                <div className="flex items-center gap-2">
-                                    <span className="bg-green-500 h-2 w-2 rounded-full animate-pulse"></span>
-                                    <span className="text-sm font-semibold tracking-wide text-white">ADMIN MODE ACTIVE</span>
-                                </div>
-                                <div className="flex gap-3">
-                                    <input 
-                                        type="file" 
-                                        accept=".svg, .png, .jpg" 
-                                        ref={logoInputRef}
-                                        className="hidden"
-                                        onChange={handleAppLogoUpload}
-                                    />
-                                    <button 
-                                        onClick={() => logoInputRef.current?.click()}
-                                        className="text-xs bg-stone-700 hover:bg-stone-600 text-white px-3 py-1.5 rounded border border-stone-600 transition-colors"
-                                    >
-                                        Change App Logo
-                                    </button>
-                                     <button 
-                                        onClick={handleResetLogo}
-                                        className="text-xs bg-stone-700 hover:bg-stone-600 text-white px-3 py-1.5 rounded border border-stone-600 transition-colors"
-                                    >
-                                        Reset Logo
-                                    </button>
-                                    <button 
-                                        onClick={handleLogout}
-                                        className="text-xs bg-red-900/50 hover:bg-red-900 text-red-100 px-3 py-1.5 rounded border border-red-900 transition-colors"
-                                    >
-                                        Logout
-                                    </button>
-                                </div>
-                            </div>
-
                             {/* The Create Form */}
                             <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
                                 <CreateProfileForm onShare={addProfileToCommunity} />
                             </div>
                         </div>
-                    )}
                 </div>
             )}
         </div>
