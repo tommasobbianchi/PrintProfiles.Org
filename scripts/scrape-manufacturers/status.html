@@ -2,16 +2,15 @@
 <style>
   :root{
     --bg:#f6f7f9; --panel:#fff; --ink:#12151a; --muted:#5c6672; --line:#e2e6ec;
-    --accent:#2f6df6; --ok:#158f5a; --warn:#b7791f; --bad:#c0392b;
-    --bar:#2f6df6; --bar2:#8fb0fa;
+    --accent:#2f6df6; --ok:#158f5a; --warn:#b7791f; --bad:#c0392b; --bar:#2f6df6;
   }
   @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
     --bg:#0e1116; --panel:#151a21; --ink:#e8ecf1; --muted:#98a3b0; --line:#242c36;
-    --accent:#6d9bff; --ok:#3ecf8e; --warn:#e0a83e; --bad:#ff6b5e; --bar:#6d9bff; --bar2:#2f4a86;
+    --accent:#6d9bff; --ok:#3ecf8e; --warn:#e0a83e; --bad:#ff6b5e; --bar:#6d9bff;
   }}
   :root[data-theme="dark"]{
     --bg:#0e1116; --panel:#151a21; --ink:#e8ecf1; --muted:#98a3b0; --line:#242c36;
-    --accent:#6d9bff; --ok:#3ecf8e; --warn:#e0a83e; --bad:#ff6b5e; --bar:#6d9bff; --bar2:#2f4a86;
+    --accent:#6d9bff; --ok:#3ecf8e; --warn:#e0a83e; --bad:#ff6b5e; --bar:#6d9bff;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
@@ -19,7 +18,9 @@
     padding:32px 20px 64px}
   .wrap{max-width:1080px;margin:0 auto}
   h1{font-size:26px;margin:0 0 4px;letter-spacing:-.02em}
-  .sub{color:var(--muted);margin:0 0 28px;font-size:14px}
+  .sub{color:var(--muted);margin:0 0 10px;font-size:14px}
+  .live{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;
+    background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn);margin-bottom:22px}
   h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
      margin:34px 0 12px;font-weight:600}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
@@ -47,27 +48,47 @@
   @media(max-width:760px){.two{grid-template-columns:1fr}}
   .funnel td:first-child{color:var(--muted)}
   .big{font-size:17px;font-weight:650}
+  .callout{border-left:3px solid var(--warn);padding-left:14px;margin:0}
 </style>
 
 <div class="wrap">
 <h1>Filament preset crawl — status</h1>
-<p class="sub">PrintProfiles.Org · <code>constants.ts</code> · 25 Aug 2026, 17:05 CEST · 10 local commits, nothing pushed</p>
+<p class="sub">PrintProfiles.Org · <code>constants.ts</code> · 25 Aug 2026, 17:55 CEST · 11 local commits, nothing pushed</p>
+<span class="live">● Crawl in progress — 37 Shopify brands, 13 of 37 hosts done, 599 rows so far</span>
 
 <div class="grid kpis">
-  <div class="card kpi"><div class="n">779</div><div class="l">presets in database</div><div class="d">+325 from 454</div></div>
+  <div class="card kpi"><div class="n">779</div><div class="l">presets committed</div><div class="d">+325 from 454</div></div>
   <div class="card kpi"><div class="n">325</div><div class="l">with official source URL</div><div class="d">was 0</div></div>
-  <div class="card kpi"><div class="n">17</div><div class="l">manufacturers crawled</div><div class="d">of 114 resolved</div></div>
-  <div class="card kpi"><div class="n">3,873</div><div class="l">product pages crawled</div><div class="d">1.0 GB cached</div></div>
-  <div class="card kpi"><div class="n">7</div><div class="l">parsers live</div><div class="d">2 cover many brands</div></div>
+  <div class="card kpi"><div class="n">8</div><div class="l">parsers live</div><div class="d">3 cover many brands</div></div>
+  <div class="card kpi"><div class="n">63</div><div class="l">brands wired to a parser</div><div class="d">of 114 resolved</div></div>
+  <div class="card kpi"><div class="n">1.0 GB</div><div class="l">cached pages</div><div class="d">re-runs cost no traffic</div></div>
+</div>
+
+<h2>The finding that changes the target</h2>
+<div class="card">
+<p class="callout"><strong>Most remaining brands do not publish print settings at all.</strong> Of the 59 brands on custom platforms, a generic multilingual parser reached only <strong>13</strong>. The other <strong>39</strong> were checked individually and yield nothing extractable — not because parsing failed, but because the data is not on the page.</p>
+<div class="scroll" style="margin-top:14px"><table>
+<thead><tr><th>Why nothing can be extracted</th><th class="n">Brands</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>Settings only in an off-site TDS <strong>PDF</strong></td><td class="n">5</td><td>colorFabb, UltiMaker, Raise3D, BASF/Forward AM</td></tr>
+<tr><td>Catalogue is <strong>client-rendered</strong> — served HTML is an empty shell</td><td class="n">8</td><td>MatterHackers (same 62 KB shell for every product), Filament PM, Tinmorry</td></tr>
+<tr><td>No material product pages in the sitemap</td><td class="n">6</td><td>Creality, MakerBot, Snapmaker, taulman3D</td></tr>
+<tr><td>Marketing copy only, no spec block</td><td class="n">7</td><td>igus, Verbatim, Gembird, Comgrow</td></tr>
+<tr><td>Host unreachable → gate fails closed</td><td class="n">9</td><td>smartfil.es, giantarm, mika3d, zortrax</td></tr>
+<tr><td>Refused / broken feed</td><td class="n">4</td><td>123-3D (sitemap 401), add:north (own sitemap 404s), Sakata3D (0 bytes)</td></tr>
+</tbody>
+</table></div>
+<p class="note">This is a ceiling on the whole approach, not a to-do item. Reading those TDS PDFs is the one avenue that would add meaningful coverage — the fetch layer already has <code>pdftotext</code> support and it is unused so far.</p>
 </div>
 
 <h2>Yield per parser</h2>
 <div class="card scroll">
 <table>
-<thead><tr><th>Parser</th><th>Brands</th><th class="n">Listed</th><th class="n">Parsed</th><th class="n">Presets</th><th style="width:130px">Parse rate</th></tr></thead>
+<thead><tr><th>Parser</th><th>Brands</th><th class="n">Listed</th><th class="n">Parsed</th><th class="n">Presets</th><th style="width:120px">Parse rate</th></tr></thead>
 <tbody>
-<tr><td><code>woocommerce</code></td><td>AzureFilm, Print-Me, Francofil, IC3D, iSanmate +2</td><td class="n">2,358</td><td class="n">510</td><td class="n">50</td><td><span class="track"><span class="bar" style="width:22%"></span></span></td></tr>
-<tr><td><code>shopify</code></td><td>Elegoo, Overture, Jayo, Protopasta, Amolen, Siraya, Kexcelled</td><td class="n">777</td><td class="n">179</td><td class="n">128</td><td><span class="track"><span class="bar" style="width:23%"></span></span></td></tr>
+<tr><td><code>shopify</code> <span class="pill p-warn">running</span></td><td>37 storefronts</td><td class="n">777+</td><td class="n">599+</td><td class="n">128</td><td><span class="track"><span class="bar" style="width:23%"></span></span></td></tr>
+<tr><td><code>woocommerce</code></td><td>7 storefronts</td><td class="n">2,358</td><td class="n">510</td><td class="n">50</td><td><span class="track"><span class="bar" style="width:22%"></span></span></td></tr>
+<tr><td><code>generic</code> <span class="pill p-warn">not yet run</span></td><td>13 custom sites</td><td class="n">1,457</td><td class="n">—</td><td class="n">—</td><td><span class="track"><span class="bar" style="width:0%"></span></span></td></tr>
 <tr><td><code>fillamentum</code></td><td>Fillamentum</td><td class="n">275</td><td class="n">210</td><td class="n">21</td><td><span class="track"><span class="bar" style="width:76%"></span></span></td></tr>
 <tr><td><code>eryone</code></td><td>Eryone</td><td class="n">207</td><td class="n">60</td><td class="n">29</td><td><span class="track"><span class="bar" style="width:29%"></span></span></td></tr>
 <tr><td><code>extrudr</code></td><td>Extrudr</td><td class="n">156</td><td class="n">136</td><td class="n">31</td><td><span class="track"><span class="bar" style="width:87%"></span></span></td></tr>
@@ -75,57 +96,61 @@
 <tr><td><code>prusament</code></td><td>Prusa</td><td class="n">23</td><td class="n">22</td><td class="n">23</td><td><span class="track"><span class="bar" style="width:96%"></span></span></td></tr>
 </tbody>
 </table>
-<p class="note">Parse rate is rows with a nozzle+bed pair over pages listed. The two low rates are data availability, not parsing: storefront feeds carry many non-filament products, and some publish no temperatures at all. Adding a rendered-page fallback took Shopify from 85 to 179 rows and moved Elegoo and Jayo off zero.</p>
+<p class="note">Parse rate is rows carrying a nozzle+bed pair over pages listed. Low rates are data availability, not parsing: storefront feeds are full of non-filament products. Adding a rendered-page fallback took Shopify from 85 to 179 rows and moved Elegoo and Jayo off zero.</p>
 </div>
 
-<h2>From 3,873 pages to 325 presets</h2>
+<h2>Generic parser — validated hosts</h2>
 <div class="card scroll">
-<table class="funnel">
+<table>
+<thead><tr><th>Host</th><th class="n">Listed</th><th class="n">Sampled</th><th class="n">Parsed</th></tr></thead>
 <tbody>
-<tr><td>Product pages listed</td><td class="n big">3,873</td><td>Across 17 storefronts</td></tr>
-<tr><td>Rows with nozzle + bed</td><td class="n big">1,186</td><td>The rest publish no temperatures</td></tr>
-<tr><td>− already in database</td><td class="n">−979</td><td>Mostly colour variants of known products</td></tr>
-<tr><td>− colour variants collapsed</td><td class="n">−13</td><td>Same product, different colour</td></tr>
-<tr><td>− not a filament</td><td class="n">−107</td><td>Samples, gift cards, bundles, spool holders</td></tr>
-<tr><td>− resold under wrong brand</td><td class="n">−23</td><td>colorFabb spools listed on ninjatek.com</td></tr>
-<tr><td>− physically impossible</td><td class="n">−1</td><td>Nozzle cooler than bed → wrong numbers paired</td></tr>
-<tr><td><strong>Presets added</strong></td><td class="n big" style="color:var(--accent)">325</td><td>Each citing its source URL</td></tr>
+<tr><td>eu.esun3d.com</td><td class="n">114</td><td class="n">8</td><td class="n">8</td></tr>
+<tr><td>spectrumfilaments.com</td><td class="n">111</td><td class="n">8</td><td class="n">8</td></tr>
+<tr><td>3djake.com <span class="note">(own brand only)</span></td><td class="n">231</td><td class="n">8</td><td class="n">8</td></tr>
+<tr><td>formfutura.com</td><td class="n">123</td><td class="n">8</td><td class="n">8</td></tr>
+<tr><td>rosa3d.pl</td><td class="n">300</td><td class="n">8</td><td class="n">8</td></tr>
+<tr><td>sunlu.com</td><td class="n">85</td><td class="n">8</td><td class="n">7</td></tr>
+<tr><td>nobufil.com</td><td class="n">154</td><td class="n">8</td><td class="n">6</td></tr>
+<tr><td>zyltech.com</td><td class="n">32</td><td class="n">8</td><td class="n">6</td></tr>
+<tr><td>winkle.shop</td><td class="n">19</td><td class="n">8</td><td class="n">3</td></tr>
+<tr><td>paramount-3d.com</td><td class="n">176</td><td class="n">8</td><td class="n">3</td></tr>
+<tr><td>aurapol.com</td><td class="n">101</td><td class="n">8</td><td class="n">2</td></tr>
+<tr><td>stronghero3d.com</td><td class="n">9</td><td class="n">8</td><td class="n">2</td></tr>
+<tr><td>gizmodorks.com</td><td class="n">12</td><td class="n">8</td><td class="n">1</td></tr>
+</tbody>
+</table>
+<p class="note">Only three hosts needed anything site-specific; the rest share one multilingual label set (EN/DE/PL/CS/ES/FR/NL/IT). Nulls are correct refusals — AURAPOL's recycled PET-G page contains no temperature at all — not silent failures.</p>
+</div>
+
+<h2>Real bugs the numeric parsing had to survive</h2>
+<div class="card scroll">
+<table>
+<thead><tr><th>Site</th><th>Trap</th><th>Consequence if unhandled</th></tr></thead>
+<tbody>
+<tr><td>Spectrum</td><td><code>/\bC\b/</code> matched the "c" in <em>Pęcice</em> in the footer address — JS word boundaries don't treat <code>ę</code> as a letter</td><td>Postal code 85 read as a drying temperature</td></tr>
+<tr><td>Paramount 3D</td><td><code>Bed / Print Temperature: 100-110 C (212-230 F) / 220-260 C</code> — bed stated first, °F noise</td><td>Bed and nozzle swapped; 212 read as a value</td></tr>
+<tr><td>eSUN</td><td><code>210-230℃/410-446℉</code> and full-width <code>＜300mm/s</code></td><td>Fahrenheit parsed as Celsius; a ceiling written as a setpoint</td></tr>
+<tr><td>SUNLU</td><td><code>250-260℃/50-100mm/s</code> in one field</td><td>Speed read as 255 instead of 75</td></tr>
+<tr><td>Gizmo Dorks</td><td>Range split across a tag boundary: <code>190&lt;/span&gt;&lt;span&gt;-225°C</code></td><td>Upper bound lost</td></tr>
+<tr><td>Extrudr</td><td><code>"up to 250"</code> / <code>"up to 1000 mm/s"</code></td><td>A marketing ceiling becomes a slicer default no printer can run</td></tr>
 </tbody>
 </table>
 </div>
 
-<div class="grid two" style="margin-top:12px">
-  <div class="card">
-    <h2 style="margin-top:0">Presets by manufacturer</h2>
-    <div class="scroll"><table><tbody>
-      <tr><td>Kexcelled</td><td class="n">57</td></tr>
-      <tr><td>Fiberlogy</td><td class="n">43</td></tr>
-      <tr><td>Extrudr</td><td class="n">31</td></tr>
-      <tr><td>Print-Me</td><td class="n">31</td></tr>
-      <tr><td>Eryone</td><td class="n">29</td></tr>
-      <tr><td>Prusa</td><td class="n">23</td></tr>
-      <tr><td>Amolen</td><td class="n">23</td></tr>
-      <tr><td>Fillamentum</td><td class="n">21</td></tr>
-      <tr><td>Protopasta</td><td class="n">14</td></tr>
-      <tr><td>AzureFilm</td><td class="n">11</td></tr>
-      <tr><td>Elegoo</td><td class="n">10</td></tr>
-      <tr><td>Overture</td><td class="n">10</td></tr>
-      <tr><td>Jayo</td><td class="n">8</td></tr>
-      <tr><td>Siraya Tech</td><td class="n">6</td></tr>
-      <tr><td>IC3D · Francofil · iSanmate</td><td class="n">8</td></tr>
-    </tbody></table></div>
-  </div>
-  <div class="card">
-    <h2 style="margin-top:0">Platform of 114 resolved brands</h2>
-    <div class="scroll"><table><tbody>
-      <tr><td>Custom / other <span class="pill p-warn">next</span></td><td class="n">59</td></tr>
-      <tr><td>Shopify <span class="pill p-ok">done</span></td><td class="n">37</td></tr>
-      <tr><td>WooCommerce <span class="pill p-ok">done</span></td><td class="n">7</td></tr>
-      <tr><td>Blocked <span class="pill p-bad">skipped</span></td><td class="n">9</td></tr>
-      <tr><td>No domain <span class="pill p-bad">skipped</span></td><td class="n">2</td></tr>
-    </tbody></table></div>
-    <p class="note">Only 14 of the 44 Shopify/WooCommerce brands have been crawled so far — the remaining 30 need no new parser, just a run.</p>
-  </div>
+<h2>From pages to presets</h2>
+<div class="card scroll">
+<table class="funnel">
+<tbody>
+<tr><td>Product pages listed</td><td class="n big">3,873</td><td>Across 17 storefronts (crawl to date)</td></tr>
+<tr><td>Rows with nozzle + bed</td><td class="n big">1,186</td><td>The rest publish no temperatures</td></tr>
+<tr><td>− already in database</td><td class="n">−979</td><td>Mostly colour variants of known products</td></tr>
+<tr><td>− not a filament</td><td class="n">−107</td><td>Samples, gift cards, bundles, printers, spare parts</td></tr>
+<tr><td>− resold under wrong brand</td><td class="n">−23</td><td>colorFabb spools listed on ninjatek.com</td></tr>
+<tr><td>− colour variants collapsed</td><td class="n">−13</td><td>Same product, different colour</td></tr>
+<tr><td>− physically impossible</td><td class="n">−1</td><td>Nozzle cooler than bed → wrong numbers paired</td></tr>
+<tr><td><strong>Presets added</strong></td><td class="n big" style="color:var(--accent)">325</td><td>Each citing its source URL</td></tr>
+</tbody>
+</table>
 </div>
 
 <h2>What remains, and how long</h2>
@@ -133,25 +158,25 @@
 <table>
 <thead><tr><th>Work</th><th class="n">Scope</th><th class="n">ETA</th><th>Status</th></tr></thead>
 <tbody>
-<tr><td>Remaining Shopify + WooCommerce brands</td><td class="n">30 brands</td><td class="n">~1.5 h</td><td>Parser exists — run only</td></tr>
-<tr><td>Custom-platform brands (SUNLU, eSUN, Creality, Anycubic…)</td><td class="n">54 brands</td><td class="n">~3.5 h</td><td><span class="pill p-warn">parser being built now</span></td></tr>
-<tr><td>Import + verify the above</td><td class="n">—</td><td class="n">~0.5 h</td><td>Scripted, idempotent</td></tr>
-<tr><td><strong>Total to full coverage of the 114</strong></td><td class="n">—</td><td class="n big">~5.5 h</td><td>Unattended, resumable</td></tr>
+<tr><td>Shopify crawl, 37 brands</td><td class="n">24 hosts left</td><td class="n">~1.5 h</td><td><span class="pill p-warn">running now</span></td></tr>
+<tr><td>Generic crawl, 13 custom sites</td><td class="n">1,457 pages</td><td class="n">~40 min</td><td>Parser ready, validated</td></tr>
+<tr><td>Import + verify</td><td class="n">—</td><td class="n">~20 min</td><td>Scripted, idempotent</td></tr>
+<tr><td><strong>Total to exhaust what is publicly published</strong></td><td class="n">—</td><td class="n big">~2.5 h</td><td>Unattended, resumable</td></tr>
+<tr><td>TDS PDF extraction <span class="pill p-warn">optional</span></td><td class="n">~5 brands</td><td class="n">unscoped</td><td>Only route to colorFabb, UltiMaker, BASF</td></tr>
 </tbody>
 </table>
-<p class="note"><strong>How the ETA is derived:</strong> the crawler holds ≥1.5 s per domain by policy, so wall-clock is set by page count, not by CPU. Measured: 2,358 WooCommerce pages in 19 min, 777 Shopify pages with rendered fallback in 6.5 min. The 54 custom-platform brands are assumed at ~150 products each (~8,100 pages) — that assumption is the main uncertainty, and the figure moves with it. Everything is cached and resumable, so an interrupted run costs no repeated traffic.</p>
+<p class="note"><strong>How the ETA is derived:</strong> the crawler holds ≥1.5 s per domain by policy, so wall-clock tracks page count, not CPU. Measured: 2,358 WooCommerce pages in 19 min; 777 Shopify pages with rendered fallback in 6.5 min. Remaining page counts are now known rather than assumed, so this estimate is firmer than the earlier one.</p>
 </div>
 
-<h2>Projected coverage</h2>
+<h2>Revised coverage projection</h2>
 <div class="card">
 <table>
 <tbody>
-<tr><td>Now</td><td class="n big">779</td><td>presets · 325 attributed</td></tr>
-<tr><td>After remaining Shopify / Woo brands</td><td class="n">~1,050</td><td>estimate</td></tr>
-<tr><td>After custom-platform brands</td><td class="n big" style="color:var(--accent)">~1,400</td><td>estimate at the observed 8.4% page-to-preset rate</td></tr>
+<tr><td>Committed now</td><td class="n big">779</td><td>325 attributed</td></tr>
+<tr><td>After the two crawls in flight</td><td class="n big" style="color:var(--accent)">~1,000–1,100</td><td>at the observed 8.4% page-to-preset rate</td></tr>
 </tbody>
 </table>
-<p class="note">These are projections from the measured rate, not promises. The rate varies a lot by vendor: Prusament converts 96% of pages, WooCommerce storefronts 22%.</p>
+<p class="note">This is <strong>revised down</strong> from the earlier ~1,400. That figure assumed the 59 custom-platform brands would convert like the rest; checking them one by one showed 39 publish nothing extractable. The ceiling is set by what manufacturers actually publish, not by crawler effort.</p>
 </div>
 
 <h2>Blocked — not crawled, no bypass attempted</h2>
@@ -166,42 +191,39 @@
 <tr><td>Hatchbox</td><td><code>hatchbox3d.com</code></td><td>403 bot challenge</td></tr>
 <tr><td>3D Solutech</td><td><code>3dsolutech.com</code></td><td>403 bot challenge</td></tr>
 <tr><td>Filoalfa</td><td><code>filoalfa3d.com</code></td><td>403 bot challenge</td></tr>
+<tr><td>REC</td><td><code>rec3d.ru</code></td><td>Empty-title bot wall</td></tr>
 <tr><td>Aceaddity</td><td><code>aceaddity.com</code></td><td><code>robots.txt</code> disallows <code>/</code> for <code>*</code></td></tr>
 <tr><td>Inslogic</td><td><code>inslogic.com</code></td><td><code>robots.txt</code> returns 522 → gate fails closed</td></tr>
 <tr><td>OVV3D · Polyalchemy</td><td>—</td><td>Reseller-only, no own domain resolves</td></tr>
 </tbody>
 </table>
-<p class="note">Bambu Lab and Polymaker are the two costliest losses — 14,154 and 4,704 community users respectively. Their data would need an official feed or their permission, not a workaround.</p>
+<p class="note">Bambu Lab and Polymaker are the costliest losses — 14,154 and 4,704 community users. Their data would need an official feed or their permission, not a workaround. Two earlier "blocked" verdicts were <em>wrong</em> and got corrected on re-check: Anycubic's catalogue is a Shopify storefront at <code>store.anycubic.com</code>, and <code>esun3d.com</code> was never blocked.</p>
 </div>
 
-<h2>Crawler conduct</h2>
+<div class="grid two" style="margin-top:12px">
 <div class="card">
-<table>
-<tbody>
-<tr><td>User-agent</td><td><code>PrintProfilesOrg-bot/1.0</code> with contact address</td></tr>
-<tr><td>Rate limit</td><td>≥1.5 s per domain, independent timers, honours <code>Retry-After</code></td></tr>
-<tr><td>robots.txt</td><td>RFC 9309 group matching, longest-match Allow/Disallow</td></tr>
-<tr><td>On robots 5xx / unreachable</td><td>Fails <strong>closed</strong> — treated as disallow-all</td></tr>
-<tr><td>Bot challenges</td><td>Never bypassed; host is logged and skipped</td></tr>
-<tr><td>Cache</td><td>4,218 files · 1.0 GB — re-runs cost no network</td></tr>
-</tbody>
-</table>
-<p class="note">Three robots defects were found and fixed during review: mid-pattern wildcards such as <code>Disallow: /*?add-to-cart=</code> compiled to a test that never matched and so failed <em>open</em>; <code>Allow:</code> was ignored; and a 5xx robots.txt was read as permission. Covered by <code>robots.test.mjs</code>.</p>
+<h2 style="margin-top:0">Crawler conduct</h2>
+<table><tbody>
+<tr><td>User-agent</td><td><code>PrintProfilesOrg-bot/1.0</code> + contact</td></tr>
+<tr><td>Rate limit</td><td>≥1.5 s/domain, honours <code>Retry-After</code></td></tr>
+<tr><td>robots.txt</td><td>RFC 9309, longest-match</td></tr>
+<tr><td>On robots 5xx</td><td>Fails <strong>closed</strong></td></tr>
+<tr><td>Bot challenges</td><td>Never bypassed</td></tr>
+</tbody></table>
+<p class="note">Three robots defects were found in review: mid-pattern wildcards such as <code>Disallow: /*?add-to-cart=</code> failed <em>open</em>; <code>Allow:</code> was ignored; a 5xx robots.txt was read as permission. Covered by <code>robots.test.mjs</code>.</p>
 </div>
-
-<h2>Build health</h2>
 <div class="card">
-<table>
-<tbody>
+<h2 style="margin-top:0">Build health</h2>
+<table><tbody>
 <tr><td><code>npx tsc --noEmit</code></td><td><span class="pill p-ok">pass</span></td></tr>
 <tr><td><code>npm run build</code></td><td><span class="pill p-ok">pass</span></td></tr>
 <tr><td><code>robots.test.mjs</code></td><td><span class="pill p-ok">pass</span></td></tr>
-<tr><td>Duplicate preset ids</td><td><span class="pill p-ok">0</span></td></tr>
-<tr><td>Physically implausible rows</td><td><span class="pill p-ok">0 of 779</span></td></tr>
+<tr><td>Duplicate ids</td><td><span class="pill p-ok">0</span></td></tr>
+<tr><td>Implausible rows</td><td><span class="pill p-ok">0 of 779</span></td></tr>
 <tr><td>Import re-run</td><td><span class="pill p-ok">idempotent</span></td></tr>
-</tbody>
-</table>
+</tbody></table>
+</div>
 </div>
 
-<p class="note" style="margin-top:26px">Generated from <code>constants.ts</code>, <code>scripts/scrape-manufacturers/data/*.json</code> and the crawl logs. Counts are exact; ETA and projected coverage are estimates with their assumptions stated above.</p>
+<p class="note" style="margin-top:26px">Generated from <code>constants.ts</code>, <code>scripts/scrape-manufacturers/data/*.json</code>, <code>VALIDATION*.md</code> and the crawl logs. Counts are exact; ETA and projected coverage are estimates with assumptions stated above.</p>
 </div>

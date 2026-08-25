@@ -22,7 +22,7 @@ const OTHER_MAKERS = ['colorFabb', 'Polymaker', 'Fillamentum', 'Prusament', 'Fib
   'Extrudr', 'FormFutura', 'BASF', 'Ultimaker', 'Spectrum', 'Devil Design', 'NinjaTek',
   'Protopasta', 'Eryone', 'Kexcelled', 'AzureFilm'];
 
-const JUNK = /\b(sample|gift\s*card|voucher|spool\s*holder|nozzle|bundle|sticker|t-shirt|dryer)\b|MOQ:|\bbe the first\b|\bnew colou?r collection\b|\bsuper\s*pack\b|\bmaster\s*spool\b|^\s*unset\b|\bunset\b|^\s*\d+\s*x\s|\+/i;
+const JUNK = /\b(sample|gift\s*card|voucher|spool\s*holder|nozzle|bundle|sticker|t-shirt|dryer)\b|MOQ:|\bbe the first\b|\bnew colou?r collection\b|\bsuper\s*pack\b|\bmaster\s*spool\b|^\s*unset\b|\bunset\b|^\s*\d+\s*x\s|\+|\b3d\s*printer\b|\bprinter\b|\bdiscontinued\b|\bresin\b|\bbuild\s*plate\b|\bhotend\b|\bextruder\b|\bkit\b|\bupgrade\b|\bfilament\s*dryer\b|\benclosure\b|\bbelt\b|\bmotor\b|\bscreen\b|\bcable\b/i;
 
 // Product identity lives in a small set of known tokens: the polymer, the fill, the grade.
 // Everything else in a storefront title is a colour name, and colour names are unbounded
