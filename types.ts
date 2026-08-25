@@ -1,5 +1,12 @@
 
-export type FilamentType = 'PLA' | 'ABS' | 'PETG' | 'TPU' | 'ASA' | 'PC' | 'PA-CF' | 'PA-GF' | 'Copolyester' | 'PETT' | 'Nylon' | 'TPE' | 'PEBA' | 'Other';
+export type FilamentType =
+  | 'PLA' | 'ABS' | 'PETG' | 'TPU' | 'ASA' | 'PC' | 'PA-CF' | 'PA-GF'
+  | 'Copolyester' | 'PETT' | 'Nylon' | 'TPE' | 'PEBA'
+  // Distinct polymers, not marketing grades: "PLA+" stays PLA and carries its grade in
+  // `brand`, but PCTG/PVB/PP/HIPS et al. print differently enough to need their own type.
+  | 'PCTG' | 'PVB' | 'PP' | 'HIPS' | 'PEI' | 'BVOH' | 'PVA'
+  | 'PA6' | 'PA12' | 'PET' | 'CPE' | 'PHA'
+  | 'Other';
 export type PrinterBrand = 'Bambu Lab' | 'Anycubic' | 'Creality' | 'Prusa' | 'Ultimaker' | 'Elegoo' | 'Other';
 
 export interface FilamentProfile {
