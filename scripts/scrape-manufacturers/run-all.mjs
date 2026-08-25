@@ -17,7 +17,7 @@ const DATA = join(HERE, 'data');
 const MAX = Number(process.env.MAX_PER_PARSER) || Infinity;
 const FLUSH_EVERY = 5;
 
-const PARSERS = ['prusament', 'fiberlogy', 'extrudr', 'fillamentum', 'eryone'];
+const PARSERS = ['prusament', 'fiberlogy', 'extrudr', 'fillamentum', 'eryone', 'shopify', 'woocommerce'];
 
 async function main() {
   await mkdir(DATA, { recursive: true });

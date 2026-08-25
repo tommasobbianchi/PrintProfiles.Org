@@ -1,0 +1,141 @@
+2026-08-25T13:39:18.823Z === run start === MAX_PER_PARSER=unlimited
+2026-08-25T13:39:18.935Z prusament: 23 listed, 22 already saved, 1 pending
+2026-08-25T13:39:19.026Z fiberlogy: 77 listed, 69 already saved, 8 pending
+2026-08-25T13:39:19.134Z extrudr: 156 listed, 136 already saved, 20 pending
+2026-08-25T13:39:19.372Z fillamentum: 275 listed, 210 already saved, 65 pending
+2026-08-25T13:39:20.076Z eryone: 207 listed, 60 already saved, 147 pending
+2026-08-25T13:39:23.051Z shopify: 777 listed, 85 already saved, 692 pending
+2026-08-25T13:39:40.278Z woocommerce iSanmate (isanmate.com): 366 product URLs
+2026-08-25T13:40:24.148Z woocommerce AzureFilm (azurefilm.com): 935 product URLs
+2026-08-25T13:40:31.357Z woocommerce Das Filament (dasfilament.de): 384 product URLs
+2026-08-25T13:40:42.995Z woocommerce NinjaTek (ninjatek.com): 200 product URLs
+2026-08-25T13:40:55.685Z woocommerce Print-Me (print-me.pl): 342 product URLs
+2026-08-25T13:40:59.256Z woocommerce Francofil (francofil.fr): 121 product URLs
+2026-08-25T13:40:59.794Z woocommerce IC3D (ic3dprinters.com): 10 product URLs
+2026-08-25T13:40:59.795Z woocommerce: 2358 listed, 0 already saved, 2358 pending
+2026-08-25T13:40:59.826Z woocommerce ok iSANMATE LW-PLA Lightweight PLA Filament (nozzle 240°C / bed 53°C) https://www.isanmate.com/product/lw-pla-filament/
+2026-08-25T13:40:59.893Z woocommerce ok iSANMATE PEI1010 3D Filament (nozzle 100°C / bed 120°C) https://www.isanmate.com/product/pei1010-3d-filament/
+2026-08-25T13:40:59.900Z woocommerce ok PETG CF Onyx Black (nozzle 250°C / bed 60°C) https://azurefilm.com/product/petg-cf-onyx-black/
+2026-08-25T13:40:59.901Z woocommerce ok PETG CF Olive Green (nozzle 250°C / bed 60°C) https://azurefilm.com/product/petg-cf-olive-green/
+2026-08-25T13:40:59.901Z woocommerce ok PLA CF Onyx Black (nozzle 220°C / bed 45°C) https://azurefilm.com/product/pla-cf-onyx-black/
+2026-08-25T13:40:59.903Z woocommerce ok PLA CF Damson Bordeaux (nozzle 220°C / bed 45°C) https://azurefilm.com/product/pla-cf-damson-bordeaux/
+2026-08-25T13:40:59.904Z woocommerce ok PLA CF Forest Green (nozzle 220°C / bed 45°C) https://azurefilm.com/product/pla-cf-forest-green/
+2026-08-25T13:40:59.905Z woocommerce ok PLA CF Abyss Blue (nozzle 220°C / bed 45°C) https://azurefilm.com/product/pla-cf-abyss-blue/
+2026-08-25T13:40:59.906Z woocommerce ok PLA Original filament Army Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-army-green/
+2026-08-25T13:40:59.907Z woocommerce ok PLA+ Black (nozzle 215°C / bed 60°C) https://azurefilm.com/product/pla-black/
+2026-08-25T13:40:59.909Z woocommerce ok PLA+ White (nozzle 215°C / bed 60°C) https://azurefilm.com/product/pla-white/
+2026-08-25T13:40:59.911Z woocommerce ok PLA Original filament Purple (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-purple/
+2026-08-25T13:41:06.164Z woocommerce ok Refill PLA Caribbean Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-caribbean-green/
+2026-08-25T13:41:06.165Z woocommerce ok Refill PLA Lagoon (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-lagoon/
+2026-08-25T13:41:06.166Z woocommerce ok Refill PLA Fuchsia Pink (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-fuchsia-pink/
+2026-08-25T13:41:06.174Z woocommerce ok Refill PLA Transparent (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-transparent/
+2026-08-25T13:41:06.174Z woocommerce ok Refill PLA Sunset Orange (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-sunset-orange/
+2026-08-25T13:41:06.184Z woocommerce ok Refill PLA filament Champagne Gold (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-champagne-gold/
+2026-08-25T13:41:06.184Z woocommerce ok Refill PLA filament Champagne (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-champagne/
+2026-08-25T13:41:06.184Z woocommerce ok Refill PLA filament Army Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-army-green/
+2026-08-25T13:41:06.187Z woocommerce ok SUPER PACK PLA MIX (nozzle 215°C / bed 55°C) https://azurefilm.com/product/super-pack-pla-mix/
+2026-08-25T13:41:06.187Z woocommerce ok SUPER PACK PLA WHITE & GREY (nozzle 215°C / bed 55°C) https://azurefilm.com/product/super-pack-pla-white-grey/
+2026-08-25T13:41:06.187Z woocommerce ok SUPER PACK PLA BLACK & GREY (nozzle 215°C / bed 55°C) https://azurefilm.com/product/super-pack-pla-black-grey/
+2026-08-25T13:41:06.188Z woocommerce ok SUPER PACK PLA BLACK & WHITE (nozzle 215°C / bed 55°C) https://azurefilm.com/product/super-pack-pla-black-white/
+2026-08-25T13:41:06.188Z woocommerce ok SUPER PACK PLA Grey (nozzle 215°C / bed 55°C) https://azurefilm.com/product/super-pack-pla-grey/
+2026-08-25T13:41:06.200Z woocommerce ok SUPER PACK PLA White (nozzle 215°C / bed 55°C) https://azurefilm.com/product/super-pack-pla-white/
+2026-08-25T13:41:06.201Z woocommerce ok SUPER PACK PLA Black (nozzle 215°C / bed 55°C) https://azurefilm.com/product/super-pack-pla-black/
+2026-08-25T13:41:21.495Z woocommerce ok PLA Original Cyan Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-cyan-sample/
+2026-08-25T13:41:21.499Z woocommerce ok PLA Original Magenta Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-magenta-sample/
+2026-08-25T13:41:21.500Z woocommerce ok Refill PLA filament Cyan (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-cyan/
+2026-08-25T13:41:21.501Z woocommerce ok Refill PLA filament Magenta (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-magenta/
+2026-08-25T13:41:21.502Z woocommerce ok PLA Original filament Cyan (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-cyan/
+2026-08-25T13:41:21.502Z woocommerce ok PLA Original filament Magenta (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-magenta/
+2026-08-25T13:41:21.507Z woocommerce ok Refill PLA filament Anthracite (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-anthracite/
+2026-08-25T13:41:21.507Z woocommerce ok Refill PLA filament Foggy White (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-foggy-white/
+2026-08-25T13:41:21.508Z woocommerce ok Refill PLA filament Marble (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-marble/
+2026-08-25T13:41:21.508Z woocommerce ok Refill PLA filament Galaxy Black (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-galaxy-black/
+2026-08-25T13:41:21.509Z woocommerce ok Refill PLA filament Light Grey (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-light-grey/
+2026-08-25T13:41:21.509Z woocommerce ok Refill PLA filament Shark Grey (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-shark-grey/
+2026-08-25T13:41:21.510Z woocommerce ok Refill PLA filament Light Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-light-green/
+2026-08-25T13:41:21.510Z woocommerce ok Refill PLA filament Emerald Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-emerald-green/
+2026-08-25T13:41:21.511Z woocommerce ok Refill PLA filament Navy Blue (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-navy-blue/
+2026-08-25T13:41:21.511Z woocommerce ok Refill PLA filament Pink (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-pink/
+2026-08-25T13:41:21.511Z woocommerce ok Refill PLA filament Purple (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-purple/
+2026-08-25T13:41:21.512Z woocommerce ok Refill PLA filament Red Wine (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-red-wine/
+2026-08-25T13:41:21.512Z woocommerce ok Refill PLA filament Gold (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-gold/
+2026-08-25T13:41:21.513Z woocommerce ok Refill PLA filament Mustard Brown (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-mustard-brown/
+2026-08-25T13:41:21.515Z woocommerce ok Refill PLA filament Unset (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-unset/
+2026-08-25T13:41:24.067Z woocommerce ok 2x Refill PLA Black + 2x Master Spool (nozzle 215°C / bed 55°C) https://azurefilm.com/product/2x-refill-pla-black-2x-master-spool/
+2026-08-25T13:41:24.069Z woocommerce ok 2x Refill PLA White + 2x Master Spool (nozzle 215°C / bed 55°C) https://azurefilm.com/product/2x-refill-pla-white-2x-master-spool/
+2026-08-25T13:41:24.082Z woocommerce ok ABS Prime filament Red (nozzle 253°C / bed 85°C) https://azurefilm.com/product/abs-prime-filament-red/
+2026-08-25T13:41:24.082Z woocommerce ok ASA Prime filament Nature (nozzle 245°C / bed 90°C) https://azurefilm.com/product/asa-prime-filament-nature/
+2026-08-25T13:41:24.084Z woocommerce ok ABS Prime filament White Sample (nozzle 253°C / bed 85°C) https://azurefilm.com/product/abs-prime-filament-white-sample/
+2026-08-25T13:41:24.085Z woocommerce ok ABS Prime filament Black Sample (nozzle 253°C / bed 85°C) https://azurefilm.com/product/abs-prime-filament-black-sample/
+2026-08-25T13:41:24.085Z woocommerce ok ASA Prime filament White Sample (nozzle 245°C / bed 90°C) https://azurefilm.com/product/asa-prime-filament-white-sample/
+2026-08-25T13:41:24.088Z woocommerce ok ASA Prime filament Black Sample (nozzle 245°C / bed 90°C) https://azurefilm.com/product/asa-prime-filament-black-sample/
+2026-08-25T13:41:24.092Z woocommerce ok ABS Prime filament Black (nozzle 253°C / bed 85°C) https://azurefilm.com/product/abs-prime-filament-black/
+2026-08-25T13:41:24.094Z woocommerce ok ABS Prime filament Silver (nozzle 253°C / bed 85°C) https://azurefilm.com/product/abs-prime-filament-silver/
+2026-08-25T13:41:24.094Z woocommerce ok ABS Prime filament White (nozzle 253°C / bed 85°C) https://azurefilm.com/product/abs-prime-filament-white/
+2026-08-25T13:41:24.095Z woocommerce ok ABS Prime filament Dark Blue (nozzle 253°C / bed 85°C) https://azurefilm.com/product/abs-prime-filament-dark-blue/
+2026-08-25T13:41:24.097Z woocommerce ok ASA Prime filament Black (nozzle 245°C / bed 90°C) https://azurefilm.com/product/asa-prime-filament-black/
+2026-08-25T13:41:24.098Z woocommerce ok ASA Prime filament Silver (nozzle 245°C / bed 90°C) https://azurefilm.com/product/asa-prime-filament-silver/
+2026-08-25T13:41:24.099Z woocommerce ok ASA Prime filament White (nozzle 245°C / bed 90°C) https://azurefilm.com/product/asa-prime-filament-white/
+2026-08-25T13:41:24.100Z woocommerce ok ASA Prime filament Dark Blue (nozzle 245°C / bed 90°C) https://azurefilm.com/product/asa-prime-filament-dark-blue/
+2026-08-25T13:41:24.101Z woocommerce ok ASA Prime filament Red (nozzle 245°C / bed 90°C) https://azurefilm.com/product/asa-prime-filament-red/
+2026-08-25T13:41:24.107Z woocommerce ok PC ABS Black Sample (nozzle 275°C / bed 110°C) https://azurefilm.com/product/pc-abs-black-sample/
+2026-08-25T13:41:24.108Z woocommerce ok PC ABS filament Natur (nozzle 275°C / bed 110°C) https://azurefilm.com/product/pc-abs-filament-natur/
+2026-08-25T13:41:24.109Z woocommerce ok PC ABS filament Black (nozzle 275°C / bed 110°C) https://azurefilm.com/product/pc-abs-filament-black/
+2026-08-25T13:41:24.109Z woocommerce ok PC ABS filament White (nozzle 275°C / bed 110°C) https://azurefilm.com/product/pc-abs-filament-white/
+2026-08-25T13:41:24.110Z woocommerce ok PLA Original filament Coral Red (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-coral-red/
+2026-08-25T13:41:24.131Z woocommerce ok Refill PLA filament Orange (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-orange/
+2026-08-25T13:41:24.132Z woocommerce ok Refill PLA filament Litho White (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-litho-white/
+2026-08-25T13:41:24.132Z woocommerce ok Refill PLA filament Yellow (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-yellow/
+2026-08-25T13:41:24.133Z woocommerce ok Refill PLA filament Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-green/
+2026-08-25T13:41:24.133Z woocommerce ok Refill PLA filament Red (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-red/
+2026-08-25T13:41:24.134Z woocommerce ok Refill PLA filament Blue (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-blue/
+2026-08-25T13:41:24.135Z woocommerce ok Refill PLA filament Silver (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-silver/
+2026-08-25T13:41:24.135Z woocommerce ok Refill PLA filament Grey (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-grey/
+2026-08-25T13:41:24.136Z woocommerce ok Refill PLA filament Black (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-black/
+2026-08-25T13:41:24.137Z woocommerce ok Refill PLA filament White (nozzle 215°C / bed 55°C) https://azurefilm.com/product/refill-pla-filament-white/
+2026-08-25T13:41:24.138Z woocommerce ok PLA Original filament Emerald Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-emerald-green/
+2026-08-25T13:41:24.138Z woocommerce ok PLA Original filament Lagoon Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-lagoon-green/
+2026-08-25T13:41:24.140Z woocommerce ok PLA Original filament Champagne (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-champagne/
+2026-08-25T13:41:24.141Z woocommerce ok PLA Original filament Shark Grey (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-shark-grey/
+2026-08-25T13:41:24.142Z woocommerce ok PLA Original filament Caribbean Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-caribbean-green/
+2026-08-25T13:41:24.175Z woocommerce ok LumberLay Glitter filament Cork (nozzle 215°C / bed 55°C) https://azurefilm.com/product/lumberlay-glitter-filament-cork/
+2026-08-25T13:41:24.183Z woocommerce ok PLA Original Marble Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-marble-sample/
+2026-08-25T13:41:24.184Z woocommerce ok PLA Original Purple Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-purple-sample/
+2026-08-25T13:41:24.185Z woocommerce ok PLA Original White Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-white-sample/
+2026-08-25T13:41:24.186Z woocommerce ok PLA Original Silver Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-silver-sample/
+2026-08-25T13:41:24.187Z woocommerce ok PLA Original Grey Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-grey-sample/
+2026-08-25T13:41:24.187Z woocommerce ok PLA Original Red Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-red-sample/
+2026-08-25T13:41:24.188Z woocommerce ok PLA Original Light Green Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-light-green-sample/
+2026-08-25T13:41:24.189Z woocommerce ok PLA Original Black Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-black-sample/
+2026-08-25T13:41:24.190Z woocommerce ok PLA Original Orange Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-orange-sample/
+2026-08-25T13:41:24.192Z woocommerce ok PLA Original Yellow Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-yellow-sample/
+2026-08-25T13:41:24.192Z woocommerce ok PLA Original Blue Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-blue-sample/
+2026-08-25T13:41:24.193Z woocommerce ok PLA Original Gold Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-gold-sample/
+2026-08-25T13:41:24.194Z woocommerce ok PLA Original Brown Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-brown-sample/
+2026-08-25T13:41:24.195Z woocommerce ok PLA Original Pink Sample (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-pink-sample/
+2026-08-25T13:43:04.715Z woocommerce ok PLA Original filament Sunset Orange (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-sunset-orange/
+2026-08-25T13:43:04.716Z woocommerce ok PLA Original filament Red Wine (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-red-wine/
+2026-08-25T13:43:04.717Z woocommerce ok PLA Original filament Navy Blue (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-navy-blue/
+2026-08-25T13:43:04.717Z woocommerce ok PLA Original filament Light Grey (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-light-grey/
+2026-08-25T13:43:04.718Z woocommerce ok Unset PC ABS (nozzle 275°C / bed 110°C) https://azurefilm.com/product/unset-pc-abs/
+2026-08-25T13:43:04.726Z woocommerce ok Unset PLA Original (nozzle 215°C / bed 55°C) https://azurefilm.com/product/unset-pla-original/
+2026-08-25T13:43:11.435Z woocommerce ok PLA Original filament White (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-white/
+2026-08-25T13:43:11.436Z woocommerce ok PLA Original filament Black (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-black/
+2026-08-25T13:43:11.437Z woocommerce ok PLA Original filament Gold (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-gold/
+2026-08-25T13:43:11.437Z woocommerce ok PLA Original filament Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-green/
+2026-08-25T13:43:11.439Z woocommerce ok PLA Original filament Mustard Brown (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-mustard-brown/
+2026-08-25T13:43:11.440Z woocommerce ok PLA Original filament Yellow (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-yellow/
+2026-08-25T13:43:11.440Z woocommerce ok PLA Original filament Orange (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-orange/
+2026-08-25T13:43:11.441Z woocommerce ok PLA Original filament Pink (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-pink/
+2026-08-25T13:43:11.441Z woocommerce ok PLA Original filament Light Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-light-green/
+2026-08-25T13:43:11.442Z woocommerce ok PLA Original filament Foggy White (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-foggy-white/
+2026-08-25T13:43:11.443Z woocommerce ok PLA Original filament Red (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-red/
+2026-08-25T13:43:11.443Z woocommerce ok PLA Original filament Champagne Gold (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-champagne-gold/
+2026-08-25T13:43:11.443Z woocommerce ok PLA Original filament Grey (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-grey/
+2026-08-25T13:43:11.444Z woocommerce ok PLA Original filament Galaxy Black (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-galaxy-black/
+2026-08-25T13:43:11.444Z woocommerce ok PLA Original filament Marble (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-marble/
+2026-08-25T13:43:11.445Z woocommerce ok PLA Original filament Blue (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-blue/
+2026-08-25T13:43:11.445Z woocommerce ok PLA Original filament Silver (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-silver/
+2026-08-25T13:43:11.446Z woocommerce ok PLA Original filament Fuchsia Pink (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-fuchsia-pink/
+2026-08-25T13:43:11.446Z woocommerce ok PLA Original filament Pistachio Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-pistachio-green/
+2026-08-25T13:43:18.207Z woocommerce ok PLA Original filament Anthracite (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-anthracite/

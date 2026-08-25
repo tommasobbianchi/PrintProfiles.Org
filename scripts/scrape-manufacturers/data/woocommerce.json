@@ -1,0 +1,1263 @@
+[
+  {
+    "manufacturer": "iSanmate",
+    "brand": "iSANMATE LW-PLA Lightweight PLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 240,
+    "bedTemp": 53,
+    "printSpeed": 60,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100,
+    "sourceUrl": "https://www.isanmate.com/product/lw-pla-filament/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "iSanmate",
+    "brand": "iSANMATE PEI1010 3D Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 100,
+    "bedTemp": 120,
+    "printSpeed": 35,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://www.isanmate.com/product/pei1010-3d-filament/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PETG CF Onyx Black",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 60,
+    "printSpeed": 100,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/petg-cf-onyx-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PETG CF Olive Green",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 60,
+    "printSpeed": 100,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/petg-cf-olive-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA CF Onyx Black",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 45,
+    "printSpeed": 330,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-cf-onyx-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA CF Damson Bordeaux",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 45,
+    "printSpeed": 330,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-cf-damson-bordeaux/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA CF Forest Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 45,
+    "printSpeed": 330,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-cf-forest-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA CF Abyss Blue",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 45,
+    "printSpeed": 330,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-cf-abyss-blue/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Army Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-army-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA+ Black",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 60,
+    "printSpeed": 83,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA+ White",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 60,
+    "printSpeed": 83,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Purple",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-purple/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA Caribbean Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-caribbean-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA Lagoon",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-lagoon/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA Fuchsia Pink",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-fuchsia-pink/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA Transparent",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-transparent/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA Sunset Orange",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-sunset-orange/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Champagne Gold",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-champagne-gold/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Champagne",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-champagne/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Army Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-army-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "SUPER PACK PLA MIX",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/super-pack-pla-mix/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "SUPER PACK PLA WHITE & GREY",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/super-pack-pla-white-grey/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "SUPER PACK PLA BLACK & GREY",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/super-pack-pla-black-grey/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "SUPER PACK PLA BLACK & WHITE",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/super-pack-pla-black-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "SUPER PACK PLA Grey",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/super-pack-pla-grey/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "SUPER PACK PLA White",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/super-pack-pla-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "SUPER PACK PLA Black",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/super-pack-pla-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Cyan Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-cyan-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Magenta Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-magenta-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Cyan",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-cyan/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Magenta",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-magenta/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Cyan",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-cyan/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Magenta",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-magenta/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Anthracite",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-anthracite/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Foggy White",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-foggy-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Marble",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-marble/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Galaxy Black",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-galaxy-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Light Grey",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-light-grey/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Shark Grey",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-shark-grey/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Light Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-light-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Emerald Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-emerald-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Navy Blue",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-navy-blue/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Pink",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-pink/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Purple",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-purple/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Red Wine",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-red-wine/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Gold",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-gold/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Mustard Brown",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-mustard-brown/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Unset",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-unset/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "2x Refill PLA Black + 2x Master Spool",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/2x-refill-pla-black-2x-master-spool/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "2x Refill PLA White + 2x Master Spool",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/2x-refill-pla-white-2x-master-spool/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ABS Prime filament Red",
+    "filamentType": "ABS",
+    "nozzleTemp": 253,
+    "bedTemp": 85,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/abs-prime-filament-red/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ASA Prime filament Nature",
+    "filamentType": "ASA",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/asa-prime-filament-nature/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ABS Prime filament White Sample",
+    "filamentType": "ABS",
+    "nozzleTemp": 253,
+    "bedTemp": 85,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/abs-prime-filament-white-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ABS Prime filament Black Sample",
+    "filamentType": "ABS",
+    "nozzleTemp": 253,
+    "bedTemp": 85,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/abs-prime-filament-black-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ASA Prime filament White Sample",
+    "filamentType": "ASA",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/asa-prime-filament-white-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ASA Prime filament Black Sample",
+    "filamentType": "ASA",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/asa-prime-filament-black-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ABS Prime filament Black",
+    "filamentType": "ABS",
+    "nozzleTemp": 253,
+    "bedTemp": 85,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/abs-prime-filament-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ABS Prime filament Silver",
+    "filamentType": "ABS",
+    "nozzleTemp": 253,
+    "bedTemp": 85,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/abs-prime-filament-silver/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ABS Prime filament White",
+    "filamentType": "ABS",
+    "nozzleTemp": 253,
+    "bedTemp": 85,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/abs-prime-filament-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ABS Prime filament Dark Blue",
+    "filamentType": "ABS",
+    "nozzleTemp": 253,
+    "bedTemp": 85,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/abs-prime-filament-dark-blue/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ASA Prime filament Black",
+    "filamentType": "ASA",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/asa-prime-filament-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ASA Prime filament Silver",
+    "filamentType": "ASA",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/asa-prime-filament-silver/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ASA Prime filament White",
+    "filamentType": "ASA",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/asa-prime-filament-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ASA Prime filament Dark Blue",
+    "filamentType": "ASA",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/asa-prime-filament-dark-blue/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "ASA Prime filament Red",
+    "filamentType": "ASA",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/asa-prime-filament-red/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PC ABS Black Sample",
+    "filamentType": "ABS",
+    "nozzleTemp": 275,
+    "bedTemp": 110,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pc-abs-black-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PC ABS filament Natur",
+    "filamentType": "ABS",
+    "nozzleTemp": 275,
+    "bedTemp": 110,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pc-abs-filament-natur/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PC ABS filament Black",
+    "filamentType": "ABS",
+    "nozzleTemp": 275,
+    "bedTemp": 110,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pc-abs-filament-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PC ABS filament White",
+    "filamentType": "ABS",
+    "nozzleTemp": 275,
+    "bedTemp": 110,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pc-abs-filament-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Coral Red",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-coral-red/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Orange",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-orange/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Litho White",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-litho-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Yellow",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-yellow/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Red",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-red/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Blue",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-blue/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Silver",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-silver/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Grey",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-grey/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament Black",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Refill PLA filament White",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/refill-pla-filament-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Emerald Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-emerald-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Lagoon Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-lagoon-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Champagne",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-champagne/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Shark Grey",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-shark-grey/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Caribbean Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-caribbean-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "LumberLay Glitter filament Cork",
+    "filamentType": "Other",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/lumberlay-glitter-filament-cork/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Marble Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-marble-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Purple Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-purple-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original White Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-white-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Silver Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-silver-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Grey Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-grey-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Red Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-red-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Light Green Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-light-green-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Black Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-black-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Orange Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-orange-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Yellow Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-yellow-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Blue Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-blue-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Gold Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-gold-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Brown Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-brown-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original Pink Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-pink-sample/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Sunset Orange",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-sunset-orange/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Red Wine",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-red-wine/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Navy Blue",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-navy-blue/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Light Grey",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-light-grey/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Unset PC ABS",
+    "filamentType": "ABS",
+    "nozzleTemp": 275,
+    "bedTemp": 110,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/unset-pc-abs/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "Unset PLA Original",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/unset-pla-original/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament White",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Black",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Gold",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-gold/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Mustard Brown",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-mustard-brown/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Yellow",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-yellow/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Orange",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-orange/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Pink",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-pink/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Light Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-light-green/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Foggy White",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-foggy-white/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Red",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-red/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Champagne Gold",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-champagne-gold/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Grey",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-grey/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Galaxy Black",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-galaxy-black/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Marble",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-marble/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Blue",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-blue/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Silver",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-silver/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Fuchsia Pink",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-fuchsia-pink/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "AzureFilm",
+    "brand": "PLA Original filament Pistachio Green",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "sourceUrl": "https://azurefilm.com/product/pla-original-filament-pistachio-green/",
+    "sourceType": "manufacturer"
+  }
+]

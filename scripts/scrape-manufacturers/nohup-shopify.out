@@ -1,0 +1,99 @@
+2026-08-25T13:37:45.293Z === run start === MAX_PER_PARSER=unlimited
+2026-08-25T13:37:45.427Z prusament: 23 listed, 22 already saved, 1 pending
+2026-08-25T13:37:45.533Z fiberlogy: 77 listed, 69 already saved, 8 pending
+2026-08-25T13:37:45.659Z extrudr: 156 listed, 136 already saved, 20 pending
+2026-08-25T13:37:46.232Z fillamentum: 275 listed, 210 already saved, 65 pending
+2026-08-25T13:37:47.133Z eryone: 207 listed, 60 already saved, 147 pending
+2026-08-25T13:37:50.202Z shopify: 777 listed, 0 already saved, 777 pending
+2026-08-25T13:37:50.254Z shopify ok Overture PC Professional (nozzle 260°C / bed 90°C) https://overture3d.com/products/overture-pc-professional-filament
+2026-08-25T13:37:50.255Z shopify ok Overture ABS (nozzle 240°C / bed 100°C) https://overture3d.com/products/overture-abs-filament-1-75mm
+2026-08-25T13:37:50.256Z shopify ok Black High Strength Carbon Fiber HTPETG (nozzle 300°C / bed 100°C) https://proto-pasta.com/products/black-high-strength-carbon-fiber-htpetg
+2026-08-25T13:37:50.256Z shopify ok Galaxy Black High Impact Carbon Fiber HTPETG (nozzle 300°C / bed 100°C) https://proto-pasta.com/products/galaxy-black-high-impact-carbon-fiber-htpetg
+2026-08-25T13:37:50.256Z shopify ok Highfive Blue Glass Fiber HTPETG (nozzle 300°C / bed 100°C) https://proto-pasta.com/products/highfive-blue-glass-fiber-htpetg
+2026-08-25T13:37:50.256Z shopify ok White Glass Fiber HTPETG (nozzle 300°C / bed 100°C) https://proto-pasta.com/products/white-glass-fiber-htpetg
+2026-08-25T13:37:50.257Z shopify ok Black High Strength Carbon Fiber PCTG (nozzle 255°C / bed 70°C) https://proto-pasta.com/products/black-high-strength-carbon-fiber-pctg
+2026-08-25T13:37:50.257Z shopify ok Gray High Impact Carbon Fiber PCTG (nozzle 255°C / bed 70°C) https://proto-pasta.com/products/gray-high-impact-carbon-fiber-pctg
+2026-08-25T13:37:50.257Z shopify ok White Glass Fiber PCTG (nozzle 255°C / bed 70°C) https://proto-pasta.com/products/white-glass-fiber-pctg
+2026-08-25T13:37:50.257Z shopify ok Clear PCTG (nozzle 255°C / bed 80°C) https://proto-pasta.com/products/clear-pctg
+2026-08-25T13:37:50.279Z shopify ok Clear PETG *new low price* (nozzle 235°C / bed 70°C) https://proto-pasta.com/products/simply-clear-petg
+2026-08-25T13:37:50.279Z shopify ok Carbon Fiber PETG *new low price* (nozzle 235°C / bed 70°C) https://proto-pasta.com/products/carbon-fiber-petg
+2026-08-25T13:37:50.280Z shopify ok White PETG *new low price* (nozzle 235°C / bed 70°C) https://proto-pasta.com/products/simply-white-petg
+2026-08-25T13:37:50.280Z shopify ok Black PETG *new low price* (nozzle 235°C / bed 70°C) https://proto-pasta.com/products/simply-black-petg
+2026-08-25T13:37:50.282Z shopify ok TPU Glow in the Dark Variety Pack (4x200g) (nozzle 220°C / bed 55°C) https://amolen.com/products/tpu-glow-in-the-dark-variety-pack-4x200g
+2026-08-25T13:37:50.287Z shopify ok TPU Glow-in-the-Dark (nozzle 205°C / bed 30°C) https://amolen.com/products/tpu-glow
+2026-08-25T13:37:50.290Z shopify ok Siraya Tech Fibreheart ASA-GF Filament (nozzle 260°C / bed 105°C) https://siraya.tech/products/siraya-tech-fibreheart-asa-gf-filament
+2026-08-25T13:37:50.291Z shopify ok THE K8™ PA CF (nozzle 290°C / bed 100°C) https://kexcelled3d.com/products/the-k8™-pa-cf-1
+2026-08-25T13:37:50.291Z shopify ok THE K3™ PLA (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k3™-pla-1
+2026-08-25T13:37:50.292Z shopify ok THE K5™ PLA Coffee (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla-coffee
+2026-08-25T13:37:50.292Z shopify ok THE K9™ PPA CF15 (nozzle 290°C / bed 100°C) https://kexcelled3d.com/products/the-k9™-ppa-cf15
+2026-08-25T13:37:50.292Z shopify ok THE K6™ ABS FR (nozzle 250°C / bed 90°C) https://kexcelled3d.com/products/the-k6™-abs-fr
+2026-08-25T13:37:50.293Z shopify ok THE K5™ ABS CC (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-abs-cc
+2026-08-25T13:37:50.293Z shopify ok THE K6™ BAS 70 (nozzle 225°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-bas-70
+2026-08-25T13:37:50.293Z shopify ok THE K3™ ASA (nozzle 255°C / bed 90°C) https://kexcelled3d.com/products/the-k3™-asa
+2026-08-25T13:37:50.293Z shopify ok THE K5™ ABS PRO (nozzle 275°C / bed 90°C) https://kexcelled3d.com/products/the-k5-abs-pro
+2026-08-25T13:37:50.294Z shopify ok THE K5™ ABS Rapid (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-abs-rapid
+2026-08-25T13:37:50.294Z shopify ok THE K6™ PETG (nozzle 260°C / bed 100°C) https://kexcelled3d.com/products/the-k6™-petg
+2026-08-25T13:37:50.297Z shopify ok THE K8™ TPU 60A (nozzle 245°C / bed 43°C) https://kexcelled3d.com/products/the-k8™-tpu-60a
+2026-08-25T13:37:50.297Z shopify ok THE K8™ TPU 77D (nozzle 225°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-77d
+2026-08-25T13:37:50.298Z shopify ok THE K12™ PEEK Ultra (nozzle 410°C / bed 165°C) https://kexcelled3d.com/products/the-k12™-peek-ultra
+2026-08-25T13:37:50.298Z shopify ok THE K9™ PEBA (nozzle 235°C / bed 55°C) https://kexcelled3d.com/products/the-k9™-peba
+2026-08-25T13:37:50.298Z shopify ok THE K8™ TPU 90A MATTE (nozzle 245°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-90a-matte
+2026-08-25T13:37:50.298Z shopify ok THE K8™ TPU AIR (nozzle 220°C / bed 43°C) https://kexcelled3d.com/products/the-k8™-tpu-air
+2026-08-25T13:37:50.298Z shopify ok THE K8™ TPU 90A (nozzle 245°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-90a
+2026-08-25T13:37:50.299Z shopify ok THE K8™ TPU 85A (nozzle 240°C / bed 40°C) https://kexcelled3d.com/products/the-k8™-tpu-85a
+2026-08-25T13:37:50.299Z shopify ok THE K8™ TPU 80A (nozzle 240°C / bed 40°C) https://kexcelled3d.com/products/the-k8™-tpu-80a
+2026-08-25T13:37:50.299Z shopify ok THE K8™ TPU 75A (nozzle 245°C / bed 40°C) https://kexcelled3d.com/products/the-k8™-tpu-75a
+2026-08-25T13:37:50.299Z shopify ok THE K8™ TPU 65A (nozzle 245°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-65a
+2026-08-25T13:37:50.299Z shopify ok THE K8™ TPU 70A (nozzle 245°C / bed 40°C) https://kexcelled3d.com/products/the-k8™-tpu-70a
+2026-08-25T13:37:50.300Z shopify ok THE K12™ PEI 9085 (nozzle 355°C / bed 180°C) https://kexcelled3d.com/products/the-k12™-pei-9085
+2026-08-25T13:37:50.300Z shopify ok THE K11™ PEEK GF10 (nozzle 425°C / bed 165°C) https://kexcelled3d.com/products/the-k11™-peek-gf10
+2026-08-25T13:37:50.300Z shopify ok THE K11™ PEEK CF10 (nozzle 425°C / bed 110°C) https://kexcelled3d.com/products/the-k11™-peek-cf10
+2026-08-25T13:37:50.300Z shopify ok THE K11™ PPSU (nozzle 400°C / bed 195°C) https://kexcelled3d.com/products/the-k11™-ppsu
+2026-08-25T13:37:50.300Z shopify ok THE K11™ PEI 1010 (nozzle 375°C / bed 195°C) https://kexcelled3d.com/products/the-k11™-pei-1010
+2026-08-25T13:37:50.301Z shopify ok THE K11™ PEEK (nozzle 425°C / bed 165°C) https://kexcelled3d.com/products/the-k11™-peek
+2026-08-25T13:37:50.301Z shopify ok THE K11™ PEKK (nozzle 375°C / bed 145°C) https://kexcelled3d.com/products/the-k11™-pekk
+2026-08-25T13:37:50.301Z shopify ok THE K9™ PC FR (nozzle 280°C / bed 110°C) https://kexcelled3d.com/products/the-k9™-pc-fr
+2026-08-25T13:37:50.301Z shopify ok THE K10™ PC (nozzle 330°C / bed 160°C) https://kexcelled3d.com/products/the-k10™-pc
+2026-08-25T13:37:50.302Z shopify ok THE K8™ OBC (nozzle 230°C / bed 100°C) https://kexcelled3d.com/products/the-k8™-obc
+2026-08-25T13:37:50.302Z shopify ok THE K8™ TPU 64D (nozzle 230°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-64d-1
+2026-08-25T13:37:50.302Z shopify ok THE K8™ TPU 95A (nozzle 245°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-64d
+2026-08-25T13:37:50.302Z shopify ok THE K8™ PC (nozzle 280°C / bed 110°C) https://kexcelled3d.com/products/the-k8™-pc
+2026-08-25T13:37:50.303Z shopify ok THE K6™ PLA FR (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pla-fr
+2026-08-25T13:37:50.303Z shopify ok THE K6™ BVOH (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-bvoh
+2026-08-25T13:37:50.303Z shopify ok THE K6™ HIPS (nozzle 240°C / bed 90°C) https://kexcelled3d.com/products/the-k6™-hips
+2026-08-25T13:37:50.303Z shopify ok THE K6™ PVA (nozzle 215°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pva
+2026-08-25T13:37:50.304Z shopify ok The K5™ ABS P (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-abs-p
+2026-08-25T13:37:50.304Z shopify ok THE K6™ PLA FG (nozzle 215°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pla-fg
+2026-08-25T13:37:50.304Z shopify ok THE K5™ PETG GF (nozzle 263°C / bed 70°C) https://kexcelled3d.com/products/the-k5-petg-gf
+2026-08-25T13:37:50.304Z shopify ok The K5™ PLA Streams (nozzle 230°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-streams
+2026-08-25T13:37:50.305Z shopify ok THE K5™ PLA CF (nozzle 230°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-cf
+2026-08-25T13:37:50.305Z shopify ok The K5™ PLA CC (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla-cc
+2026-08-25T13:37:50.305Z shopify ok The K5™ PLA G (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-g
+2026-08-25T13:37:50.305Z shopify ok The K5™ PLA P (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-p
+2026-08-25T13:37:50.305Z shopify ok THE K5™ PLA Magic (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-magic
+2026-08-25T13:37:50.306Z shopify ok THE K5™ PLA Silk (nozzle 230°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-silk
+2026-08-25T13:37:50.306Z shopify ok THE K6™ PLA CF10 (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pla-cf10
+2026-08-25T13:37:50.306Z shopify ok THE K6™ PLA (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pla
+2026-08-25T13:37:50.306Z shopify ok THE K5™ ASA (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-asa
+2026-08-25T13:37:50.307Z shopify ok THE K5™ PETG Rapid (nozzle 300°C / bed 70°C) https://kexcelled3d.com/products/the-k5-petg-rapid
+2026-08-25T13:37:50.307Z shopify ok THE K5™ ABS T (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-abs-t
+2026-08-25T13:37:50.307Z shopify ok THE K5™ PLA Sparkle (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-sparkle
+2026-08-25T13:37:50.307Z shopify ok THE K5™ WOOD (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-wood
+2026-08-25T13:37:50.307Z shopify ok THE K5™ PLA M (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla-m
+2026-08-25T13:37:50.308Z shopify ok THE K5™ PETG (nozzle 255°C / bed 70°C) https://kexcelled3d.com/products/the-k5-petg
+2026-08-25T13:37:50.308Z shopify ok THE K5™ ABS (nozzle 260°C / bed 90°C) https://kexcelled3d.com/products/the-k5-abs
+2026-08-25T13:37:50.308Z shopify ok THE K5™ PLA PRO (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla-pro
+2026-08-25T13:37:50.308Z shopify ok THE K5™ PLA (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla
+2026-08-25T13:37:50.309Z shopify ok THE K5™ ABS M (nozzle 245°C / bed 75°C) https://kexcelled3d.com/products/the-k5-abs-m
+2026-08-25T13:37:50.309Z shopify ok THE K7™ PET CF10 (nozzle 270°C / bed 100°C) https://kexcelled3d.com/products/the-k7™-pet-cf10
+2026-08-25T13:37:50.309Z shopify ok THE K11™ PEEK PRO (nozzle 400°C / bed 125°C) https://kexcelled3d.com/products/the-k11™-peek-pro
+2026-08-25T13:37:50.309Z shopify ok THE K5™ PETG CF (nozzle 255°C / bed 75°C) https://kexcelled3d.com/products/the-k5™-petg-cf
+2026-08-25T13:37:50.310Z shopify ok THE K10™ PPS CF10 (nozzle 245°C / bed 75°C) https://kexcelled3d.com/products/the-k10™-pps-cf10
+2026-08-25T13:37:50.310Z shopify ok THE K5™ PETG M (nozzle 245°C / bed 75°C) https://kexcelled3d.com/products/the-k5-petg-m
+2026-08-25T13:37:50.310Z === run done ===
+prusament: listed=23 new=0 total=22
+fiberlogy: listed=77 new=0 total=69
+extrudr: listed=156 new=0 total=136
+fillamentum: listed=275 new=0 total=210
+eryone: listed=207 new=0 total=60
+shopify: listed=777 new=85 total=85

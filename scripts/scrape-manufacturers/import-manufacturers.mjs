@@ -74,6 +74,11 @@ async function main() {
       // "PLA Mineral Filament" -> "PLA Mineral": the vendor's trailing noun adds nothing
       // and the existing presets use bare product names.
       raw.brand = String(raw.brand || '').replace(/\s+filaments?$/i, '').trim();
+      // Many stores title products "<Brand> <Product>", and profileName is built as
+      // "<manufacturer> <brand>" — without this the name doubles up
+      // ("Siraya Tech Siraya Tech Fibreheart ASA-GF").
+      const mfrPrefix = new RegExp('^' + raw.manufacturer.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s+', 'i');
+      raw.brand = raw.brand.replace(mfrPrefix, '').trim();
       if (!raw.brand) { junk++; continue; }
 
       const key = norm(raw.manufacturer) + '|' + norm(raw.brand);
