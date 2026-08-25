@@ -34,7 +34,10 @@ async function main() {
     } catch {
       rows = [];
     }
-    const done = new Set(rows.map((r) => r.sourceUrl).filter(Boolean));
+    // Key on the listing URL when the parser records one: a parser may publish a different
+    // canonical sourceUrl for attribution (SpoolmanDB cites the vendor file permalink while
+    // listing rows as <file>#<index>), and keying on sourceUrl alone re-appends every row.
+    const done = new Set(rows.map((r) => r.sourceKey || r.sourceUrl).filter(Boolean));
 
     const mod = await import(`./parsers/${name}.mjs`);
     let urls;
@@ -55,6 +58,9 @@ async function main() {
       try {
         const p = await mod.parseProduct(url);
         if (p) {
+          // Record the listing URL so a resume can tell this row was already fetched even when
+          // the parser publishes a different canonical sourceUrl for attribution.
+          if (p.sourceUrl !== url) p.sourceKey = url;
           rows.push(p);
           done.add(url);
           parsed++;

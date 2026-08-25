@@ -612,3 +612,469 @@
 2026-08-25T15:52:23.222Z WARN network error at https://voxelab3dp.com/products/voexlab-aquila-3d-printer-50g-text-filament (attempt 2) — backing off 6000ms
 2026-08-25T15:52:29.795Z WARN network error at https://voxelab3dp.com/products/voexlab-aquila-3d-printer-50g-text-filament (attempt 3) — backing off 12000ms
 2026-08-25T15:52:42.266Z WARN GET https://voxelab3dp.com/products/voexlab-aquila-3d-printer-50g-text-filament -> network-error
+2026-08-25T15:52:43.722Z WARN network error at https://voxelab3dp.com/products/voxelab-pla-pro-pla-3d-printing-filament-dimensional-accuracy-0-02-mm (attempt 1) — backing off 3000ms
+2026-08-25T15:52:47.237Z WARN network error at https://voxelab3dp.com/products/voxelab-pla-pro-pla-3d-printing-filament-dimensional-accuracy-0-02-mm (attempt 2) — backing off 6000ms
+2026-08-25T15:52:53.817Z WARN network error at https://voxelab3dp.com/products/voxelab-pla-pro-pla-3d-printing-filament-dimensional-accuracy-0-02-mm (attempt 3) — backing off 12000ms
+2026-08-25T15:53:06.364Z WARN GET https://voxelab3dp.com/products/voxelab-pla-pro-pla-3d-printing-filament-dimensional-accuracy-0-02-mm -> network-error
+2026-08-25T15:53:23.132Z shopify ok Sample Coil ASA (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-natural-asa-filament
+2026-08-25T15:53:23.133Z shopify ok Sample Coil ASA - Perfect (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-asa-perfect-blue
+2026-08-25T15:53:23.139Z shopify ok Natural ASA Filament AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/natural-asa-filament
+2026-08-25T15:53:23.139Z shopify ok Perfect Blue ASA AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/perfect-blue-asa
+2026-08-25T15:53:32.127Z shopify ok Sample Coil Pack ASA - Pop of Color (nozzle 250°C / bed 100°C) https://atomicfilament.com/products/sample-coil-pack-asa-filament-pop-of-color
+2026-08-25T15:54:12.666Z shopify ok Sample Coil ASA - Dark (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-dark-gray-asa-filament
+2026-08-25T15:54:12.666Z shopify ok Sample Coil ASA - Perfect (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-perfect-red-asa
+2026-08-25T15:54:12.672Z shopify ok Perfect Red ASA AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/perfect-red-asa
+2026-08-25T15:54:26.144Z shopify ok Dark Gray ASA Filament AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/dark-gray-asa-filament-ams-compatible
+2026-08-25T15:55:03.664Z shopify ok Sample Coil ASA - Army (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-asa-army-green
+2026-08-25T15:55:03.665Z shopify ok Army Green ASA Filament AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/army-green-asa-filament-ams-compatible
+2026-08-25T15:55:03.665Z shopify ok Sample Coil ASA - Royal (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-asa-royal-blue
+2026-08-25T15:55:03.672Z shopify ok Royal Blue ASA Filament AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/royal-blue-asa-filament-ams-compatible
+2026-08-25T15:55:03.673Z shopify ok Cool Gray ASA Filament (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/cool-gray-asa-filament
+2026-08-25T15:55:05.160Z shopify ok Sample Coil ASA - Neon Green UV Reactive Opaque (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-asa-neon-green-uv-reactive-opaque-copy-1
+2026-08-25T15:55:05.161Z shopify ok Sample Coil ASA - Perfect (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-asa-perfect-orange
+2026-08-25T15:55:05.161Z shopify ok Perfect Orange ASA AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/perfect-orange-asa-ams-compatible
+2026-08-25T15:55:05.168Z shopify ok Neon Green UV Reactive Opaque ASA Filament AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/neon-green-uv-reactive-asa-ams-compatible
+2026-08-25T15:55:12.703Z shopify ok Sample Coil ASA - Perfect (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-asa-perfect-yellow
+2026-08-25T15:55:15.689Z shopify ok Perfect Yellow ASA AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/perfect-yellow-asa-filament
+2026-08-25T15:55:41.175Z shopify ok Sample Coil ASA - Cool (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-asa-cool-gray
+2026-08-25T15:55:44.199Z shopify ok CARBON FIBER Black ASA AMS Compatible (nozzle 250°C / bed 115°C) https://atomicfilament.com/products/carbon-fiber-black-asa
+2026-08-25T15:55:44.205Z shopify ok Sample Coil ASA (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-asa-white
+2026-08-25T15:55:45.693Z shopify ok 3.5KG Black ASA Filament (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/3-5kg-black-asa-filament
+2026-08-25T15:55:47.162Z shopify ok White ASA Filament AMS Compatible (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/white-asa-filament
+2026-08-25T15:55:53.218Z shopify ok Sample Coil ASA (nozzle 240°C / bed 100°C) https://atomicfilament.com/products/sample-coil-asa-black
+2026-08-25T15:55:53.220Z shopify ok Black ASA Filament AMS Compatible (nozzle 250°C / bed 100°C) https://atomicfilament.com/products/black-asa-filament
+2026-08-25T15:56:03.736Z shopify ok Army Green ABS AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/army-green-abs-filament
+2026-08-25T15:56:03.737Z shopify ok 3.5KG Metallic Silver v2 PETG PRO (nozzle 248°C / bed 70°C) https://atomicfilament.com/products/metallic-silver-v2-petg-pro-1
+2026-08-25T15:56:20.216Z shopify ok 3.5KG Neon Orange UV Reactive Opaque PETG PRO (nozzle 253°C / bed 70°C) https://atomicfilament.com/products/3-5kg-neon-orange-uv-reactive-opaque-petg
+2026-08-25T15:56:23.212Z shopify ok 3.5KG Perfect Red Opaque PETG PRO (nozzle 253°C / bed 80°C) https://atomicfilament.com/products/3-5kg-perfect-red-opaque-petg-pro
+2026-08-25T15:57:50.314Z shopify ok FLAME RETARDANT Sabic FR15U Black ABS Filament AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/flame-retardant-black-abs-filament
+2026-08-25T15:58:53.282Z shopify ok Sample Coil ABS (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/sample-coil-abs-black
+2026-08-25T16:00:30.799Z shopify ok 3.5KG Bright White ABS Filament (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/3-5kg-bright-white-abs-filament
+2026-08-25T16:00:32.313Z shopify ok 3.5KG Black ABS Filament (nozzle 243°C / bed 115°C) https://atomicfilament.com/products/3-5kg-black-abs-filament
+2026-08-25T16:01:09.836Z shopify ok Natural ABS Filament AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/natural-abs-filament
+2026-08-25T16:01:09.837Z shopify ok Royal Blue ABS AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/royal-blue-abs-filament
+2026-08-25T16:01:18.848Z shopify ok Perfect Red ABS Filament AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/perfect-red-abs-filament
+2026-08-25T16:01:27.851Z shopify ok Black CARBON FIBER Nuclear Nylon v3 (nozzle 275°C / bed 60°C) https://atomicfilament.com/products/carbon-fiber-nuclear-nylon
+2026-08-25T16:02:44.470Z shopify ok Deep Black Opaque PETG PRO AMS Compatible (nozzle 253°C / bed 80°C) https://atomicfilament.com/products/deep-black-opaque-petg-pro
+2026-08-25T16:03:06.858Z shopify ok Bright White PLA Filament AMS Compatible (nozzle 205°C / bed 55°C) https://atomicfilament.com/products/bright-white-pla-filament
+2026-08-25T16:03:08.412Z shopify ok Black PLA Filament AMS Compatible (nozzle 205°C / bed 55°C) https://atomicfilament.com/products/black-pla-filament
+2026-08-25T16:03:15.887Z shopify ok Light Gray ABS Filament AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/light-gray-abs-filament
+2026-08-25T16:03:15.887Z shopify ok Neon Yellow UV Reactive ABS Filament AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/neon-yellow-uv-reactive-abs-filament
+2026-08-25T16:03:15.888Z shopify ok Neon Green UV Reactive ABS Filament AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/neon-green-uv-reactive-abs-filament
+2026-08-25T16:03:15.889Z shopify ok Perfect Orange ABS Filament AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/perfect-orange-abs-filament
+2026-08-25T16:03:15.889Z shopify ok CARBON FIBER Ultra Black ABS AMS Compatible (nozzle 245°C / bed 115°C) https://atomicfilament.com/products/carbon-fiber-ultra-black-abs
+2026-08-25T16:03:15.893Z shopify ok Dark Cherry Red ABS AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/dark-cherry-red-abs-filament
+2026-08-25T16:03:15.894Z shopify ok Gun Metal Gray ABS Filament AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/gun-metal-gray-abs-filament
+2026-08-25T16:03:15.894Z shopify ok Perfect Blue ABS AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/perfect-blue-abs-filament
+2026-08-25T16:03:15.895Z shopify ok Bright White ABS AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/bright-white-abs-filament
+2026-08-25T16:03:15.895Z shopify ok Gray ABS AMS Compatible (nozzle 235°C / bed 115°C) https://atomicfilament.com/products/gray-abs-filament
+2026-08-25T16:03:15.899Z shopify ok Black ABS Filament AMS Compatible (nozzle 245°C / bed 115°C) https://atomicfilament.com/products/black-abs-filament
+2026-08-25T16:03:32.955Z shopify ok TPU-GF (nozzle 255°C / bed 48°C) https://qidi3d.com/products/tpu-gf
+2026-08-25T16:03:32.956Z shopify ok ASA-CF20 Core (nozzle 265°C / bed 95°C) https://qidi3d.com/products/asa-cf20-core
+2026-08-25T16:03:55.542Z shopify ok PEBA 95A (nozzle 245°C / bed 55°C) https://qidi3d.com/products/peba-95a
+2026-08-25T16:03:59.891Z shopify ok PPS-GF20 (nozzle 325°C / bed 90°C) https://qidi3d.com/products/pps-gf20
+2026-08-25T16:04:12.042Z shopify ok PETG Rapido (nozzle 300°C / bed 75°C) https://qidi3d.com/products/petg-rapido
+2026-08-25T16:04:12.044Z shopify ok PETG-CF (nozzle 150°C / bed 75°C) https://qidi3d.com/products/petg-cf
+2026-08-25T16:04:12.048Z shopify ok PETG-GF (nozzle 255°C / bed 75°C) https://qidi3d.com/products/petg-gf
+2026-08-25T16:04:12.050Z shopify ok PETG Basic (nozzle 260°C / bed 75°C) https://qidi3d.com/products/petg-basic
+2026-08-25T16:04:12.053Z shopify ok PETG Translucent (nozzle 260°C / bed 75°C) https://qidi3d.com/products/petg-translucent
+2026-08-25T16:04:39.149Z shopify ok TPU-Aero Filament (nozzle 250°C / bed 45°C) https://qidi3d.com/products/tpu-aero
+2026-08-25T16:05:37.489Z shopify ok PLA-CF Filament (nozzle 225°C / bed 50°C) https://qidi3d.com/products/pla-cf
+2026-08-25T16:06:37.623Z shopify ok S-White Support Filament (nozzle 290°C / bed 60°C) https://qidi3d.com/products/qidi-tech-s-white-support-filament
+2026-08-25T16:06:43.988Z shopify ok PLA Glow in the Dark (nozzle 215°C / bed 45°C) https://numakers.com/products/pla-glow-in-the-dark
+2026-08-25T16:06:45.465Z shopify ok Dual/Tri-Color Silk PLA (nozzle 215°C / bed 50°C) https://numakers.com/products/tri-color-silk-pla
+2026-08-25T16:06:50.001Z shopify ok PLA Matte (nozzle 215°C / bed 50°C) https://numakers.com/products/pla-matte
+2026-08-25T16:06:51.526Z shopify ok Warehouse Clearance - Older Formula PLA+ (Dark Gray, Light Gray, Teal or Mystery Color) (nozzle 215°C / bed 50°C) https://numakers.com/products/warehouse-clearance-pla-older-formula-dark-gray-or-mystery-color
+2026-08-25T16:06:54.398Z shopify ok PLA Marble (nozzle 215°C / bed 50°C) https://numakers.com/products/pla-marble
+2026-08-25T16:06:55.936Z shopify ok ABS Filament (nozzle 250°C / bed 95°C) https://numakers.com/products/abs-filament
+2026-08-25T16:06:57.521Z shopify ok PLA+ Filament (nozzle 215°C / bed 50°C) https://numakers.com/products/pla-filament
+2026-08-25T16:06:58.958Z shopify ok ASA Filament (nozzle 250°C / bed 95°C) https://numakers.com/products/asa-filament
+2026-08-25T16:06:58.960Z shopify ok PrimaSelect ABS Metal-Shine (nozzle 220°C / bed 80°C) https://primacreator.com/products/primaselect-abs-metal-shine
+2026-08-25T16:06:58.961Z shopify ok PrimaSelect ASA (nozzle 240°C / bed 80°C) https://primacreator.com/products/primaselect-asa
+2026-08-25T16:06:59.235Z shopify ok PrimaSelect OBC (nozzle 210°C / bed 70°C) https://primacreator.com/products/primaselect-obc
+2026-08-25T16:06:59.237Z shopify ok PrimaSelect PC (nozzle 250°C / bed 80°C) https://primacreator.com/products/primaselect-pc
+2026-08-25T16:06:59.244Z shopify ok PrimaSelect PC Heat-Resistance (nozzle 310°C / bed 140°C) https://primacreator.com/products/primaselect-pc-heat-resistance
+2026-08-25T16:06:59.245Z shopify ok PrimaSelect PC-CF (nozzle 270°C / bed 70°C) https://primacreator.com/products/primaselect-pc-cf
+2026-08-25T16:06:59.247Z shopify ok PrimaSelect PETG (nozzle 225°C / bed 70°C) https://primacreator.com/products/primaselect-petg
+2026-08-25T16:06:59.249Z shopify ok PrimaSelect PLA Carbon (nozzle 210°C / bed 30°C) https://primacreator.com/products/primaselect-pla-carbon
+2026-08-25T16:06:59.250Z shopify ok PrimaSelect PLA Flame Retardant (nozzle 210°C / bed 30°C) https://primacreator.com/products/primaselect-pla-flame-retardant
+2026-08-25T16:06:59.256Z shopify ok PrimaSelect PLA Glow in the Dark (nozzle 190°C / bed 30°C) https://primacreator.com/products/primaselect-pla-glow-in-the-dark
+2026-08-25T16:06:59.257Z shopify ok PrimaSelect PLA Gradient (nozzle 210°C / bed 30°C) https://primacreator.com/products/primaselect-pla-gradient
+2026-08-25T16:06:59.258Z shopify ok PrimaSelect PLA Marble (nozzle 190°C / bed 30°C) https://primacreator.com/products/primaselect-pla-marble
+2026-08-25T16:06:59.259Z shopify ok PrimaSelect PLA Matt (nozzle 210°C / bed 30°C) https://primacreator.com/products/primaselect-pla-matt
+2026-08-25T16:06:59.260Z shopify ok PrimaSelect PLA Metal-Shine (nozzle 190°C / bed 30°C) https://primacreator.com/products/primaselect-pla-metal-shine
+2026-08-25T16:06:59.264Z shopify ok PrimaSelect PLA Pastel (nozzle 210°C / bed 30°C) https://primacreator.com/products/primaselect-pla-pastel
+2026-08-25T16:06:59.265Z shopify ok PrimaSelect PLA Satin (nozzle 210°C / bed 60°C) https://primacreator.com/products/primaselect-pla-satin
+2026-08-25T16:06:59.266Z shopify ok PrimaSelect PLA Sparkle (nozzle 200°C / bed 30°C) https://primacreator.com/products/primaselect-pla-sparkle
+2026-08-25T16:06:59.267Z shopify ok PrimaSelect PLA-CF (nozzle 210°C / bed 45°C) https://primacreator.com/products/primaselect-pla-cf
+2026-08-25T16:06:59.268Z shopify ok PrimaSelect TPU 64D (nozzle 215°C / bed 40°C) https://primacreator.com/products/primaselect-tpu-64d
+2026-08-25T16:06:59.272Z shopify ok PrimaSelect TPU 80A (nozzle 210°C / bed 40°C) https://primacreator.com/products/primaselect-tpu-80a
+2026-08-25T16:06:59.273Z shopify ok PrimaSelect PLA (nozzle 190°C / bed 30°C) https://primacreator.com/products/primaselect-pla
+2026-08-25T16:06:59.273Z shopify ok PrimaSelect TPU 85A (nozzle 210°C / bed 40°C) https://primacreator.com/products/primaselect-tpu-85a
+2026-08-25T16:06:59.274Z shopify ok PrimaSelect TPU 90A (nozzle 210°C / bed 40°C) https://primacreator.com/products/primaselect-tpu-90a
+2026-08-25T16:06:59.274Z shopify ok PrimaSelect PLA Tough (nozzle 200°C / bed 30°C) https://primacreator.com/products/primaselect-pla-tough
+2026-08-25T16:06:59.278Z shopify ok PrimaSelect TPU 77D (nozzle 215°C / bed 40°C) https://primacreator.com/products/primaselect-tpu-77d
+2026-08-25T16:07:00.666Z shopify ok PrimaSelect TPU 95A (nozzle 225°C / bed 40°C) https://primacreator.com/products/primaselect-tpu-95a
+2026-08-25T16:07:00.667Z shopify ok PrimaValue PETG (nozzle 220°C / bed 75°C) https://primacreator.com/products/primavalue-petg
+2026-08-25T16:07:00.668Z shopify ok PrimaValue PLA+ High Speed (nozzle 200°C / bed 45°C) https://primacreator.com/products/primavalue-pla-high-speed
+2026-08-25T16:08:24.507Z shopify ok CARBONX™ PEKK-A+CF (nozzle 375°C / bed 130°C) https://3dxtech.com/products/carbonx-pekk-a-cf15-1
+2026-08-25T16:08:27.368Z shopify ok CARBONX™ NYLON 12+CF (nozzle 275°C / bed 100°C) https://3dxtech.com/products/carbonx-nylon-12-cf-1
+2026-08-25T16:08:28.899Z shopify ok ECOMAX® R-PETG (nozzle 245°C / bed 75°C) https://3dxtech.com/products/ecomax®-r-petg
+2026-08-25T16:08:30.443Z shopify ok 3DXMAX® ASA (nozzle 245°C / bed 100°C) https://3dxtech.com/products/3dxmax-r-asa
+2026-08-25T16:08:33.546Z shopify ok 3DXTECH® ABS (nozzle 230°C / bed 105°C) https://3dxtech.com/products/3dxtech-r-abs
+2026-08-25T16:08:34.919Z shopify ok THERMAX™ HTS2 (nozzle 365°C / bed 140°C) https://3dxtech.com/products/thermax-hts2-1
+2026-08-25T16:08:36.416Z shopify ok OBSIDIAN™ NYLON 6+GF (nozzle 275°C / bed 100°C) https://3dxtech.com/products/obsidian-gf-pa6-1
+2026-08-25T16:08:37.890Z shopify ok MAX-G™ PCTG (nozzle 260°C / bed 80°C) https://3dxtech.com/products/max-g-pctg-1
+2026-08-25T16:08:39.356Z shopify ok CARBONX™ PLA+CF (nozzle 205°C / bed 42°C) https://3dxtech.com/products/carbonx-pla-cf-1
+2026-08-25T16:08:40.857Z shopify ok FIBREX™ NYLON 6+GF30 (nozzle 270°C / bed 68°C) https://3dxtech.com/products/fibrex-nylon-6-gf-1
+2026-08-25T16:08:42.400Z shopify ok MAX-G™ PETG (nozzle 245°C / bed 75°C) https://3dxtech.com/products/max-g-petg-1
+2026-08-25T16:08:43.851Z shopify ok 3DXSTAT™ ESD-PC (nozzle 280°C / bed 115°C) https://3dxtech.com/products/3dxstat-esd-pc-1
+2026-08-25T16:08:45.397Z shopify ok ECOMAX® PLA (nozzle 205°C / bed 42°C) https://3dxtech.com/products/ecomax-r-pla
+2026-08-25T16:08:49.850Z shopify ok CARBONX™ PP+CF (nozzle 255°C / bed 55°C) https://3dxtech.com/products/carbonx-pp-cf-1
+2026-08-25T16:08:55.906Z shopify ok THERMAX™ PEI 9085 (nozzle 365°C / bed 150°C) https://3dxtech.com/products/thermax-pei-9085
+2026-08-25T16:08:57.400Z shopify ok THERMAX™ PPS (nozzle 330°C / bed 140°C) https://3dxtech.com/products/thermax-pps
+2026-08-25T16:08:58.890Z shopify ok CARBONX™ NYLON 6+CF (nozzle 255°C / bed 95°C) https://3dxtech.com/products/carbonx-nylon-6-cf-1
+2026-08-25T16:09:00.345Z shopify ok CARBONX™ ASA+CF (nozzle 245°C / bed 100°C) https://3dxtech.com/products/carbonx-asa-cf-1
+2026-08-25T16:09:01.848Z shopify ok FIREWIRE® FR-PC/ABS (nozzle 275°C / bed 115°C) https://3dxtech.com/products/firewire-r-fr-pc-abs
+2026-08-25T16:09:03.459Z shopify ok 3DXSTAT™ ESD-PLA (nozzle 233°C / bed 55°C) https://3dxtech.com/products/3dxstat-esd-pla-1
+2026-08-25T16:09:04.913Z shopify ok THERMAX™ PEEK (nozzle 440°C / bed 160°C) https://3dxtech.com/products/thermax-peek-1
+2026-08-25T16:09:06.465Z shopify ok 3DXMAX® HIPS (nozzle 228°C / bed 105°C) https://3dxtech.com/products/3dxmax-hips
+2026-08-25T16:09:07.837Z shopify ok 3DXMAX® PC (nozzle 295°C / bed 115°C) https://3dxtech.com/products/3dxmax-r-pc
+2026-08-25T16:09:09.352Z shopify ok THERMAX™ PSU (nozzle 365°C / bed 150°C) https://3dxtech.com/products/thermax-psu-1
+2026-08-25T16:09:10.842Z shopify ok 3DXSTAT™ ESD-PEI 1010 (nozzle 375°C / bed 150°C) https://3dxtech.com/products/3dxstat-esd-pei-ultem-1010
+2026-08-25T16:09:12.378Z shopify ok THERMAX™ PEI 1010 (nozzle 380°C / bed 140°C) https://3dxtech.com/products/thermax-pei-1010
+2026-08-25T16:09:13.869Z shopify ok 3DXSTAT™ ESD-ABS (nozzle 230°C / bed 105°C) https://3dxtech.com/products/3dxstat-esd-abs-1
+2026-08-25T16:09:15.335Z shopify ok 3DXFLEX™ TPU (95A) (nozzle 238°C / bed 50°C) https://3dxtech.com/products/3dxflex-tpu-95a
+2026-08-25T16:09:16.885Z shopify ok 3DXFLEX™ TPU (85A) (nozzle 238°C / bed 50°C) https://3dxtech.com/products/3dxflex-tpu-85a
+2026-08-25T16:09:18.390Z shopify ok 3DXSTAT™ ESD-TPU (60D) (nozzle 230°C / bed 50°C) https://3dxtech.com/products/esd-flex-tpu
+2026-08-25T16:09:19.823Z shopify ok THERMAX™ MTS1 (nozzle 305°C / bed 100°C) https://3dxtech.com/products/thermax-mts1-1
+2026-08-25T16:09:21.407Z shopify ok 3DXSTAT™ ESD-PETG (nozzle 245°C / bed 75°C) https://3dxtech.com/products/3dxstat-esd-petg-1
+2026-08-25T16:09:22.884Z shopify ok THERMAX™ PPSU (nozzle 375°C / bed 150°C) https://3dxtech.com/products/thermax-ppsu-1
+2026-08-25T16:09:24.457Z shopify ok THERMAX™ PPE/PS (nozzle 305°C / bed 100°C) https://3dxtech.com/products/thermax-ppe-ps-1
+2026-08-25T16:09:25.852Z shopify ok THERMAX™ PEKK-A (nozzle 360°C / bed 130°C) https://3dxtech.com/products/pekk-a
+2026-08-25T16:09:27.424Z shopify ok FIBREX™ PEEK+GF20 (nozzle 393°C / bed 138°C) https://3dxtech.com/products/fibrex-peek-gf20-1
+2026-08-25T16:09:30.554Z shopify ok THERMAX™ PES (nozzle 365°C / bed 150°C) https://3dxtech.com/products/thermax-pes-1
+2026-08-25T16:09:31.878Z shopify ok CARBONX™ PEI 9085+CF (nozzle 378°C / bed 150°C) https://3dxtech.com/products/pei-cf15
+2026-08-25T16:09:34.905Z shopify ok FIBREX™ NYLON 12+GF30 (nozzle 275°C / bed 100°C) https://3dxtech.com/products/fibrex-nylon-12-gf30-1
+2026-08-25T16:09:36.420Z shopify ok WEARX™ NYLON 6 (nozzle 268°C / bed 88°C) https://3dxtech.com/products/wearx-1
+2026-08-25T16:09:37.968Z shopify ok AMIDEX™ NYLON 12 (nozzle 288°C / bed 80°C) https://3dxtech.com/products/amidex™-nylon-12
+2026-08-25T16:09:39.444Z shopify ok FIREWIRE® FR-ABS (nozzle 230°C / bed 105°C) https://3dxtech.com/products/firewire-r-fr-abs
+2026-08-25T16:09:42.379Z shopify ok THERMAX™ HTS1 (nozzle 365°C / bed 140°C) https://3dxtech.com/products/thermax-hts1-1
+2026-08-25T16:09:48.379Z shopify ok 3DXMAX® LTS2 (nozzle 228°C / bed 93°C) https://3dxtech.com/products/3dxmax-lts2
+2026-08-25T16:09:49.920Z shopify ok FIBREX™ ABS+GF (nozzle 238°C / bed 103°C) https://3dxtech.com/products/fibrex-abs-gf-1
+2026-08-25T16:09:51.412Z shopify ok CARBONX™ ezPC™+CF (nozzle 270°C / bed 90°C) https://3dxtech.com/products/carbonx-ezpc-cf-1
+2026-08-25T16:09:52.935Z shopify ok ezPC™ POLYCARBONATE (nozzle 265°C / bed 100°C) https://3dxtech.com/products/ezpc-polycarbonate-1
+2026-08-25T16:09:54.472Z shopify ok Economy PLA (nozzle 205°C / bed 42°C) https://3dxtech.com/products/economy-pla
+2026-08-25T16:09:55.827Z shopify ok CARBONX™ PC+CF (nozzle 295°C / bed 115°C) https://3dxtech.com/products/carbonx-pc-cf-1
+2026-08-25T16:09:57.448Z shopify ok CARBONX™ PETG+CF (nozzle 245°C / bed 80°C) https://3dxtech.com/products/carbonx-petg-cf-1
+2026-08-25T16:09:58.887Z shopify ok CARBONX™ ABS+CF (nozzle 230°C / bed 105°C) https://3dxtech.com/products/carbonx-abs-cf-1
+2026-08-25T16:10:00.373Z shopify ok ION™ NYLON 6 ALLOY (nozzle 260°C / bed 105°C) https://3dxtech.com/products/ion-pa6-alloy-5
+2026-08-25T16:10:01.899Z shopify ok ECOMAX® TOUGH PLA (nozzle 215°C / bed 42°C) https://3dxtech.com/products/ecomax-r-tough-pla
+2026-08-25T16:10:07.904Z shopify ok TRITON3D™ ESD-ABS - Stratasys® Compatible (nozzle 230°C / bed 105°C) https://3dxtech.com/products/triton-esd-abs-1
+2026-08-25T16:10:10.939Z shopify ok TRITON3D™ ABS+CF - Stratasys® Compatible (nozzle 230°C / bed 105°C) https://3dxtech.com/products/triton-abs-cf-1
+2026-08-25T16:10:19.857Z shopify ok AQUATEK™ PVA (nozzle 205°C / bed 47°C) https://3dxtech.com/products/aquatek-pva-1
+2026-08-25T16:10:21.448Z shopify ok SIMUBONE® (nozzle 230°C / bed 42°C) https://3dxtech.com/products/simubone-r
+2026-08-25T16:10:24.408Z shopify ok OBSIDIAN™ FR-NYLON (nozzle 275°C / bed 100°C) https://3dxtech.com/products/obsidian-fr-nylon
+2026-08-25T16:10:30.412Z shopify ok Satin PLA (nozzle 205°C / bed 42°C) https://3dxtech.com/products/satin-pla
+2026-08-25T16:10:31.910Z shopify ok Glitter PLA (nozzle 205°C / bed 42°C) https://3dxtech.com/products/glitter-pla
+2026-08-25T16:10:31.911Z shopify ok 3DXLABS™ EMI-ABS (nozzle 285°C / bed 100°C) https://3dxtech.com/products/3dxlabs-emi-abs
+2026-08-25T16:10:52.927Z shopify ok OBSIDIAN™ NYLON 6+CF V2 (nozzle 275°C / bed 100°C) https://3dxtech.com/products/obsidian-nylon-6-cf-v2
+2026-08-25T16:11:00.424Z shopify ok CARBONX™ HTN+CF (nozzle 285°C / bed 115°C) https://3dxtech.com/products/carbonx-htn-cf
+2026-08-25T16:11:11.029Z shopify ok Economy PLA - Master Reels (nozzle 205°C / bed 42°C) https://3dxtech.com/products/economy-pla-master-reels
+2026-08-25T16:11:12.441Z shopify ok 3DXSTAT™ EMI-PETG (nozzle 245°C / bed 80°C) https://3dxtech.com/products/3dxstat-emi-petg
+2026-08-25T16:11:24.447Z shopify ok 3DXMAX PC-ABS (nozzle 295°C / bed 115°C) https://3dxtech.com/products/3dxmaxa-r-pc-abs
+2026-08-25T16:11:25.922Z shopify ok FIBREX PEI+GF30 (nozzle 380°C / bed 140°C) https://3dxtech.com/products/pei-gf30
+2026-08-25T16:11:27.461Z shopify ok AmideX Nylon 6-66 (nozzle 265°C / bed 65°C) https://3dxtech.com/products/amidex-nylon-6-67
+2026-08-25T16:11:28.854Z shopify ok FluorX PVDF (nozzle 255°C / bed 100°C) https://3dxtech.com/products/fluorx-pvdf-1
+2026-08-25T16:12:08.120Z shopify ok 4kg PLA (nozzle 215°C / bed 60°C) https://polarfilament.com/products/4kg-pla-1-75mm-assorted-colors
+2026-08-25T16:12:08.121Z shopify ok 4kg PETG (nozzle 230°C / bed 70°C) https://polarfilament.com/products/4kg-petg-1-75mm-assorted-colors
+2026-08-25T16:12:17.104Z shopify ok Red Licorice Flexible TPU-60D - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/red-licorice-flexible-tpu-60d-1kg-1-75mm
+2026-08-25T16:12:51.661Z shopify ok Black Nylon PA12 - (nozzle 230°C / bed 80°C) https://polarfilament.com/products/black-nylon-pa12-1kg-1-75mm
+2026-08-25T16:12:53.137Z shopify ok Sapphire Flexible TPU-60D - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/saphhire-flexible-tpu-60d-1kg-1-75mm
+2026-08-25T16:12:53.138Z shopify ok Polar White Flexible TPU-60D - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/polar-white-flexible-tpu-60d-1kg-1-75mm
+2026-08-25T16:13:00.598Z shopify ok Candy Red Flexible TPU-60D - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/candy-red-flexible-tpu-60d-1kg-1-75mm
+2026-08-25T16:13:00.606Z shopify ok Shamrock Flexible TPU-60D - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/shamrock-flexible-tpu-60d-1kg-1-75mm
+2026-08-25T16:13:00.607Z shopify ok Light Blue Flexible TPU-60D - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/light-blue-flexible-tpu-60d-1kg-1-75mm
+2026-08-25T16:13:03.597Z shopify ok Natural Flexible TPU-60D - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/natural-flexible-tpu-60d-1kg-1-75mm
+2026-08-25T16:13:03.598Z shopify ok Classic Black ESD PLA - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/classic-black-esd-pla-1-75mm-1kg
+2026-08-25T16:13:03.599Z shopify ok Classic Black Flexible TPU-60D - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/classic-black-flexible-tpu-60d-1kg-1-75mm
+2026-08-25T16:13:03.605Z shopify ok Vivid Orange Flexible TPU-60D - (nozzle 225°C / bed 60°C) https://polarfilament.com/products/vivid-orange-flexible-tpu-60d-1kg-1-75mm
+2026-08-25T16:13:11.126Z shopify ok Natural Nylon PA12 - (nozzle 230°C / bed 80°C) https://polarfilament.com/products/natural-nylon-pa12-1kg-1-75mm
+2026-08-25T16:13:11.127Z shopify ok Natural Nylon PA12 - (nozzle 230°C / bed 80°C) https://polarfilament.com/products/natural-nylon-750g-1-75mm
+2026-08-25T16:13:12.654Z shopify ok Sunshine Yellow PLA - (nozzle 215°C / bed 60°C) https://polarfilament.com/products/sunshine-yellow-pla-1kg-2-85mm
+2026-08-25T16:13:12.654Z shopify ok Royal Blue PLA - (nozzle 215°C / bed 60°C) https://polarfilament.com/products/royal-blue-pla-1kg-2-85mm
+2026-08-25T16:13:12.659Z shopify ok Vivid Orange PLA - (nozzle 215°C / bed 60°C) https://polarfilament.com/products/vivid-orange-pla-1kg-2-85mm
+2026-08-25T16:13:12.659Z shopify ok Polar White PLA - (nozzle 215°C / bed 60°C) https://polarfilament.com/products/polar-white-pla-1kg-2-85mm
+2026-08-25T16:13:12.660Z shopify ok Candy Red PLA - (nozzle 215°C / bed 60°C) https://polarfilament.com/products/candy-red-pla-1kg-2-85mm
+2026-08-25T16:13:26.159Z shopify ok Classic Black PLA - (nozzle 215°C / bed 60°C) https://polarfilament.com/products/copy-of-classic-black-pla-1kg-2-85mm
+2026-08-25T16:13:27.639Z shopify ok Gray ASA - (nozzle 240°C / bed 80°C) https://polarfilament.com/products/dark-gray-pla-1kg-1-75mm
+2026-08-25T16:14:04.010Z shopify ok Shamrock Green ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/shamrock-green-abs-copy
+2026-08-25T16:14:04.011Z shopify ok Transition "Mystery" Color CoexFlex™ 40D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/transition-mystery-color-coexflex-40d-tpe
+2026-08-25T16:14:04.012Z shopify ok Natural CoexFlex™ 40D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/natural-coexflex-40d-tpe
+2026-08-25T16:14:04.012Z shopify ok Black CoexFlex™ 40D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/black-coexflex-40d-tpe
+2026-08-25T16:14:04.012Z shopify ok White CoexFlex™ 40D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/white-coexflex-40d-tpe-1-75mm
+2026-08-25T16:14:05.529Z shopify ok Gunmetal Gray PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/gunmetalgray-pctg-prime
+2026-08-25T16:14:06.949Z shopify ok Blueberry PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/blueberry-pctg-prime-copy
+2026-08-25T16:14:08.669Z shopify ok Pumpkin Orange PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/pumpkin-orange-pctg-prime
+2026-08-25T16:14:14.452Z shopify ok Scarlet Red PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/banana-yellow-pctg-prime-copy
+2026-08-25T16:14:16.049Z shopify ok Carbon Filled PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/carbon-pla
+2026-08-25T16:14:21.962Z shopify ok Banana Yellow PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/banana-yellow-pctg-prime
+2026-08-25T16:14:21.963Z shopify ok Black CoexFlex™ 90A TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/black-coexflex™-90a-tpe
+2026-08-25T16:14:21.963Z shopify ok Natural CoexFlex™ 90A TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/natural-coexflex™-90a-tpe
+2026-08-25T16:14:23.535Z shopify ok Green Bay Green PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/green-bay-green-pla-prime
+2026-08-25T16:14:24.996Z shopify ok Forest Green PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/forest-green-pctg-prime
+2026-08-25T16:14:26.474Z shopify ok Stealth Gray PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/stealth-gray-pctg-prime
+2026-08-25T16:14:27.964Z shopify ok White CoexNylex™ Unfilled Nylon (nozzle 245°C / bed 95°C) https://coex3d.com/products/white-coexnylex™-unfilled-nylon
+2026-08-25T16:14:29.525Z shopify ok Natural PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/natural-pctg-prime
+2026-08-25T16:14:30.994Z shopify ok Transition "Mystery" Color PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/transition-mystery-color-pctg-prime
+2026-08-25T16:14:32.556Z shopify ok Black PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/black-pctg-prime
+2026-08-25T16:14:34.071Z shopify ok Stone Gray PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/stone-gray-pctg-prime
+2026-08-25T16:14:35.491Z shopify ok Cobalt Blue PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/cobalt-blue-pctg-prime
+2026-08-25T16:14:36.999Z shopify ok White PCTG Prime (nozzle 258°C / bed 80°C) https://coex3d.com/products/white-pctg-prime
+2026-08-25T16:14:38.652Z shopify ok Peach Pink PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/peach-pink-pla
+2026-08-25T16:14:40.039Z shopify ok Black CoexNylex™ PA6-CF (nozzle 285°C / bed 90°C) https://coex3d.com/products/black-coexnylex™-pa6-carbon
+2026-08-25T16:14:43.023Z shopify ok CMYK PLA Bundle (nozzle 225°C / bed 60°C) https://coex3d.com/products/cmyk-pla-bundle
+2026-08-25T16:14:46.033Z shopify ok Stone Gray ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/stone-gray-abs-prime
+2026-08-25T16:14:47.559Z shopify ok Matte Black PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/matte-black-petg
+2026-08-25T16:14:50.564Z shopify ok Gunmetal Gray PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/gunmetal-gray-pla
+2026-08-25T16:14:52.085Z shopify ok Fog Gray PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/fog-gray-pla
+2026-08-25T16:14:52.092Z shopify ok Transition “Mystery” Color PLA+Silk (nozzle 225°C / bed 50°C) https://coex3d.com/products/transition-mystery-color-pla-silk
+2026-08-25T16:14:52.092Z shopify ok Lipstick Pink PLA+Silk (nozzle 225°C / bed 50°C) https://coex3d.com/products/lipstick-pink-pla-silk
+2026-08-25T16:14:52.093Z shopify ok Copper PLA+Silk (nozzle 225°C / bed 50°C) https://coex3d.com/products/copper-pla-silk
+2026-08-25T16:14:52.093Z shopify ok Electric Blue PLA+Silk (nozzle 225°C / bed 50°C) https://coex3d.com/products/electric-blue-pla-silk
+2026-08-25T16:14:52.094Z shopify ok Gold PLA+Silk (nozzle 225°C / bed 50°C) https://coex3d.com/products/gold-pla-silk
+2026-08-25T16:14:52.099Z shopify ok Silver PLA+Silk (nozzle 225°C / bed 50°C) https://coex3d.com/products/silver-pla-silk
+2026-08-25T16:14:52.099Z shopify ok Black Chrome PLA+Silk (nozzle 225°C / bed 50°C) https://coex3d.com/products/black-chrome-pla-silk
+2026-08-25T16:14:52.100Z shopify ok Frost White PLA+Silk (nozzle 225°C / bed 50°C) https://coex3d.com/products/natural-pla-silk
+2026-08-25T16:14:52.100Z shopify ok Transition "Mystery" Color ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/transition-mystery-color-asa
+2026-08-25T16:14:53.511Z shopify ok Midnight Blue ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/midnight-blue-asa-prime
+2026-08-25T16:14:54.979Z shopify ok Shamrock Green ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/shamrock-green-asa-prime
+2026-08-25T16:14:56.521Z shopify ok Aqua Blue ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/aqua-blue-asa-prime
+2026-08-25T16:14:58.027Z shopify ok Natural ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/natural-asa-prime
+2026-08-25T16:14:59.492Z shopify ok Metallic Silver ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/metallic-silver-asa-prime
+2026-08-25T16:15:00.973Z shopify ok Lemon Yellow ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/lemon-yellow-asa-prime
+2026-08-25T16:15:00.979Z shopify ok PLA Starter Pack (nozzle 225°C / bed 30°C) https://coex3d.com/products/pla-starter-pack
+2026-08-25T16:15:02.550Z shopify ok Stone Gray ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/stone-gray-asa-prime
+2026-08-25T16:15:03.991Z shopify ok Cobalt Blue ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/cobalt-blue-asa-prime
+2026-08-25T16:15:05.482Z shopify ok Inferno Orange ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/inferno-orange-asa-prime
+2026-08-25T16:15:06.967Z shopify ok Salsa Red ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/salsa-red-asa-prime
+2026-08-25T16:15:08.524Z shopify ok Black ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/black-asa
+2026-08-25T16:15:09.944Z shopify ok White ASA Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/white-asa-prime
+2026-08-25T16:15:13.030Z shopify ok Pumpkin Orange PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/pumpkin-orange-petg
+2026-08-25T16:15:14.520Z shopify ok Stone Gray PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/stone-grey-petg
+2026-08-25T16:15:16.004Z shopify ok Construction Yellow PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/construction-yellow-pla-prime
+2026-08-25T16:15:17.508Z shopify ok Lemon Yellow ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/lemon-yellow-abs-prime
+2026-08-25T16:15:18.993Z shopify ok Milkshake Pink PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/milkshake-pink-petg
+2026-08-25T16:15:20.507Z shopify ok Inferno Orange ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/inferno-orange-abs-prime
+2026-08-25T16:15:20.508Z shopify ok Stone Gray PLA Prime (nozzle 225°C / bed 50°C) https://coex3d.com/products/stone-gray-pla-prime
+2026-08-25T16:15:22.012Z shopify ok Glacier Blue PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/glacier-blue-pla
+2026-08-25T16:15:23.501Z shopify ok Chocolate Brown PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/chocolate-brown-pla
+2026-08-25T16:15:25.003Z shopify ok Galaxy Blue PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/galaxy-blue-pla
+2026-08-25T16:15:27.954Z shopify ok White ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/white-abs-prime
+2026-08-25T16:15:29.564Z shopify ok Green Bay Yellow PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/green-bay-yellow-pla-prime
+2026-08-25T16:15:31.027Z shopify ok Lilac Purple PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/lilac-purple-pla-prime
+2026-08-25T16:15:32.557Z shopify ok Army Green PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/army-green-pla-prime
+2026-08-25T16:15:33.992Z shopify ok Pumpkin Orange PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/pumpkin-orange-pla-prime
+2026-08-25T16:15:35.555Z shopify ok Army Green PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/army-green-pla
+2026-08-25T16:15:37.033Z shopify ok Green Bay Yellow PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/green-bay-yellow-pla
+2026-08-25T16:15:38.559Z shopify ok Black PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/black-pla
+2026-08-25T16:15:43.008Z shopify ok Black CoexNylex™ Unfilled Nylon (nozzle 245°C / bed 95°C) https://coex3d.com/products/black-coexnylex-unfilled-nylon
+2026-08-25T16:15:44.536Z shopify ok Metallic Gunmetal Silver PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/metallic-gunmetal-silver-pla-prime
+2026-08-25T16:15:46.021Z shopify ok Desert Tan PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/desert-tan-pla-prime
+2026-08-25T16:15:47.523Z shopify ok Metallic Silver PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/metallic-silver-pla-prime
+2026-08-25T16:15:49.009Z shopify ok Scarlet Red PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/scarlet-red-petg
+2026-08-25T16:15:50.465Z shopify ok Natural CoexNylex™ Unfilled Nylon (nozzle 245°C / bed 95°C) https://coex3d.com/products/natural-coexnylex-unfilled-nylon
+2026-08-25T16:15:52.076Z shopify ok Black PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/black-pla-prime
+2026-08-25T16:15:53.552Z shopify ok Taxicab Yellow PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/taxicab-yellow-pla-prime
+2026-08-25T16:15:55.062Z shopify ok Legion Gray PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/legion-grey-pla
+2026-08-25T16:15:56.591Z shopify ok Translucent Blood Red PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/translucent-blood-red-pla
+2026-08-25T16:15:58.037Z shopify ok Raspberry PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/raspberry-petg
+2026-08-25T16:15:59.509Z shopify ok Blueberry PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/blueberry-petg
+2026-08-25T16:15:59.509Z shopify ok C♻EXNext (nozzle 225°C / bed 30°C) https://coex3d.com/products/coex-next-1-75mm
+2026-08-25T16:16:01.031Z shopify ok White ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/white-abs
+2026-08-25T16:16:02.502Z shopify ok Translucent Blood Red PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/translucent-blood-red-pla-prime
+2026-08-25T16:16:04.070Z shopify ok Forest Green PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/forest-green-petg
+2026-08-25T16:16:05.531Z shopify ok Rust Orange PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/rust-orange-petg
+2026-08-25T16:16:07.039Z shopify ok Banana Yellow PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/banana-yellow-petg
+2026-08-25T16:16:07.040Z shopify ok Transition "Mystery" Color CoexFlex™ 30D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/transition-mystery-color-coexflex-30d-tpe
+2026-08-25T16:16:07.041Z shopify ok White CoexFlex™ 30D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/white-coexflex-30d-tpe-1-75mm
+2026-08-25T16:16:07.048Z shopify ok Natural CoexFlex™ 30D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/natural-coexflex-30d-tpe
+2026-08-25T16:16:07.048Z shopify ok Black CoexFlex™ 30D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/black-coexflex-30d-tpe
+2026-08-25T16:16:07.048Z shopify ok Transition "Mystery" Color CoexFlex™ 60D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/transition-mystery-color-coexflex-60d-tpe
+2026-08-25T16:16:07.049Z shopify ok White CoexFlex™ 60D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/white-coexflex-60d-tpe
+2026-08-25T16:16:07.049Z shopify ok Natural CoexFlex™ 60D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/natural-coexflex-60d-tpe
+2026-08-25T16:16:07.055Z shopify ok Black CoexFlex™ 60D TPE (nozzle 228°C / bed 55°C) https://coex3d.com/products/black-coexflex-60d-tpe
+2026-08-25T16:16:08.482Z shopify ok Desert Tan PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/desert-tan-pla
+2026-08-25T16:16:10.010Z shopify ok Metallic Silver ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/metallic-silver-abs-prime
+2026-08-25T16:16:11.491Z shopify ok Cobalt Blue ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/cobalt-blue-abs-prime
+2026-08-25T16:16:13.006Z shopify ok Black ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/black-abs-prime
+2026-08-25T16:16:14.532Z shopify ok Flame Retardant Black ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/flame-retardant-black-abs
+2026-08-25T16:16:19.033Z shopify ok Gamer Green (Chartreuse) PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/gamer-green-chartreuse-pla
+2026-08-25T16:16:20.526Z shopify ok Glow in the Dark Green PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/glow-green-pla
+2026-08-25T16:16:22.028Z shopify ok Transition “Mystery” Color PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/transition-mystery-color-pla-prime
+2026-08-25T16:16:23.558Z shopify ok Lilac Purple PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/lilac-purple-pla
+2026-08-25T16:16:24.990Z shopify ok Plum Purple PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/plum-purple-pla
+2026-08-25T16:16:26.521Z shopify ok Cobalt Blue PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/cobalt-blue-petg
+2026-08-25T16:16:28.073Z shopify ok Salsa Red PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/salsa-red-petg
+2026-08-25T16:16:29.570Z shopify ok Navy Blue PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/navy-blue-pla
+2026-08-25T16:16:31.067Z shopify ok Metallic Gunmetal Silver PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/metallic-gunmetal-silver-pla
+2026-08-25T16:16:32.543Z shopify ok Iced Amethyst PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/iced-amethyst-pla
+2026-08-25T16:16:34.013Z shopify ok Cobalt Blue PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/cobalt-blue-pla
+2026-08-25T16:16:35.561Z shopify ok Green Bay Green PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/green-bay-green-pla
+2026-08-25T16:16:37.024Z shopify ok Scarlet Red PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/scarlet-red-pla
+2026-08-25T16:16:38.528Z shopify ok Bone Brown PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/bone-brown-pla
+2026-08-25T16:16:40.027Z shopify ok Transition "Mystery" Color ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/transition-mystery-color-abs-prime
+2026-08-25T16:16:41.550Z shopify ok White PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/white-pla-prime
+2026-08-25T16:16:43.055Z shopify ok Maroon Red PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/maroon-red-pla
+2026-08-25T16:16:44.540Z shopify ok Inferno Orange ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/inferno-orange-abs
+2026-08-25T16:16:46.051Z shopify ok Pumpkin Orange PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/pumpkin-orange-pla
+2026-08-25T16:16:47.559Z shopify ok Stealth Gray PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/stealth-gray-petg
+2026-08-25T16:16:49.102Z shopify ok Transition "Mystery" Color PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/transition-mystery-color-petg
+2026-08-25T16:16:49.103Z shopify ok Transition “Mystery” Color PLA (nozzle 225°C / bed 30°C) https://coex3d.com/products/mystery-color-pla
+2026-08-25T16:16:50.516Z shopify ok Transition "Mystery" Color ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/transition-mystery-abs
+2026-08-25T16:16:52.064Z shopify ok Black PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/black-petg
+2026-08-25T16:16:53.539Z shopify ok Gunmetal Gray PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/gunmetal-gray-petg
+2026-08-25T16:16:55.026Z shopify ok Natural PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/natural-petg
+2026-08-25T16:16:56.534Z shopify ok White PETG (nozzle 238°C / bed 80°C) https://coex3d.com/products/white-petg
+2026-08-25T16:16:58.043Z shopify ok Scarlet Red PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/scarlet-red-pla-prime
+2026-08-25T16:17:01.014Z shopify ok Midnight Blue ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/midnight-blue-abs
+2026-08-25T16:17:02.522Z shopify ok Salsa Red ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/salsa-red-abs-prime
+2026-08-25T16:17:04.066Z shopify ok Natural ABS Prime (nozzle 255°C / bed 90°C) https://coex3d.com/products/natural-abs-prime
+2026-08-25T16:17:05.559Z shopify ok Cobalt Blue PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/cobalt-blue-pla-prime
+2026-08-25T16:17:07.063Z shopify ok Metallic Silver PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/metallic-silver-pla
+2026-08-25T16:17:08.608Z shopify ok Stone Gray PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/stone-gray-pla
+2026-08-25T16:17:10.037Z shopify ok Olive Drab Green PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/olive-drab-green-pla
+2026-08-25T16:17:11.588Z shopify ok Ocean Blue PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/ocean-blue-pla
+2026-08-25T16:17:13.030Z shopify ok Construction Yellow PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/construction-yellow-pla
+2026-08-25T16:17:14.549Z shopify ok Neon Green PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/neon-green-pla
+2026-08-25T16:17:16.111Z shopify ok Taxicab Yellow PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/taxicab-yellow-pla
+2026-08-25T16:17:17.575Z shopify ok Inferno Orange PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/inferno-orange-pla
+2026-08-25T16:17:19.081Z shopify ok Magenta Pink PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/magenta-pink-pla
+2026-08-25T16:17:20.588Z shopify ok White PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/white-pla
+2026-08-25T16:17:22.020Z shopify ok Stone Gray ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/stone-gray-abs
+2026-08-25T16:17:23.508Z shopify ok Shamrock Green ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/shamrock-green-abs
+2026-08-25T16:17:25.033Z shopify ok Metallic Silver ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/metallic-silver-abs
+2026-08-25T16:17:26.493Z shopify ok Lemon Yellow ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/lemon-yellow-abs
+2026-08-25T16:17:27.978Z shopify ok Cobalt Blue ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/cobalt-blue-abs
+2026-08-25T16:17:29.473Z shopify ok Aqua Blue ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/aqua-blue-abs
+2026-08-25T16:17:31.080Z shopify ok Natural PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/natural-pla-175mm-1kg
+2026-08-25T16:17:32.509Z shopify ok Natural ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/natural-abs
+2026-08-25T16:17:34.011Z shopify ok Salsa Red ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/salsa-red-abs-175mm-1kg
+2026-08-25T16:17:35.490Z shopify ok Black ABS (nozzle 255°C / bed 90°C) https://coex3d.com/products/black-abs
+2026-08-25T16:17:37.019Z shopify ok Natural PLA Prime (nozzle 225°C / bed 60°C) https://coex3d.com/products/natural-pla-prime
+2026-08-25T16:17:38.524Z shopify ok Natural HIPS (nozzle 255°C / bed 90°C) https://coex3d.com/products/natural-hips
+2026-08-25T16:17:40.043Z shopify ok Aqua Blue PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/aqua-blue-pla
+2026-08-25T16:17:41.595Z shopify ok Salsa Red PLA (nozzle 225°C / bed 60°C) https://coex3d.com/products/salsa-red-pla
+2026-08-25T16:17:41.595Z shopify ok TPU 100A Filament (nozzle 240°C / bed 70°C) https://pushplastic.com/products/tpu-100a-filament-1-75mm-1kg
+2026-08-25T16:18:18.093Z shopify ok TPU 100A Filament (nozzle 240°C / bed 70°C) https://pushplastic.com/products/tpu-100a-filament-2-85mm-1kg
+2026-08-25T16:18:21.030Z shopify ok PETG Filament (nozzle 243°C / bed 90°C) https://pushplastic.com/products/petg-filament-2-85mm-10kg-subscription
+2026-08-25T16:18:21.039Z shopify ok PETG Filament (nozzle 243°C / bed 90°C) https://pushplastic.com/products/petg-filament-1-75mm-10kg-subscription
+2026-08-25T16:19:58.540Z shopify ok PEI 9085 Filament (nozzle 350°C / bed 150°C) https://pushplastic.com/products/pei-9085-filament-2-85mm-500g
+2026-08-25T16:19:58.541Z shopify ok PEI 9085 Filament (nozzle 350°C / bed 150°C) https://pushplastic.com/products/pei-9085-filament-2-85mm-3kg
+2026-08-25T16:19:58.542Z shopify ok PEI 9085 Filament (nozzle 350°C / bed 150°C) https://pushplastic.com/products/pei-9085-filament-1-75mm-500g
+2026-08-25T16:19:58.543Z shopify ok PEI 9085 Filament (nozzle 350°C / bed 150°C) https://pushplastic.com/products/pei-9085-filament-1-75mm-3kg
+2026-08-25T16:19:58.549Z shopify ok PEI 1010 Filament (nozzle 375°C / bed 160°C) https://pushplastic.com/products/pei-1010-filament-2-85mm-500g
+2026-08-25T16:19:58.549Z shopify ok PEI 1010 Filament (nozzle 375°C / bed 160°C) https://pushplastic.com/products/pei-1010-filament-2-85mm-3kg
+2026-08-25T16:19:58.549Z shopify ok PEI 1010 Filament (nozzle 375°C / bed 160°C) https://pushplastic.com/products/pei-1010-filament-1-75mm-500g
+2026-08-25T16:19:58.550Z shopify ok PEI 1010 Filament (nozzle 375°C / bed 160°C) https://pushplastic.com/products/pei-1010-filament-1-75mm-3kg
+2026-08-25T16:20:39.507Z shopify ok EconoFil™ Hyper PLA Filament - Green - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-green-1-75mm-1-kg
+2026-08-25T16:21:03.545Z shopify ok EconoFil™ Hyper PLA Filament - Red - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-red-1-75mm-1-kg
+2026-08-25T16:21:05.035Z shopify ok EconoFil™ Hyper PLA Filament - Black - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-black-1-75mm-1-kg
+2026-08-25T16:21:06.476Z shopify ok EconoFil™ Hyper PLA Filament - Beige - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-beige-1-75mm-1-kg
+2026-08-25T16:21:07.975Z shopify ok EconoFil™ Hyper PLA Filament - Blue - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-blue-1-75mm-1-kg
+2026-08-25T16:21:09.485Z shopify ok EconoFil™ Hyper PLA Filament - Brown - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-brown-1-75mm-1-kg
+2026-08-25T16:21:10.992Z shopify ok EconoFil™ Hyper PLA Filament - Grey - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-grey-1-75mm-1-kg
+2026-08-25T16:21:12.464Z shopify ok EconoFil™ Hyper PLA Filament - Light Green - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-light-green-1-75mm-1-kg
+2026-08-25T16:21:13.940Z shopify ok EconoFil™ Hyper PLA Filament - Orange - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-orange-1-75mm-1-kg
+2026-08-25T16:21:15.412Z shopify ok EconoFil™ Hyper PLA Filament - Purple - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-purple-1-75mm-1-kg
+2026-08-25T16:21:16.925Z shopify ok EconoFil™ Hyper PLA Filament - Silver - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-silver-1-75mm-1-kg
+2026-08-25T16:21:18.472Z shopify ok EconoFil™ Hyper PLA Filament - White - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-white-1-75mm-1-kg
+2026-08-25T16:21:19.943Z shopify ok EconoFil™ Hyper PLA Filament - Yellow - (nozzle 200°C / bed 45°C) https://filaments.ca/products/econofil-hyper-pla-filament-yellow-1-75mm-1-kg
+2026-08-25T16:25:32.559Z shopify ok Black: Recycled Nylon 12 (PA12) with Carbon Fiber 20% (Coming Soon!) (nozzle 230°C / bed 80°C) https://greengate3d.com/products/natural-recycled-nylon-12-pa12-copy
+2026-08-25T16:25:35.521Z shopify ok Barbara's Bargain Bonanza Blowout! Buy 4 Transition Spools and get a 5th for FREE: Recycled PET-G (nozzle 228°C / bed 80°C) https://greengate3d.com/products/barbaras-bargain-bonanza-blowout-4-5-buy-4-get-the-5th-free-recycled-pet-g
+2026-08-25T16:25:46.012Z shopify ok Natural: Recycled PLA <em>(NEW!)</em> (nozzle 205°C / bed 60°C) https://greengate3d.com/products/natural-recycled-pla-em-new-em-mark-coming-soon-mark
+2026-08-25T16:25:46.021Z shopify ok Pistachio: Recycled PET-G <mark>NEW!</mark> <em>Pastel</em> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/pistachio-recycled-pet-g-em-pastel-em
+2026-08-25T16:25:46.022Z shopify ok Peach: Recycled PET-G <mark>NEW!</mark> <em>Pastel</em> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/peach-recycled-pet-g-em-pastel-em
+2026-08-25T16:25:46.022Z shopify ok London Fog: Recycled PET-G <mark>NEW!</mark> <em>Pastel</em> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/london-fog-recycled-pet-g-em-pastel-em
+2026-08-25T16:25:46.022Z shopify ok Black: Recycled PLA <em>(NEW!)</em> (nozzle 205°C / bed 60°C) https://greengate3d.com/products/white-recycled-pla-em-new-em-coming-soon-copy
+2026-08-25T16:25:46.023Z shopify ok White: Recycled PLA <em>(NEW!)</em> (nozzle 205°C / bed 60°C) https://greengate3d.com/products/white-recycled-pla-em-new-em-coming-soon
+2026-08-25T16:25:46.029Z shopify ok BambuLab PLA: Sunflower (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulab-pla-sunflower-yeloow
+2026-08-25T16:25:52.047Z shopify ok Eggplant: Recycled PLA <em>(NEW!)</em> (nozzle 205°C / bed 60°C) https://greengate3d.com/products/eggplant-recycled-pla
+2026-08-25T16:25:52.048Z shopify ok Denim: Recycled PLA <em>(NEW!)</em> (nozzle 205°C / bed 60°C) https://greengate3d.com/products/denim-recycled-pla
+2026-08-25T16:25:52.048Z shopify ok Gray: Recycled PLA <em>(NEW!)</em> (nozzle 205°C / bed 60°C) https://greengate3d.com/products/gray-recycled-pla-copy
+2026-08-25T16:25:52.049Z shopify ok Olive: Recycled PLA <em>(NEW!)</em> (nozzle 205°C / bed 60°C) https://greengate3d.com/products/olive-recycled-pla
+2026-08-25T16:25:52.057Z shopify ok Valentine's Day Bundle (nozzle 228°C / bed 80°C) https://greengate3d.com/products/valentines-day-bundle
+2026-08-25T16:25:52.057Z shopify ok Cherry Pie by Billie Ruben: Recycled PET-G <mark> Now with 20% more, FREE! </mark> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/cherry-pie-recycled-pet-g
+2026-08-25T16:25:52.058Z shopify ok Independence Day is EVERY DAY at GreenGate3D: A FULL 10% Discount, Always! (nozzle 228°C / bed 85°C) https://greengate3d.com/products/product-fixed-bundle-13-american
+2026-08-25T16:25:55.007Z shopify ok Baby Blue: Recycled PLA <em>(NEW!)</em> (nozzle 205°C / bed 60°C) https://greengate3d.com/products/baby-blue-recycled-pla
+2026-08-25T16:26:13.003Z shopify ok BambuLabs PLA: Cocoa (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-cocoa-brown
+2026-08-25T16:26:13.012Z shopify ok BambuLabs PLA Silk : (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-silk-silver
+2026-08-25T16:26:13.012Z shopify ok BambuLab PLA: Bronze (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulab-pla-bronze
+2026-08-25T16:26:13.013Z shopify ok BambuLab PLA: Indigo (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulab-pla-indigo-purple
+2026-08-25T16:26:13.014Z shopify ok BambuLab PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulab-pla-orange
+2026-08-25T16:26:13.014Z shopify ok Black: Recycled Nylon 12 (PA12): (nozzle 230°C / bed 80°C) https://greengate3d.com/products/copy-natural-recycled-nylon-12-500g-not-pet-g
+2026-08-25T16:26:17.503Z shopify ok BambuLab PLA: Hot (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-hot-pink-copy
+2026-08-25T16:26:17.504Z shopify ok Camo Collection (nozzle 228°C / bed 85°C) https://greengate3d.com/products/camo-collection-1
+2026-08-25T16:26:17.504Z shopify ok Interplanetary Bundle (nozzle 228°C / bed 85°C) https://greengate3d.com/products/interplanetary-bundle
+2026-08-25T16:26:19.020Z shopify ok United We Stand <mark>NOW WITH 20% MORE, FREE!!!</mark> (nozzle 228°C / bed 80°C) https://greengate3d.com/products/united-we-stand
+2026-08-25T16:26:20.534Z shopify ok BambuLab PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-pink
+2026-08-25T16:26:20.542Z shopify ok BambuLab PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-yellow
+2026-08-25T16:26:20.543Z shopify ok BambuLab PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-purple
+2026-08-25T16:26:20.543Z shopify ok BambuLab PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-magenta
+2026-08-25T16:26:20.544Z shopify ok BambuLab PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-cyan
+2026-08-25T16:26:20.544Z shopify ok ReCreator3D Combo Pack #2 (Virgin Emerald and virgin Clear) (nozzle 263°C / bed 85°C) https://greengate3d.com/products/new-recreator3d-combo-pack-2-virgin-emerald-and-virgin-clear
+2026-08-25T16:26:20.550Z shopify ok ReCreator3D Combo Pack #1 (Recycled Emerald and recycled Clear) (nozzle 228°C / bed 85°C) https://greengate3d.com/products/new-recreator3d-combo-pack-1-recycled-emerald-and-recycled-clear
+2026-08-25T16:26:20.550Z shopify ok Highlighter Bundle (nozzle 228°C / bed 80°C) https://greengate3d.com/products/highlighter-bundle-1
+2026-08-25T16:26:22.035Z shopify ok Pair of Sun Glasses Bundle (nozzle 228°C / bed 80°C) https://greengate3d.com/products/pair-of-sun-glasses-bundle
+2026-08-25T16:26:22.035Z shopify ok Caribbean Blue: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/caribbean-blue-recycled-pet-g-coming-soon
+2026-08-25T16:26:22.036Z shopify ok Starburst: Recycled Clear PET-G with ✨️SPARKLES✨️ (nozzle 228°C / bed 85°C) https://greengate3d.com/products/clear-recycled-pet-g-with-s-p-a-r-k-l-e-s
+2026-08-25T16:26:22.044Z shopify ok Twinkle-Twinkle: Recycled PET-G Shadow with ✨️SPARKLES✨️ (nozzle 228°C / bed 85°C) https://greengate3d.com/products/twinkle-twinkle-recycled-pet-g
+2026-08-25T16:26:22.044Z shopify ok BambuLab PLA: Pumpkin (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-orange-not-petg
+2026-08-25T16:26:22.045Z shopify ok (BambuLab PLA) All Colors, Basic 💥Crazy🤪 Pricing! (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulab-pla-all-colors-basic
+2026-08-25T16:26:22.046Z shopify ok Cyber Fairy Pink: Recycled Translucent Pink PET-G with ✨️SPARKLES✨️ (nozzle 228°C / bed 85°C) https://greengate3d.com/products/cyber-fairy-pink-recycled-pet-g-with-s-p-a-r-k-l-e-s
+2026-08-25T16:26:22.046Z shopify ok Purple Haze: Recycled PET-G (nozzle 228°C / bed 80°C) https://greengate3d.com/products/purple-haze-recycled-pet-g
+2026-08-25T16:26:22.053Z shopify ok Smoke: Recycled PET-G (Translucent Black!) 🔥 (nozzle 228°C / bed 85°C) https://greengate3d.com/products/smoke-recycled-pet-g-new-translucent-light-black
+2026-08-25T16:26:22.053Z shopify ok Black ABS Virgin: (nozzle 255°C / bed 100°C) https://greengate3d.com/products/black-abs-virgin-new-not-pet-g-1kg
+2026-08-25T16:26:22.054Z shopify ok Natural ABS Virgin: (nozzle 255°C / bed 100°C) https://greengate3d.com/products/natural-recycled-nylon-12-new-not-pet-g-1kg
+2026-08-25T16:26:22.054Z shopify ok Jurassic Amber: Recycled PET-G 🔥 (nozzle 228°C / bed 85°C) https://greengate3d.com/products/jurassic-amber-recycled-pet
+2026-08-25T16:26:22.054Z shopify ok Deepwater Blue by 3DPrint Bunny: Recycled PET-G with ✨️SPARKLES✨️ (nozzle 228°C / bed 85°C) https://greengate3d.com/products/deepwater-blue-by-3dprint-bunny-recycled-pet-g-new
+2026-08-25T16:26:22.059Z shopify ok Spartan Armor Green: Recycled PET-G with ✨️SPARKLES✨️ Michigan State University custom color!!! (nozzle 228°C / bed 85°C) https://greengate3d.com/products/spartan-armor-green-recycled-pet-g-new
+2026-08-25T16:26:22.060Z shopify ok Natural: Recycled Nylon 12 (PA12) (nozzle 230°C / bed 80°C) https://greengate3d.com/products/natural-recycled-nylon-12-aka-pa12
+2026-08-25T16:26:22.060Z shopify ok MiniWorld3D Marble: Recycled PET-G (+ FREE Arc de Triomphe STL) (nozzle 228°C / bed 80°C) https://greengate3d.com/products/marble-recycled-pet-g
+2026-08-25T16:26:22.060Z shopify ok Glow In The Dark: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/glow-in-the-dark-recycled-pet-g-filament
+2026-08-25T16:26:22.060Z shopify ok Ocean: Recycled PET-G 🔥 (nozzle 228°C / bed 85°C) https://greengate3d.com/products/ocean-recycled-pet-g-new
+2026-08-25T16:26:22.065Z shopify ok Sapphire: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/sapphire-recycled-pet-g-this-one-is-gorgeous
+2026-08-25T16:26:22.065Z shopify ok Pewter: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/silver-gunmetal-recycled-pet-g
+2026-08-25T16:26:22.065Z shopify ok BambuLab PLA: Mistletoe (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-mistletoe-green-not-petg
+2026-08-25T16:26:22.066Z shopify ok Sunflower: Recycled PET-G (+ FREE Sunflower STL) <em>Pastel</em> (nozzle 228°C / bed 80°C) https://greengate3d.com/products/sunflower-recycled-pet-g-coming-soon
+2026-08-25T16:26:22.066Z shopify ok Lavender: Recycled PET-G <em>Pastel</em> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/lavender-recycled-pet-g-coming-soon
+2026-08-25T16:26:22.070Z shopify ok Pink Flamingo: Recycled PET-G <em>Pastel</em> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/pink-flamingo-recycled-pet-g-coming-soon
+2026-08-25T16:26:22.070Z shopify ok Hydrangea Blue: Recycled PET-G <em>Pastel</em> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/hydrangea-recycled-pet-g-coming-soon
+2026-08-25T16:26:25.001Z shopify ok BambuLabs PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-red-not-petg
+2026-08-25T16:26:25.002Z shopify ok BambuLabs PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-blue-not-petg
+2026-08-25T16:26:25.003Z shopify ok BambuLabs PLA: Jade (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-jade-white-not-petg
+2026-08-25T16:26:25.013Z shopify ok BambuLabs PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-gray-not-petg
+2026-08-25T16:26:25.013Z shopify ok BambuLabs PLA: (nozzle 210°C / bed 50°C) https://greengate3d.com/products/bambulabs-pla-black
+2026-08-25T16:26:25.014Z shopify ok Black: High Temperature Virgin PET-G (nozzle 263°C / bed 85°C) https://greengate3d.com/products/black-high-temperature-virgin-pet-g
+2026-08-25T16:26:25.014Z shopify ok Purple Reign: High Temperature Virgin PET-G (<mark> Only 2.85 left </mark>) (nozzle 263°C / bed 85°C) https://greengate3d.com/products/purple-reign-high-temperature-virgin-pet-g
+2026-08-25T16:26:25.015Z shopify ok Pink Grapefruit: High Temperature Virgin PET-G with ✨️SPARKLES✨️ (nozzle 263°C / bed 85°C) https://greengate3d.com/products/pink-grapefruit-high-temperature-virgin-pet-g
+2026-08-25T16:26:25.023Z shopify ok Primer Grey 2.0: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-gray-pet-g
+2026-08-25T16:26:25.023Z shopify ok Clear w/UV Additive: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/clear-with-uv-additive-recycled-pet-g-limited-supply
+2026-08-25T16:26:25.024Z shopify ok Sunset Purple: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/sunset-purple-recycled-pet-g-coming-soon
+2026-08-25T16:26:25.024Z shopify ok Magic Magenta: Fluorescent Recycled PET-G 🔥 (nozzle 228°C / bed 85°C) https://greengate3d.com/products/magic-magenta-recycled-pet-g-new-and-fluorescent
+2026-08-25T16:26:25.025Z shopify ok Your Royal Highness: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/your-royal-highness-recycled-pet-g
+2026-08-25T16:26:25.034Z shopify ok Indigo: Recycled PET-G <mark> Now with 20% more, FREE! </mark> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-translucent-purple-pet-g
+2026-08-25T16:26:25.034Z shopify ok Emerald: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/emerald
+2026-08-25T16:26:25.035Z shopify ok Coffee: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/coffe-recycled-pet-g
+2026-08-25T16:26:25.035Z shopify ok Slice Engineering Orange: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/slice-engineering-orange-recycled-pet-g-in-collaboration-with-greengate3d
+2026-08-25T16:26:28.025Z shopify ok Prime Time Lime: Fluorescent Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/prime-time-lime-recycled-pet-g
+2026-08-25T16:26:29.527Z shopify ok GreenGate Green: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/greengate-green-recycled-pet-g
+2026-08-25T16:26:29.527Z shopify ok Mars Red: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/new-mars-red-recycled-pet-g
+2026-08-25T16:26:29.528Z shopify ok Clear: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-pet-g
+2026-08-25T16:26:29.528Z shopify ok Olive Drab: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/olive-drab-recycled-pet-g
+2026-08-25T16:26:29.529Z shopify ok Sandman Tan: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/sandman-tan-recycled-pet-g
+2026-08-25T16:26:29.536Z shopify ok Transition Spools: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/transitional-color-recycled-pet-g
+2026-08-25T16:26:29.536Z shopify ok Black: Recycled PET-G <mark> Now with 20% more, FREE! </mark> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-black-pet-g
+2026-08-25T16:26:29.537Z shopify ok American White: Recycled PET-G <mark>Now with 20% more, FREE!</mark> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-white-pet-g
+2026-08-25T16:26:29.537Z shopify ok American Red: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-red-pet-g
+2026-08-25T16:26:29.538Z shopify ok American Blue: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-petg-filament-american-blue

@@ -22,7 +22,15 @@ const OTHER_MAKERS = ['colorFabb', 'Polymaker', 'Fillamentum', 'Prusament', 'Fib
   'Extrudr', 'FormFutura', 'BASF', 'Ultimaker', 'Spectrum', 'Devil Design', 'NinjaTek',
   'Protopasta', 'Eryone', 'Kexcelled', 'AzureFilm'];
 
-const JUNK = /\b(sample|gift\s*card|voucher|spool\s*holder|nozzle|bundle|sticker|t-shirt|dryer)\b|MOQ:|\bbe the first\b|\bnew colou?r collection\b|\bsuper\s*pack\b|\bmaster\s*spool\b|^\s*unset\b|\bunset\b|^\s*\d+\s*x\s|\+|\b3d\s*printer\b|\bprinter\b|\bdiscontinued\b|\bresin\b|\bbuild\s*plate\b|\bhotend\b|\bextruder\b|\bkit\b|\bupgrade\b|\bfilament\s*dryer\b|\benclosure\b|\bbelt\b|\bmotor\b|\bscreen\b|\bcable\b/i;
+// Attribution wording per provenance. A slicer-profile value is NOT the vendor's own figure
+// and must not be presented as one, so each class gets its own sentence.
+const ATTRIB = {
+  manufacturer: (r) => `Official ${r.manufacturer} data — ${r.sourceUrl}`,
+  spoolmandb: (r) => `SpoolmanDB (MIT) — ${r.sourceUrl}`,
+  'slicer-profile': (r) => `OrcaSlicer profile "${r.sourceProfile}" (AGPL-3.0, values cited as facts) — ${r.sourceUrl}`,
+};
+
+const JUNK = /\b(sample|gift\s*card|voucher|spool\s*holder|nozzle|bundle|sticker|t-shirt|dryer)\b|MOQ:|\bbe the first\b|\bnew colou?r collection\b|\bsuper\s*pack\b|\bmaster\s*spool\b|^\s*unset\b|\bunset\b|^\s*\d+\s*x\s|\s\+\s|\b3d\s*printer\b|\bprinter\b|\bdiscontinued\b|\bresin\b|\bbuild\s*plate\b|\bhotend\b|\bextruder\b|\bkit\b|\bupgrade\b|\bfilament\s*dryer\b|\benclosure\b|\bbelt\b|\bmotor\b|\bscreen\b|\bcable\b/i;
 
 // Product identity lives in a small set of known tokens: the polymer, the fill, the grade.
 // Everything else in a storefront title is a colour name, and colour names are unbounded
@@ -58,7 +66,8 @@ const ORDER = [
   'id', 'profileName', 'printerBrand', 'manufacturer', 'brand', 'filamentType',
   'nozzleTemp', 'bedTemp', 'printSpeed', 'fanSpeedMin', 'fanSpeedMax',
   'dryingTemp', 'dryingTime', 'density', 'filamentDiameter',
-  'nozzleTempInitial', 'bedTempInitial', 'notes',
+  'nozzleTempInitial', 'bedTempInitial', 'maxVolumetricSpeed', 'flowRatio',
+  'notes', 'sourceType', 'sourceUrl', 'sourceProfile',
 ];
 
 function serialize(p) {
@@ -199,7 +208,12 @@ async function main() {
         filamentDiameter: raw.filamentDiameter,
         nozzleTempInitial: raw.nozzleTempInitial,
         bedTempInitial: raw.bedTempInitial,
-        notes: `Official ${raw.manufacturer} data — ${raw.sourceUrl}`,
+        maxVolumetricSpeed: raw.maxVolumetricSpeed,
+        flowRatio: raw.flowRatio,
+        notes: ATTRIB[raw.sourceType ?? 'manufacturer'](raw),
+        sourceType: raw.sourceType ?? 'manufacturer',
+        sourceUrl: raw.sourceUrl,
+        sourceProfile: raw.sourceProfile,
       };
       lines.push(serialize(p));
   }
