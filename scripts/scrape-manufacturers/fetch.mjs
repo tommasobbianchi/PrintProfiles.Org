@@ -25,7 +25,10 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const CACHE = join(HERE, 'cache');
 const LOG = join(HERE, 'run.log');
 const UA = 'PrintProfilesOrg-bot/1.0 (+https://printprofiles.org; contact tommaso.b.bianchi@gmail.com)';
-const FLOOR = 1500; // ms between requests to the same domain
+// ms between requests to the same domain. RATE_FLOOR_MS raises it for hosts that answer 429
+// at the default pace — store.anycubic.com returned 172 of them, so its data was never
+// collected. Backing off is both the polite and the effective response.
+const FLOOR = Number(process.env.RATE_FLOOR_MS) || 1500;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const sha1 = (s) => createHash('sha1').update(s).digest('hex');

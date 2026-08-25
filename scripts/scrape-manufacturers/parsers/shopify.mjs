@@ -196,9 +196,14 @@ function isFilamentLike(rec) {
   return true;
 }
 
+// HOSTS=store.anycubic.com restricts this run to those storefronts, so a single host can be
+// retried at a slower rate without recrawling the other 36.
+const HOST_FILTER = process.env.HOSTS ? process.env.HOSTS.split(',').map((h) => h.trim()) : null;
+const activeBrands = () => (HOST_FILTER ? BRANDS.filter((b) => HOST_FILTER.includes(b.host)) : BRANDS);
+
 export async function listProducts() {
   const urls = [];
-  for (const b of BRANDS) {
+  for (const b of activeBrands()) {
     const map = await loadHost(b.host);
     for (const handle of map.keys()) urls.push(`https://${b.host}/products/${handle}`);
   }
