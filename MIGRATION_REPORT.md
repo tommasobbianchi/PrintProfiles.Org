@@ -161,3 +161,68 @@ and every HTTP response is cached under `cache/` — so re-running it costs no n
 - No preset carries `maxVolumetricSpeed` from a datasheet; `createPreset` still derives it
   from the material type.
 - Re-running the crawl picks up vendor catalogue changes; the import is idempotent.
+
+
+## 8. Second wave — platform-generic parsers (2026-08-25)
+
+Rather than one parser per brand, two generic parsers now cover many brands each, because
+storefronts on the same e-commerce platform expose the same machine-readable feed.
+
+| Parser | Feed | Brands | Products listed | Rows parsed |
+|---|---|---|---|---|
+| `parsers/shopify.mjs` | `/products.json` | Elegoo, Overture, Jayo, Protopasta, Amolen, Siraya Tech, Kexcelled | 777 | 85 |
+| `parsers/woocommerce.mjs` | `/wp-json/wc/store/v1/products` | AzureFilm, Print-Me, Francofil, IC3D, iSanmate, das Filament, NinjaTek | 2358 | 510 |
+
+`brand-registry.mjs` holds 114 brands with DNS-verified hosts and detected platform:
+**58 other, 37 Shopify, 7 WooCommerce, 10 blocked, 2 unresolved.**
+
+### Why the Shopify yield is low
+
+85 of 777 is a data-availability limit, not a parsing bug. Only ~110 of those products state a
+temperature in `body_html` at all — Jayo states none, Elegoo's feed is mostly resin printers
+and accessories. The parser captures 77% of what is actually published. Fetching the rendered
+product page for the rest is the obvious next step and is not done yet.
+
+### Blocked, no bypass attempted
+
+- 403 bot challenge on every path: bambulab.com, polymaker.com, panchroma.com, hatchbox3d.com,
+  filoalfa3d.com, microcenter.com, 3dsolutech.com
+- `robots.txt` disallows `/` for `*`: aceaddity.com
+- inslogic.com: `robots.txt` returns 522, so the gate fails closed per RFC 9309
+- Unresolved (reseller-only, no own domain): OVV3D, Polyalchemy
+
+## 9. Data-quality guards in the importer
+
+510 parsed WooCommerce rows produced only 32 presets. Each guard below was written after
+finding the defect in real output, not anticipated:
+
+| Guard | Dropped | Why |
+|---|---|---|
+| variant collapse | 411 | Colour and weight do not change print settings. AzureFilm: 103 rows / 7 distinct settings; Print-Me: 273 / 18; Francofil: 74 / 3. |
+| resold spools | 23 | Every "NinjaTek" row was a colorFabb product — ninjatek.com resells them. Attributing them to NinjaTek would be false. |
+| physical sanity | 1 | iSanmate PEI1010 parsed as nozzle 100 / bed 120; a nozzle cooler than the bed means two wrong numbers were paired. |
+| non-filament / promo | 56 | Samples, gift cards, spool holders, "MOQ:", "Be the first…". |
+| speed ceiling | 6 | "up to 1000 mm/s" is a capability claim, not a setpoint. |
+
+The import is **idempotent**: it dedups on manufacturer|brand *and* on
+manufacturer|type|nozzle|bed, because the variant collapse picks a representative name that is
+not stable between runs. Preset ids continue from the highest existing `mfr-*-N` rather than
+restarting at 1 — that bug had already produced two colliding `mfr-eryone` ids.
+
+## 10. Current state
+
+**716 presets** (from 454), **243 carrying an official source URL**.
+`npx tsc --noEmit`, `npm run build` and `scripts/scrape-manufacturers/robots.test.mjs` all pass.
+Zero duplicate ids, zero physically implausible rows across the whole database.
+
+### Next, in value order
+
+1. Fetch rendered product pages where the JSON feed omits specs — recovers most of the ~690
+   Shopify products currently yielding nothing.
+2. The 58 brands on neither platform need per-site parsers or a generic
+   sitemap+spec-table fallback; that group holds the largest remaining brands
+   (SUNLU, eSUN, Creality, Anycubic, Inland, Jayo).
+3. The 3dfilamentprofiles.com brand list has ~1150 brands; work has been top-down by community
+   usage. The long tail is mostly 1-3 users per brand and many are Amazon-only resellers with
+   no datasheet to cite.
+4. 23 pre-existing normalised manufacturer|brand collisions in constants.ts remain untouched.
