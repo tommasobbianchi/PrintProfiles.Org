@@ -139,3 +139,395 @@
 2026-08-25T13:43:11.446Z woocommerce ok PLA Original filament Fuchsia Pink (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-fuchsia-pink/
 2026-08-25T13:43:11.446Z woocommerce ok PLA Original filament Pistachio Green (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-pistachio-green/
 2026-08-25T13:43:18.207Z woocommerce ok PLA Original filament Anthracite (nozzle 215°C / bed 55°C) https://azurefilm.com/product/pla-original-filament-anthracite/
+2026-08-25T13:54:10.141Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Clear – 1.75mm – 0.65kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen_flex&pa_spool-weight=0-65kg&pa_color=colorfabb-clear&pa_diameter=1-75mm
+2026-08-25T13:54:13.607Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Dark Gray – 1.75mm – 0.65kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen_flex&pa_spool-weight=0-65kg&pa_color=colorfabb-dark-gray&pa_diameter=1-75mm
+2026-08-25T13:54:17.072Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Black – 2.85mm – 0.65kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen_flex&pa_spool-weight=0-65kg&pa_color=colorfabb-black&pa_diameter=2-85mm
+2026-08-25T13:54:20.533Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Black – 1.75mm – 0.65kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen_flex&pa_spool-weight=0-65kg&pa_color=colorfabb-black&pa_diameter=1-75mm
+2026-08-25T13:54:27.143Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Black – 2.85mm – 0.7kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=colorfabb_ht&pa_spool-weight=0-7kg&pa_color=colorfabb-black&pa_diameter=2-85mm
+2026-08-25T13:54:30.606Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Black – 1.75mm – 0.7kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=colorfabb_ht&pa_spool-weight=0-7kg&pa_color=colorfabb-black&pa_diameter=1-75mm
+2026-08-25T13:54:34.095Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – White – 2.85mm – 0.7kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=colorfabb_ht&pa_spool-weight=0-7kg&pa_color=colorfabb-white&pa_diameter=2-85mm
+2026-08-25T13:54:37.557Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Clear – 2.85mm – 0.7kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=colorfabb_ht&pa_spool-weight=0-7kg&pa_color=colorfabb-clear&pa_diameter=2-85mm
+2026-08-25T13:54:41.011Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Clear – 2.85mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-clear&pa_diameter=2-85mm
+2026-08-25T13:54:44.486Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Clear – 1.75mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-clear&pa_diameter=1-75mm
+2026-08-25T13:54:47.915Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Gray Metalic – 2.85mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-gray-metalic&pa_diameter=2-85mm
+2026-08-25T13:54:51.658Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Gold Metalic – 1.75mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-gold-metalic&pa_diameter=1-75mm
+2026-08-25T13:54:56.064Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Silver – 2.85mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-silver&pa_diameter=2-85mm
+2026-08-25T13:54:59.698Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Red – 2.85mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-red&pa_diameter=2-85mm
+2026-08-25T13:55:03.390Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Red – 1.75mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-red&pa_diameter=1-75mm
+2026-08-25T13:55:07.072Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Light Green – 2.85mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-light-green&pa_diameter=2-85mm
+2026-08-25T13:55:10.690Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Light Green – 1.75mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-light-green&pa_diameter=1-75mm
+2026-08-25T13:55:14.195Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Dark Gray – 2.85mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-dark-gray&pa_diameter=2-85mm
+2026-08-25T13:55:17.740Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Dark Gray – 1.75mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-dark-gray&pa_diameter=1-75mm
+2026-08-25T13:55:21.228Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Black – 2.85mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-black&pa_diameter=2-85mm
+2026-08-25T13:55:24.712Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – White – 1.75mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=ngen&pa_spool-weight=0-75kg&pa_color=colorfabb-white&pa_diameter=1-75mm
+2026-08-25T13:55:28.183Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Dark Gray – 2.85mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=colorfabb_xt&pa_spool-weight=0-75kg&pa_color=colorfabb-dark-gray&pa_diameter=2-85mm
+2026-08-25T13:55:31.684Z woocommerce ok 3D Printing Filament colorFabb Co-Polyesters – Dark Gray – 1.75mm – 0.75kg (nozzle 125°C / bed 110°C) https://ninjatek.com/shop/colorfabb-co-polyesters/?pa_sub-category=colorfabb_xt&pa_spool-weight=0-75kg&pa_color=colorfabb-dark-gray&pa_diameter=1-75mm
+2026-08-25T13:56:00.482Z woocommerce ok Easy ASA White 200g (nozzle 220°C / bed 70°C) https://print-me.pl/sklep/produkty/industry/asa/easy-asa/easy-asa-white-200g/
+2026-08-25T13:56:00.486Z woocommerce ok Easy ASA Black 200g (nozzle 220°C / bed 70°C) https://print-me.pl/sklep/produkty/industry/asa/easy-asa/easy-asa-black-200g/
+2026-08-25T13:56:00.487Z woocommerce ok Easy ASA Black 850g (nozzle 220°C / bed 70°C) https://print-me.pl/sklep/produkty/industry/asa/easy-asa/easy-asa-black-850g/
+2026-08-25T13:56:00.489Z woocommerce ok Easy ASA White 850g (nozzle 220°C / bed 70°C) https://print-me.pl/sklep/produkty/industry/asa/easy-asa/easy-asa-white-850g/
+2026-08-25T13:56:00.505Z woocommerce ok PrintMe Flex 20D – Tuscan Orange (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-tuscan-orange/
+2026-08-25T13:56:00.506Z woocommerce ok PrintMe Flex 20D Tuscan Orange – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-tuscan-orange-200g/
+2026-08-25T13:56:00.508Z woocommerce ok Advanced Matt PET-G White 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-white-200g/
+2026-08-25T13:56:00.509Z woocommerce ok Advanced Matt PET-G White 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-white-850g/
+2026-08-25T13:56:00.509Z woocommerce ok Advanced Matt PET-G Common Grey 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-common-grey-850g/
+2026-08-25T13:56:00.510Z woocommerce ok Advanced Matt PET-G Dark Blue 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-dark-blue-850g/
+2026-08-25T13:56:00.511Z woocommerce ok Advanced Matt PET-G Lime Green 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-lime-green-850g/
+2026-08-25T13:56:00.513Z woocommerce ok Advanced Matt PET-G Lemon Drop 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-lemon-drop-850g/
+2026-08-25T13:56:00.514Z woocommerce ok Advanced Matt PET-G Tuscan Orange 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-tuscan-orange-850g/
+2026-08-25T13:56:00.515Z woocommerce ok Advanced Matt PET-G Red Lips 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-red-lips-850g/
+2026-08-25T13:56:00.516Z woocommerce ok Advanced Matt PET-G Red Lips 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-red-lips-200g/
+2026-08-25T13:56:00.517Z woocommerce ok Advanced Matt PET-G Tuscan Orange 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-tuscan-orange-200g/
+2026-08-25T13:56:00.519Z woocommerce ok Advanced Matt PET-G Lime Green 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-lime-green-200g/
+2026-08-25T13:56:00.520Z woocommerce ok Advanced Matt PET-G Lemon Drop 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-lemon-drop-200g/
+2026-08-25T13:56:00.520Z woocommerce ok Advanced Matt PET-G Dark Blue 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-dark-blue-200g/
+2026-08-25T13:56:00.521Z woocommerce ok Advanced Matt PET-G Common Grey 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-common-grey-200g/
+2026-08-25T13:56:00.522Z woocommerce ok Advanced Matt PET-G Black 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-black-200g/
+2026-08-25T13:56:00.523Z woocommerce ok Advanced Matt PET-G Black 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/advanced-matt-pet-g-hobby-design/advanced-matt-pet-g-black-850g/
+2026-08-25T13:56:00.524Z woocommerce ok SmartFit PLA Rainbow 850g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-rainbow-850g/
+2026-08-25T13:56:00.525Z woocommerce ok Smooth ABS+ Dark Blue 200g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-dark-blue-200g/
+2026-08-25T13:56:00.525Z woocommerce ok Smooth ABS+ Cherry Red 200g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-cherry-red-200g/
+2026-08-25T13:56:00.526Z woocommerce ok Smooth ABS+ Natural 200g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-natural-200g/
+2026-08-25T13:56:00.528Z woocommerce ok Smooth ABS+ White 200g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-white-200g/
+2026-08-25T13:56:00.528Z woocommerce ok Smooth ABS+ Black Volcano 200g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-black-volcano-200g/
+2026-08-25T13:56:00.529Z woocommerce ok Smooth ABS+ White 850g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-white-850g/
+2026-08-25T13:56:00.529Z woocommerce ok Smooth ABS+ Dark Blue 850g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-dark-blue-850g/
+2026-08-25T13:56:00.530Z woocommerce ok Smooth ABS+ Cherry Red 850g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-cherry-red-850g/
+2026-08-25T13:56:00.531Z woocommerce ok Smooth ABS+ Natural 850g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-natural-850g/
+2026-08-25T13:56:00.532Z woocommerce ok Smooth ABS+ Black Volcano 850g (nozzle 240°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/smooth-abs/smooth-abs-black-volcano-850g/
+2026-08-25T13:56:00.532Z woocommerce ok Swift PET-G V0 Natural 200g (nozzle 240°C / bed 75°C) https://print-me.pl/sklep/produkty/industry/swift-pet-g-v0/swift-pet-g-v0-natural-200g/
+2026-08-25T13:56:00.533Z woocommerce ok Swift PET-G V0 Natural 850g (nozzle 240°C / bed 75°C) https://print-me.pl/sklep/produkty/industry/swift-pet-g-v0/swift-pet-g-v0-natural-850g/
+2026-08-25T13:56:00.533Z woocommerce ok Smooth ABS ESD Black 200g (nozzle 245°C / bed 95°C) https://print-me.pl/sklep/produkty/industry/smooth-abs-esd/smooth-abs-esd-black-200g/
+2026-08-25T13:56:00.536Z woocommerce ok Smooth ABS ESD Black 850g (nozzle 245°C / bed 95°C) https://print-me.pl/sklep/produkty/industry/smooth-abs-esd/smooth-abs-esd-black-850g/
+2026-08-25T13:56:00.537Z woocommerce ok Nylon X CF 200g (nozzle 265°C / bed 60°C) https://print-me.pl/sklep/produkty/industry/nylon-x-cf/nylon-x-cf-200g/
+2026-08-25T13:56:00.538Z woocommerce ok Nylon X CF 450g (nozzle 265°C / bed 60°C) https://print-me.pl/sklep/produkty/industry/nylon-x-cf/nylon-x-cf-450g/
+2026-08-25T13:56:00.539Z woocommerce ok PrintMe Flex MDT 200g (nozzle 218°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/mdt/printme-flex-mdt-200g/
+2026-08-25T13:56:00.540Z woocommerce ok PrintMe Flex MDT 450g (nozzle 218°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/mdt/printme-flex-mdt-450g/
+2026-08-25T13:56:00.542Z woocommerce ok Carbon Fiber PA12 200g (nozzle 265°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/carbon-fiber-pa12/carbon-fiber-pa12-200g/
+2026-08-25T13:56:00.543Z woocommerce ok Carbon Fiber PA12 450g (nozzle 265°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/carbon-fiber-pa12/carbon-fiber-pa-12-450g/
+2026-08-25T13:56:00.544Z woocommerce ok PrintMe Flex 55D – White 200g (nozzle 235°C / bed 80°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/55d/printme-flex-55d-white-200g/
+2026-08-25T13:56:00.545Z woocommerce ok PrintMe Flex 55D – Grey 200g (nozzle 235°C / bed 80°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/55d/printme-flex-55d-grey-200g/
+2026-08-25T13:56:00.546Z woocommerce ok PrintMe Flex 55D – Black 200g (nozzle 235°C / bed 80°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/55d/printme-flex-55d-black-200g/
+2026-08-25T13:56:00.548Z woocommerce ok PrintMe Flex 55D 450g Grey (nozzle 235°C / bed 80°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/55d/printme-flex-55d-grey/
+2026-08-25T13:56:00.549Z woocommerce ok PrintMe Flex 55D 450g White (nozzle 235°C / bed 80°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/55d/printme-flex-55d-white/
+2026-08-25T13:56:00.550Z woocommerce ok PrintMe Flex 55D 450g Black (nozzle 235°C / bed 80°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/55d/printme-flex-55d-black/
+2026-08-25T13:56:00.550Z woocommerce ok Lumen PET-G Foggy White 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/lumen-pet-g/lumen-pet-g-foggy-white-200g/
+2026-08-25T13:56:00.551Z woocommerce ok Lumen PET-G Foggy White 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/lumen-pet-g/lumen-pet-g-foggy-white-850g/
+2026-08-25T13:56:00.554Z woocommerce ok Swift PET-G ESD Black 850g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/industry/pet-g-esd/swift-pet-g-esd-black-850g/
+2026-08-25T13:56:00.555Z woocommerce ok Swift PET-G ESD Black 200g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/industry/pet-g-esd/swift-pet-g-esd-black-200g/
+2026-08-25T13:56:00.556Z woocommerce ok Advanced Matt PLA Common Grey 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-common-grey-200g/
+2026-08-25T13:56:00.557Z woocommerce ok Advanced Matt PLA Dark Blue 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-dark-blue-200g/
+2026-08-25T13:56:00.558Z woocommerce ok Advanced Matt PLA Green Apple 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-green-apple-200g/
+2026-08-25T13:56:00.561Z woocommerce ok Advanced Matt PLA Lemon Drop 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-lemon-drop-200g/
+2026-08-25T13:56:00.562Z woocommerce ok Advanced Matt PLA Tuscan Orange 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-tuscan-orange-200g/
+2026-08-25T13:56:00.563Z woocommerce ok Advanced Matt PLA Red Lips 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-red-lips-200g/
+2026-08-25T13:56:00.564Z woocommerce ok Advanced Matt PLA Red Lips 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-red-lips-850g/
+2026-08-25T13:56:00.565Z woocommerce ok Advanced Matt PLA Tuscan Orange 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-tuscan-orange-850g/
+2026-08-25T13:56:00.567Z woocommerce ok Advanced Matt PLA Lemon Drop 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-lemon-drop-850g/
+2026-08-25T13:56:00.568Z woocommerce ok Advanced Matt PLA Green Apple 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-green-apple-850g/
+2026-08-25T13:56:00.569Z woocommerce ok Advanced Matt PLA Dark Blue 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-dark-blue-850g/
+2026-08-25T13:56:00.570Z woocommerce ok Advanced Matt PLA Common Grey 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-common-grey-850g/
+2026-08-25T13:56:00.570Z woocommerce ok rPET-G – Anthracite Black (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/rpet-g/rpet-g-anthracite-black/
+2026-08-25T13:56:00.572Z woocommerce ok SmartFit PLA Polish Army – Camouflage (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-polish-army-camouflage/
+2026-08-25T13:56:00.573Z woocommerce ok SmartFit PLA Polish Army – Mud Brown 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-polish-army-mud-brown-200g/
+2026-08-25T13:56:00.573Z woocommerce ok SmartFit PLA Polish Army – Sand Khaki 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-polish-army-sand-khaki-200g/
+2026-08-25T13:56:00.574Z woocommerce ok SmartFit PLA Polish Army – Olive Green 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-polish-army-olive-green-200g/
+2026-08-25T13:56:00.575Z woocommerce ok SmartFit PLA Polish Army – Uniform Green 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-polish-army-uniform-green-200g/
+2026-08-25T13:56:00.577Z woocommerce ok SmartFit PLA Polish Army – Sand Khaki (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-polish-army-sand-khaki/
+2026-08-25T13:56:00.578Z woocommerce ok SmartFit PLA Polish Army – Mud Brown (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-polish-army-mud-brown/
+2026-08-25T13:56:00.578Z woocommerce ok SmartFit PLA Polish Army – Olive Green (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-polish-army-olive-green/
+2026-08-25T13:56:00.579Z woocommerce ok SmartFit PLA Polish Army – Uniform Green (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-polish-army-uniform-green/
+2026-08-25T13:56:00.579Z woocommerce ok Lucent PLA – Rubin Red 200g (nozzle 204°C / bed 30°C) https://print-me.pl/sklep/produkty/hobby-design/pla/lucent-pla/lucent-pla-rubin-red-200g/
+2026-08-25T13:56:00.581Z woocommerce ok Lucent PLA – Green Bottle 200g (nozzle 204°C / bed 30°C) https://print-me.pl/sklep/produkty/hobby-design/pla/lucent-pla/lucent-pla-green-bottle-200g/
+2026-08-25T13:56:00.582Z woocommerce ok Lucent PLA – Natural 200g (nozzle 213°C / bed 30°C) https://print-me.pl/sklep/produkty/hobby-design/pla/lucent-pla/lucent-pla-natural-200g/
+2026-08-25T13:56:00.582Z woocommerce ok Lucent PLA – Blue Lagoon 200g (nozzle 204°C / bed 30°C) https://print-me.pl/sklep/produkty/hobby-design/pla/lucent-pla/lucent-pla-blue-lagoon-200g/
+2026-08-25T13:56:00.583Z woocommerce ok E-HT PLA Lemon Drop 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-lemon-drop-200g/
+2026-08-25T13:56:00.583Z woocommerce ok E-HT PLA Lemon Drop (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-lemon-drop/
+2026-08-25T13:56:00.589Z woocommerce ok PrintMe Flex 40D Fresh Grass – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/40d/printme-flex-40d-fresh-grass-200g/
+2026-08-25T13:56:00.590Z woocommerce ok PrintMe Flex 20D Lemon Drop – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-lemon-drop-200g/
+2026-08-25T13:56:00.590Z woocommerce ok PrintMe Flex 20D – Lemon Drop (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-lemon-drop/
+2026-08-25T13:56:00.591Z woocommerce ok Swift PET-G Christmas Green 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-christmas-green-250g/
+2026-08-25T13:56:00.591Z woocommerce ok Swift PET-G Christmas Green (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-christmas-green/
+2026-08-25T13:56:00.593Z woocommerce ok Advanced Matt PLA White 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-white-200g/
+2026-08-25T13:56:00.593Z woocommerce ok Advanced Matt PLA White 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-white-850g/
+2026-08-25T13:56:00.593Z woocommerce ok Satin Matt PLA Mineral 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/satin-matt/satin-matt-pla-mineral-200g/
+2026-08-25T13:56:00.594Z woocommerce ok Satin Matt PLA Bone 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/satin-matt/satin-matt-pla-bone-200g/
+2026-08-25T13:56:00.594Z woocommerce ok Satin Matt PLA Skin 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/satin-matt/satin-matt-pla-skin-200g/
+2026-08-25T13:56:00.595Z woocommerce ok SmartFit PLA Glitter Edition – Stardust 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-stardust-200g/
+2026-08-25T13:56:00.596Z woocommerce ok SmartFit PLA Glitter Edition – Onyx Star 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-onyx-star-200g/
+2026-08-25T13:56:00.596Z woocommerce ok SmartFit PLA Glitter Edition – Onyx Star 850g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-onyx-star-850g/
+2026-08-25T13:56:00.596Z woocommerce ok SmartFit PLA Glitter Edition – Stardust 850g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-stardust-850g/
+2026-08-25T13:56:00.597Z woocommerce ok SmartFit PLA Glitter Edition – Sapphire Star 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-sapphire-star-200g/
+2026-08-25T13:56:00.598Z woocommerce ok SmartFit PLA Glitter Edition – Sapphire Star 850g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-sapphire-star-850g/
+2026-08-25T13:56:00.598Z woocommerce ok SmartFit PLA Glitter Edition – Emerald Green 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-emerald-green-200g/
+2026-08-25T13:56:00.598Z woocommerce ok SmartFit PLA Glitter Edition – Emerald Green 850g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-emerald-green-850g/
+2026-08-25T13:56:00.599Z woocommerce ok SmartFit PLA Glitter Edition – Topaz Red 850g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-topaz-red-850g/
+2026-08-25T13:56:00.599Z woocommerce ok E-HT PLA Anthracite Black 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-anthracite-black-200g/
+2026-08-25T13:56:00.600Z woocommerce ok E-HT PLA Aquamarine 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-aquamarine-200g/
+2026-08-25T13:56:00.601Z woocommerce ok E-HT PLA Jasper Red 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-jasper-red-200g/
+2026-08-25T13:56:00.601Z woocommerce ok E-HT PLA Cairo Night 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-cairo-night-200g/
+2026-08-25T13:56:00.601Z woocommerce ok E-HT PLA Amethyst 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-amethyst-200g/
+2026-08-25T13:56:00.602Z woocommerce ok E-HT PLA Polar White 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-polar-white-200g/
+2026-08-25T13:56:00.603Z woocommerce ok E-HT PLA Common Grey 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-common-grey-200g/
+2026-08-25T13:56:00.603Z woocommerce ok E-HT PLA Copper 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-copper-200g/
+2026-08-25T13:56:00.603Z woocommerce ok E-HT PLA Steel 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-steel-200g/
+2026-08-25T13:56:00.604Z woocommerce ok E-HT PLA Intensive Red 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-intensive-red-200g/
+2026-08-25T13:56:00.604Z woocommerce ok E-HT PLA Intensive Orange 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-intensive-orange-200g/
+2026-08-25T13:56:00.606Z woocommerce ok E-HT PLA Intensive Green 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-intensive-green-200g/
+2026-08-25T13:56:00.606Z woocommerce ok E-HT PLA Antique Gold 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-antique-gold-200g/
+2026-08-25T13:56:00.607Z woocommerce ok E-HT PLA Dark Blue 200g (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-dark-blue-200g/
+2026-08-25T13:56:00.607Z woocommerce ok SmartFit PLA Glitter Edition – Topaz Red 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-glitter-edition-topaz-red-200g/
+2026-08-25T13:56:00.607Z woocommerce ok SmartFit PLA Marble – Azurro 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-marble-azurro-200g/
+2026-08-25T13:56:00.608Z woocommerce ok SmartFit PLA Marble Cream 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-marble-cream-200g/
+2026-08-25T13:56:00.609Z woocommerce ok SmartFit PLA Marble Carrara 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-marble-carrara-200g/
+2026-08-25T13:56:00.609Z woocommerce ok SmartFit PLA Marble Carrara (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-marble-carrara/
+2026-08-25T13:56:00.610Z woocommerce ok Swift PET-G Foggy White 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-foggy-white-250g/
+2026-08-25T13:56:00.610Z woocommerce ok Swift PET-G Transparent Black 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-transparent-black-250g/
+2026-08-25T13:56:00.611Z woocommerce ok Swift PET-G Transparent Black (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-transparent-black/
+2026-08-25T13:56:00.611Z woocommerce ok Swift PET-G Foggy White (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-foggy-white/
+2026-08-25T13:56:00.612Z woocommerce ok Swift PET-G Lime Green 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-lime-green-250g/
+2026-08-25T13:56:00.612Z woocommerce ok Swift PET-G Lime Green (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-lime-green/
+2026-08-25T13:56:00.613Z woocommerce ok Swift PET-G Signal Yellow 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-signal-yellow-250g/
+2026-08-25T13:56:00.614Z woocommerce ok Swift PET-G Signal Yellow (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-signal-yellow/
+2026-08-25T13:56:00.615Z woocommerce ok Swift PET-G Intensive Green 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-intensive-green-250g/
+2026-08-25T13:56:00.615Z woocommerce ok Swift PET-G Intensive Green (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-intensive-green/
+2026-08-25T13:56:00.615Z woocommerce ok Swift PET-G Natural 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-natural-250g/
+2026-08-25T13:56:00.616Z woocommerce ok Swift PET-G White 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-white-250g/
+2026-08-25T13:56:00.617Z woocommerce ok Swift PET-G Black 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-black-250g/
+2026-08-25T13:56:00.617Z woocommerce ok Swift PET-G Light Grey 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-light-grey-250g/
+2026-08-25T13:56:00.618Z woocommerce ok Swift PET-G Neon Red 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-neon-red-250g/
+2026-08-25T13:56:00.618Z woocommerce ok Swift PET-G Orange Glass 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-orange-glass-250g/
+2026-08-25T13:56:00.618Z woocommerce ok Swift PET-G Antique Gold 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-antique-gold-250g/
+2026-08-25T13:56:00.620Z woocommerce ok Swift PET-G Aluminium 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-aluminium-250g/
+2026-08-25T13:56:00.620Z woocommerce ok Swift PET-G Blue Jeans 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-blue-jeans-250g/
+2026-08-25T13:56:00.620Z woocommerce ok Swift PET-G Bronze 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-bronze-250g/
+2026-08-25T13:56:00.621Z woocommerce ok Swift PET-G Icy Lake 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-icy-lake-250g/
+2026-08-25T13:56:00.621Z woocommerce ok Swift PET-G Cherry Red 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-cherry-red-250g/
+2026-08-25T13:56:00.622Z woocommerce ok Swift PET-G Black Mirror 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-black-mirror-250g/
+2026-08-25T13:56:00.623Z woocommerce ok EcoLine PLA Aluminium 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-aluminium-250g/
+2026-08-25T13:56:00.623Z woocommerce ok EcoLine PLA Neon Pink 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-neon-pink-250g/
+2026-08-25T13:56:00.623Z woocommerce ok EcoLine PLA Neon Pink (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-neon-pink/
+2026-08-25T13:56:00.624Z woocommerce ok EcoLine PLA Aluminium (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-aluminium/
+2026-08-25T13:56:00.625Z woocommerce ok Swift PET-G Black Mirror (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-black-mirror/
+2026-08-25T13:56:00.625Z woocommerce ok Swift PET-G Cherry Red (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-cherry-red/
+2026-08-25T13:56:00.626Z woocommerce ok Swift PET-G Icy Lake (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-icy-lake/
+2026-08-25T13:56:00.626Z woocommerce ok Swift PET-G Bronze (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-bronze/
+2026-08-25T13:56:00.626Z woocommerce ok E-HT PLA Dark Blue (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-dark-blue/
+2026-08-25T13:56:00.627Z woocommerce ok E-HT PLA Antique Gold (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-antique-gold/
+2026-08-25T13:56:00.628Z woocommerce ok E-HT PLA Intensive Green (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-intensive-green/
+2026-08-25T13:56:00.628Z woocommerce ok E-HT PLA Intensive Orange (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-intensive-orange/
+2026-08-25T13:56:00.629Z woocommerce ok E-HT PLA Intensive Red (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-intensive-red/
+2026-08-25T13:56:00.629Z woocommerce ok E-HT PLA Steel (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-steel/
+2026-08-25T13:56:00.630Z woocommerce ok E-HT PLA Copper (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-copper/
+2026-08-25T13:56:00.630Z woocommerce ok E-HT PLA Common Grey (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-common-grey/
+2026-08-25T13:56:00.631Z woocommerce ok E-HT PLA Polar White (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-polar-white/
+2026-08-25T13:56:00.631Z woocommerce ok E-HT PLA Amethyst (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-amethyst/
+2026-08-25T13:56:00.631Z woocommerce ok E-HT PLA Cairo Night (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-cairo-night/
+2026-08-25T13:56:00.632Z woocommerce ok E-HT PLA Jasper Red (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-jasper-red/
+2026-08-25T13:56:00.633Z woocommerce ok E-HT PLA Aquamarine (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-aquamarine/
+2026-08-25T13:56:00.633Z woocommerce ok E-HT PLA Anthracite Black (nozzle 213°C / bed 60°C) https://print-me.pl/sklep/produkty/hobby-design/pla/e-ht-pla/e-ht-pla-anthracite-black/
+2026-08-25T13:56:00.633Z woocommerce ok Swift PET-G Blue Jeans (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-dark-blue/
+2026-08-25T13:56:00.634Z woocommerce ok Swift PET-G Aluminium (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-aluminium/
+2026-08-25T13:56:00.635Z woocommerce ok Swift PET-G Antique Gold (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-antique-gold/
+2026-08-25T13:56:00.636Z woocommerce ok Lucent PLA – Green Bottle (nozzle 204°C / bed 30°C) https://print-me.pl/sklep/produkty/hobby-design/pla/lucent-pla/lucent-pla-green-bottle/
+2026-08-25T13:56:00.637Z woocommerce ok Lucent PLA – Blue Lagoon (nozzle 204°C / bed 30°C) https://print-me.pl/sklep/produkty/hobby-design/pla/lucent-pla/lucent-pla-blue-lagoon/
+2026-08-25T13:56:00.639Z woocommerce ok Lucent PLA – Rubin Red (nozzle 204°C / bed 30°C) https://print-me.pl/sklep/produkty/hobby-design/pla/lucent-pla/lucent-pla-rubin-red/
+2026-08-25T13:56:00.640Z woocommerce ok Lucent PLA – Natural (nozzle 213°C / bed 30°C) https://print-me.pl/sklep/produkty/hobby-design/pla/lucent-pla/lucent-pla-natural/
+2026-08-25T13:56:00.643Z woocommerce ok Advanced Matt PLA Black 200g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-black-200g/
+2026-08-25T13:56:00.644Z woocommerce ok Advanced Matt PLA Black 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/advanced-matt-pla/advanced-matt-pla-black-850g/
+2026-08-25T13:56:00.644Z woocommerce ok SmartFit PLA Marble Cream (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-marble-cream/
+2026-08-25T13:56:00.645Z woocommerce ok SmartFit PLA Marble – Azurro (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/smartfit-pla/smartfit-pla-marble-azurro/
+2026-08-25T13:56:00.646Z woocommerce ok Carbon Fiber PET-G 200g (nozzle 250°C / bed 53°C) https://print-me.pl/sklep/produkty/industry/pet-g-cf/carbon-fiber-pet-g-200/
+2026-08-25T13:56:00.648Z woocommerce ok Carbon Fiber PET-G 850g (nozzle 250°C / bed 53°C) https://print-me.pl/sklep/produkty/industry/pet-g-cf/carbon-fiber-pet-g/
+2026-08-25T13:56:02.938Z woocommerce ok Satin Matt PLA Skin 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/satin-matt/satin-matt-pla-skin/
+2026-08-25T13:56:02.939Z woocommerce ok Satin Matt PLA Bone 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/satin-matt/satin-matt-pla-bone/
+2026-08-25T13:56:02.944Z woocommerce ok Satin Matt PLA Mineral 850g (nozzle 195°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/satin-matt/satin-matt-pla-mineral/
+2026-08-25T13:56:02.946Z woocommerce ok SmartFit NF PLA Cork 450g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/natural-fibers/smartfit-pla-cork/
+2026-08-25T13:56:02.950Z woocommerce ok SmartFit PLA NF Cork 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/natural-fibers/smartfit-pla-cork-200g/
+2026-08-25T13:56:02.950Z woocommerce ok SmartFit NF PLA Bamboo 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/natural-fibers/smartfit-pla-bamboo-200g/
+2026-08-25T13:56:02.951Z woocommerce ok SmartFit NF PLA Bamboo (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/natural-fibers/smartfit-pla-bamboo/
+2026-08-25T13:56:02.952Z woocommerce ok SmartFit NF PLA Wood (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/natural-fibers/smartfit-pla-wood/
+2026-08-25T13:56:02.954Z woocommerce ok SmartFit NF PLA Wood 200g (nozzle 210°C / bed 53°C) https://print-me.pl/sklep/produkty/hobby-design/pla/natural-fibers/smartfit-pla-wood-200g/
+2026-08-25T13:56:02.958Z woocommerce ok PrintMe Flex 20D – Neon Pink (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-neon-pink/
+2026-08-25T13:56:02.959Z woocommerce ok PrintMe Flex 20D – Blue (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-blue/
+2026-08-25T13:56:02.960Z woocommerce ok PrintMe Flex 20D – White (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-white/
+2026-08-25T13:56:02.960Z woocommerce ok PrintMe Flex 20D – Fresh Grass (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-fresh-grass/
+2026-08-25T13:56:02.961Z woocommerce ok PrintMe Flex 20D – Red (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-red/
+2026-08-25T13:56:02.964Z woocommerce ok PrintMe Flex 20D – Black (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-black/
+2026-08-25T13:56:02.964Z woocommerce ok PrintMe Flex 20D – Grey (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-grey/
+2026-08-25T13:56:02.965Z woocommerce ok PrintMe Flex 20D Grey – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-grey-200g/
+2026-08-25T13:56:02.966Z woocommerce ok PrintMe Flex 20D Neon Pink – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-neon-pink-200g/
+2026-08-25T13:56:02.967Z woocommerce ok PrintMe Flex 20D White – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-white-200g/
+2026-08-25T13:56:02.969Z woocommerce ok PrintMe Flex 20D Blue – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-blue-200g/
+2026-08-25T13:56:02.970Z woocommerce ok PrintMe Flex 20D Red – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-red-200g/
+2026-08-25T13:56:02.971Z woocommerce ok Smooth ABS Common Grey (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-common-grey-200/
+2026-08-25T13:56:02.971Z woocommerce ok Smooth ABS Natural Ivory (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-natural-ivory-2/
+2026-08-25T13:56:02.972Z woocommerce ok Smooth ABS Cherry Red (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-cherry-red-200/
+2026-08-25T13:56:02.974Z woocommerce ok Smooth ABS Lemon Drop (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-lemon-drop-200/
+2026-08-25T13:56:02.975Z woocommerce ok Smooth ABS Tuscan Orange (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-tuscan-orange-200/
+2026-08-25T13:56:02.976Z woocommerce ok Smooth ABS Dark Blue (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-dark-blue-200/
+2026-08-25T13:56:02.976Z woocommerce ok Smooth ABS Dark Green (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-dark-green-200/
+2026-08-25T13:56:02.977Z woocommerce ok Smooth ABS Fresh Grass (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-fresh-grass-200/
+2026-08-25T13:56:02.979Z woocommerce ok Smooth ABS White (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-white-200/
+2026-08-25T13:56:02.980Z woocommerce ok Smooth ABS Black Volcano (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-black-volcano-200/
+2026-08-25T13:56:02.980Z woocommerce ok Swift PET-G Rubin Red 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-rubin-red-250/
+2026-08-25T13:56:02.980Z woocommerce ok Swift PET-G Blue Lagoon 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-blue-lagoon-250/
+2026-08-25T13:56:02.981Z woocommerce ok Swift PET-G Green Bottle 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-green-bottle-250/
+2026-08-25T13:56:02.982Z woocommerce ok Swift PET-G Violet Glass 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-violet-glass-250/
+2026-08-25T13:56:02.983Z woocommerce ok Swift PET-G Yellow Glass 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-yellow-glass-250/
+2026-08-25T13:56:02.983Z woocommerce ok Swift PET-G Raspberry Pink 250g (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-raspberry-pink-250/
+2026-08-25T13:56:02.984Z woocommerce ok Swift PET-G Raspberry Pink (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-raspberry-pink/
+2026-08-25T13:56:02.984Z woocommerce ok Smooth ABS Black Volcano (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-black-volcano/
+2026-08-25T13:56:02.986Z woocommerce ok Smooth ABS Fresh Grass (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-fresh-grass/
+2026-08-25T13:56:02.986Z woocommerce ok Smooth ABS Common Grey (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-common-grey/
+2026-08-25T13:56:02.987Z woocommerce ok Smooth ABS Dark Green (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-dark-green/
+2026-08-25T13:56:02.987Z woocommerce ok Smooth ABS Dark Blue (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-dark-blue/
+2026-08-25T13:56:02.988Z woocommerce ok Smooth ABS Cherry Red (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-cherry-red/
+2026-08-25T13:56:02.990Z woocommerce ok Smooth ABS Tuscan Orange (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-tuscan-orange/
+2026-08-25T13:56:02.990Z woocommerce ok Smooth ABS Lemon Drop (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-lemon-drop/
+2026-08-25T13:56:02.991Z woocommerce ok Smooth ABS White (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-white/
+2026-08-25T13:56:02.991Z woocommerce ok Smooth ABS Natural Ivory (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/abs/smooth-abs-natural-ivory/
+2026-08-25T13:56:02.991Z woocommerce ok Swift PET-G Yellow Glass (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-yellow-glass/
+2026-08-25T13:56:02.993Z woocommerce ok Swift PET-G Violet Glass (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-violet-glass/
+2026-08-25T13:56:02.994Z woocommerce ok Swift PET-G Orange Glass (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-orange-glass/
+2026-08-25T13:56:02.994Z woocommerce ok Swift PET-G Green Bottle (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-green-bottle/
+2026-08-25T13:56:02.994Z woocommerce ok Swift PET-G Blue Lagoon (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-blue-lagoon/
+2026-08-25T13:56:02.995Z woocommerce ok Swift PET-G Rubin Red (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-rubin-red/
+2026-08-25T13:56:02.996Z woocommerce ok Swift PET-G Neon Red (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-neon-red/
+2026-08-25T13:56:02.996Z woocommerce ok Swift PET-G Light Grey (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-light-grey/
+2026-08-25T13:56:02.997Z woocommerce ok Swift PET-G Black (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-black/
+2026-08-25T13:56:02.997Z woocommerce ok Swift PET-G White (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-white/
+2026-08-25T13:56:02.998Z woocommerce ok Swift PET-G Natural (nozzle 235°C / bed 70°C) https://print-me.pl/sklep/produkty/hobby-design/pet-g-hobby-design/swift-pet-g-natural/
+2026-08-25T13:56:02.999Z woocommerce ok EcoLine PLA Dark Blue 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-dark-blue-250/
+2026-08-25T13:56:03.000Z woocommerce ok EcoLine PLA Anthracite Black 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-anthracite-black-250/
+2026-08-25T13:56:03.000Z woocommerce ok EcoLine PLA Common Grey 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-common-grey-250/
+2026-08-25T13:56:03.000Z woocommerce ok EcoLine PLA Light Grey 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-light-grey-250/
+2026-08-25T13:56:03.001Z woocommerce ok EcoLine PLA Red Lips 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-red-lips-250/
+2026-08-25T13:56:03.003Z woocommerce ok EcoLine PLA Tuscan Orange 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-tuscan-orange-250/
+2026-08-25T13:56:03.003Z woocommerce ok EcoLine PLA Pastel Blue 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-pastel-blue-250/
+2026-08-25T13:56:03.003Z woocommerce ok EcoLine PLA Lemon Drop 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-lemon-drop-250/
+2026-08-25T13:56:03.004Z woocommerce ok EcoLine PLA Heather Violet 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-heather-violet-250/
+2026-08-25T13:56:03.004Z woocommerce ok EcoLine PLA Milk Chocolate 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-milk-chocolate-250/
+2026-08-25T13:56:03.005Z woocommerce ok EcoLine PLA Green Apple 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-green-apple-250/
+2026-08-25T13:56:03.006Z woocommerce ok EcoLine PLA Neon Kivi 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-neon-kivi-250/
+2026-08-25T13:56:03.006Z woocommerce ok EcoLine PLA Neon Yellow 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-neon-yellow-250/
+2026-08-25T13:56:03.007Z woocommerce ok EcoLine PLA Neon Red 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-neon-red-250/
+2026-08-25T13:56:03.007Z woocommerce ok EcoLine PLA Natural 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-natural-250/
+2026-08-25T13:56:03.009Z woocommerce ok EcoLine PLA Polar White 250g (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-polar-white-250/
+2026-08-25T13:56:03.009Z woocommerce ok EcoLine PLA Neon Red (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-neon-red/
+2026-08-25T13:56:03.009Z woocommerce ok EcoLine PLA Neon Yellow (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-neon-yellow/
+2026-08-25T13:56:03.010Z woocommerce ok EcoLine PLA Neon Kivi (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-neon-kivi/
+2026-08-25T13:56:03.010Z woocommerce ok EcoLine PLA Green Apple (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-green-apple/
+2026-08-25T13:56:03.012Z woocommerce ok EcoLine PLA Milk Chocolate (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-milk-chocolate/
+2026-08-25T13:56:03.012Z woocommerce ok EcoLine PLA Heather Violet (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-heather-violet/
+2026-08-25T13:56:03.012Z woocommerce ok EcoLine PLA Natural (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-natural/
+2026-08-25T13:56:03.013Z woocommerce ok EcoLine PLA Lemon Drop (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-lemon-drop/
+2026-08-25T13:56:03.013Z woocommerce ok EcoLine PLA Tuscan Orange (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-tuscan-orange/
+2026-08-25T13:56:03.015Z woocommerce ok EcoLine PLA Pastel Blue (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-pastel-blue/
+2026-08-25T13:56:03.015Z woocommerce ok EcoLine PLA Red Lips (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-red-lips/
+2026-08-25T13:56:03.015Z woocommerce ok EcoLine PLA Dark Blue (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-dark-blue/
+2026-08-25T13:56:03.016Z woocommerce ok EcoLine PLA Light Grey (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-light-grey/
+2026-08-25T13:56:03.016Z woocommerce ok EcoLine PLA Common Grey (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-common-grey/
+2026-08-25T13:56:03.017Z woocommerce ok EcoLine PLA Anthracite Black (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-anthracite-black/
+2026-08-25T13:56:03.018Z woocommerce ok EcoLine PLA Polar White (nozzle 200°C / bed 40°C) https://print-me.pl/sklep/produkty/hobby-design/pla/ecoline-pla-filaments/ecoline-pla-polar-white/
+2026-08-25T13:56:03.018Z woocommerce ok Smooth ASA White 200g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-white-200g/
+2026-08-25T13:56:03.019Z woocommerce ok Smooth ASA Silver Shine 200g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-silver-shine-200/
+2026-08-25T13:56:03.019Z woocommerce ok Smooth ASA Black Volcano 200g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-black-volcano-200/
+2026-08-25T13:56:03.020Z woocommerce ok Smooth ASA Dark Blue 200g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-dark-blue-200/
+2026-08-25T13:56:03.020Z woocommerce ok Smooth ASA Cherry Red 200g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-cherry-red-200/
+2026-08-25T13:56:03.021Z woocommerce ok Smooth ASA Natural 200g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-natural-200/
+2026-08-25T13:56:03.021Z woocommerce ok Smooth ASA Dark Blue 850g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-dark-blue/
+2026-08-25T13:56:03.021Z woocommerce ok Smooth ASA White 850g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-white/
+2026-08-25T13:56:03.023Z woocommerce ok Smooth ASA Cherry Red 850g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-cherry-red/
+2026-08-25T13:56:03.023Z woocommerce ok Smooth ASA Natural 850g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-natural/
+2026-08-25T13:56:03.023Z woocommerce ok Smooth ASA Black Volcano 850g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-black-volcano/
+2026-08-25T13:56:03.024Z woocommerce ok Smooth ASA Silver Shine 850g (nozzle 235°C / bed 100°C) https://print-me.pl/sklep/produkty/industry/asa/smooth-asa-silver-shine/
+2026-08-25T13:56:03.024Z woocommerce ok PrintMe Flex 20D Black – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-black-200g/
+2026-08-25T13:56:03.028Z woocommerce ok PrintMe Flex 40D – Fresh Grass (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/40d/printme-flex-40d-fresh-grass/
+2026-08-25T13:56:03.029Z woocommerce ok PrintMe Flex 20D Fresh Grass – 200g (nozzle 235°C / bed 50°C) https://print-me.pl/sklep/produkty/hobby-design/flexible/20d/printme-flex-20d-fresh-grass-2/
+2026-08-25T13:56:03.030Z woocommerce ok PLA Vert Irisé Pailleté (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-vert-irise-paillete/
+2026-08-25T13:56:03.031Z woocommerce ok PLA Orange Translucide (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-orange-translucide/
+2026-08-25T13:56:03.031Z woocommerce ok PLA Jaune Translucide (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-jaune-translucide/
+2026-08-25T13:56:03.035Z woocommerce ok PLA Vert Translucide (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-vert-translucide/
+2026-08-25T13:56:03.035Z woocommerce ok PLA Bleu Translucide (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-bleu-translucide/
+2026-08-25T13:56:03.035Z woocommerce ok PLA Violet Halloween (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-violet-halloween/
+2026-08-25T13:56:03.036Z woocommerce ok PLA Jaune Pastel – Citron Meringué (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-jaune-pastel-citron-meringue/
+2026-08-25T13:56:03.036Z woocommerce ok PLA Bleu Pastel – Le Glacier (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-bleu-pastel-le-glacier/
+2026-08-25T13:56:03.038Z woocommerce ok PLA Rose Pastel – Barbe à Papa (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-rose-pastel-barbe-a-papa/
+2026-08-25T13:56:03.038Z woocommerce ok PLA Violet Pastel – Lilas (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-violet-pastel-lilas/
+2026-08-25T13:56:03.038Z woocommerce ok PLA Bleu Paon (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-bleu-paon/
+2026-08-25T13:56:03.039Z woocommerce ok PLA Granit Rouge (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-granit-rouge/
+2026-08-25T13:56:03.039Z woocommerce ok PLA Blanc | Certifié PMUC (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-blanc-certifie-pmuc/
+2026-08-25T13:56:03.040Z woocommerce ok PLA Noir | Certifié PMUC (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-noir-certifie-pmuc/
+2026-08-25T13:56:03.041Z woocommerce ok PLA Granit Gris (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-granite-gris/
+2026-08-25T13:56:03.041Z woocommerce ok PLA Rouge | Certifié PMUC (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-rouge-certifie-pmuc/
+2026-08-25T13:56:03.041Z woocommerce ok PLA Vert | Certifié PMUC (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-vert-certifie-pmuc/
+2026-08-25T13:56:03.042Z woocommerce ok PLA Granit Jaune (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-granite-jaune/
+2026-08-25T13:56:03.043Z woocommerce ok PLA Granit Vanille (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-granite-vanille/
+2026-08-25T13:56:03.044Z woocommerce ok PLA Granit Blanc (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-granite-blanc/
+2026-08-25T13:56:03.045Z woocommerce ok Pack surprise PETG – 3 ou 5 kg (nozzle 240°C / bed 80°C) https://francofil.fr/product/pack-surprise-petg-filament-3d-francofil/
+2026-08-25T13:56:03.046Z woocommerce ok PLA Rose – RAL 4003 (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-rose-ral-4003-francofil/
+2026-08-25T13:56:03.047Z woocommerce ok PLA Phosphorescent Vert (nozzle 215°C / bed 50°C) https://francofil.fr/product/pla-phosphorescent-vert/
+2026-08-25T13:56:03.050Z woocommerce ok ASA Rouge (nozzle 250°C / bed 100°C) https://francofil.fr/product/filament-asa-rouge/
+2026-08-25T13:56:03.050Z woocommerce ok PLA Rose FME (Foreign Material Exclusion) Certifié PMUC (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-rose-fme/
+2026-08-25T13:56:03.052Z woocommerce ok ASA Vierge (nozzle 250°C / bed 100°C) https://francofil.fr/product/filament-asa-vierge/
+2026-08-25T13:56:03.052Z woocommerce ok ASA Blanc (nozzle 250°C / bed 100°C) https://francofil.fr/product/filament-asa-blanc/
+2026-08-25T13:56:03.053Z woocommerce ok ASA Gris (nozzle 250°C / bed 100°C) https://francofil.fr/product/filament-asa-gris/
+2026-08-25T13:56:03.054Z woocommerce ok PLA Bleu A 110 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-bleu-a-110/
+2026-08-25T13:56:03.055Z woocommerce ok PLA Terre Battue – Coproduit (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-terre-battue/
+2026-08-25T13:56:03.056Z woocommerce ok PLA Noir Métal Pailleté (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-noir-metal-paillete/
+2026-08-25T13:56:03.056Z woocommerce ok PLA Ardoise – Coproduit (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-ardoise/
+2026-08-25T13:56:03.057Z woocommerce ok PLA Bois – Coproduit (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-bois/
+2026-08-25T13:56:03.059Z woocommerce ok PETG Vierge (nozzle 240°C / bed 80°C) https://francofil.fr/product/petg-vierge/
+2026-08-25T13:56:03.059Z woocommerce ok PETG Bleu (nozzle 240°C / bed 80°C) https://francofil.fr/product/petg-bleu/
+2026-08-25T13:56:03.059Z woocommerce ok PETG Gris (nozzle 240°C / bed 80°C) https://francofil.fr/product/petg-gris/
+2026-08-25T13:56:03.060Z woocommerce ok PETG Blanc (nozzle 240°C / bed 80°C) https://francofil.fr/product/petg-blanc/
+2026-08-25T13:56:03.060Z woocommerce ok PETG Noir (nozzle 240°C / bed 80°C) https://francofil.fr/product/petg-noir/
+2026-08-25T13:56:03.062Z woocommerce ok PETG Rouge (nozzle 240°C / bed 80°C) https://francofil.fr/product/filament-petg-rouge-pour-impression-3d/
+2026-08-25T13:56:03.064Z woocommerce ok PLA Terre Collection Heliox – Les 4 éléments (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-terre-collection-heliox-les-4-elements/
+2026-08-25T13:56:03.064Z woocommerce ok PLA Feu Collection Héliox – Les 4 éléments (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-feu-collection-heliox-les-4-elements/
+2026-08-25T13:56:03.064Z woocommerce ok PLA Eau Collection Héliox – Les 4 éléments (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-eau-collection-heliox-les-4-elements/
+2026-08-25T13:56:03.065Z woocommerce ok PLA Air Collection Héliox – Les 4 éléments (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-air-collection-heliox-les-4-elements/
+2026-08-25T13:56:03.066Z woocommerce ok Pack surprise PLA – 3 ou 5 – Bobines PLA (nozzle 215°C / bed 50°C) https://francofil.fr/product/pack-surprise-pla-francofil/
+2026-08-25T13:56:03.067Z woocommerce ok PLA Vert Pistache – RAL 6019 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-vert-ral-6019/
+2026-08-25T13:56:03.067Z woocommerce ok PLA Bière – Coproduit (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-biere/
+2026-08-25T13:56:03.068Z woocommerce ok ASA Noir (nozzle 250°C / bed 100°C) https://francofil.fr/product/filament-asa-noir/
+2026-08-25T13:56:03.068Z woocommerce ok PLA Bronze (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-bronze/
+2026-08-25T13:56:03.069Z woocommerce ok PLA Blé – Coproduit (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-ble/
+2026-08-25T13:56:03.070Z woocommerce ok PLA Café – Coproduit (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-cafe/
+2026-08-25T13:56:03.070Z woocommerce ok PLA Saint-Jacques – Coproduit (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-saint-jacques/
+2026-08-25T13:56:03.071Z woocommerce ok PLA Huître – Coproduit (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-huitre/
+2026-08-25T13:56:03.071Z woocommerce ok PLA Moule – Coproduit (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-moule/
+2026-08-25T13:56:03.073Z woocommerce ok PLA Rouge Noël (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-rouge-metallise/
+2026-08-25T13:56:03.073Z woocommerce ok PLA Cuivre (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-cuivre/
+2026-08-25T13:56:03.073Z woocommerce ok PLA Argent (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-argent/
+2026-08-25T13:56:03.074Z woocommerce ok PLA Or (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-or/
+2026-08-25T13:56:03.074Z woocommerce ok PLA Argent Rose (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-argent-rose/
+2026-08-25T13:56:03.075Z woocommerce ok PLA Anthracite Violet (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-anthracite-violet/
+2026-08-25T13:56:03.076Z woocommerce ok PLA Vierge (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-vierge/
+2026-08-25T13:56:03.076Z woocommerce ok PLA Vert RAL 6018 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-vert-ral-6018/
+2026-08-25T13:56:03.077Z woocommerce ok PLA Rouge RAL 3020 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-rouge-ral-3020/
+2026-08-25T13:56:03.077Z woocommerce ok PLA Orange RAL 2003 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-orange-ral-2003/
+2026-08-25T13:56:03.078Z woocommerce ok PLA Noir (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-noir/
+2026-08-25T13:56:03.079Z woocommerce ok PLA Jaune RAL 1018 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-jaune-ral-1018/
+2026-08-25T13:56:03.079Z woocommerce ok PLA Gris RAL 7040 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-gris-ral-7040/
+2026-08-25T13:56:03.080Z woocommerce ok PLA Anthracite RAL 7016 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-anthracite-ral-7016/
+2026-08-25T13:56:03.080Z woocommerce ok PLA Gris RAL 7001 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-gris-ral-7001/
+2026-08-25T13:56:03.082Z woocommerce ok PLA Bleu RAL 5015 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-bleu-ral-5015/
+2026-08-25T13:56:03.082Z woocommerce ok PLA Bleu RAL 5002 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-bleu-ral-5002/
+2026-08-25T13:56:03.082Z woocommerce ok PLA Bleu Turquoise (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-bleu-turquoise/
+2026-08-25T13:56:03.082Z woocommerce ok PLA Blanc (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-blanc/
+2026-08-25T13:56:03.083Z woocommerce ok PLA Vert RAL 6000 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-vert-ral-6000/
+2026-08-25T13:56:03.085Z woocommerce ok PLA Jaune Fluo RAL 1026 (nozzle 215°C / bed 50°C) https://francofil.fr/product/filament-pla-jaune-fluo-ral-1026/
+2026-08-25T13:56:03.085Z woocommerce ok PolyHex™ (Hi-Temp PETG) Filament (nozzle 280°C / bed 115°C) https://www.ic3dprinters.com/shop/polyhex/
+2026-08-25T13:56:03.085Z woocommerce ok Carbon Fiber PETG (nozzle 268°C / bed 90°C) https://www.ic3dprinters.com/shop/cf-petg/
+2026-08-25T13:56:03.086Z woocommerce ok Impact Modified PLA (nozzle 230°C / bed 65°C) https://www.ic3dprinters.com/shop/impact-modified-pla/
+2026-08-25T13:56:03.086Z woocommerce ok Matte Impact Modified PLA (nozzle 230°C / bed 65°C) https://www.ic3dprinters.com/shop/matte-pla-filaments/
+2026-08-25T13:56:03.093Z === run done ===
+prusament: listed=23 new=0 total=22
+fiberlogy: listed=77 new=0 total=69
+extrudr: listed=156 new=0 total=136
+fillamentum: listed=275 new=0 total=210
+eryone: listed=207 new=0 total=60
+shopify: listed=777 new=0 total=85
+woocommerce: listed=2358 new=510 total=510
