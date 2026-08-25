@@ -15,6 +15,9 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA = join(HERE, 'data');
 const CONSTANTS = join(HERE, '..', '..', 'constants.ts');
 
+// Listing rows that are not a filament product.
+const JUNK = /\b(sample|gift\s*card|voucher|spool\s*holder|nozzle|bundle|sticker|t-shirt|dryer)\b/i;
+
 const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
 
 const ORDER = [
@@ -41,8 +44,10 @@ async function main() {
 
   const constants = await readFile(CONSTANTS, 'utf8');
   const existing = new Set(
-    [...constants.matchAll(/manufacturer:\s*'([^']*)'[^}]*?brand:\s*'([^']*)'/g)].map(
-      (m) => norm(m[1]) + '|' + norm(m[2])
+    // Both quote styles: the hand-written presets use ', the ones this script emits use ".
+    // Without that the second run would re-add everything it added on the first.
+    [...constants.matchAll(/manufacturer:\s*(['"])(.*?)\1[^}]*?brand:\s*(['"])(.*?)\3/g)].map(
+      (m) => norm(m[2]) + '|' + norm(m[4])
     )
   );
   console.log(`constants.ts: ${existing.size} existing manufacturer|brand keys`);
@@ -50,6 +55,7 @@ async function main() {
   const lines = [];
   let n = 0;
   let dup = 0;
+  let junk = 0;
 
   for (const f of files) {
     const parser = f.replace(/\.json$/, '');
@@ -62,6 +68,14 @@ async function main() {
     if (!Array.isArray(rows)) continue;
 
     for (const raw of rows) {
+      // Shop listings carry entries that are not distinct filaments: sample lengths
+      // ("15 m Sample"), gift cards, spool holders. They would become junk presets.
+      if (JUNK.test(raw.brand)) { junk++; continue; }
+      // "PLA Mineral Filament" -> "PLA Mineral": the vendor's trailing noun adds nothing
+      // and the existing presets use bare product names.
+      raw.brand = String(raw.brand || '').replace(/\s+filaments?$/i, '').trim();
+      if (!raw.brand) { junk++; continue; }
+
       const key = norm(raw.manufacturer) + '|' + norm(raw.brand);
       if (existing.has(key)) { dup++; continue; }
       if (raw.nozzleTemp === undefined || raw.bedTemp === undefined) continue;
@@ -76,7 +90,11 @@ async function main() {
         filamentType: raw.filamentType || 'Other',
         nozzleTemp: raw.nozzleTemp,
         bedTemp: raw.bedTemp,
-        printSpeed: raw.printSpeed,
+        // Some datasheets state speed as a capability ceiling ("up to 1000 mm/s") rather
+        // than a setpoint. Copying that into printSpeed would hand the slicer a default no
+        // printer can run, so above this bound we drop the field and let createPreset's
+        // default stand — the claim itself stays visible in the source URL.
+        printSpeed: raw.printSpeed > 300 ? undefined : raw.printSpeed,
         fanSpeedMin: raw.fanSpeedMin,
         fanSpeedMax: raw.fanSpeedMax,
         dryingTemp: raw.dryingTemp,
@@ -92,7 +110,7 @@ async function main() {
     }
   }
 
-  console.log(`data files=${files.length} alreadyPresent=${dup} new=${lines.length}`);
+  console.log(`data files=${files.length} alreadyPresent=${dup} skippedNonFilament=${junk} new=${lines.length}`);
   if (!lines.length) return;
 
   console.log(`\n// --- Imported from official manufacturer sites (${new Date().toISOString().slice(0, 10)}) ---`);

@@ -19,5 +19,603 @@
     "sourceType": "manufacturer",
     "printSpeed": 55,
     "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Wood",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/wood-pla",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Silk",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/silk-pla",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Ultra Silk",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/advanced-silk-pla",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Luminous",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/glow-in-the-dark-pla",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA+ Filament Suitable For FDM 3D Printer",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/pla",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Matte",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/matte-pla",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Bundle Sale) PETG & Carbon Fiber PETG Filament (MOQ:10 Rolls,Mixable )",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 78,
+    "sourceUrl": "https://eryone3d.com/products/eryone-petg-3d-printer-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 55,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Galaxy Sparkly Glitter Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/pla-galaxy-sparkly-glitter-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "TPU Rainbow Filament",
+    "filamentType": "TPU",
+    "nozzleTemp": 210,
+    "bedTemp": 30,
+    "sourceUrl": "https://eryone3d.com/products/tpu-rainbow",
+    "sourceType": "manufacturer",
+    "printSpeed": 28,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Silk Triple-Color",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 65,
+    "sourceUrl": "https://eryone3d.com/products/pla-silk-triple-color-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Bundle Sale) PLA Silk & Ultra Silk Filament (MOQ:5 Rolls,Mixable )",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/bundle-sale-pla-ultra-silk-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Bundle Sale) Eryone PLA Matte Filament,1kg (MOQ:5 Rolls,Mixable )",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/bundle-sale-pla-matte-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Bundle Sale) PLA Galaxy Sparkly Glitter Filament (MOQ:5 Rolls,Mixable )",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/bundle-sale-galaxy-pla-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Bundle Sale) Eryone Special PLA Filament,1kg (MOQ:3 Rolls,Mixable )",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 65,
+    "sourceUrl": "https://eryone3d.com/products/bundle-sale-special-pla-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Silk Rainbow",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/macaron-rainbow-pla-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Pre-Sale)Eryone PLA New Colors Filament,1kg (MOQ:20 Rolls,Mixable)",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/pre-sale-new-colors-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Pre-Sale)TPU 3D Printer Filament,0.5kg/Spool (MOQ:20 rolls,Mixable)",
+    "filamentType": "TPU",
+    "nozzleTemp": 240,
+    "bedTemp": 78,
+    "sourceUrl": "https://eryone3d.com/products/pre-sale-tpu-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 55,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(US only) Eryone PLA All Series Filament,1kg (MOQ:20 Rolls,Mixable)",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/us-only-pla-all-series-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(UK only)Eryone PLA All Series Filament,1kg (MOQ:20 Rolls,Mixable)",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/uk-only-pla-all-series-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(CA only)Eryone PLA All Series Filament,1kg (MOQ:20 Rolls,Mixable)",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/ca-only-pla-all-series-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(EU only)Eryone PLA All Series Filament,1kg (MOQ:20 Rolls,Mixable)",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/eu-only-pla-all-series-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "Nylon",
+    "filamentType": "Nylon",
+    "nozzleTemp": 265,
+    "bedTemp": 110,
+    "sourceUrl": "https://eryone3d.com/products/nylon-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "Eryone PLA New Color Collection Filament,1kg,(MOQ:10 Rolls,Mixable)",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/pla-new-product-color-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Sample）Eryone PLA New Product Color Collection Filament,10 Meters",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/sample-pla-new-product-color-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA High-Speed",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/pla-high-speed-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Silk High-Speed Triple-Color",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 65,
+    "sourceUrl": "https://eryone3d.com/products/pla-silk-high-speed-triple-color",
+    "sourceType": "manufacturer",
+    "printSpeed": 265,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PETG High-Speed",
+    "filamentType": "PETG",
+    "nozzleTemp": 260,
+    "bedTemp": 78,
+    "sourceUrl": "https://eryone3d.com/products/petg-high-speed-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 315,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA+ High-Speed",
+    "filamentType": "PLA",
+    "nozzleTemp": 210,
+    "bedTemp": 48,
+    "sourceUrl": "https://eryone3d.com/products/pla-plus-high-speed-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA 3D Printer Matte High Speed Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/high-speed-matte-pla-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 265,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "Eryone Be the first to experience the latest filaments,1kg,(MOQ:10 Rolls,Mixable)",
+    "filamentType": "Other",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/pre-sale-be-the-first-to-experience-the-latest-filaments-1kg-moq-10-rolls-mixable",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Light Weight Filament - 1.75mm±0.03mm (750g)",
+    "filamentType": "PLA",
+    "nozzleTemp": 235,
+    "bedTemp": 53,
+    "sourceUrl": "https://eryone3d.com/products/pla-light-weight-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Matte High-Speed Triple-Color Filament - 1.75mm±0.03mm (1kg)",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/pla-matte-hp-3-color-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 265,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Bundle Sale)PLA Silk Triple-Color Filament ,1kg (MOQ:10 Rolls,Mixable",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 65,
+    "sourceUrl": "https://eryone3d.com/products/bundle-pla-silk-triple-color-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Bundle Sale)PLA Silk High-Speed Triple-Color Filament ,1kg (MOQ:10 Ro",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 65,
+    "sourceUrl": "https://eryone3d.com/products/bundle-pla-silk-high-speed-triple-color-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 265,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Bundle Sale) PLA Matte High Speed Filament,1kg (MOQ:10 Rolls,Mixable",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/bundle-pla-matte-high-speed-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 265,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "(Bundle Sale) PLA Matte High-Speed Triple-Color Filament ,1kg (MOQ:10",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/bundle-pla-matte-high-speed-triple-color-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 265,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Silk Triple-Color",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 65,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-silk-triple-color-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PETG & Carbon Fiber PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 78,
+    "sourceUrl": "https://eryone3d.com/products/moq1-petg-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 55,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Matte",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-matte-matte-rainbow-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Silk Rainbow",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-silk-rainbow-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Silk",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-silk-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA 3D Printer Matte High Speed Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-matte-high-speed-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 265,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA+ High-Speed",
+    "filamentType": "PLA",
+    "nozzleTemp": 210,
+    "bedTemp": 48,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-high-speed-filament-1kg",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Silk High-Speed Triple-Color",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 65,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-silk-high-speed-triple-color-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 265,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Galaxy Sparkly Glitter Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-galaxy-sparkly-glitter-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Luminous",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-luminous-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "3D Printer Filament, PLA Matte High-Speed Triple-Color Filament - 1.75",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-matte-high-speed-triple-color-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 265,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "3D Printer Filament, PLA Light Weight Filament - 1.75mm±0.03mm (750g)",
+    "filamentType": "PLA",
+    "nozzleTemp": 235,
+    "bedTemp": 53,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-light-weight-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Ultra Silk",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-ultra-silk-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA+ Filament Suitable For FDM 3D Printer",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PETG High-Speed",
+    "filamentType": "PETG",
+    "nozzleTemp": 260,
+    "bedTemp": 78,
+    "sourceUrl": "https://eryone3d.com/products/moq1-petg-high-speed-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 315,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "Nylon",
+    "filamentType": "Nylon",
+    "nozzleTemp": 265,
+    "bedTemp": 110,
+    "sourceUrl": "https://eryone3d.com/products/moq1-nylon-nylon-cf-gfpa6-pa12-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA High-Speed",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-high-speed-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Wood",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-wood-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Lagoon Rainbow",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 65,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-lagoon-rainbow-filament",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "3D Printer Filament, TPU Rainbow Filament",
+    "filamentType": "TPU",
+    "nozzleTemp": 210,
+    "bedTemp": 30,
+    "sourceUrl": "https://eryone3d.com/products/moq1-tpu-rainbow-filament",
+    "sourceType": "manufacturer",
+    "printSpeed": 28,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 63,
+    "sourceUrl": "https://eryone3d.com/products/moq1-pla-filament-3kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 78,
+    "sourceUrl": "https://eryone3d.com/products/moq1-petg-filament-3kg",
+    "sourceType": "manufacturer",
+    "printSpeed": 55,
+    "filamentDiameter": 1.75
   }
 ]

@@ -16,5 +16,185 @@
     "bedTemp": 85,
     "sourceUrl": "https://prusament.com/materials/prusament-petg-ultraglow/",
     "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PLA High Speed",
+    "filamentType": "PLA",
+    "nozzleTemp": 210,
+    "bedTemp": 50,
+    "sourceUrl": "https://prusament.com/materials/prusament-pla-high-speed/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PC Space Grade",
+    "filamentType": "PC",
+    "nozzleTemp": 290,
+    "bedTemp": 120,
+    "sourceUrl": "https://prusament.com/materials/prusament-pc-space-grade/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PP Glass Fiber",
+    "filamentType": "Other",
+    "nozzleTemp": 245,
+    "bedTemp": 95,
+    "sourceUrl": "https://prusament.com/materials/prusament-pp-glass-fiber/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "TPU 95A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 65,
+    "sourceUrl": "https://prusament.com/materials/prusament-tpu-95a/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PETG Magnetite 40%",
+    "filamentType": "PETG",
+    "nozzleTemp": 270,
+    "bedTemp": 100,
+    "sourceUrl": "https://prusament.com/materials/prusament-petg-magnetite-40/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PP Carbon Fiber",
+    "filamentType": "Other",
+    "nozzleTemp": 270,
+    "bedTemp": 85,
+    "sourceUrl": "https://prusament.com/materials/prusament-pp/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "Woodfill",
+    "filamentType": "PLA",
+    "nozzleTemp": 195,
+    "bedTemp": 60,
+    "sourceUrl": "https://prusament.com/materials/prusament-woodfill/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PEI 1010",
+    "filamentType": "Other",
+    "nozzleTemp": 410,
+    "bedTemp": 150,
+    "sourceUrl": "https://prusament.com/materials/prusament-pei-1010/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PLA",
+    "filamentType": "PLA",
+    "nozzleTemp": 210,
+    "bedTemp": 40,
+    "sourceUrl": "https://prusament.com/materials/pla/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PLA Recycled",
+    "filamentType": "PLA",
+    "nozzleTemp": 210,
+    "bedTemp": 40,
+    "sourceUrl": "https://prusament.com/materials/prusament-pla-recycled/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "rPLA",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 40,
+    "sourceUrl": "https://prusament.com/materials/prusament-rpla/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 80,
+    "sourceUrl": "https://prusament.com/materials/prusament-petg/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PETG Recycled",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 80,
+    "sourceUrl": "https://prusament.com/materials/prusament-petg-recycled/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PETG Tungsten",
+    "filamentType": "PETG",
+    "nozzleTemp": 260,
+    "bedTemp": 80,
+    "sourceUrl": "https://prusament.com/materials/prusament-petg-tungsten-75/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PETG V0",
+    "filamentType": "PETG",
+    "nozzleTemp": 230,
+    "bedTemp": 80,
+    "sourceUrl": "https://prusament.com/materials/prusament-petg-v0/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PVB",
+    "filamentType": "Other",
+    "nozzleTemp": 215,
+    "bedTemp": 65,
+    "sourceUrl": "https://prusament.com/materials/prusament-pvb/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 260,
+    "bedTemp": 110,
+    "sourceUrl": "https://prusament.com/materials/prusament-asa/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PC Blend",
+    "filamentType": "PC",
+    "nozzleTemp": 275,
+    "bedTemp": 110,
+    "sourceUrl": "https://prusament.com/materials/prusament-pc-blend/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PC Blend Carbon Fiber",
+    "filamentType": "PC",
+    "nozzleTemp": 285,
+    "bedTemp": 110,
+    "sourceUrl": "https://prusament.com/materials/prusament-pc-blend-carbon-fiber/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PA11 (Nylon) Carbon Fiber",
+    "filamentType": "PA-CF",
+    "nozzleTemp": 285,
+    "bedTemp": 110,
+    "sourceUrl": "https://prusament.com/materials/prusament-pa11-nylon-carbon-fiber/",
+    "sourceType": "manufacturer"
   }
 ]

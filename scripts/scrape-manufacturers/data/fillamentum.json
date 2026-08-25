@@ -16,5 +16,1877 @@
     "bedTemp": 55,
     "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-luminous-yellow",
     "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "HIPS Extrafill",
+    "filamentType": "Other",
+    "nozzleTemp": 240,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/hips-extrafill-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Timberfill®",
+    "filamentType": "PLA",
+    "nozzleTemp": 180,
+    "bedTemp": 48,
+    "sourceUrl": "https://shop.fillamentum.com/products/timberfill-cinnamon",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Timberfill®",
+    "filamentType": "PLA",
+    "nozzleTemp": 180,
+    "bedTemp": 48,
+    "sourceUrl": "https://shop.fillamentum.com/products/timberfill-light-wood-tone",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-pearl-ruby-red",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-luminous-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-signal-red",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-turquoise-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-purple-red",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-traffic-purple",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-turquoise-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-concrete-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-traffic-red",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-traffic-yellow",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-signal-brown",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-sky-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-traffic-black",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-traffic-white",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-luminous-orange",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-metallic-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-metallic-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-sky-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-traffic-black",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-signal-red",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-luminous-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Timberfill®",
+    "filamentType": "PLA",
+    "nozzleTemp": 180,
+    "bedTemp": 48,
+    "sourceUrl": "https://shop.fillamentum.com/products/timberfill-rosewood",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Timberfill®",
+    "filamentType": "PLA",
+    "nozzleTemp": 180,
+    "bedTemp": 48,
+    "sourceUrl": "https://shop.fillamentum.com/products/timberfill-champagne",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-signal-yellow",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-traffic-white",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-traffic-black",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-traffic-red",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-traffic-yellow",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-sky-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-green-grass",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-metallic-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 92A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-92a-luminous-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 92A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-92a-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 92A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-92a-traffic-black",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Nylon FX256",
+    "filamentType": "Nylon",
+    "nozzleTemp": 245,
+    "bedTemp": 100,
+    "sourceUrl": "https://shop.fillamentum.com/products/nylon-fx256-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Nylon CF15 Carbon",
+    "filamentType": "PA-CF",
+    "nozzleTemp": 248,
+    "bedTemp": 95,
+    "sourceUrl": "https://shop.fillamentum.com/products/nylon-cf15-carbon",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Nylon AF80 Aramid",
+    "filamentType": "Nylon",
+    "nozzleTemp": 248,
+    "bedTemp": 95,
+    "sourceUrl": "https://shop.fillamentum.com/products/nylon-af80-aramid",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-powder-beige",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-vertigo-galaxy",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-traffic-white",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-black-soul",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-deep-sea-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-morning-sun-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-iced-green-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-lilac",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-baby-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Crystal Clear",
+    "filamentType": "PLA",
+    "nozzleTemp": 213,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-crystal-clear-smaragd-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-neon-orange-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-white-aluminium",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-grey-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-anthracite-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-vertigo-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-pistachio-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Vinyl 303",
+    "filamentType": "Other",
+    "nozzleTemp": 223,
+    "bedTemp": 85,
+    "sourceUrl": "https://shop.fillamentum.com/products/vinyl-303-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Vinyl 303",
+    "filamentType": "Other",
+    "nozzleTemp": 223,
+    "bedTemp": 85,
+    "sourceUrl": "https://shop.fillamentum.com/products/vinyl-303-black",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-army-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-caramel-brown-metallic",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-flash-yellow-metallic",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-flirty-plum",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-grey-mouse-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-jungle-green-metallic",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-lagoon-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-lemonade-translucent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-mistake-blue-metallic",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE HG100",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-hg100-ghost-white",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPE 90A",
+    "filamentType": "TPE",
+    "nozzleTemp": 235,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpe-90a-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Polypropylene PP 2320",
+    "filamentType": "Other",
+    "nozzleTemp": 235,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/polypropylene-pp-2320",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-pla-extrafill-premium",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "HIPS Extrafill",
+    "filamentType": "Other",
+    "nozzleTemp": 240,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/hips-extrafill-signal-red",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "HIPS Extrafill",
+    "filamentType": "Other",
+    "nozzleTemp": 240,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/hips-extrafill-sky-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "HIPS Extrafill",
+    "filamentType": "Other",
+    "nozzleTemp": 240,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/hips-extrafill-metallic-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "HIPS Extrafill",
+    "filamentType": "Other",
+    "nozzleTemp": 240,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/hips-extrafill-traffic-black",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPE 90A",
+    "filamentType": "TPE",
+    "nozzleTemp": 235,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpe-90a-traffic-black",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "CPE CF112 Carbon",
+    "filamentType": "PA-CF",
+    "nozzleTemp": 260,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/cpe-cf112-carbon",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Nylon FX256",
+    "filamentType": "Nylon",
+    "nozzleTemp": 245,
+    "bedTemp": 100,
+    "sourceUrl": "https://shop.fillamentum.com/products/nylon-fx256-signal-red",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Nylon FX256",
+    "filamentType": "Nylon",
+    "nozzleTemp": 245,
+    "bedTemp": 100,
+    "sourceUrl": "https://shop.fillamentum.com/products/nylon-fx256-sky-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Nylon FX256",
+    "filamentType": "Nylon",
+    "nozzleTemp": 245,
+    "bedTemp": 100,
+    "sourceUrl": "https://shop.fillamentum.com/products/nylon-fx256-metallic-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Nylon FX256",
+    "filamentType": "Nylon",
+    "nozzleTemp": 245,
+    "bedTemp": 100,
+    "sourceUrl": "https://shop.fillamentum.com/products/nylon-fx256-vertigo-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Nylon FX256",
+    "filamentType": "Nylon",
+    "nozzleTemp": 245,
+    "bedTemp": 100,
+    "sourceUrl": "https://shop.fillamentum.com/products/nylon-fx256-traffic-black",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "PA-CF",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-cpe-cf112-carbon",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "Other",
+    "nozzleTemp": 223,
+    "bedTemp": 80,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-vinyl-303-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "Nylon",
+    "nozzleTemp": 248,
+    "bedTemp": 95,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-nylon-af80-aramid",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "Nylon",
+    "nozzleTemp": 248,
+    "bedTemp": 95,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-nylon-fx256",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-carrot-orange",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill TPU 98A",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-tpu-98a-blue-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "TPU",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-flexfill-tpu-98a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "PA-CF",
+    "nozzleTemp": 248,
+    "bedTemp": 95,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-nylon-cf15-carbon",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-vertigo-cherry",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-vertigo-jade",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-vertigo-mystique",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 265,
+    "bedTemp": 78,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-cpe-hg100",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "ABS",
+    "nozzleTemp": 230,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-abs-extrafill",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "ASA",
+    "nozzleTemp": 248,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-asa-extrafill",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill PEBA 90A",
+    "filamentType": "PEBA",
+    "nozzleTemp": 235,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-peba-90a-natural",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "PEBA",
+    "nozzleTemp": 235,
+    "bedTemp": 80,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-flexfill-peba-90a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Crystal Clear",
+    "filamentType": "PLA",
+    "nozzleTemp": 213,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-crystal-clear-kiwi-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Crystal Clear",
+    "filamentType": "PLA",
+    "nozzleTemp": 213,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-crystal-clear-tangerine-orange",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Crystal Clear",
+    "filamentType": "PLA",
+    "nozzleTemp": 213,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-crystal-clear-amethyst-purple",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-pla-crystal-clear",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "NonOilen®",
+    "filamentType": "PLA",
+    "nozzleTemp": 183,
+    "bedTemp": 50,
+    "sourceUrl": "https://shop.fillamentum.com/products/nonoilen",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 175,
+    "bedTemp": 48,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-timberfill",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 185,
+    "bedTemp": 25,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-nonoilen",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "6 m Sample",
+    "filamentType": "PLA",
+    "nozzleTemp": 185,
+    "bedTemp": 25,
+    "sourceUrl": "https://shop.fillamentum.com/products/6-m-sample-2-85-mm-nonoilen",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-dijon-mustard",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-vivid-pink",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-vertigo-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA Extrafill",
+    "filamentType": "ASA",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa-extrafill-snow-white",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-peppered-mustard",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-volcanic-dust",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Timberfill®",
+    "filamentType": "PLA",
+    "nozzleTemp": 180,
+    "bedTemp": 48,
+    "sourceUrl": "https://shop.fillamentum.com/products/timberfill-southern-pine",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Timberfill®",
+    "filamentType": "PLA",
+    "nozzleTemp": 180,
+    "bedTemp": 48,
+    "sourceUrl": "https://shop.fillamentum.com/products/timberfill-redheart",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Timberfill®",
+    "filamentType": "PLA",
+    "nozzleTemp": 180,
+    "bedTemp": 48,
+    "sourceUrl": "https://shop.fillamentum.com/products/charcoal",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Timberfill®",
+    "filamentType": "PLA",
+    "nozzleTemp": 180,
+    "bedTemp": 48,
+    "sourceUrl": "https://shop.fillamentum.com/products/timberfill-terracotta",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-aloe-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-natural-1",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-ghost-white",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-melon-yellow",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-calendula-orange",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-forget-me-not-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-koala-grey",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-black-soul",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-gold-cloud",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-sea-wave",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-greedy-dragon",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-copper-with-me",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-neon-yellow-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-lemon-yellow-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-neon-orange-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-red-hood-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-neon-pink-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-pink-lollipop-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-bunny-blue-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-deep-sea-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-iced-green-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/petg-fresh-poison-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-new-petg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill PEBA 90A",
+    "filamentType": "PEBA",
+    "nozzleTemp": 235,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-peba-90a-black-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill PEBA 90A",
+    "filamentType": "PEBA",
+    "nozzleTemp": 235,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-peba-90a-red-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill PEBA 90A",
+    "filamentType": "PEBA",
+    "nozzleTemp": 235,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-peba-90a-yellow-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "Flexfill PEBA 90A",
+    "filamentType": "PEBA",
+    "nozzleTemp": 235,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/flexfill-peba-90a-blue-transparent",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "0rCA®",
+    "filamentType": "PA-CF",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "sourceUrl": "https://shop.fillamentum.com/products/orca",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "15 m Sample",
+    "filamentType": "Other",
+    "nozzleTemp": 240,
+    "bedTemp": 98,
+    "sourceUrl": "https://shop.fillamentum.com/products/15-m-sample-1-75-mm-pp-2320",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ASA CF10 Carbon",
+    "filamentType": "PA-CF",
+    "nozzleTemp": 260,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/asa_cf10",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-traffic-white-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-light-ivory-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-green-grass-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-melon-yellow-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-orange-orange-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-sky-blue-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-traffic-black-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-signal-red-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-traffic-red-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-turquoise-blue-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-vertigo-starlight-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-chocolate-brown-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-gold-happens-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-everybodys-magenta-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-vertigo-jade-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-vertigo-cherry-1-kg-1-75-mm",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-mukha-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-baby-blue-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-lilac-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-mint-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-electric-grey-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-vertigo-grey-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Crystal Clear",
+    "filamentType": "PLA",
+    "nozzleTemp": 213,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-crystal-clear-iceland-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Crystal Clear",
+    "filamentType": "PLA",
+    "nozzleTemp": 213,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-crystal-clear",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Crystal Clear",
+    "filamentType": "PLA",
+    "nozzleTemp": 213,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-crystal-clear-amethyst-purple-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-vertigo-galaxy-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-noble-blue-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-natural-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-metallic-grey-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-purple-red-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-traffic-yellow-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-pearl-night-blue-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-concrete-grey-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-cobalt-blue-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-luminous-green-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-pearl-ruby-red-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-rapunzel-silver-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-iron-grey-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-2-5kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-turkey-egg-1-kg-1-75-mm",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-witch-please",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-abu-dhabi-green",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-cairo-gold",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-marrakesh-red",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-the-orient-collection-bundle",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "rePETG Loopfill",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/repetg-loopfill-traffic-black",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "rePETG Loopfill",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/repetg-loopfill-traffic-white-1-kg-1-75-mm",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "rePETG Loopfill",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/repetg-loopfill-traffic-red-1-kg-1-75-mm",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "rePETG Loopfill",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/repetg-loopfill-sky-blue-1-kg-1-75-mm",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "rePETG Loopfill",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/repetg-loopfill-luminous-yellow-1-kg-1-75-mm",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "rePETG Loopfill",
+    "filamentType": "PETG",
+    "nozzleTemp": 253,
+    "bedTemp": 70,
+    "sourceUrl": "https://shop.fillamentum.com/products/repetg-loopfill-custom-color",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "NonOilen®",
+    "filamentType": "PLA",
+    "nozzleTemp": 183,
+    "bedTemp": 50,
+    "sourceUrl": "https://shop.fillamentum.com/products/nonoilen-ginger-shot",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "NonOilen®",
+    "filamentType": "PLA",
+    "nozzleTemp": 183,
+    "bedTemp": 50,
+    "sourceUrl": "https://shop.fillamentum.com/products/nonoilen-red-sunset",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "NonOilen®",
+    "filamentType": "PLA",
+    "nozzleTemp": 183,
+    "bedTemp": 50,
+    "sourceUrl": "https://shop.fillamentum.com/products/nonoilen-dark-stone",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "NonOilen®",
+    "filamentType": "PLA",
+    "nozzleTemp": 183,
+    "bedTemp": 50,
+    "sourceUrl": "https://shop.fillamentum.com/products/nonoilen-arctic-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "NonOilen®",
+    "filamentType": "PLA",
+    "nozzleTemp": 183,
+    "bedTemp": 50,
+    "sourceUrl": "https://shop.fillamentum.com/products/nonoilen-whispering-grass",
+    "sourceType": "manufacturer"
   }
 ]

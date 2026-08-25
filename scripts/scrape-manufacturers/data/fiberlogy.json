@@ -18,5 +18,675 @@
     "sourceUrl": "https://fiberlogy.com/en/product/mineral-pla-filament-s2/",
     "sourceType": "manufacturer",
     "density": 1.38
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PLA+CF Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/placf-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.26
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ABS ESD Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 258,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/esd-abs-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.05
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ABS Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 258,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/abs-filament-s1/",
+    "sourceType": "manufacturer",
+    "density": 1.05
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ABS Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 258,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/abs-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.05
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ABS Plus Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/abs-plus-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.05
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ABS Plus Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/abs-plus-filament-s1/",
+    "sourceType": "manufacturer",
+    "density": 1.05
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ABS Plus Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/abs-plus-filament-s2-4/",
+    "sourceType": "manufacturer",
+    "density": 1.05
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ABS+GF Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 278,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/absgf-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.12
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ABS+GF Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 278,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/absgf-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.12
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/asa-s2-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ASA Filament",
+    "filamentType": "ASA",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/asa-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ASA Matte Filament",
+    "filamentType": "ASA",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/asa-matte-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ASA Matte Filament",
+    "filamentType": "ASA",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/asa-matte-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "BVOH Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 205,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/bvoh-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.14
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "CPE HT",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 270,
+    "bedTemp": 120,
+    "sourceUrl": "https://fiberlogy.com/en/product/cpe-ht-s2-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.18
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "CPE HT+Ag Antibac Filament",
+    "filamentType": "Copolyester",
+    "nozzleTemp": 270,
+    "bedTemp": 120,
+    "sourceUrl": "https://fiberlogy.com/en/product/cpe-htag-antibac-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.18
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Easy ABS Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 245,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/easy-abs-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.09
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Easy ABS Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 245,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/easy-abs-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.09
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Easy PETG Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/easy-petg-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.29
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Easy PETG Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/easy-petg-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.29
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Easy PLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 4156,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/easy-pla-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "ESD PETG Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 258,
+    "bedTemp": 85,
+    "sourceUrl": "https://fiberlogy.com/en/product/esd-petg-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.3
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberFlex 30D Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 210,
+    "bedTemp": 70,
+    "sourceUrl": "https://fiberlogy.com/en/product/fiberflex-30d-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberFlex 40D Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 210,
+    "bedTemp": 70,
+    "sourceUrl": "https://fiberlogy.com/en/product/fiberflex-40d-filament-s1/",
+    "sourceType": "manufacturer",
+    "density": 1.16
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberFlex 40D Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 210,
+    "bedTemp": 70,
+    "sourceUrl": "https://fiberlogy.com/en/product/fiberflex-40d-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.16
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberFlex+CF Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 198,
+    "bedTemp": 80,
+    "sourceUrl": "https://fiberlogy.com/en/product/fiberflexcf-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.23
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberSatin PLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/fibersatin-pla-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.2
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberSilk PLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/fibersilk-pla-filament-s1/",
+    "sourceType": "manufacturer",
+    "density": 1.22
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberSilk PLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/fibersilk-pla-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.22
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberSmooth PVB Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 220,
+    "bedTemp": 75,
+    "sourceUrl": "https://fiberlogy.com/en/product/fibersmooth-pvb-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.1
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberSmooth PVB Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 220,
+    "bedTemp": 75,
+    "sourceUrl": "https://fiberlogy.com/en/product/fibersmooth-pvb-filament-s1/",
+    "sourceType": "manufacturer",
+    "density": 1.1
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "FiberWood PLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/fiberwood-pla-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.3
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Filament FiberWood",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/fiberwood-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.3
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Filament rPETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/rpetg-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.29
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "HIPS Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 238,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/hips-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.04
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "HIPS Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 238,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/hips-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.04
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "HS PLA Clear Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 235,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/hs-pla-clear-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Matte PLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/matte-pla-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Matte PLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/matte-pla-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Nylon PA12",
+    "filamentType": "Nylon",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/nylon-pa12-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.01
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Nylon PA12+CF Filament",
+    "filamentType": "PA-CF",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/nylon-pa12cf-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Nylon PA12+GF Filament",
+    "filamentType": "Nylon",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/nylon-pa12gf-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.13
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "Nylon PA12+GF Filament",
+    "filamentType": "Nylon",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/nylon-pa12gf-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.13
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PA12 Nylon Filament",
+    "filamentType": "Nylon",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/pa12-nylon-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.01
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PC/ABS Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 270,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/pc-abs-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PC/ABS Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 270,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/pc-abs-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PCTG Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 260,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/pctg-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.23
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PCTG Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 260,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/pctg-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.23
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PCTG+CF Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/pctgcf-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.28
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PCTG+CF Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/pctgcf-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.28
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PCTG+GF Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/pctggf-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.31
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PEI 9085 Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 365,
+    "bedTemp": 160,
+    "sourceUrl": "https://fiberlogy.com/en/product/pei-9085-filament-2/",
+    "sourceType": "manufacturer",
+    "density": 1.34
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PETG FR V0",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/petg-fr-v0-s2-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.26
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PETG FR V0 Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/petg-fr-v0-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.26
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PETG Matte Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 260,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/petg-matte-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.29
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PETG Matte Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 260,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/petg-matte-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.29
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PETG+CF Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/petgcf-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.32
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PETG+CF Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/petgcf-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.32
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PETG+PTFE Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 230,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/petgptfe-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.32
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PETG+PTFE Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 230,
+    "bedTemp": 90,
+    "sourceUrl": "https://fiberlogy.com/en/product/petgptfe-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.32
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PLA Impact Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 233,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/pla-impact-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.22
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PLA Mineral Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/pla-mineral-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.38
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PLA Velvet Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/pla-velvet-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.27
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "rABS Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/rabs-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.05
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "rASA Filament",
+    "filamentType": "ASA",
+    "nozzleTemp": 235,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/rasa-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.05
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "rNylon Filament",
+    "filamentType": "Nylon",
+    "nozzleTemp": 263,
+    "bedTemp": 110,
+    "sourceUrl": "https://fiberlogy.com/en/product/rnylon-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.01
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "rPLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/rpla-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.24
   }
 ]
