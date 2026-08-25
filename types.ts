@@ -48,4 +48,14 @@ export interface FilamentProfile {
   density?: number; // in g/cm³
   tensileStrength?: string; // e.g. "50 MPa"
   notes?: string;
+
+  // Provenance. Where a preset's numbers came from, kept as data rather than buried in `notes`,
+  // so the UI can say which and a reader can judge how much to trust it.
+  //   'manufacturer'   the vendor's own product page or datasheet
+  //   'spoolmandb'     SpoolmanDB, the MIT-licensed community database
+  //   'slicer-profile' parameter values from an open-source slicer's tuned profile
+  //   'generic'        hand-written, unattributed — the original seed presets
+  sourceType?: 'manufacturer' | 'spoolmandb' | 'slicer-profile' | 'generic';
+  sourceUrl?: string;
+  sourceProfile?: string; // e.g. 'Bambu PETG HF @base' — names the exact profile cited
 }
