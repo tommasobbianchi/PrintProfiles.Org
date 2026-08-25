@@ -1078,3 +1078,24 @@
 2026-08-25T16:26:29.537Z shopify ok American White: Recycled PET-G <mark>Now with 20% more, FREE!</mark> (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-white-pet-g
 2026-08-25T16:26:29.537Z shopify ok American Red: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-red-pet-g
 2026-08-25T16:26:29.538Z shopify ok American Blue: Recycled PET-G (nozzle 228°C / bed 85°C) https://greengate3d.com/products/recycled-petg-filament-american-blue
+2026-08-25T16:28:37.350Z shopify ok Polymax PETG (nozzle 230°C / bed 70°C) https://x3d.com.au/products/polymax-petg
+2026-08-25T16:29:26.849Z shopify ok PolyLite PETG (nozzle 235°C / bed 75°C) https://x3d.com.au/products/polylite-petg
+2026-08-25T16:29:32.841Z shopify ok X3D Pro Silk PLA - (nozzle 210°C / bed 50°C) https://x3d.com.au/products/silk-pla-1-75-mm
+2026-08-25T16:29:37.350Z shopify ok X3D Pro Flexible TPU (nozzle 215°C / bed 50°C) https://x3d.com.au/products/x3d-pro-flexible-tpu-1-75mm-800g
+2026-08-25T16:29:37.352Z shopify ok Polylite PLA (nozzle 210°C / bed 43°C) https://x3d.com.au/products/polylite-pla-1-75-mm
+2026-08-25T16:29:59.417Z woocommerce iSanmate (isanmate.com): 366 product URLs
+2026-08-25T16:29:59.583Z woocommerce AzureFilm (azurefilm.com): 935 product URLs
+2026-08-25T16:30:00.169Z woocommerce Das Filament (dasfilament.de): 384 product URLs
+2026-08-25T16:30:00.603Z woocommerce NinjaTek (ninjatek.com): 200 product URLs
+2026-08-25T16:30:01.454Z woocommerce Print-Me (print-me.pl): 342 product URLs
+2026-08-25T16:30:02.073Z woocommerce Francofil (francofil.fr): 121 product URLs
+2026-08-25T16:30:02.671Z woocommerce IC3D (ic3dprinters.com): 10 product URLs
+2026-08-25T16:30:02.672Z woocommerce: 2358 listed, 510 already saved, 1848 pending
+2026-08-25T16:30:08.321Z === run done ===
+prusament: listed=23 new=0 total=22
+fiberlogy: listed=77 new=0 total=69
+extrudr: listed=156 new=0 total=136
+fillamentum: listed=275 new=0 total=210
+eryone: listed=207 new=0 total=60
+shopify: listed=5959 new=1066 total=1245
+woocommerce: listed=2358 new=0 total=510

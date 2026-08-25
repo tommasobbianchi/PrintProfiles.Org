@@ -17,7 +17,10 @@ const DATA = join(HERE, 'data');
 const MAX = Number(process.env.MAX_PER_PARSER) || Infinity;
 const FLUSH_EVERY = 5;
 
-const PARSERS = ['prusament', 'fiberlogy', 'extrudr', 'fillamentum', 'eryone', 'shopify', 'woocommerce', 'generic'];
+const ALL_PARSERS = ['prusament', 'fiberlogy', 'extrudr', 'fillamentum', 'eryone', 'shopify', 'woocommerce', 'generic', 'spoolmandb'];
+// ONLY=generic,spoolmandb runs just those. Without it every parser runs, and a parser with a
+// large backlog (shopify has thousands of pages) would otherwise block the ones behind it.
+const PARSERS = process.env.ONLY ? process.env.ONLY.split(',').map((s) => s.trim()) : ALL_PARSERS;
 
 async function main() {
   await mkdir(DATA, { recursive: true });

@@ -12732,5 +12732,56 @@
     "nozzleTemp": 228,
     "bedTemp": 85,
     "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "X3D",
+    "brand": "Polymax PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://x3d.com.au/products/polymax-petg",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 230,
+    "bedTemp": 70,
+    "printSpeed": 30
+  },
+  {
+    "manufacturer": "X3D",
+    "brand": "PolyLite PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://x3d.com.au/products/polylite-petg",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "printSpeed": 45
+  },
+  {
+    "manufacturer": "X3D",
+    "brand": "X3D Pro Silk PLA -",
+    "filamentType": "PLA",
+    "sourceUrl": "https://x3d.com.au/products/silk-pla-1-75-mm",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 210,
+    "bedTemp": 50
+  },
+  {
+    "manufacturer": "X3D",
+    "brand": "X3D Pro Flexible TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://x3d.com.au/products/x3d-pro-flexible-tpu-1-75mm-800g",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 50,
+    "printSpeed": 30,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "X3D",
+    "brand": "Polylite PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://x3d.com.au/products/polylite-pla-1-75-mm",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 210,
+    "bedTemp": 43,
+    "printSpeed": 50,
+    "filamentDiameter": 1.75
   }
 ]
