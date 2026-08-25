@@ -1,5 +1,28 @@
-import { FilamentProfile } from '../types';
+import { FilamentProfile, FilamentType } from '../types';
 import { BAMBU_PRINTER_MAP } from '../constants';
+
+// Each slicer accepts filament_type only from its own fixed vocabulary, which is narrower than
+// our FilamentType union. Emitting an unknown value there makes the profile import badly, so
+// map to the nearest accepted term and fall back to the closest generic rather than inventing.
+const PRUSA_TYPE: Partial<Record<FilamentType, string>> = {
+    PETG: 'PETG', PET: 'PET', PCTG: 'PETG', PETT: 'PET', CPE: 'PET', Copolyester: 'PET',
+    TPU: 'FLEX', TPE: 'FLEX', PEBA: 'FLEX',
+    Nylon: 'NYLON', 'PA-CF': 'NYLON', 'PA-GF': 'NYLON', PA6: 'NYLON', PA12: 'NYLON',
+    BVOH: 'PVA', PHA: 'PLA', PVB: 'PVB', HIPS: 'HIPS', PP: 'PP', PEI: 'PEI', PVA: 'PVA',
+    PLA: 'PLA', ABS: 'ABS', ASA: 'ASA', PC: 'PC',
+};
+
+// Orca/Bambu vocabulary. It has no PCTG/PVB/CPE entry, so those ride as their base polymer.
+const BAMBU_TYPE: Partial<Record<FilamentType, string>> = {
+    PETG: 'PETG', PET: 'PETG', PCTG: 'PETG', PETT: 'PETG', CPE: 'PETG', Copolyester: 'PETG',
+    TPU: 'TPU', TPE: 'TPU', PEBA: 'TPU',
+    Nylon: 'PA', 'PA-CF': 'PA-CF', 'PA-GF': 'PA', PA6: 'PA', PA12: 'PA',
+    BVOH: 'PVA', PVA: 'PVA', PHA: 'PLA', PVB: 'PLA', HIPS: 'HIPS', PP: 'PP', PEI: 'PEI',
+    PLA: 'PLA', ABS: 'ABS', ASA: 'ASA', PC: 'PC',
+};
+
+const slicerType = (map: Partial<Record<FilamentType, string>>, t: FilamentType, fallback: string) =>
+    map[t] ?? fallback;
 
 // 1. Bambu Studio / Orca Slicer (Standard JSON with Arrays)
 export const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
@@ -36,7 +59,7 @@ export const generateBambuJson = (profile: Omit<FilamentProfile, 'id'>) => {
         compatible_printers: compatibilityList,
         
         // Arrays of Strings
-        filament_type: [profile.filamentType],
+        filament_type: [slicerType(BAMBU_TYPE, profile.filamentType, 'PLA')],
         filament_vendor: [profile.manufacturer],
         filament_density: [String(profile.density || "1.24")],
         filament_cost: [String(profile.filamentCost || "0")],
@@ -86,7 +109,7 @@ export const generatePrusaIni = (profile: Omit<FilamentProfile, 'id'>): string =
     // Simplified INI generation based on PrusaSlicer keys
     return `[filament:${profile.profileName}]
 filament_vendor = ${profile.manufacturer}
-filament_type = ${profile.filamentType}
+filament_type = ${slicerType(PRUSA_TYPE, profile.filamentType, 'PLA')}
 filament_density = ${profile.density || 1.24}
 filament_cost = ${profile.filamentCost || 0}
 filament_diameter = ${profile.filamentDiameter}
