@@ -22,7 +22,35 @@ const OTHER_MAKERS = ['colorFabb', 'Polymaker', 'Fillamentum', 'Prusament', 'Fib
   'Extrudr', 'FormFutura', 'BASF', 'Ultimaker', 'Spectrum', 'Devil Design', 'NinjaTek',
   'Protopasta', 'Eryone', 'Kexcelled', 'AzureFilm'];
 
-const JUNK = /\b(sample|gift\s*card|voucher|spool\s*holder|nozzle|bundle|sticker|t-shirt|dryer)\b|MOQ:|\bbe the first\b|\bnew colou?r collection\b/i;
+const JUNK = /\b(sample|gift\s*card|voucher|spool\s*holder|nozzle|bundle|sticker|t-shirt|dryer)\b|MOQ:|\bbe the first\b|\bnew colou?r collection\b|\bsuper\s*pack\b|\bmaster\s*spool\b|^\s*unset\b|\bunset\b|^\s*\d+\s*x\s|\+/i;
+
+// Product identity lives in a small set of known tokens: the polymer, the fill, the grade.
+// Everything else in a storefront title is a colour name, and colour names are unbounded
+// ("Navy Blue", "Red Wine", "Foggy White", "Mustard Brown"), so a colour BLOCKLIST always
+// leaks. Whitelisting identity tokens and discarding the rest is the way that actually holds.
+const IDENTITY = new Set([
+  // polymers
+  'pla','petg','pet','pctg','abs','asa','tpu','tpe','pc','pa','pa6','pa12','nylon','pp','ppa',
+  'hips','pvb','pva','bvoh','peba','pei','peek','pps','cpe','copolyester','pha','pbt','pmma',
+  // fills and reinforcements — these change how it prints, so they are identity
+  'cf','gf','carbon','glass','fiber','fibre','wood','metal','marble','stone','mineral','ceramic',
+  'glow','silk','matt','matte','satin','gloss','glossy','foaming','lw','lightweight','conductive',
+  'esd','flame','fr','v0','recycled','bio','composite','hemp','wheat','coffee','shell','cork',
+  // grades and product lines
+  'plus','pro','premium','advanced','basic','original','prime','eco','ecoline','refill','master',
+  'spool','smooth','swift','easy','flex','hs','ht','hf','max','tough','ultra','high','speed',
+  'strength','impact','modified','soft','hard','semisoft','medium','professional','standard',
+]);
+
+// "Refill PLA filament Navy Blue" -> "plarefill"; "PLA CF Onyx Black" -> "clapla"... i.e. the
+// identity tokens, sorted so word order cannot split one product into two.
+const stripColour = (b) => {
+  const toks = String(b || '')
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((t) => IDENTITY.has(t) || /^\d+[a-z]$/.test(t)); // 20D, 95A: shore hardness is identity
+  return [...new Set(toks)].sort().join('');
+};
 
 const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
 
@@ -60,8 +88,8 @@ async function main() {
   // (the variant collapse picks a representative name), so the import would otherwise re-add
   // near-identical presets every time. Settings are stable, so dedup on those too.
   const existingSettings = new Set(
-    [...constants.matchAll(/manufacturer:\s*(['"])(.*?)\1[\s\S]*?filamentType:\s*(['"])(.*?)\3[\s\S]*?nozzleTemp:\s*(\d+),\s*bedTemp:\s*(\d+)/g)]
-      .map((m) => [norm(m[2]), m[4], m[5], m[6]].join('|'))
+    [...constants.matchAll(/manufacturer:\s*(['"])(.*?)\1,\s*brand:\s*(['"])(.*?)\3,\s*filamentType:\s*(['"])(.*?)\5,\s*nozzleTemp:\s*(\d+),\s*bedTemp:\s*(\d+)/g)]
+      .map((m) => [norm(m[2]), stripColour(m[4]), m[6], m[7], m[8]].join('|'))
   );
 
   // Highest mfr-*-N already issued, so new ids continue the sequence instead of restarting.
@@ -120,13 +148,17 @@ async function main() {
       // Spool weight is not part of the product identity: "Easy ASA White 200g" -> "Easy ASA White".
       raw.brand = raw.brand.replace(/[\s,–-]*\b\d+(?:[.,]\d+)?\s*(?:g|kg)\b\s*$/i, '').trim();
 
-      // Colour and spool weight do not change print settings, so "PLA CF Onyx Black" and
-      // "PLA CF Forest Green" are one preset. Collapse on identical settings and keep the
-      // shortest name, which is reliably the family name rather than a colour variant.
-      const skey = [norm(raw.manufacturer), raw.filamentType, raw.nozzleTemp, raw.bedTemp].join('|');
+      // Collapse colour variants only. Keying on settings ALONE over-collapses: Francofil's
+      // wheat / scallop / coffee filled PLA all print at 205/55 but are different products,
+      // as are FilaFlex 82A and 95A. So the key is the colour-stripped product name plus the
+      // settings — same product different colour collapses, different products never do.
+      const skey = [norm(raw.manufacturer), stripColour(raw.brand), raw.filamentType, raw.nozzleTemp, raw.bedTemp].join('|');
       if (existingSettings.has(skey)) { dup++; continue; }
 
-      const vkey = [norm(raw.manufacturer), raw.filamentType, raw.nozzleTemp, raw.bedTemp, raw.printSpeed ?? ''].join('|');
+      const vkey = [
+        norm(raw.manufacturer), stripColour(raw.brand), raw.filamentType,
+        raw.nozzleTemp, raw.bedTemp, raw.printSpeed ?? '', raw.density ?? '',
+      ].join('|');
       const seen = variants.get(vkey);
       if (seen) {
         seen.count++;
