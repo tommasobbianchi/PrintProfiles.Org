@@ -1,0 +1,27 @@
+2026-08-25T17:28:33.700Z === run start === MAX_PER_PARSER=unlimited
+2026-08-25T17:28:41.960Z WARN GET https://cookiecad.com/products.json?limit=250&page=1 -> 404
+2026-08-25T17:28:43.309Z WARN robots.txt for r3d.store returned 404 — no rules, proceeding
+2026-08-25T17:28:44.694Z WARN GET https://r3d.store/products.json?limit=250&page=1 -> 404
+2026-08-25T17:28:48.735Z WARN robots.txt for voxelab3dp.com returned network-error — no rules, proceeding
+2026-08-25T17:28:53.331Z shopify: 6324 listed, 1245 already saved, 5079 pending
+2026-08-25T17:29:36.475Z WARN network error at https://voxelab3dp.com/products/voexlab-aquila-3d-printer-50g-text-filament (attempt 1) — backing off 3000ms
+2026-08-25T17:29:40.053Z WARN network error at https://voxelab3dp.com/products/voexlab-aquila-3d-printer-50g-text-filament (attempt 2) — backing off 6000ms
+2026-08-25T17:29:46.701Z WARN network error at https://voxelab3dp.com/products/voexlab-aquila-3d-printer-50g-text-filament (attempt 3) — backing off 12000ms
+2026-08-25T17:29:59.279Z WARN GET https://voxelab3dp.com/products/voexlab-aquila-3d-printer-50g-text-filament -> network-error
+2026-08-25T17:30:00.619Z WARN network error at https://voxelab3dp.com/products/voxelab-pla-pro-pla-3d-printing-filament-dimensional-accuracy-0-02-mm (attempt 1) — backing off 3000ms
+2026-08-25T17:30:04.061Z WARN network error at https://voxelab3dp.com/products/voxelab-pla-pro-pla-3d-printing-filament-dimensional-accuracy-0-02-mm (attempt 2) — backing off 6000ms
+2026-08-25T17:30:10.634Z WARN network error at https://voxelab3dp.com/products/voxelab-pla-pro-pla-3d-printing-filament-dimensional-accuracy-0-02-mm (attempt 3) — backing off 12000ms
+2026-08-25T17:30:23.215Z WARN GET https://voxelab3dp.com/products/voxelab-pla-pro-pla-3d-printing-filament-dimensional-accuracy-0-02-mm -> network-error
+2026-08-25T17:30:43.026Z shopify ok PVA (nozzle 230°C / bed 95°C) https://store.anycubic.com/products/pva
+2026-08-25T17:30:45.744Z shopify ok PA6-CF (nozzle 280°C / bed 95°C) https://store.anycubic.com/products/pa6-cf
+2026-08-25T17:30:47.766Z WARN HTTP 429 at https://store.anycubic.com/products/s1-max-filament-runout-sensor-assembly (attempt 1) — backing off 3000ms
+2026-08-25T17:30:50.833Z WARN HTTP 429 at https://store.anycubic.com/products/s1-max-filament-runout-sensor-assembly (attempt 2) — backing off 6000ms
+2026-08-25T17:30:56.899Z WARN HTTP 429 at https://store.anycubic.com/products/s1-max-filament-runout-sensor-assembly (attempt 3) — backing off 12000ms
+2026-08-25T17:31:08.958Z WARN GET https://store.anycubic.com/products/s1-max-filament-runout-sensor-assembly -> 429
+2026-08-25T17:31:10.460Z WARN HTTP 429 at https://store.anycubic.com/products/ace-2-pro-filament-feeding-retraction-module-not-including-motors (attempt 1) — backing off 3000ms
+2026-08-25T17:31:13.528Z WARN HTTP 429 at https://store.anycubic.com/products/ace-2-pro-filament-feeding-retraction-module-not-including-motors (attempt 2) — backing off 6000ms
+2026-08-25T17:31:19.580Z WARN HTTP 429 at https://store.anycubic.com/products/ace-2-pro-filament-feeding-retraction-module-not-including-motors (attempt 3) — backing off 12000ms
+2026-08-25T17:31:31.655Z WARN GET https://store.anycubic.com/products/ace-2-pro-filament-feeding-retraction-module-not-including-motors -> 429
+2026-08-25T17:31:33.140Z WARN HTTP 429 at https://store.anycubic.com/products/abs-kol-partner-only (attempt 1) — backing off 3000ms
+2026-08-25T17:31:36.193Z WARN HTTP 429 at https://store.anycubic.com/products/abs-kol-partner-only (attempt 2) — backing off 6000ms
+2026-08-25T17:31:42.248Z WARN HTTP 429 at https://store.anycubic.com/products/abs-kol-partner-only (attempt 3) — backing off 12000ms
