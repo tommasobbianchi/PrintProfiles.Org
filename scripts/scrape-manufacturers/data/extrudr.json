@@ -1,0 +1,32 @@
+[
+  {
+    "manufacturer": "Extrudr",
+    "brand": "BioFusion",
+    "filamentType": "Other",
+    "nozzleTemp": 215,
+    "bedTemp": 40,
+    "sourceUrl": "https://extrudr.com/de/de/products/biofusion/",
+    "sourceType": "manufacturer",
+    "printSpeed": 30,
+    "fanSpeedMin": 10,
+    "fanSpeedMax": 30,
+    "dryingTemp": 60,
+    "dryingTime": "0–4h",
+    "density": 1.25
+  },
+  {
+    "manufacturer": "Extrudr",
+    "brand": "DuraPro ABS",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 105,
+    "sourceUrl": "https://extrudr.com/de/de/products/durapro-abs/",
+    "sourceType": "manufacturer",
+    "printSpeed": 110,
+    "fanSpeedMin": 0,
+    "fanSpeedMax": 50,
+    "dryingTemp": 60,
+    "dryingTime": "10h",
+    "density": 1.05
+  }
+]

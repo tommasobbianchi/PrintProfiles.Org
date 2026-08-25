@@ -1,0 +1,20 @@
+[
+  {
+    "manufacturer": "Prusa",
+    "brand": "PA11",
+    "filamentType": "Nylon",
+    "nozzleTemp": 275,
+    "bedTemp": 100,
+    "sourceUrl": "https://prusament.com/materials/prusament-pa11/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Prusa",
+    "brand": "PETG Ultraglow",
+    "filamentType": "PETG",
+    "nozzleTemp": 260,
+    "bedTemp": 85,
+    "sourceUrl": "https://prusament.com/materials/prusament-petg-ultraglow/",
+    "sourceType": "manufacturer"
+  }
+]

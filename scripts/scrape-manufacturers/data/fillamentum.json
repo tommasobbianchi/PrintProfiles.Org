@@ -1,0 +1,20 @@
+[
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "ABS Extrafill",
+    "filamentType": "ABS",
+    "nozzleTemp": 235,
+    "bedTemp": 93,
+    "sourceUrl": "https://shop.fillamentum.com/products/abs-extrafill-cobalt-blue",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Fillamentum",
+    "brand": "PLA Extrafill",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "sourceUrl": "https://shop.fillamentum.com/products/pla-extrafill-luminous-yellow",
+    "sourceType": "manufacturer"
+  }
+]

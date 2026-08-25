@@ -1,0 +1,22 @@
+[
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PCTG+GF Filament",
+    "filamentType": "Other",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://fiberlogy.com/en/product/pctggf-filament/",
+    "sourceType": "manufacturer",
+    "density": 1.31
+  },
+  {
+    "manufacturer": "Fiberlogy",
+    "brand": "PLA Mineral Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 60,
+    "sourceUrl": "https://fiberlogy.com/en/product/mineral-pla-filament-s2/",
+    "sourceType": "manufacturer",
+    "density": 1.38
+  }
+]

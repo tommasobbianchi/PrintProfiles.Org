@@ -1,0 +1,23 @@
+[
+  {
+    "manufacturer": "Eryone",
+    "brand": "PLA Lagoon Rainbow",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 65,
+    "sourceUrl": "https://eryone3d.com/products/pla-lagoon-rainbow",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Eryone",
+    "brand": "PETG & Carbon Fiber PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 78,
+    "sourceUrl": "https://eryone3d.com/products/petg",
+    "sourceType": "manufacturer",
+    "printSpeed": 55,
+    "filamentDiameter": 1.75
+  }
+]
