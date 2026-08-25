@@ -11617,5 +11617,1617 @@
     "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-bright-magenta",
     "sourceType": "manufacturer",
     "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Matt Industrial Red Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-matt-industrial-red",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Candy Blue Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-filament-candy-blue",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PLAx Matt Artist Grey Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 225,
+    "bedTemp": 65,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pla-filament-matt-artist-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 60
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Astro Red Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-astro-red",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Industrial Orange Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-filament-industrial-orange",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Neon Pink Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-neon-pink",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Matt Safety Yellow Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-matt-safety-yellow",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Feinschmelzer PETG Sterling Silver FS3 Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/feinschmelzer-petg-sterling-silver",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Candy Green Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-candy-green",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "ABSx Glow in the Dark Green Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-glow-in-the-dark-green",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Silver Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-silver",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Matt Industrial Blue Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-matt-industrial-blue",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Astro Grey Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-filament-astro-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Feinschmelzer PETG Vivid Orange FS2 Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/feinschmelzer-petg-vivid-orange",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx White Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-white",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Industrial Turquoise Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-industrial-turquoise",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Black Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/filament-petg-black",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx ESD Black Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-esd-filament-black",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Matt Desert Sand Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-matt-desert-sand",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Neon Yellow Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-neon-yellow",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Candy Red Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-candy-red",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCx Black Filament 1 kg 1.75",
+    "filamentType": "PC",
+    "nozzleTemp": 275,
+    "bedTemp": 110,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pc-filament-black",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 60
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Neon Orange Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-neon-orange",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG GF Lime green Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 255,
+    "bedTemp": 80,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-gf-filament-lime-green",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Matt Industrial Orange Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-matt-industrial-orange",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Candy Amber Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-candy-amber",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Dark Purple Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-dark-purple",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG CF Filament Dark Grey",
+    "filamentType": "PETG",
+    "nozzleTemp": 255,
+    "bedTemp": 80,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-cf-filament-dark-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Industrial Dark Grey Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-industrial-dark-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Astro Green Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-astro-green",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Matt Industrial Light Green Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-matt-industrial-light-green",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Astro Gray Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-astro-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Stainless Steel Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-filament-stainless-steel",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Astro Purple Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-astro-purple",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "ABSx Glow in the Dark Blue Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-glow-in-the-dark-blue",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Industrial Brown Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-industrial-brown",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Astro Black Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-astro-black",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ASA Filament Black",
+    "filamentType": "ASA",
+    "nozzleTemp": 260,
+    "bedTemp": 110,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/asa-filament-black",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Industrial Orange Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-industrial-orange",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Candy Green Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-filament-candy-green",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PLAx GF White Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 225,
+    "bedTemp": 65,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/plax-gf-filament-white",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 60
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Industrial Dark Grey Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-industrial-dark-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Industrial Light Green Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-industrial-light-green",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Matt Black Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-matt-black",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Industrial Petrol Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-industrial-petrol",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Candy Red Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-candy-red",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Bronze Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-bronze",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Yellow Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-yellow",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Aluminum Gray Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-filament-aluminium-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Alu Grey Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-alu-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Marble White Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-marble-white",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Industrial Beige Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-industrial-beige",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG GF Industrial Teal Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 255,
+    "bedTemp": 80,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-gf-filament-industrial-teal",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Industrial Light Green Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-filament-industrial-light-green",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Aluminum Gray Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-aluminium-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Industrial Teal Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-filament-industrial-teal",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Pearl White Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-pearl-white",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Industrial Light Grey Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-industrial-light-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Industrial Yellow Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-industrial-yellow",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15,
+    "density": 1.08
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PLAx CF Anthracite Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 225,
+    "bedTemp": 65,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/plax-cf-filament-anthracite",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 60
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Orchid Purple Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-orchid-purple",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Candy Smoke Grey Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-candy-smoke-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Neon Yellow Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-neon-yellow",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Candy Ice Blue Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-candy-ice-blue",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG CF Filament Black",
+    "filamentType": "PCTG",
+    "nozzleTemp": 265,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-cf-filament-black",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PLAx Matt White Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 225,
+    "bedTemp": 65,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pla-filament-matt-white",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 60
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Feinschmelzer PLAx Vivid Orange FS2 Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 225,
+    "bedTemp": 65,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/feinschmelzer-plax-vivid-orange",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 60
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Industrial Teal Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-industrial-teal",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Candy Red Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-filament-candy-red",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Classic Grey Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-classic-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Marble White Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-marble-white",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Matt Classic Grey Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-matt-classic-grey",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Industrial Red Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-industrial-red",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Industrial Green Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-industrial-green",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil ABSx Industrial Turquoise Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/abs-filament-industrial-turquoise",
+    "sourceType": "manufacturer",
+    "fanSpeedMax": 15
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Candy Amethyst Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-candy-amethyst",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG CF Filament Dark Blue",
+    "filamentType": "PETG",
+    "nozzleTemp": 255,
+    "bedTemp": 80,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-cf-filament-dark-blue",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PCTG Black Filament",
+    "filamentType": "PCTG",
+    "nozzleTemp": 255,
+    "bedTemp": 85,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/pctg-black-filament",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Nobufil",
+    "brand": "Nobufil PETG Pearl White Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.nobufil.com/en/product-page/petg-filament-pearl-white",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 50
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "High Speed High Flow Matte PETG 3D Printer Filament 1.75mm 5 kg 11 lbs",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 80,
+    "sourceUrl": "https://www.zyltech.com/high-speed-high-flow-matte-petg-3d-printer-filament-1-75mm-5-kg-11-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.29
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "ABS Carbon Fiber 3D Printer Filament 1.75mm 1kg 2.2 lbs Made in USA",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.zyltech.com/abs-carbon-fiber-3d-printer-filament-1-75mm-1kg-2-2-lbs-made-in-usa/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "Matte Rainbow Gradient Series PLA 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.zyltech.com/matte-rainbow-gradient-series-pla-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.27
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "Made In USA Silk Premium PLA Composite 3D Printer Filament 1.75mm 5 kg 11 lbs",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.zyltech.com/made-in-usa-silk-premium-pla-composite-3d-printer-filament-1-75mm-5-kg-11-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "ASA Carbon Fiber 3D Printer Filament 1.75mm 1kg 2.2 lbs Made in USA",
+    "filamentType": "ASA",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.zyltech.com/asa-carbon-fiber-3d-printer-filament-1-75mm-1kg-2-2-lbs-made-in-usa/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "Dual Gradient Silk Series 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "Other",
+    "nozzleTemp": 220,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.zyltech.com/dual-gradient-silk-series-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "printSpeed": 100,
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "Tri-Color Silk Series 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "Other",
+    "nozzleTemp": 220,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.zyltech.com/tri-color-silk-series-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "printSpeed": 60,
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "Dual Color Silk Series 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "Other",
+    "nozzleTemp": 220,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.zyltech.com/dual-color-silk-series-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "printSpeed": 60,
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "2026 Rainbow Silk Series PLA 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.zyltech.com/2026-rainbow-silk-series-pla-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "printSpeed": 80,
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "New Made In USA Silk Premium PLA Composite 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.zyltech.com/new-made-in-usa-silk-premium-pla-composite-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "High Speed High Flow PETG 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 80,
+    "sourceUrl": "https://www.zyltech.com/high-speed-high-flow-petg-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.29
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "ABS PRO 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "ABS",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.zyltech.com/abs-pro-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.03
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "5KG Texas Size Spool ASA PRO 3D Printer Filament 1.75mm 11 lbs",
+    "filamentType": "ASA",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.zyltech.com/5kg-texas-size-spool-asa-pro-3d-printer-filament-1-75mm-11-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "5KG Texas Size Spool ASA Matte 3D Printer Filament 1.75mm 11 lbs",
+    "filamentType": "ASA",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.zyltech.com/5kg-texas-size-spool-asa-matte-3d-printer-filament-1-75mm-11-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "ASA Matte 3D Printer Filament 1.75mm 1kg 2.2 lbs",
+    "filamentType": "ASA",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.zyltech.com/asa-matte-3d-printer-filament-1-75mm-1kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "ASA Glass Fiber 3D Printer Filament 1.75mm 1kg 2.2 lbs Made in USA",
+    "filamentType": "ASA",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.zyltech.com/asa-glass-fiber-3d-printer-filament-1-75mm-1kg-2-2-lbs-made-in-usa/",
+    "sourceType": "manufacturer",
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "ASA Pro 3D Printer Filament 1.75mm 1kg 2.2 lbs",
+    "filamentType": "ASA",
+    "nozzleTemp": 260,
+    "bedTemp": 100,
+    "sourceUrl": "https://www.zyltech.com/asa-pro-3d-printer-filament-1-75mm-1kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "printSpeed": 5,
+    "fanSpeedMin": 30,
+    "fanSpeedMax": 30,
+    "density": 1.07
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "5KG Texas Size Spool High Speed High Flow PETG 3D Printer Filament 1.75mm 11 lbs Made in USA",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 80,
+    "sourceUrl": "https://www.zyltech.com/5kg-texas-size-spool-high-speed-high-flow-petg-3d-printer-filament-1-75mm-11-lbs-made-in-usa/",
+    "sourceType": "manufacturer",
+    "density": 1.29
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "High Speed High Flow Matte PETG 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "PETG",
+    "nozzleTemp": 235,
+    "bedTemp": 80,
+    "sourceUrl": "https://www.zyltech.com/high-speed-high-flow-matte-petg-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.29
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "PETG-GF Glass Fiber Reinforced PETG 3D Printer Filament Made in USA 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 75,
+    "sourceUrl": "https://www.zyltech.com/petg-gf-glass-fiber-reinforced-petg-3d-printer-filament-made-in-usa-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 60,
+    "fanSpeedMax": 60,
+    "density": 1.3
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "PETG 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 10,
+    "sourceUrl": "https://www.zyltech.com/petg-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "fanSpeedMin": 40,
+    "fanSpeedMax": 40,
+    "density": 1.27
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "Dual Color Matte PLA 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "PLA",
+    "nozzleTemp": 215,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.zyltech.com/dual-color-matte-pla-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "printSpeed": 60,
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Zyltech",
+    "brand": "Glow in Dark Luminous PLA 3D Printer Filament 1.75mm 1 kg 2.2 lbs",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.zyltech.com/glow-in-dark-luminous-pla-3d-printer-filament-1-75mm-1-kg-2-2-lbs/",
+    "sourceType": "manufacturer",
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Gizmo Dorks",
+    "brand": "3D Printing ABS Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 110,
+    "sourceUrl": "https://gizmodorks.com/abs-3d-printer-filament/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Gizmo Dorks",
+    "brand": "3D Printer PLA Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 208,
+    "bedTemp": 60,
+    "sourceUrl": "https://gizmodorks.com/pla-3d-printer-filament/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Gizmo Dorks",
+    "brand": "PETG 3D Printer Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 245,
+    "bedTemp": 80,
+    "sourceUrl": "https://gizmodorks.com/petg-3d-printer-filament/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Gizmo Dorks",
+    "brand": "HIPS 3D Printer Filament",
+    "filamentType": "HIPS",
+    "nozzleTemp": 240,
+    "bedTemp": 110,
+    "sourceUrl": "https://gizmodorks.com/hips-3d-printer-filament/",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Black Cherry) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-black-cherry-1-75mm-1kg-filament-wmrl3005490c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Autobot Blue) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-pantone-autobot-blue-2118c-1-75mm-1kg-filament-brl50022118c-1",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Black) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/absblack",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Enzo Red) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-pantone-enzo-red-485c-1-75mm-1kg-filament-trrl3020485c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Stealth Gray) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-stealth-gray-1-75mm-1kg-filament-igrl7021419c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (White) 1.75mm 1kg Filament [WHITE] ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-white-1-75mm-1kg-filamentasa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (McLaren Orange) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-pantone-mclaren-orange-2019c-1-75mm-1kg-filament-orl20112019c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Prototype Gray) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/absprototypegray",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Game Cartridge Gray) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-game-cartridge-gray-1-75mm-1kg-filament-lgrl7035423a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Iron Red) 1.75mm 1kg Filament [IRRL30111815SA] ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-iron-red-1-75mm-1kg-filament-irrl30111815sa-asa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Simpson Yellow) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-simpson-yellow-1-75mm-1kg-filament-yrl1018129g",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Skin - Ivory) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-skin-ivory-1-75mm-1kg-filament-irl10147501g",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (McLaren Orange) 1.75mm 1kg Filament [ORL20112019SA] ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-mclaren-orange-1-75mm-1kg-asa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Graphite Gray) 1.75mm 1kg Filament [BGRL7043_425SA]",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/asa-graphite-gray-1-75mm-1kg-filament-bgrl7043sa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Decepticon Purple) 1.75mm 1kg Filament [PRL40077449SA] ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-decepticon-purple-1-75mm-1kg-filament-derl7006g09sa-a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Black) 1.75mm 1kg Filament [BLACK] ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-black-1-75mm-1kg-filamentasa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Harajuku Pink) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-harajuku-pink-675c-1-75mm-1kg-filament-tmrl4010675a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Military Khaki) 1.75mm 1kg Filament [GBRL10197530SA] ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-military-khaki-1-75mm-1kg-filament-gbrl10197530sa-asa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Master Spool) 1.75 mm 1kg Filament [MS.G]",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-petg-filament-1-75-mm-petg-1-kg-master-spool",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Enzo Red) 1.75mm 1kg Filament [TRRL3020485SA] ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-enzo-red-1-75mm-1kg-filament-trrl3020485sa-asa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Vapor Gray) 1.75mm 1kg Filament [LGRL7035421SA] ASA…",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-vapor-gray-1-75mm-1kg-filament-lgrl7035421sa-asa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG Carbon Fiber (Black) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-carbon-fiber-black-1-75mm",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Black) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-pantone-black-6c-1-75mm",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Skin - Fair Complexion) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-pantone-468c-skin-fair-complexion-1-75mm-1kg-filament-lirl1015468a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Skin - Dark Complexion) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-pantone-729c-skin-dark-complexion-1-75mm-1kg-filament-bbrl10117",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Skin - Ivory) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-skin-ivory-1-75mm-1kg-filament-ubrl10147501a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Autobot Blue) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-pantone-autobot-blue-2118c-1-75mm-1kg-filament-brl50022118c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Decepticon Purple) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-pantone-decepticon-purple-7449c-1-75mm-1kg-filament-prl40077449c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Military Green) 1.75mm 1kg Filament [OGRL60037764SA] ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-military-green-1-75mm-1kg-filament-ogrl60037764sa-asa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Gold Krugerrand) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-gold-krugerrand-1-75mm-1kg-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS CF (Black) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-cf-black-1-75mm-1kg-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (British Racing Green) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-pantone-british-racing-green-3435c-1-75mm-1kg-filament-grl6005343",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Primordial Earth) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-primordial-earth-1-75mm-1kg-filament-derl7006g09g",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Clear) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-clear-1-75mm-1kg-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Harajuku Pink) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-harajuku-pink-1-75mm-1kg-filament-tmrl4010675a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Stealth Gray) 1.75mm 1kg Filament [IGRL7021_419SA] ASA…",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/asa-stealth-gray-1-75mm-1kg-filament-igrl7021-419sa-asa",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (White) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-white-1-75mm-1kg-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Military Green) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-pantone-military-green-7764c-1-75mm-1kg-filament-ogrl60037764c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Military Khaki) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-pantone-military-khaki-7530c-1-75mm-1kg-filament-gbrl1019-7530c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Egg Yolk Yellow) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-egg-yolk-yellow-1-75mm-1kg-filament-syrl1003137c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (White) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-2",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PLA (Blue to White) 1.75mm 0.5kg Color Changing Filament",
+    "filamentType": "PLA",
+    "nozzleTemp": 220,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/pla-blue-to-white-1-75mm-0-5kg-color-changing-filament",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Simpson Yellow) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-pantone-simpson-yellow-129c-1-75mm-1kg-filament-yrl1018129c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Iron Red) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-pantone-iron-red-1815c-1-75mm-1kg-filament-irrl30111815c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Decepticon Purple) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-pantone-decepticon-purple-7449c-1-75mm-1kg-filament-prl40077449c",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Master Spool) 1.75 mm 1kg Filament [MS.A]",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-abs-filament-1-75-mm-abs-1-kg-master-spool",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "PETG (Enzo Red) 1.75mm 1kg Filament",
+    "filamentType": "PETG",
+    "nozzleTemp": 240,
+    "bedTemp": 70,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/petg-enzo-red-1-75mm-1kg-filament-trrl3020485g",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Skin - Universal Beige) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-pantone-7502c-skin-universal-beige-1-75mm-1kg-filament-ubrl10017502a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ASA (Primordial Earth) 1.75mm 1kg Filament [DERL7006G09SA] ASA",
+    "filamentType": "ASA",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/paramount-3d-asa-primordial-earth-1-75mm-1kg",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (McLaren Orange) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-mclaren-orange-1-75mm-1kg-filament-orl20112019a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Paramount 3D",
+    "brand": "ABS (Military Khaki) 1.75mm 1kg Filament",
+    "filamentType": "ABS",
+    "nozzleTemp": 240,
+    "bedTemp": 105,
+    "sourceUrl": "https://www.paramount-3d.com/product-page/abs-pantone-military-khaki-7530c-1-75mm-1kg-filament-gbrl10197530a",
+    "sourceType": "manufacturer"
+  },
+  {
+    "manufacturer": "Stronghero3d",
+    "brand": "Stronghero3dPLAfilament black blue purpleNet Weight 1kg(2.2lbs)",
+    "filamentType": "PLA",
+    "nozzleTemp": 205,
+    "bedTemp": 55,
+    "sourceUrl": "https://www.stronghero3d.com/products/stronghero3dplafilament.html",
+    "sourceType": "manufacturer",
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Stronghero3d",
+    "brand": "Stronghero3d PLA filament blue green Diameter1.75mm weight1kg",
+    "filamentType": "PLA",
+    "nozzleTemp": 200,
+    "bedTemp": 30,
+    "sourceUrl": "https://www.stronghero3d.com/products/stronghero3dplaprinterfilament.html",
+    "sourceType": "manufacturer",
+    "printSpeed": 55,
+    "density": 1.24
+  },
+  {
+    "manufacturer": "Stronghero3d",
+    "brand": "Metallic Finish 3D Printing Filaments",
+    "filamentType": "Other",
+    "nozzleTemp": 205,
+    "bedTemp": 60,
+    "sourceUrl": "https://www.stronghero3d.com/products/metallic-finish-3d-printing-filaments.html",
+    "sourceType": "manufacturer",
+    "printSpeed": 45,
+    "fanSpeedMin": 0,
+    "fanSpeedMax": 0,
+    "filamentDiameter": 1.75
   }
 ]

@@ -7,12 +7,26 @@
 // Resumable: on start it reloads existing data/<parser>.json and skips URLs already there.
 // Per-product errors are logged and skipped, never fatal.
 
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, stat, rm } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { log } from './fetch.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
+
+// Write the UNION of what is on disk and what this run holds, keyed by sourceKey/sourceUrl.
+// A plain overwrite loses rows whenever two runs touch the same parser — that happened here,
+// cutting slicerprofiles from 669 rows back to 498. Merging makes the write order irrelevant.
+async function mergeWrite(outFile, rows) {
+  let onDisk = [];
+  try { onDisk = JSON.parse(await readFile(outFile, 'utf8')); } catch { /* first write */ }
+  if (!Array.isArray(onDisk)) onDisk = [];
+  const key = (r) => r.sourceKey || r.sourceUrl;
+  const merged = new Map();
+  for (const r of [...onDisk, ...rows]) { const k = key(r); if (k) merged.set(k, r); }
+  await writeFile(outFile, JSON.stringify([...merged.values()], null, 2));
+  return merged.size;
+}
 const DATA = join(HERE, 'data');
 const MAX = Number(process.env.MAX_PER_PARSER) || Infinity;
 const FLUSH_EVERY = 5;
@@ -28,7 +42,23 @@ async function main() {
 
   const summary = [];
 
+  // Two run-all instances touching the same parser both hold the row array in memory and both
+  // rewrite data/<parser>.json, so the one that finishes last wins and the other's rows vanish.
+  // That actually happened here: a concurrent slicerprofiles run cut 669 rows back to 498.
+  // A stale lock from a killed run is ignored after LOCK_STALE_MS.
+  const LOCK_STALE_MS = 30 * 60 * 1000;
   for (const name of PARSERS) {
+    const lockFile = join(DATA, `.${name}.lock`);
+    try {
+      const st = await stat(lockFile);
+      if (Date.now() - st.mtimeMs < LOCK_STALE_MS) {
+        await log(`SKIP ${name}: another run holds ${lockFile}`);
+        continue;
+      }
+      await log(`${name}: ignoring stale lock`);
+    } catch { /* no lock, proceed */ }
+    await writeFile(lockFile, String(process.pid));
+    try {
     const outFile = join(DATA, `${name}.json`);
     let rows = [];
     try {
@@ -73,11 +103,14 @@ async function main() {
         await log(`ERROR ${name} ${url}: ${e.message}`);
       }
       if (rows.length % FLUSH_EVERY === 0) {
-        await writeFile(outFile, JSON.stringify(rows, null, 2));
+        await mergeWrite(outFile, rows);
       }
     }
-    await writeFile(outFile, JSON.stringify(rows, null, 2));
-    summary.push({ name, listed: urls.length, parsed, total: rows.length });
+    const total = await mergeWrite(outFile, rows);
+    summary.push({ name, listed: urls.length, parsed, total });
+    } finally {
+      await rm(lockFile, { force: true });
+    }
   }
 
   await log('=== run done ===');

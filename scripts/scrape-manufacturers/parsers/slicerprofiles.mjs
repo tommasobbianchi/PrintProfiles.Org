@@ -70,6 +70,9 @@ async function listLocalDirs() {
   return ents.filter((e) => e.isDirectory()).map((e) => e.name);
 }
 
+// Where run-all.mjs keeps this parser's rows; read back so a resumed run stays deduplicated.
+const DATA_FILE = _join(dirname(fileURLToPath(import.meta.url)), '..', 'data', 'slicerprofiles.json');
+
 const rawUrl = (vendorDir, subPath) => RAW + encodeURI(`${vendorDir}/${subPath}`);
 
 // A vendor string that identifies nobody. Attributing a profile to "Generic" would invent a
@@ -303,6 +306,17 @@ export async function listProducts() {
       g.members.push({ name, subPath });
       groups.set(key, g);
     }
+  }
+
+  // run-all.mjs resumes by skipping URLs already in data/<parser>.json, but the collapse below
+  // lives in this process's memory: without re-seeding it, a resumed run re-emits a second row
+  // for every filament the first run had already folded away. Seed from what is on disk.
+  try {
+    const prior = JSON.parse(await _readFile(DATA_FILE, 'utf8'));
+    if (Array.isArray(prior)) for (const r of prior) emitted.add(`${norm(r.manufacturer)}|${norm(r.brand)}`);
+    if (emitted.size) await log(`slicerprofiles: ${emitted.size} filaments already in data/slicerprofiles.json — not re-emitting`);
+  } catch {
+    // no previous run
   }
 
   const urls = [];

@@ -190,4 +190,58 @@ shipped in two packs) into one row each.
 
 ## 7. Full crawl
 
-_(filled in from the complete run — see the section below)_
+One complete pass over every vendor pack (`node run-sp.mjs`, a runner equivalent to what
+`run-all.mjs` does for the other parsers):
+
+```
+2026-08-25T17:12:45.099Z slicerprofiles: 65 vendor dirs, 7643 filament files, 1719 distinct filaments
+DONE listed 1719 rows 498 inheritanceResolved 227
+```
+
+* **7643** filament profile files scanned across **65** vendor packs
+* **1719** distinct filaments after folding the `@printer` / `@nozzle` variants
+* **498** rows after the second collapse on `manufacturer + brand` (the rest are dropped: the
+  vendor resolves to `Generic`/`Unknown`, the chain states no `nozzle_temperature` /
+  `hot_plate_temp`, or the filament was already emitted from another pack)
+* **227** of those 498 rows (46%) needed inheritance resolution for their temperatures — they
+  carry `inheritedFrom`
+* **46** manufacturers
+
+Rows per manufacturer:
+
+```
+Bambu Lab=42, QIDI=36, Polymaker=34, BETA=30, Anycubic=24, Snapmaker=24, Creality=22,
+Elegoo=22, addnorth=20, Orca Arena=18, Artillery=15, Eryone=15, Volumic=15, DREMC=13,
+FusRock=13, WonderMaker=12, eSUN=11, Eolas Prints=10, Tiertime=10, LH Stinger=8,
+Prusa Polymers=7, FDplast=6, FlyingBear=6, InfiMech=6, Other=6, SeeMeCNC=6, SUNLU=6,
+CoLiDo=5, Cubicon=5, FILL3D=5, Co Print=4, iQ Materials=4, Peopoly=4, re3D=4, Afinia=3,
+Elas=3, Flashforge=3, HATCHBOX=3, NIT=3, Overture=3, RatRig=3, Valment=3, FilAr=2, Yumi=2,
+GreenGate3D=1, Numakers=1
+```
+
+By material:
+
+```
+PLA=158, PETG=80, TPU=46, ABS=44, ASA=30, PA-CF=28, PC=22, Nylon=20, PET=17, Other=17,
+PA6=9, PVA=8, PA-GF=6, PP=5, PEBA=3, HIPS=2, PCTG=1, PVB=1, PA12=1
+```
+
+Field coverage over the 498 rows: `nozzleTemp`/`bedTemp` 498 (required — the parser returns
+`null` without them), `maxVolumetricSpeed` 498, `flowRatio` 497, `density` 497,
+`fanSpeedMin`/`fanSpeedMax` 497, `filamentDiameter` 497.
+
+---
+
+## 8. What is deliberately NOT extracted
+
+On licence grounds, none of the following leaves the source:
+
+* the profile JSON itself — nothing is written to this repo; `fetch.mjs`'s `cache/` is
+  gitignored, and the parser writes no file of its own;
+* `filament_start_gcode`, `filament_end_gcode`, `filament_notes`, `filament_settings_id` and
+  every other prose/script field — expressive content, not facts;
+* profile and product-line names as product names (`Panchroma`, `PolyLite`, `PolyTerra`,
+  `Fiberon`, `Basic`, `Galaxy`, `Celestial`, `Temp Shift`…). They appear only in
+  `sourceProfile`, as attribution, next to `sourceUrl`;
+* profiles whose resolved `filament_vendor` is `Generic`/`Unknown` — attributing a parameter
+  set to a manufacturer that does not exist would be a fabricated fact, not a citation.
