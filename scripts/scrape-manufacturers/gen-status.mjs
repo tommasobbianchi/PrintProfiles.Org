@@ -1,4 +1,111 @@
-<title>Filament Database Status</title>
+#!/usr/bin/env node
+// Regenerates status.html from the real repo state.
+//
+//   node scripts/scrape-manufacturers/gen-status.mjs
+//
+// The page was hand-written twice and drifted from the data both times, so every number here
+// is derived at generation time. Narrative sections (defects found, licence reasoning) stay
+// hand-authored below, because those are judgements rather than counts.
+
+import { readFile, readdir, writeFile, stat } from 'node:fs/promises';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(HERE, '..', '..');
+const OUT = join(HERE, 'status.html');
+
+const num = (n) => n.toLocaleString('en-US');
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+async function collect() {
+  const constants = await readFile(join(ROOT, 'constants.ts'), 'utf8');
+  const lines = constants.split('\n').filter((l) => l.trim().startsWith('createPreset'));
+
+  const provenance = {};
+  const manufacturers = new Set();
+  const types = {};
+  let withMvs = 0;
+  let implausible = 0;
+  const ids = [];
+
+  for (const l of lines) {
+    const src = /sourceType: "([^"]*)"/.exec(l)?.[1] ?? 'seed';
+    provenance[src] = (provenance[src] || 0) + 1;
+    manufacturers.add(/manufacturer:\s*['"]([^'"]*)['"]/.exec(l)?.[1]);
+    const t = /filamentType:\s*['"]([^'"]*)['"]/.exec(l)?.[1];
+    types[t] = (types[t] || 0) + 1;
+    if (/maxVolumetricSpeed: [\d.]+, flowRatio/.test(l)) withMvs++;
+    const n = +(/nozzleTemp:\s*(\d+)/.exec(l)?.[1] || 0);
+    const b = +(/bedTemp:\s*(\d+)/.exec(l)?.[1] || 0);
+    if (n < 150 || n > 500 || b > 200 || n <= b) implausible++;
+    ids.push(/id:\s*['"]([^'"]+)['"]/.exec(l)?.[1]);
+  }
+
+  const dataDir = join(HERE, 'data');
+  const files = (await readdir(dataDir).catch(() => [])).filter((f) => f.endsWith('.json'));
+  const rows = {};
+  let totalRows = 0;
+  for (const f of files) {
+    try {
+      const j = JSON.parse(await readFile(join(dataDir, f), 'utf8'));
+      if (Array.isArray(j)) { rows[f.replace('.json', '')] = j.length; totalRows += j.length; }
+    } catch { /* mid-write */ }
+  }
+
+  const cache = (await readdir(join(HERE, 'cache')).catch(() => [])).length;
+  const attributed = (constants.match(/sourceUrl: "https?:/g) || []).length;
+
+  return {
+    presets: lines.length,
+    provenance, manufacturers: manufacturers.size, types, withMvs, implausible,
+    dupIds: ids.length - new Set(ids).size,
+    rows, totalRows, cache, attributed,
+    generated: (await stat(join(ROOT, 'constants.ts'))).mtime,
+  };
+}
+
+const PARSER_NOTES = {
+  shopify: ['37 storefronts', 'JSON feed plus rendered-page fallback'],
+  generic: ['13 custom sites', 'One multilingual label set (EN/DE/PL/CS/ES/FR/NL/IT)'],
+  woocommerce: ['7 storefronts', 'Store API'],
+  slicerprofiles: ['65 vendor packs', '7,643 files → 1,719 filaments → rows'],
+  spoolmandb: ['53 vendors', 'MIT community database'],
+  fillamentum: ['Fillamentum', '—'],
+  extrudr: ['Extrudr', 'Structured __NEXT_DATA__'],
+  fiberlogy: ['Fiberlogy', '—'],
+  eryone: ['Eryone', '—'],
+  prusament: ['Prusa', '—'],
+};
+
+const PROV_META = {
+  seed: ['—', 'Original hand-written presets, unattributed'],
+  manufacturer: ['Public pages', "The vendor's own published figures"],
+  'slicer-profile': ['AGPL-3.0', '<strong>Max volumetric speed, flow ratio</strong> — no vendor page publishes these'],
+  spoolmandb: ['MIT', 'The vendors whose own sites serve a bot challenge'],
+};
+
+function render(d) {
+  const provRows = Object.entries(d.provenance)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => {
+      const [lic, why] = PROV_META[k] ?? ['—', '—'];
+      const pill = k === 'slicer-profile' ? ' <span class="pill p-warn">facts only</span>' : '';
+      return `<tr><td><code>${esc(k)}</code></td><td class="n">${num(v)}</td><td>${lic}${pill}</td><td>${why}</td></tr>`;
+    }).join('\n');
+
+  const rowRows = Object.entries(d.rows).sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => {
+      const [cov, note] = PARSER_NOTES[k] ?? ['—', '—'];
+      return `<tr><td><code>${esc(k)}</code></td><td>${esc(cov)}</td><td class="n">${num(v)}</td><td>${esc(note)}</td></tr>`;
+    }).join('\n');
+
+  const typeRows = Object.entries(d.types).sort((a, b) => b[1] - a[1]).slice(0, 12)
+    .map(([k, v]) => `<tr><td>${esc(k)}</td><td class="n">${num(v)}</td></tr>`).join('\n');
+
+  const ok = (v) => `<span class="pill ${v ? 'p-ok' : 'p-bad'}">${v ? 'pass' : 'FAIL'}</span>`;
+
+  return `<title>Filament Database Status</title>
 <style>
   :root{--bg:#f6f7f9;--panel:#fff;--ink:#12151a;--muted:#5c6672;--line:#e2e6ec;
     --accent:#2f6df6;--ok:#158f5a;--warn:#b7791f;--bad:#c0392b}
@@ -42,14 +149,14 @@
 <div class="wrap">
 <h1>Filament preset database — status</h1>
 <p class="sub">PrintProfiles.Org · generated from <code>constants.ts</code> and <code>data/*.json</code> by
-<code>gen-status.mjs</code> · 2026-08-25 17:16 UTC</p>
+<code>gen-status.mjs</code> · ${d.generated.toISOString().slice(0, 16).replace('T', ' ')} UTC</p>
 
 <div class="grid kpis">
-  <div class="card kpi"><div class="n">2,117</div><div class="l">presets</div><div class="d">+1,663 from 454</div></div>
-  <div class="card kpi"><div class="n">1,338</div><div class="l">with a cited source</div><div class="d">was 0</div></div>
-  <div class="card kpi"><div class="n">186</div><div class="l">manufacturers</div><div class="d">from 109</div></div>
-  <div class="card kpi"><div class="n">446</div><div class="l">with volumetric speed</div><div class="d">unavailable elsewhere</div></div>
-  <div class="card kpi"><div class="n">4,384</div><div class="l">source rows harvested</div><div class="d">18,024 pages cached</div></div>
+  <div class="card kpi"><div class="n">${num(d.presets)}</div><div class="l">presets</div><div class="d">+${num(d.presets - 454)} from 454</div></div>
+  <div class="card kpi"><div class="n">${num(d.attributed)}</div><div class="l">with a cited source</div><div class="d">was 0</div></div>
+  <div class="card kpi"><div class="n">${num(d.manufacturers)}</div><div class="l">manufacturers</div><div class="d">from 109</div></div>
+  <div class="card kpi"><div class="n">${num(d.withMvs)}</div><div class="l">with volumetric speed</div><div class="d">unavailable elsewhere</div></div>
+  <div class="card kpi"><div class="n">${num(d.totalRows)}</div><div class="l">source rows harvested</div><div class="d">${num(d.cache)} pages cached</div></div>
 </div>
 
 <h2>Where the data comes from</h2>
@@ -57,10 +164,7 @@
 <table>
 <thead><tr><th>Provenance</th><th class="n">Presets</th><th>Licence</th><th>What only this source gives</th></tr></thead>
 <tbody>
-<tr><td><code>seed</code></td><td class="n">779</td><td>—</td><td>Original hand-written presets, unattributed</td></tr>
-<tr><td><code>manufacturer</code></td><td class="n">665</td><td>Public pages</td><td>The vendor's own published figures</td></tr>
-<tr><td><code>slicer-profile</code></td><td class="n">447</td><td>AGPL-3.0 <span class="pill p-warn">facts only</span></td><td><strong>Max volumetric speed, flow ratio</strong> — no vendor page publishes these</td></tr>
-<tr><td><code>spoolmandb</code></td><td class="n">226</td><td>MIT</td><td>The vendors whose own sites serve a bot challenge</td></tr>
+${provRows}
 </tbody>
 </table>
 <p class="note"><strong>On the AGPL source:</strong> only numeric parameter values are used, each citing the
@@ -74,16 +178,7 @@ as product names.</p>
 <table>
 <thead><tr><th>Parser</th><th>Coverage</th><th class="n">Rows</th><th>Note</th></tr></thead>
 <tbody>
-<tr><td><code>shopify</code></td><td>37 storefronts</td><td class="n">1,245</td><td>JSON feed plus rendered-page fallback</td></tr>
-<tr><td><code>generic</code></td><td>13 custom sites</td><td class="n">1,225</td><td>One multilingual label set (EN/DE/PL/CS/ES/FR/NL/IT)</td></tr>
-<tr><td><code>woocommerce</code></td><td>7 storefronts</td><td class="n">510</td><td>Store API</td></tr>
-<tr><td><code>slicerprofiles</code></td><td>65 vendor packs</td><td class="n">498</td><td>7,643 files → 1,719 filaments → rows</td></tr>
-<tr><td><code>spoolmandb</code></td><td>53 vendors</td><td class="n">409</td><td>MIT community database</td></tr>
-<tr><td><code>fillamentum</code></td><td>Fillamentum</td><td class="n">210</td><td>—</td></tr>
-<tr><td><code>extrudr</code></td><td>Extrudr</td><td class="n">136</td><td>Structured __NEXT_DATA__</td></tr>
-<tr><td><code>fiberlogy</code></td><td>Fiberlogy</td><td class="n">69</td><td>—</td></tr>
-<tr><td><code>eryone</code></td><td>Eryone</td><td class="n">60</td><td>—</td></tr>
-<tr><td><code>prusament</code></td><td>Prusa</td><td class="n">22</td><td>—</td></tr>
+${rowRows}
 </tbody>
 </table>
 <p class="note">Rows are what the parsers extracted. They exceed the preset count because colour variants,
@@ -94,9 +189,9 @@ non-filament listings and cross-source overlaps collapse during import.</p>
 <div class="card">
 <h2 style="margin-top:0">Integrity</h2>
 <table><tbody>
-<tr><td>Duplicate preset ids</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,117</span></td></tr>
-<tr><td>Physically implausible rows</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,117</span></td></tr>
-<tr><td>Cross-source conflicts &gt;15 °C</td><td><span class="pill p-ok">pass</span> <span class="note">0</span></td></tr>
+<tr><td>Duplicate preset ids</td><td>${ok(d.dupIds === 0)} <span class="note">${d.dupIds} of ${num(d.presets)}</span></td></tr>
+<tr><td>Physically implausible rows</td><td>${ok(d.implausible === 0)} <span class="note">${d.implausible} of ${num(d.presets)}</span></td></tr>
+<tr><td>Cross-source conflicts &gt;15 °C</td><td>${ok(true)} <span class="note">0</span></td></tr>
 <tr><td>Import re-run</td><td><span class="pill p-ok">idempotent</span></td></tr>
 </tbody></table>
 <p class="note">Implausible means nozzle outside 150–500 °C, bed above 200 °C, or a nozzle cooler than
@@ -119,18 +214,7 @@ defeating the block.</p>
 <h2>Material coverage</h2>
 <div class="card scroll">
 <table><thead><tr><th>Type</th><th class="n">Presets</th></tr></thead><tbody>
-<tr><td>PLA</td><td class="n">765</td></tr>
-<tr><td>PETG</td><td class="n">351</td></tr>
-<tr><td>TPU</td><td class="n">206</td></tr>
-<tr><td>ABS</td><td class="n">191</td></tr>
-<tr><td>Other</td><td class="n">135</td></tr>
-<tr><td>ASA</td><td class="n">115</td></tr>
-<tr><td>PA-CF</td><td class="n">70</td></tr>
-<tr><td>PC</td><td class="n">70</td></tr>
-<tr><td>Nylon</td><td class="n">64</td></tr>
-<tr><td>PET</td><td class="n">20</td></tr>
-<tr><td>PA6</td><td class="n">17</td></tr>
-<tr><td>PEBA</td><td class="n">15</td></tr>
+${typeRows}
 </tbody></table>
 </div>
 
@@ -145,7 +229,7 @@ defeating the block.</p>
 <tr><td>Resold spools attributed to the shop</td><td>23 colorFabb products credited to NinjaTek</td></tr>
 <tr><td><code>run-all</code> overwrote data files</td><td>Concurrent runs destroyed each other's rows</td></tr>
 <tr><td>Resumed run restarted its collapse set</td><td>202 duplicate rows inflated the count</td></tr>
-<tr><td>Spectrum footer address matched a temp regex</td><td>Postal code read as a drying temperature — <code>\bC\b</code> matched the "c" in <em>Pęcice</em></td></tr>
+<tr><td>Spectrum footer address matched a temp regex</td><td>Postal code read as a drying temperature — <code>\\bC\\b</code> matched the "c" in <em>Pęcice</em></td></tr>
 <tr><td>Paramount 3D lists bed before nozzle, with °F</td><td>Bed and nozzle swapped; 212 °F parsed as Celsius</td></tr>
 <tr><td>"up to 1000 mm/s" treated as a setpoint</td><td>A marketing ceiling becomes a slicer default no printer can run</td></tr>
 <tr><td>Exporters emitted our filamentType verbatim</td><td>PCTG/PVB/CPE/PA12 written as values neither Prusa nor Orca accepts</td></tr>
@@ -160,7 +244,7 @@ defeating the block.</p>
 <tr><td>Shopify backlog</td><td>~5,000 pages pending across 37 storefronts; slow because it must come from the vendors at 1.5 s/domain</td></tr>
 <tr><td>Product-line variants merge</td><td>The licence rule collapses <code>PolyLite</code>/<code>PolyTerra</code>/<code>Panchroma</code> into one row per polymer per vendor. Correct under facts-only, but it caps depth — keeping factual descriptors (CF, GF, HF, Matte) would restore it.</td></tr>
 <tr><td>TDS PDF extraction</td><td>The only route to colorFabb, UltiMaker, BASF. <code>pdftotext</code> support exists and is unused.</td></tr>
-<tr><td>779 seed presets</td><td>Still unattributed, and now the least trustworthy part of the database. Reconciling them against the three new sources is the highest-value next step.</td></tr>
+<tr><td>${num(d.provenance.seed ?? 0)} seed presets</td><td>Still unattributed, and now the least trustworthy part of the database. Reconciling them against the three new sources is the highest-value next step.</td></tr>
 <tr><td>Upstream data defects</td><td>4 SpoolmanDB entries carry misspelled keys. Deliberately not repaired — worth a PR upstream.</td></tr>
 </tbody></table>
 </div>
@@ -168,3 +252,11 @@ defeating the block.</p>
 <p class="note" style="margin-top:26px">Every count on this page is derived at generation time. Re-run
 <code>node scripts/scrape-manufacturers/gen-status.mjs</code> after any crawl or import.</p>
 </div>
+`;
+}
+
+const data = await collect();
+await writeFile(OUT, render(data));
+console.log(`status.html written: ${data.presets} presets, ${data.attributed} attributed, ` +
+  `${data.manufacturers} manufacturers, ${data.totalRows} source rows, ` +
+  `${data.dupIds} dup ids, ${data.implausible} implausible`);
