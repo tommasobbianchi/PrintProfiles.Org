@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FilamentProfile } from './types';
 import { PRESET_PROFILES } from './constants';
 import Header from './components/Header';
@@ -13,11 +13,6 @@ const App: React.FC = () => {
   const [communityProfiles, setCommunityProfiles] = useState<FilamentProfile[]>([]);
   const [isLoadingProfiles, setIsLoadingProfiles] = useState(true);
 
-  // Authentication State (For Creating Profiles & Admin Tasks)
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [passwordInput, setPasswordInput] = useState('');
-  const [authError, setAuthError] = useState('');
-
   // Logo State (App Branding)
   const [logoSrc, setLogoSrc] = useState<string>(() => {
     if (typeof window !== 'undefined') {
@@ -27,7 +22,6 @@ const App: React.FC = () => {
   });
   // Force re-render of image when updated
   const [logoKey, setLogoKey] = useState(0);
-  const logoInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -46,77 +40,6 @@ const App: React.FC = () => {
     }
     alert("Profile added to Download list successfully!");
     setActiveTab('community');
-  };
-
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (passwordInput === 'PrintProfiles.Org') {
-        setIsAuthenticated(true);
-        setAuthError('');
-        setPasswordInput('');
-    } else {
-        setAuthError('Incorrect password.');
-    }
-  };
-
-  const handleLogout = () => {
-      setIsAuthenticated(false);
-      setActiveTab('community');
-  };
-
-  const handleAppLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    e.target.value = ''; // Reset input
-
-    if (file) {
-        if (file.size > 2 * 1024 * 1024) {
-            alert("File is too large. Max 2MB.");
-            return;
-        }
-
-        const reader = new FileReader();
-        reader.onload = (event) => {
-            const buffer = event.target?.result;
-            if (buffer instanceof ArrayBuffer) {
-                let binary = '';
-                const bytes = new Uint8Array(buffer);
-                const len = bytes.byteLength;
-                for (let i = 0; i < len; i++) {
-                    binary += String.fromCharCode(bytes[i]);
-                }
-                const base64 = window.btoa(binary);
-
-                const ext = file.name.split('.').pop()?.toLowerCase();
-                let mimeType = 'image/png'; 
-                if (ext === 'svg') mimeType = 'image/svg+xml';
-                else if (ext === 'jpg' || ext === 'jpeg') mimeType = 'image/jpeg';
-
-                const finalResult = `data:${mimeType};base64,${base64}`;
-
-                try {
-                     localStorage.removeItem('custom_app_logo');
-                } catch (e) { /* ignore */ }
-
-                setLogoSrc(finalResult);
-                setLogoKey(prev => prev + 1);
-                
-                try {
-                    localStorage.setItem('custom_app_logo', finalResult);
-                } catch (error) {
-                    alert("Could not save logo permanently (storage full?), but it will display for this session.");
-                }
-            }
-        };
-        reader.readAsArrayBuffer(file);
-    }
-  };
-
-  const handleResetLogo = () => {
-      if(confirm("Reset app logo to default?")) {
-        localStorage.removeItem('custom_app_logo');
-        setLogoSrc('/logo.svg');
-        setLogoKey(prev => prev + 1);
-      }
   };
 
   return (
