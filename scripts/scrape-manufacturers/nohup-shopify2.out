@@ -1,0 +1,203 @@
+2026-08-25T14:57:30.300Z === run start === MAX_PER_PARSER=unlimited
+2026-08-25T14:57:40.434Z prusament: 23 listed, 22 already saved, 1 pending
+2026-08-25T14:57:40.546Z fiberlogy: 77 listed, 69 already saved, 8 pending
+2026-08-25T14:57:40.782Z extrudr: 156 listed, 136 already saved, 20 pending
+2026-08-25T14:57:41.444Z fillamentum: 275 listed, 210 already saved, 65 pending
+2026-08-25T14:57:41.971Z eryone: 207 listed, 60 already saved, 147 pending
+2026-08-25T14:57:45.305Z shopify: 777 listed, 0 already saved, 777 pending
+2026-08-25T14:57:45.660Z shopify ok PETG-GF (nozzle 240°C / bed 65°C) https://elegoo.com/products/petg-gf-filament-1-75mm-colored-1kg
+2026-08-25T14:57:45.675Z shopify ok PAHT-CF (nozzle 260°C / bed 90°C) https://elegoo.com/products/paht-cf-filament-1-75mm-colored-1kg
+2026-08-25T14:57:45.717Z shopify ok PETG-CF (nozzle 255°C / bed 70°C) https://elegoo.com/products/petg-cf-filament-1-75mm-colored-1kg
+2026-08-25T14:57:45.747Z shopify ok PLA (nozzle 205°C / bed 58°C) https://elegoo.com/products/pla-filament-1-75mm-colored-1kg
+2026-08-25T14:57:45.887Z shopify ok RAPID PLA Plus Filament (nozzle 215°C / bed 50°C) https://elegoo.com/products/rapid-pla-plus-filament-1-75mm-grey-10kg
+2026-08-25T14:57:45.899Z shopify ok PLA Filament (nozzle 205°C / bed 58°C) https://elegoo.com/products/10-spools-grey-pla-filaments-bundle-2kg-5
+2026-08-25T14:57:45.954Z shopify ok TPU 95A (nozzle 220°C / bed 48°C) https://elegoo.com/products/tpu-filament-1-75mm-colored-1kg
+2026-08-25T14:57:45.980Z shopify ok PETG Pro (nozzle 245°C / bed 70°C) https://elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg
+2026-08-25T14:57:46.020Z shopify ok Rapid PETG (nozzle 235°C / bed 83°C) https://elegoo.com/products/rapid-petg-filament-1-75mm-colored-1kg
+2026-08-25T14:57:46.042Z shopify ok PLA Matte (nozzle 210°C / bed 58°C) https://elegoo.com/products/pla-matte-filament-1-75mm-colored-1kg
+2026-08-25T14:57:46.068Z shopify ok ASA (nozzle 255°C / bed 95°C) https://elegoo.com/products/asa-filament-1-75mm-colored-1kg
+2026-08-25T14:57:46.090Z shopify ok PLA Pro (nozzle 195°C / bed 58°C) https://elegoo.com/products/pla-pro-filament-1-75mm-colored-1kg
+2026-08-25T14:57:46.295Z shopify ok RAPID PLA Plus Filament (nozzle 215°C / bed 50°C) https://elegoo.com/products/elegoo-rapid-pla-plus-filament-1-75mm-black-10kg
+2026-08-25T14:57:46.306Z shopify ok RAPID PLA Plus Filament (nozzle 215°C / bed 50°C) https://elegoo.com/products/rapid-pla-plus-filament-1-75mm-4-colors-10kg-elegoo
+2026-08-25T14:57:46.317Z shopify ok PLA Plus Filament (nozzle 215°C / bed 50°C) https://elegoo.com/products/elegoo-pla-plus-filament-1-75mm-4-colors-10kg
+2026-08-25T14:57:46.463Z shopify ok PLA Plus Filament (nozzle 215°C / bed 50°C) https://elegoo.com/products/elegoo-pla-plus-filament-1-75mm-black-10kg
+2026-08-25T14:57:46.553Z shopify ok Rapid PLA Plus (nozzle 215°C / bed 50°C) https://elegoo.com/products/elegoo-rapid-pla-plus-filament-1-75mm-colored-1kg
+2026-08-25T14:57:46.581Z shopify ok PLA Plus (nozzle 215°C / bed 50°C) https://elegoo.com/products/elegoo-pla-plus-3d-printer-filament-1-75mm-colored-1kg
+2026-08-25T14:57:46.597Z shopify ok PLA Filament (nozzle 205°C / bed 58°C) https://elegoo.com/products/pla-filament-1-75mm-4-colors-10kg
+2026-08-25T14:57:46.609Z shopify ok PLA Filament (nozzle 205°C / bed 58°C) https://elegoo.com/products/elegoo-10kg-pla-filament-1-75mm-fdm-3d-printer-filament
+2026-08-25T14:57:46.723Z shopify ok Overture Matte PLA (nozzle 210°C / bed 60°C) https://overture3d.com/products/overture-matte-pla-3d-printer-filament-1-75mm-4-pack
+2026-08-25T14:57:46.728Z shopify ok Overture PLA (nozzle 205°C / bed 43°C) https://overture3d.com/products/overture-pla-3d-printer-filament-1-75mm-10-pack
+2026-08-25T14:57:46.735Z shopify ok Overture High Speed PETG (nozzle 245°C / bed 68°C) https://overture3d.com/products/overture-high-speed-petg-3d-printer-filament-1-75mm-10-pack-1
+2026-08-25T14:57:46.746Z shopify ok Overture Matte PLA (nozzle 210°C / bed 60°C) https://overture3d.com/products/overture-matte-pla-3d-printer-filament-1-75mm-2-pack-1
+2026-08-25T14:57:46.761Z shopify ok Overture PLA (nozzle 205°C / bed 43°C) https://overture3d.com/products/overture-pla-3d-printer-filament-1-75mm-4-pack-1
+2026-08-25T14:57:46.770Z shopify ok Overture High Speed PETG (nozzle 245°C / bed 68°C) https://overture3d.com/products/overture-high-speed-petg-3d-printer-filament-1-75mm-4-pack-1
+2026-08-25T14:57:46.779Z shopify ok Overture PLA (nozzle 205°C / bed 43°C) https://overture3d.com/products/overture-pla-3d-printer-filament-1-75mm-2-pack-1
+2026-08-25T14:57:46.785Z shopify ok Overture High Speed PETG (nozzle 245°C / bed 68°C) https://overture3d.com/products/high-speed-petg-3d-printer-filament-1-75mm-2-pack
+2026-08-25T14:57:46.823Z shopify ok Overture High Speed PETG Refill (nozzle 245°C / bed 68°C) https://overture3d.com/products/overture-high-speed-petg-refill-3d-printer-filament-1-75mm
+2026-08-25T14:57:46.840Z shopify ok Overture PLA Refill (nozzle 205°C / bed 43°C) https://overture3d.com/products/overture-pla-refill-3d-printer-filament-1-75mm
+2026-08-25T14:57:46.875Z shopify ok Overture High Speed TPU 95A (nozzle 220°C / bed 43°C) https://overture3d.com/products/overture-high-speed-tpu-3d-printer-filament-1-75mm-2-kg
+2026-08-25T14:57:46.938Z shopify ok Overture PC Professional (nozzle 260°C / bed 90°C) https://overture3d.com/products/overture-pc-professional-filament
+2026-08-25T14:57:46.983Z shopify ok Overture High Speed PLA (nozzle 205°C / bed 43°C) https://overture3d.com/products/overture-pla
+2026-08-25T14:57:47.000Z shopify ok Overture High Speed TPU 95A (nozzle 220°C / bed 43°C) https://overture3d.com/products/overture-high-speed-tpu-3d-printer-filament-1-75mm
+2026-08-25T14:57:47.039Z shopify ok Overture Matte PLA (nozzle 210°C / bed 60°C) https://overture3d.com/products/overture-matte-pla
+2026-08-25T14:57:47.050Z shopify ok Overture Rock PLA (nozzle 210°C / bed 60°C) https://overture3d.com/products/overture-rock-pla-filament-1-75mm
+2026-08-25T14:57:47.050Z shopify ok Overture ABS (nozzle 240°C / bed 100°C) https://overture3d.com/products/overture-abs-filament-1-75mm
+2026-08-25T14:57:47.067Z shopify ok Overture Silk PLA (nozzle 210°C / bed 55°C) https://overture3d.com/products/overture-silk-pla-3d-printer-filament-1-75mm
+2026-08-25T14:57:47.118Z shopify ok Overture High Speed PETG (nozzle 245°C / bed 68°C) https://overture3d.com/products/overture-high-speed-petg
+2026-08-25T14:57:47.120Z shopify ok JAYO Multi-color Silk 3D Printer (nozzle 215°C / bed 70°C) https://jayo3d.com/products/jayo-multi-color-silk-3d-printer-1-1kg-filament
+2026-08-25T14:57:47.122Z shopify ok 5KG Large Spool PLA, PLA+ and PLA Matte (nozzle 215°C / bed 58°C) https://jayo3d.com/products/5kg-large-spool-pla-pla-and-pla-matte-3d-printer-filament
+2026-08-25T14:57:47.123Z shopify ok JAYO PLA 5 Rolls 3D Printing Filament (nozzle 205°C / bed 70°C) https://jayo3d.com/products/jayo-pla-5-rolls-3d-printing-filament
+2026-08-25T14:57:47.125Z shopify ok JAYO 10 Rolls PLA+ (nozzle 210°C / bed 60°C) https://jayo3d.com/products/jayo-10-rolls-pla-1-1kg-3d-printer-filament-cardboard-spool-pla-plus
+2026-08-25T14:57:47.126Z shopify ok JAYO PLA Rainbow (nozzle 215°C / bed 58°C) https://jayo3d.com/products/jayo-pla-rainbow-1-1kg-3d-printer-filament-cardboard-spool
+2026-08-25T14:57:47.127Z shopify ok JAYO Wood (nozzle 210°C / bed 58°C) https://jayo3d.com/products/jayo-wood-1-1kg-1kg-3d-printer-filament
+2026-08-25T14:57:47.130Z shopify ok JAYO PLA Meta (nozzle 190°C / bed 70°C) https://jayo3d.com/products/jayo-pla-meta-1-1kg-3d-printer-filament-cardboard-spool
+2026-08-25T14:57:47.131Z shopify ok JAYO ABS (nozzle 215°C / bed 58°C) https://jayo3d.com/products/jayo-abs-1-1kg-5-rolls-3d-printing-filament-bundle
+2026-08-25T14:57:47.132Z shopify ok JAYO Silk (nozzle 215°C / bed 70°C) https://jayo3d.com/products/jayo-silk-1-1kg-5-rolls-3d-printer-filament-bundle
+2026-08-25T14:57:47.134Z shopify ok JAYO PETG (nozzle 235°C / bed 80°C) https://jayo3d.com/products/jayo-petg
+2026-08-25T14:57:47.135Z shopify ok JAYO PLA Matte (nozzle 215°C / bed 70°C) https://jayo3d.com/products/jayo-pla-matte
+2026-08-25T14:57:47.137Z shopify ok JAYO PLA+ (nozzle 210°C / bed 60°C) https://jayo3d.com/products/jayo-pla
+2026-08-25T14:57:47.138Z shopify ok JAYO PLA (nozzle 205°C / bed 70°C) https://jayo3d.com/products/pla
+2026-08-25T14:57:47.196Z shopify ok Black High Strength Carbon Fiber HTPETG (nozzle 300°C / bed 100°C) https://proto-pasta.com/products/black-high-strength-carbon-fiber-htpetg
+2026-08-25T14:57:47.197Z shopify ok Galaxy Black High Impact Carbon Fiber HTPETG (nozzle 300°C / bed 100°C) https://proto-pasta.com/products/galaxy-black-high-impact-carbon-fiber-htpetg
+2026-08-25T14:57:47.197Z shopify ok Highfive Blue Glass Fiber HTPETG (nozzle 300°C / bed 100°C) https://proto-pasta.com/products/highfive-blue-glass-fiber-htpetg
+2026-08-25T14:57:47.198Z shopify ok White Glass Fiber HTPETG (nozzle 300°C / bed 100°C) https://proto-pasta.com/products/white-glass-fiber-htpetg
+2026-08-25T14:57:47.271Z shopify ok Black High Strength Carbon Fiber PCTG (nozzle 255°C / bed 70°C) https://proto-pasta.com/products/black-high-strength-carbon-fiber-pctg
+2026-08-25T14:57:47.271Z shopify ok Gray High Impact Carbon Fiber PCTG (nozzle 255°C / bed 70°C) https://proto-pasta.com/products/gray-high-impact-carbon-fiber-pctg
+2026-08-25T14:57:47.271Z shopify ok White Glass Fiber PCTG (nozzle 255°C / bed 70°C) https://proto-pasta.com/products/white-glass-fiber-pctg
+2026-08-25T14:57:47.272Z shopify ok Clear PCTG (nozzle 255°C / bed 80°C) https://proto-pasta.com/products/clear-pctg
+2026-08-25T14:58:22.013Z WARN HTTP 429 at https://proto-pasta.com/products/juliettes-raspberry-jam-htpla (attempt 1) — backing off 3000ms
+2026-08-25T14:59:49.436Z shopify ok Lootsef Green HTPLA (nozzle 220°C / bed 65°C) https://proto-pasta.com/products/lootsef-green-htpla
+2026-08-25T14:59:49.437Z shopify ok Clear PETG *new low price* (nozzle 235°C / bed 70°C) https://proto-pasta.com/products/simply-clear-petg
+2026-08-25T14:59:50.970Z shopify ok Carbon Fiber PETG *new low price* (nozzle 235°C / bed 70°C) https://proto-pasta.com/products/carbon-fiber-petg
+2026-08-25T14:59:50.971Z shopify ok White PETG *new low price* (nozzle 235°C / bed 70°C) https://proto-pasta.com/products/simply-white-petg
+2026-08-25T14:59:50.971Z shopify ok Black PETG *new low price* (nozzle 235°C / bed 70°C) https://proto-pasta.com/products/simply-black-petg
+2026-08-25T15:00:20.922Z shopify ok Matte Fiber HTPLA - Daffodil Wood (nozzle 205°C / bed 60°C) https://proto-pasta.com/products/matte-fiber-htpla-daffodil-wood
+2026-08-25T15:00:22.423Z shopify ok Matte Fiber HTPLA - Mahogany Wood (nozzle 205°C / bed 60°C) https://proto-pasta.com/products/matte-fiber-htpla-mahogany-wood
+2026-08-25T15:00:23.978Z shopify ok Matte Fiber HTPLA - Walnut Wood (nozzle 205°C / bed 60°C) https://proto-pasta.com/products/matte-fiber-htpla-walnut-wood
+2026-08-25T15:01:26.975Z shopify ok TPU Glow in the Dark Variety Pack (4x200g) (nozzle 220°C / bed 55°C) https://amolen.com/products/tpu-glow-in-the-dark-variety-pack-4x200g
+2026-08-25T15:01:27.701Z shopify ok PLA Matte Multicolor Rainbow Pack (4x200g) (nozzle 195°C / bed 48°C) https://amolen.com/products/pla-matte-multicolor-rainbow-pack-4x200g
+2026-08-25T15:01:29.096Z shopify ok PLA Metal-Like Variety Pack (4x200g) (nozzle 195°C / bed 48°C) https://amolen.com/products/pla-metal-like-pack-4x200g
+2026-08-25T15:01:32.121Z shopify ok PLA Silk Rainbow Variety Pack (4x200g) - (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-rainbow-variety-pack-4x200g-1-75mm
+2026-08-25T15:01:33.563Z shopify ok PLA Silk Quad Color (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-quad-color-1-75mm-1kg-2-2lb
+2026-08-25T15:01:36.608Z shopify ok PLA Silk Quad Variety Pack (4x200g) - (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-quad-variety-pack-4x200g-1-75mm
+2026-08-25T15:01:39.697Z shopify ok PLA Silk Glow in the Dark Variety Pack (4x200g) (nozzle 220°C / bed 48°C) https://amolen.com/products/pla-silk-glow-in-the-dark-variety-pack-4x200g
+2026-08-25T15:01:41.197Z shopify ok PLA Silk Glow In The Dark (nozzle 230°C / bed 48°C) https://amolen.com/products/pla-silk-basic-glow-in-the-dark-1-75mm-1kg-2-2lb
+2026-08-25T15:01:42.658Z shopify ok PLA Basic Dual Color-High Speed (nozzle 210°C / bed 48°C) https://amolen.com/products/pla-basic-dual
+2026-08-25T15:01:44.189Z shopify ok PETG Basic Variety Pack,4KG (nozzle 245°C / bed 48°C) https://amolen.com/products/petg-basic-variety-pack-4x200g-copy
+2026-08-25T15:01:45.745Z shopify ok Amolen 8th Anniversary PLA Color Bundle – 4 × (nozzle 225°C / bed 48°C) https://amolen.com/products/8th-anniversary-limited-edition
+2026-08-25T15:01:47.091Z shopify ok PLA Silk Basic Sample Pack (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-basic-sample
+2026-08-25T15:01:48.674Z shopify ok PLA Silk Dual & PLA+ Basic Sample Pack (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-dual-sample
+2026-08-25T15:01:50.055Z shopify ok PLA Silk - All in One Sample Pack (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-sample-all-in-one
+2026-08-25T15:01:57.612Z shopify ok PLA Glow In the Dark Filament (nozzle 220°C / bed 48°C) https://amolen.com/products/pla-glow-in-the-dark-filament-1-75mm-glow-green-12kg
+2026-08-25T15:01:59.142Z shopify ok PLA Silk Basic (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-basic-1-75mm-white-12kg
+2026-08-25T15:02:00.629Z shopify ok PETG Transparent Rainbow (nozzle 225°C / bed 60°C) https://amolen.com/products/petg-transparent-rainbow
+2026-08-25T15:02:02.245Z shopify ok PLA Temperature Color Change Variety Pack (4x200g) (nozzle 220°C / bed 48°C) https://amolen.com/products/pla-temperature-color-change-variety-pack-4x200g
+2026-08-25T15:02:03.701Z shopify ok PLA Temperature Color Change (nozzle 205°C / bed 25°C) https://amolen.com/products/pla-temperature
+2026-08-25T15:02:05.341Z shopify ok TPU Glow-in-the-Dark (nozzle 205°C / bed 30°C) https://amolen.com/products/tpu-glow
+2026-08-25T15:02:06.716Z shopify ok PLA Basic Variety Pack (4 x (nozzle 210°C / bed 48°C) https://amolen.com/products/pla-basic-pack-250gx4
+2026-08-25T15:02:08.185Z shopify ok PLA Shiny Glitter Variety Pack (2x1KG) - (nozzle 220°C / bed 48°C) https://amolen.com/products/pla-shiny-glitter-pack
+2026-08-25T15:02:14.141Z shopify ok TPU Flexible Variety Pack (4x200g) (nozzle 230°C / bed 48°C) https://amolen.com/products/tpu-flexible-pack
+2026-08-25T15:02:15.614Z shopify ok PLA Galaxy / Sparkle & Shiny Variety Pack (4x200g) (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-galaxy-pack
+2026-08-25T15:02:17.203Z shopify ok PLA Carbon Fiber Variety Pack (4x200g) - (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-carbon-fiber-pack
+2026-08-25T15:02:18.522Z shopify ok PLA Silk S-Series Variety Pack (4x1kg) - (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-s-series-pack-full
+2026-08-25T15:02:21.681Z shopify ok PLA Marble Variety Pack (4x200g) (nozzle 220°C / bed 48°C) https://amolen.com/products/pla-marble-pack
+2026-08-25T15:02:23.059Z shopify ok PETG Transparent Variety Pack (4x250g) (nozzle 245°C / bed 48°C) https://amolen.com/products/petg-transparent-pack
+2026-08-25T15:02:24.640Z shopify ok TPU Flexible Transparent Multicolor Rainbow Variety Pack (4x200g) (nozzle 230°C / bed 48°C) https://amolen.com/products/tpu-flexible-rainbow-pack
+2026-08-25T15:02:26.172Z shopify ok PETG Basic Variety Pack (4x200g) (nozzle 245°C / bed 48°C) https://amolen.com/products/petg-basic-pack
+2026-08-25T15:02:27.620Z shopify ok PLA Glow in the Dark Variety Pack (4x200g) (nozzle 220°C / bed 48°C) https://amolen.com/products/pla-glow-pack
+2026-08-25T15:02:29.058Z shopify ok PLA Wood Variety Pack (4x200g) (nozzle 195°C / bed 48°C) https://amolen.com/products/pla-wood-pack
+2026-08-25T15:02:30.723Z shopify ok PLA Silk Shiny Gradient Variety Pack (4x200g) - (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-shiny-pack
+2026-08-25T15:02:32.255Z shopify ok PLA Silk Triple Color Variety Pack (4x200g) - (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-triple-pack
+2026-08-25T15:02:33.703Z shopify ok PLA Silk Dual Color Variety Pack (4x200g) - (nozzle 210°C / bed 25°C) https://amolen.com/products/pla-silk-dual-pack
+2026-08-25T15:02:35.192Z shopify ok PLA Silk Basic Variety Pack (4x200g) - (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-basic-pack
+2026-08-25T15:02:36.583Z shopify ok PLA Silk S-Series Variety Pack (4x200g) - (nozzle 225°C / bed 48°C) https://amolen.com/products/pla-silk-s-series-pack
+2026-08-25T15:03:07.094Z shopify ok Fibreheart™ TPU-GF Filament (nozzle 240°C / bed 40°C) https://siraya.tech/products/fibreheart-tpu-gf-15-glass-fiber-filament
+2026-08-25T15:03:11.585Z shopify ok Rebound PEBA 85A - Elastic Filament (nozzle 245°C / bed 70°C) https://siraya.tech/products/fibreheart-rebound-peba-85a-black-elastic-flexible-filament
+2026-08-25T15:03:25.057Z shopify ok Siraya Tech Fibreheart ABS-CF Core Filament (nozzle 265°C / bed 105°C) https://siraya.tech/products/siraya-tech-fibreheart-abs-cf-core-3d-filament-fdm-printing
+2026-08-25T15:03:26.585Z shopify ok Siraya Tech Fibreheart PPA-CF Core Filament (nozzle 300°C / bed 80°C) https://siraya.tech/products/siraya-tech-fibreheart-ppa-nylon-based-paht-cf-core-3d-printing-filament
+2026-08-25T15:03:29.571Z shopify ok Siraya Tech Fibreheart PPA Filament (nozzle 290°C / bed 75°C) https://siraya.tech/products/siraya-tech-fibreheart-ppa-3d-printing-filament
+2026-08-25T15:03:32.586Z shopify ok Siraya Tech Fibreheart ASA-GF Filament (nozzle 260°C / bed 105°C) https://siraya.tech/products/siraya-tech-fibreheart-asa-gf-filament
+2026-08-25T15:03:40.103Z shopify ok THE K8™ PA CF (nozzle 290°C / bed 100°C) https://kexcelled3d.com/products/the-k8™-pa-cf-1
+2026-08-25T15:03:40.104Z shopify ok THE K3™ PLA (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k3™-pla-1
+2026-08-25T15:03:40.105Z shopify ok THE K5™ PLA Coffee (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla-coffee
+2026-08-25T15:03:40.106Z shopify ok THE K9™ PPA CF15 (nozzle 290°C / bed 100°C) https://kexcelled3d.com/products/the-k9™-ppa-cf15
+2026-08-25T15:03:40.109Z shopify ok THE K6™ ABS FR (nozzle 250°C / bed 90°C) https://kexcelled3d.com/products/the-k6™-abs-fr
+2026-08-25T15:03:40.109Z shopify ok THE K5™ ABS CC (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-abs-cc
+2026-08-25T15:03:40.110Z shopify ok THE K6™ BAS 70 (nozzle 225°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-bas-70
+2026-08-25T15:03:40.617Z shopify ok THE K3™ ASA (nozzle 255°C / bed 90°C) https://kexcelled3d.com/products/the-k3™-asa
+2026-08-25T15:03:40.618Z shopify ok THE K5™ ABS PRO (nozzle 275°C / bed 90°C) https://kexcelled3d.com/products/the-k5-abs-pro
+2026-08-25T15:03:40.621Z shopify ok THE K5™ ABS Rapid (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-abs-rapid
+2026-08-25T15:03:40.622Z shopify ok THE K6™ PETG (nozzle 260°C / bed 100°C) https://kexcelled3d.com/products/the-k6™-petg
+2026-08-25T15:03:40.635Z shopify ok THE K8™ TPU 60A (nozzle 245°C / bed 43°C) https://kexcelled3d.com/products/the-k8™-tpu-60a
+2026-08-25T15:03:40.635Z shopify ok THE K8™ TPU 77D (nozzle 225°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-77d
+2026-08-25T15:03:40.636Z shopify ok THE K12™ PEEK Ultra (nozzle 410°C / bed 165°C) https://kexcelled3d.com/products/the-k12™-peek-ultra
+2026-08-25T15:03:40.638Z shopify ok THE K9™ PEBA (nozzle 235°C / bed 55°C) https://kexcelled3d.com/products/the-k9™-peba
+2026-08-25T15:03:40.639Z shopify ok THE K8™ TPU 90A MATTE (nozzle 245°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-90a-matte
+2026-08-25T15:03:40.639Z shopify ok THE K8™ TPU AIR (nozzle 220°C / bed 43°C) https://kexcelled3d.com/products/the-k8™-tpu-air
+2026-08-25T15:03:40.640Z shopify ok THE K8™ TPU 90A (nozzle 245°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-90a
+2026-08-25T15:03:40.641Z shopify ok THE K8™ TPU 85A (nozzle 240°C / bed 40°C) https://kexcelled3d.com/products/the-k8™-tpu-85a
+2026-08-25T15:03:40.642Z shopify ok THE K8™ TPU 80A (nozzle 240°C / bed 40°C) https://kexcelled3d.com/products/the-k8™-tpu-80a
+2026-08-25T15:03:40.643Z shopify ok THE K8™ TPU 75A (nozzle 245°C / bed 40°C) https://kexcelled3d.com/products/the-k8™-tpu-75a
+2026-08-25T15:03:40.644Z shopify ok THE K8™ TPU 65A (nozzle 245°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-65a
+2026-08-25T15:03:40.644Z shopify ok THE K8™ TPU 70A (nozzle 245°C / bed 40°C) https://kexcelled3d.com/products/the-k8™-tpu-70a
+2026-08-25T15:03:40.645Z shopify ok THE K12™ PEI 9085 (nozzle 355°C / bed 180°C) https://kexcelled3d.com/products/the-k12™-pei-9085
+2026-08-25T15:03:40.646Z shopify ok THE K11™ PEEK GF10 (nozzle 425°C / bed 165°C) https://kexcelled3d.com/products/the-k11™-peek-gf10
+2026-08-25T15:03:40.647Z shopify ok THE K11™ PEEK CF10 (nozzle 425°C / bed 110°C) https://kexcelled3d.com/products/the-k11™-peek-cf10
+2026-08-25T15:03:40.647Z shopify ok THE K11™ PPSU (nozzle 400°C / bed 195°C) https://kexcelled3d.com/products/the-k11™-ppsu
+2026-08-25T15:03:40.648Z shopify ok THE K11™ PEI 1010 (nozzle 375°C / bed 195°C) https://kexcelled3d.com/products/the-k11™-pei-1010
+2026-08-25T15:03:40.649Z shopify ok THE K11™ PEEK (nozzle 425°C / bed 165°C) https://kexcelled3d.com/products/the-k11™-peek
+2026-08-25T15:03:40.650Z shopify ok THE K11™ PEKK (nozzle 375°C / bed 145°C) https://kexcelled3d.com/products/the-k11™-pekk
+2026-08-25T15:03:40.651Z shopify ok THE K9™ PC FR (nozzle 280°C / bed 110°C) https://kexcelled3d.com/products/the-k9™-pc-fr
+2026-08-25T15:03:40.651Z shopify ok THE K10™ PC (nozzle 330°C / bed 160°C) https://kexcelled3d.com/products/the-k10™-pc
+2026-08-25T15:03:40.652Z shopify ok THE K8™ OBC (nozzle 230°C / bed 100°C) https://kexcelled3d.com/products/the-k8™-obc
+2026-08-25T15:03:40.652Z shopify ok THE K8™ TPU 64D (nozzle 230°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-64d-1
+2026-08-25T15:03:40.653Z shopify ok THE K8™ TPU 95A (nozzle 245°C / bed 45°C) https://kexcelled3d.com/products/the-k8™-tpu-64d
+2026-08-25T15:03:40.654Z shopify ok THE K8™ PC (nozzle 280°C / bed 110°C) https://kexcelled3d.com/products/the-k8™-pc
+2026-08-25T15:03:40.654Z shopify ok THE K6™ PLA FR (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pla-fr
+2026-08-25T15:03:40.654Z shopify ok THE K6™ BVOH (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-bvoh
+2026-08-25T15:03:40.655Z shopify ok THE K6™ HIPS (nozzle 240°C / bed 90°C) https://kexcelled3d.com/products/the-k6™-hips
+2026-08-25T15:03:40.656Z shopify ok THE K6™ PVA (nozzle 215°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pva
+2026-08-25T15:03:40.657Z shopify ok The K5™ ABS P (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-abs-p
+2026-08-25T15:03:40.657Z shopify ok THE K6™ PLA FG (nozzle 215°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pla-fg
+2026-08-25T15:03:40.658Z shopify ok THE K5™ PETG GF (nozzle 263°C / bed 70°C) https://kexcelled3d.com/products/the-k5-petg-gf
+2026-08-25T15:03:40.658Z shopify ok The K5™ PLA Streams (nozzle 230°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-streams
+2026-08-25T15:03:40.659Z shopify ok THE K5™ PLA CF (nozzle 230°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-cf
+2026-08-25T15:03:40.659Z shopify ok The K5™ PLA CC (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla-cc
+2026-08-25T15:03:40.660Z shopify ok The K5™ PLA G (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-g
+2026-08-25T15:03:40.660Z shopify ok The K5™ PLA P (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-p
+2026-08-25T15:03:40.661Z shopify ok THE K5™ PLA Magic (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-magic
+2026-08-25T15:03:40.662Z shopify ok THE K5™ PLA Silk (nozzle 230°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-silk
+2026-08-25T15:03:40.662Z shopify ok THE K6™ PLA CF10 (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pla-cf10
+2026-08-25T15:03:40.663Z shopify ok THE K6™ PLA (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k6™-pla
+2026-08-25T15:03:40.663Z shopify ok THE K5™ ASA (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-asa
+2026-08-25T15:03:40.664Z shopify ok THE K5™ PETG Rapid (nozzle 300°C / bed 70°C) https://kexcelled3d.com/products/the-k5-petg-rapid
+2026-08-25T15:03:40.665Z shopify ok THE K5™ ABS T (nozzle 270°C / bed 90°C) https://kexcelled3d.com/products/the-k5™-abs-t
+2026-08-25T15:03:40.665Z shopify ok THE K5™ PLA Sparkle (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-pla-sparkle
+2026-08-25T15:03:40.666Z shopify ok THE K5™ WOOD (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5™-wood
+2026-08-25T15:03:40.666Z shopify ok THE K5™ PLA M (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla-m
+2026-08-25T15:03:40.667Z shopify ok THE K5™ PETG (nozzle 255°C / bed 70°C) https://kexcelled3d.com/products/the-k5-petg
+2026-08-25T15:03:40.668Z shopify ok THE K5™ ABS (nozzle 260°C / bed 90°C) https://kexcelled3d.com/products/the-k5-abs
+2026-08-25T15:03:40.669Z shopify ok THE K5™ PLA PRO (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla-pro
+2026-08-25T15:03:40.669Z shopify ok THE K5™ PLA (nozzle 220°C / bed 45°C) https://kexcelled3d.com/products/the-k5-pla
+2026-08-25T15:03:40.670Z shopify ok THE K5™ ABS M (nozzle 245°C / bed 75°C) https://kexcelled3d.com/products/the-k5-abs-m
+2026-08-25T15:03:40.670Z shopify ok THE K7™ PET CF10 (nozzle 270°C / bed 100°C) https://kexcelled3d.com/products/the-k7™-pet-cf10
+2026-08-25T15:03:40.671Z shopify ok THE K11™ PEEK PRO (nozzle 400°C / bed 125°C) https://kexcelled3d.com/products/the-k11™-peek-pro
+2026-08-25T15:03:40.672Z shopify ok THE K5™ PETG CF (nozzle 255°C / bed 75°C) https://kexcelled3d.com/products/the-k5™-petg-cf
+2026-08-25T15:03:40.672Z shopify ok THE K10™ PPS CF10 (nozzle 245°C / bed 75°C) https://kexcelled3d.com/products/the-k10™-pps-cf10
+2026-08-25T15:03:40.672Z shopify ok THE K5™ PETG M (nozzle 245°C / bed 75°C) https://kexcelled3d.com/products/the-k5-petg-m
+2026-08-25T15:03:41.503Z woocommerce iSanmate (isanmate.com): 366 product URLs
+2026-08-25T15:03:41.724Z woocommerce AzureFilm (azurefilm.com): 935 product URLs
+2026-08-25T15:03:42.403Z woocommerce Das Filament (dasfilament.de): 384 product URLs
+2026-08-25T15:03:42.501Z woocommerce NinjaTek (ninjatek.com): 200 product URLs
+2026-08-25T15:03:47.151Z woocommerce Print-Me (print-me.pl): 342 product URLs
+2026-08-25T15:03:47.649Z woocommerce Francofil (francofil.fr): 121 product URLs
+2026-08-25T15:03:48.242Z woocommerce IC3D (ic3dprinters.com): 10 product URLs
+2026-08-25T15:03:48.244Z woocommerce: 2358 listed, 510 already saved, 1848 pending
+2026-08-25T15:03:52.818Z === run done ===
+prusament: listed=23 new=0 total=22
+fiberlogy: listed=77 new=0 total=69
+extrudr: listed=156 new=0 total=136
+fillamentum: listed=275 new=0 total=210
+eryone: listed=207 new=0 total=60
+shopify: listed=777 new=179 total=179
+woocommerce: listed=2358 new=0 total=510

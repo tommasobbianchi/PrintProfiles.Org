@@ -6,11 +6,13 @@
 //   -> { products: [ { id, title, handle, body_html, product_type, tags, variants:[{title}] } ] }
 //
 // One parser covers all stores: listProducts() paginates /products.json for every host in
-// BRANDS and returns canonical product URLs; parseProduct() looks the product up from the
-// same cached records and extracts the specs from body_html (labels vary a lot per store).
+// BRANDS and returns canonical product URLs; parseProduct() extracts specs from body_html
+// (fast, already cached) and, when that has no nozzle/bed pair, FALLS BACK to the rendered
+// product page — where several of these stores (Jayo, Elegoo, …) put the spec table even
+// though they publish nothing in the JSON.
 //
 // Non-filament products (printers, resin, nozzles, dryers, spares, gift cards) have no
-// nozzle/bed temp in body_html and simply parse to null.
+// nozzle/bed temp and simply parse to null.
 
 import { get, decodeEntities } from '../fetch.mjs';
 
@@ -59,20 +61,45 @@ const strip = (html) => decodeEntities(String(html || ''))
   .replace(/<script[\s\S]*?<\/script>/gi, '')
   .replace(/<style[\s\S]*?<\/style>/gi, '')
   .replace(/<[^>]+>/g, ' ')
-  .replace(/&deg;|℃/g, '°')
+  .replace(/&deg;|℃|º/g, '°')
   .replace(/\s+/g, ' ')
   .trim();
 
 // A temperature value: a digit, then a run of digits/dots/commas/spaces/°/C/~ and dashes.
 // This accepts both "200-230°C" and the interleaved "200°C-230°C", and "270 ~ 310 ℃".
 const TEMP_VAL = `[0-9][0-9.,\\s°C~–—-]*`;
-// Labels are followed by an optional connector ("of"/"at"/"is"/"from"/"up to"/":"/"=").
-const NOZZLE_RE = new RegExp(`(?:nozzle|print(?:ing)?|extruder|hot\\s*end|hotend)\\s*(?:temp(?:erature)?s?)?\\s*(?:of|at|is|from|up\\s+to|=|:)?\\s*(${TEMP_VAL})`, 'i');
-const BED_RE = new RegExp(`(?:heated\\s*bed|build\\s*plate|print\\s*bed|heat\\s*bed|bed)\\s*(?:temp(?:erature)?s?)?\\s*(?:of|at|is|from|up\\s+to|=|:)?\\s*(${TEMP_VAL})`, 'i');
+// Labels are followed by an optional connector.
+// JSON path (body_html) tolerates prose connectors ("from"/"up to") because Protopasta
+// publishes its temps that way. The rendered-page fallback is stricter: "up to N" is a
+// ceiling, not a setpoint, so the fallback must not read it as the value.
+const CONN_LOOSE = `(?:of|at|is|from|up\\s+to|=|:)?`;
+const CONN_STRICT = `(?:of|at|is|=|:)?`;
+const NOZZLE_RE = new RegExp(`(?:nozzle|print(?:ing)?|extruder|hot\\s*end|hotend)\\s*(?:temp(?:erature)?s?)?\\s*${CONN_LOOSE}\\s*(${TEMP_VAL})`, 'i');
+const BED_RE = new RegExp(`(?:heated\\s*bed|build\\s*plate|print\\s*bed|heat\\s*bed|bed)\\s*(?:temp(?:erature)?s?)?\\s*${CONN_LOOSE}\\s*(${TEMP_VAL})`, 'i');
+// Strict (rendered page) regexes: the value holds only digits/ranges (no unit inside), and a
+// lookahead requires a real temperature unit ("°C"/"°"/"C") right after — this is what keeps
+// "Printing 3D Printers" (nav/footer noise) from yielding nozzleTemp 3.
+const TEMP_VAL_STRICT = `[0-9][0-9.,\\s~–—-]*`;
+const UNIT = `(?=\\s*(?:°\\s*C?|℃|C\\b))`;
+const NOZZLE_RE_STRICT = new RegExp(`(?:nozzle|print(?:ing)?|extruder|hot\\s*end|hotend)\\s*(?:temp(?:erature)?s?)?\\s*${CONN_STRICT}\\s*(${TEMP_VAL_STRICT})${UNIT}`, 'i');
+const BED_RE_STRICT = new RegExp(`(?:heated\\s*bed|build\\s*plate|print\\s*bed|heat\\s*bed|bed)\\s*(?:temp(?:erature)?s?)?\\s*${CONN_STRICT}\\s*(${TEMP_VAL_STRICT})${UNIT}`, 'i');
 
 // Plausibility guards: throw away obvious non-temperatures (print size, build volume, …).
 const okNozzle = (n) => n !== undefined && n >= 100 && n <= 450;
 const okBed = (n) => n !== undefined && n >= 0 && n <= 200;
+
+// Drop Fahrenheit values ("400 °F", "392-410°F", "446℉") so they are never read as °C.
+const stripFahrenheit = (t) => String(t || '')
+  .replace(/\d[\d.,\s–—~-]*°?\s*[Ff]\b/g, ' ')
+  .replace(/\d[\d.,\s–—~-]*℉/g, ' ');
+
+function tempsFrom(text, strict) {
+  const t = stripFahrenheit(strip(text));
+  const n = mid(((strict ? NOZZLE_RE_STRICT : NOZZLE_RE).exec(t) || [])[1]);
+  const b = mid(((strict ? BED_RE_STRICT : BED_RE).exec(t) || [])[1]);
+  if (!okNozzle(n) || !okBed(b)) return null;
+  return { nozzleTemp: n, bedTemp: b };
+}
 
 const COLOURS = 'black|white|red|blue|green|yellow|orange|purple|pink|brown|grey|gray|silver|gold|natural|transparent|clear|turquoise|cyan|magenta';
 
@@ -110,6 +137,32 @@ async function loadHost(host) {
   return map;
 }
 
+// Rendered product page -> searchable text. JSON-LD blocks are kept (metafield specs often
+// live there), the rest of the scripts and styles are dropped.
+function renderedText(html) {
+  const ld = [...String(html || '').matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)]
+    .map((m) => m[1]).join(' ');
+  const main = String(html || '')
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<[^>]+>/g, ' ');
+  const extra = decodeEntities(ld)
+    .replace(/\\u003c/g, '<').replace(/\\u003e/g, '>').replace(/\\n/g, ' ')
+    .replace(/<[^>]+>/g, ' ');
+  return main + ' ' + extra;
+}
+
+// Cheap gate so we do not fetch a rendered page for an obviously non-filament product
+// (resin, printer, accessory). It is an optimisation only — a false positive still resolves
+// to null via the nozzle/bed gate.
+function isFilamentLike(rec) {
+  const t = `${rec.title || ''} ${rec.product_type || ''} ${(rec.tags || []).join(' ')}`.toLowerCase();
+  if (/resin|photopolymer/.test(t)) return false;
+  if (/\b(?:printer|dryer|washer|curing|clean|cure)\b/.test(t) && !/filament/.test(t)) return false;
+  if (/\b(?:accessor|nozzle|hotend|extruder|build\s*plate|screen|lcd|dlp|sensor|stepper|motor|spare|gift|swatch|tool|film)\b/.test(t) && !/filament/.test(t)) return false;
+  return true;
+}
+
 export async function listProducts() {
   const urls = [];
   for (const b of BRANDS) {
@@ -119,35 +172,7 @@ export async function listProducts() {
   return urls;
 }
 
-export async function parseProduct(url) {
-  const u = new URL(url);
-  const host = u.hostname;
-  const handle = decodeURIComponent(u.pathname.split('/').filter(Boolean).pop());
-  const brand = BRANDS.find((b) => b.host === host);
-  if (!brand || !handle) return null;
-
-  const map = await loadHost(host);
-  const rec = map.get(handle);
-  if (!rec) return null;
-
-  const text = strip(rec.body_html);
-
-  let nozzleTemp = mid((NOZZLE_RE.exec(text) || [])[1]);
-  let bedTemp = mid((BED_RE.exec(text) || [])[1]);
-  if (!okNozzle(nozzleTemp) || !okBed(bedTemp)) return null;
-
-  const name = cleanBrand(rec.title);
-  const out = {
-    manufacturer: brand.manufacturer,
-    brand: name,
-    filamentType: detectType(`${rec.title} ${rec.product_type || ''} ${(rec.tags || []).join(' ')}`),
-    nozzleTemp,
-    bedTemp,
-    sourceUrl: `https://${host}/products/${handle}`,
-    sourceType: 'manufacturer',
-  };
-
-  // optional fields — best effort
+function optionalFields(out, text) {
   const speed = /(?:print(?:ing)?\s*speed)\s*[:~=]?\s*([0-9][0-9.,\s~–—-]*)\s*mm\/s/i.exec(text);
   if (speed) out.printSpeed = mid(speed[1]);
   const density = /density\s*[:~=]?\s*([0-9]+(?:\.[0-9]+)?)/i.exec(text);
@@ -164,6 +189,43 @@ export async function parseProduct(url) {
       out.fanSpeedMax = n.length >= 2 ? n[1] : n[0];
     }
   }
-
   return out;
+}
+
+export async function parseProduct(url) {
+  const u = new URL(url);
+  const host = u.hostname;
+  const handle = decodeURIComponent(u.pathname.split('/').filter(Boolean).pop());
+  const brand = BRANDS.find((b) => b.host === host);
+  if (!brand || !handle) return null;
+
+  const map = await loadHost(host);
+  const rec = map.get(handle);
+  if (!rec) return null;
+
+  const out = {
+    manufacturer: brand.manufacturer,
+    brand: cleanBrand(rec.title),
+    filamentType: detectType(`${rec.title} ${rec.product_type || ''} ${(rec.tags || []).join(' ')}`),
+    sourceUrl: `https://${host}/products/${handle}`,
+    sourceType: 'manufacturer',
+  };
+
+  // fast path — products.json body_html (already cached, no network)
+  let spec = tempsFrom(rec.body_html, false);
+  let specText = strip(rec.body_html);
+
+  // fallback — rendered product page, where several stores publish the spec table
+  if (!spec) {
+    if (!isFilamentLike(rec)) return null;
+    const page = await get(`https://${host}/products/${handle}`);
+    if (!page.ok) return null;
+    const rendered = renderedText(page.body);
+    spec = tempsFrom(rendered, true);
+    if (!spec) return null;
+    specText = strip(rendered);
+  }
+
+  Object.assign(out, spec);
+  return optionalFields(out, specText);
 }
