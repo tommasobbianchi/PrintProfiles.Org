@@ -42,14 +42,14 @@
 <div class="wrap">
 <h1>Filament preset database — status</h1>
 <p class="sub">PrintProfiles.Org · generated from <code>constants.ts</code> and <code>data/*.json</code> by
-<code>gen-status.mjs</code> · 2026-08-25 17:31 UTC</p>
+<code>gen-status.mjs</code> · 2026-08-25 18:45 UTC</p>
 
 <div class="grid kpis">
-  <div class="card kpi"><div class="n">2,117</div><div class="l">presets</div><div class="d">+1,663 from 454</div></div>
-  <div class="card kpi"><div class="n">1,663</div><div class="l">with a cited source</div><div class="d">was 0</div></div>
+  <div class="card kpi"><div class="n">2,133</div><div class="l">presets</div><div class="d">+1,679 from 454</div></div>
+  <div class="card kpi"><div class="n">1,679</div><div class="l">with a cited source</div><div class="d">was 0</div></div>
   <div class="card kpi"><div class="n">186</div><div class="l">manufacturers</div><div class="d">from 109</div></div>
   <div class="card kpi"><div class="n">446</div><div class="l">with volumetric speed</div><div class="d">unavailable elsewhere</div></div>
-  <div class="card kpi"><div class="n">4,384</div><div class="l">source rows harvested</div><div class="d">18,030 pages cached</div></div>
+  <div class="card kpi"><div class="n">4,419</div><div class="l">source rows harvested</div><div class="d">18,140 pages cached</div></div>
 </div>
 
 <h2>Where the data comes from</h2>
@@ -57,7 +57,7 @@
 <table>
 <thead><tr><th>Provenance</th><th class="n">Presets</th><th>Licence</th><th>What only this source gives</th></tr></thead>
 <tbody>
-<tr><td><code>manufacturer</code></td><td class="n">990</td><td>Public pages</td><td>The vendor's own published figures</td></tr>
+<tr><td><code>manufacturer</code></td><td class="n">1,006</td><td>Public pages</td><td>The vendor's own published figures</td></tr>
 <tr><td><code>seed</code></td><td class="n">454</td><td>—</td><td>Original hand-written presets, unattributed</td></tr>
 <tr><td><code>slicer-profile</code></td><td class="n">447</td><td>AGPL-3.0 <span class="pill p-warn">facts only</span></td><td><strong>Max volumetric speed, flow ratio</strong> — no vendor page publishes these</td></tr>
 <tr><td><code>spoolmandb</code></td><td class="n">226</td><td>MIT</td><td>The vendors whose own sites serve a bot challenge</td></tr>
@@ -74,7 +74,7 @@ as product names.</p>
 <table>
 <thead><tr><th>Parser</th><th>Coverage</th><th class="n">Rows</th><th>Note</th></tr></thead>
 <tbody>
-<tr><td><code>shopify</code></td><td>37 storefronts</td><td class="n">1,245</td><td>JSON feed plus rendered-page fallback</td></tr>
+<tr><td><code>shopify</code></td><td>37 storefronts</td><td class="n">1,280</td><td>JSON feed plus rendered-page fallback</td></tr>
 <tr><td><code>generic</code></td><td>13 custom sites</td><td class="n">1,225</td><td>One multilingual label set (EN/DE/PL/CS/ES/FR/NL/IT)</td></tr>
 <tr><td><code>woocommerce</code></td><td>7 storefronts</td><td class="n">510</td><td>Store API</td></tr>
 <tr><td><code>slicerprofiles</code></td><td>65 vendor packs</td><td class="n">498</td><td>7,643 files → 1,719 filaments → rows</td></tr>
@@ -94,8 +94,8 @@ non-filament listings and cross-source overlaps collapse during import.</p>
 <div class="card">
 <h2 style="margin-top:0">Integrity</h2>
 <table><tbody>
-<tr><td>Duplicate preset ids</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,117</span></td></tr>
-<tr><td>Physically implausible rows</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,117</span></td></tr>
+<tr><td>Duplicate preset ids</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,133</span></td></tr>
+<tr><td>Physically implausible rows</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,133</span></td></tr>
 <tr><td>Cross-source conflicts &gt;15 °C</td><td><span class="pill p-ok">pass</span> <span class="note">0</span></td></tr>
 <tr><td>Import re-run</td><td><span class="pill p-ok">idempotent</span></td></tr>
 </tbody></table>
@@ -119,12 +119,12 @@ defeating the block.</p>
 <h2>Material coverage</h2>
 <div class="card scroll">
 <table><thead><tr><th>Type</th><th class="n">Presets</th></tr></thead><tbody>
-<tr><td>PLA</td><td class="n">765</td></tr>
-<tr><td>PETG</td><td class="n">351</td></tr>
-<tr><td>TPU</td><td class="n">206</td></tr>
-<tr><td>ABS</td><td class="n">191</td></tr>
+<tr><td>PLA</td><td class="n">775</td></tr>
+<tr><td>PETG</td><td class="n">354</td></tr>
+<tr><td>TPU</td><td class="n">207</td></tr>
+<tr><td>ABS</td><td class="n">192</td></tr>
 <tr><td>Other</td><td class="n">135</td></tr>
-<tr><td>ASA</td><td class="n">115</td></tr>
+<tr><td>ASA</td><td class="n">116</td></tr>
 <tr><td>PA-CF</td><td class="n">70</td></tr>
 <tr><td>PC</td><td class="n">70</td></tr>
 <tr><td>Nylon</td><td class="n">64</td></tr>

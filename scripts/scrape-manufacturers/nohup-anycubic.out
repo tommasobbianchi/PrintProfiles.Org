@@ -4,3 +4,9 @@
 2026-08-25T18:40:32.072Z WARN HTTP 429 at https://store.anycubic.com/products/s1-max-filament-runout-sensor-assembly (attempt 1) — backing off 16000ms
 2026-08-25T18:40:48.133Z WARN HTTP 429 at https://store.anycubic.com/products/s1-max-filament-runout-sensor-assembly (attempt 2) — backing off 32000ms
 2026-08-25T18:41:20.188Z WARN HTTP 429 at https://store.anycubic.com/products/s1-max-filament-runout-sensor-assembly (attempt 3) — backing off 64000ms
+2026-08-25T18:42:24.249Z WARN GET https://store.anycubic.com/products/s1-max-filament-runout-sensor-assembly -> 429
+2026-08-25T18:42:32.256Z WARN HTTP 429 at https://store.anycubic.com/products/ace-2-pro-filament-feeding-retraction-module-not-including-motors (attempt 1) — backing off 16000ms
+2026-08-25T18:42:48.315Z WARN HTTP 429 at https://store.anycubic.com/products/ace-2-pro-filament-feeding-retraction-module-not-including-motors (attempt 2) — backing off 32000ms
+2026-08-25T18:43:31.253Z shopify ok ABS Filament - KOL Partner Only (nozzle 260°C / bed 100°C) https://store.anycubic.com/products/abs-kol-partner-only
+2026-08-25T18:44:34.067Z shopify ok TPU 68D 10-100kg Deals (nozzle 230°C / bed 48°C) https://store.anycubic.com/products/tpu-68d-10-100kg-deals
+2026-08-25T18:44:42.078Z shopify ok TPU 68D (nozzle 230°C / bed 48°C) https://store.anycubic.com/products/tpu-68d
