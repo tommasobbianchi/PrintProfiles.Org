@@ -832,3 +832,603 @@
 2026-08-25T16:42:41.629Z generic ok 3DJAKE ABS Bronze (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-bronze
 2026-08-25T16:42:43.084Z generic ok 3DJAKE ABS Purple (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-purple-4
 2026-08-25T16:42:44.621Z generic ok 3DJAKE ABS Pastel Blue (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-pastel-blue
+2026-08-25T16:42:46.090Z generic ok 3DJAKE ABS Neon Orange (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-neon-orange
+2026-08-25T16:42:47.589Z generic ok 3DJAKE ABS Pastel Pink (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-pastel-pink
+2026-08-25T16:42:49.132Z generic ok 3DJAKE ABS Pastel Green (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-pastel-green
+2026-08-25T16:42:50.595Z generic ok 3DJAKE mattePLA Black (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-black
+2026-08-25T16:42:52.104Z generic ok 3DJAKE mattePLA White (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-white
+2026-08-25T16:42:53.586Z generic ok 3DJAKE mattePLA Dark Blue (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-dark-blue
+2026-08-25T16:42:55.094Z generic ok 3DJAKE mattePLA Silver (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-silver
+2026-08-25T16:42:56.823Z generic ok 3DJAKE mattePLA Dark Grey (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-dark-grey
+2026-08-25T16:42:58.135Z generic ok 3DJAKE mattePLA Red (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-red
+2026-08-25T16:42:59.639Z generic ok 3DJAKE mattePLA Light Blue (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-light-blue
+2026-08-25T16:43:01.182Z generic ok 3DJAKE mattePLA Yellow (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-yellow
+2026-08-25T16:43:02.599Z generic ok 3DJAKE mattePLA Light Green (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-light-green
+2026-08-25T16:43:04.102Z generic ok 3DJAKE mattePLA Light Grey (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-light-grey
+2026-08-25T16:43:05.646Z generic ok 3DJAKE mattePLA Orange (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-orange
+2026-08-25T16:43:07.114Z generic ok 3DJAKE mattePLA Dark Green (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-dark-green
+2026-08-25T16:43:08.634Z generic ok 3DJAKE mattePLA Neon Yellow (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-neon-yellow
+2026-08-25T16:43:10.101Z generic ok 3DJAKE mattePLA Brown (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-brown
+2026-08-25T16:43:11.611Z generic ok 3DJAKE mattePLA Pink (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-pink
+2026-08-25T16:43:13.174Z generic ok 3DJAKE mattePLA Neon Green (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-neon-green
+2026-08-25T16:43:14.643Z generic ok 3DJAKE mattePLA Bronze (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-bronze
+2026-08-25T16:43:16.103Z generic ok 3DJAKE mattePLA Purple (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-purple
+2026-08-25T16:43:17.609Z generic ok 3DJAKE mattePLA Pastel Blue (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-pastel-blue
+2026-08-25T16:43:19.152Z generic ok 3DJAKE mattePLA Neon Orange (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-neon-orange
+2026-08-25T16:43:20.606Z generic ok 3DJAKE mattePLA Pastel Pink (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-pastel-pink
+2026-08-25T16:43:22.122Z generic ok 3DJAKE mattePLA Pastel Green (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-pastel-green
+2026-08-25T16:43:23.617Z generic ok 3DJAKE ecoPLA CMYK Cyan (nozzle 205°C / bed 30°C) https://www.3djake.com/3djake/ecopla-cmyk-cyan
+2026-08-25T16:43:25.118Z generic ok 3DJAKE ecoPLA CMYK Magenta (nozzle 205°C / bed 30°C) https://www.3djake.com/3djake/ecopla-cmyk-magenta
+2026-08-25T16:43:26.620Z generic ok 3DJAKE ecoPLA CMYK Yellow (nozzle 205°C / bed 30°C) https://www.3djake.com/3djake/ecopla-cmyk-yellow
+2026-08-25T16:43:28.174Z generic ok 3DJAKE ecoPLA CMYK White (nozzle 205°C / bed 30°C) https://www.3djake.com/3djake/ecopla-cmyk-white
+2026-08-25T16:43:29.686Z generic ok 3DJAKE ecoPLA CMYK Lithophane Bundle, 4x (nozzle 205°C / bed 30°C) https://www.3djake.com/3djake/ecopla-cmyk-lithophane-bundle
+2026-08-25T16:43:31.125Z generic ok 3DJAKE easyPETG White & Black Economy Set, 2 x (nozzle 240°C / bed 75°C) https://www.3djake.com/3djake/easypetg-white-black-economy-set
+2026-08-25T16:43:32.613Z generic ok 3DJAKE mattePLA White & Black Economy Set, 2 x (nozzle 215°C / bed 30°C) https://www.3djake.com/3djake/mattepla-white-black-economy-set
+2026-08-25T16:43:35.612Z generic ok 3DJAKE easyPETG Matte Black (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-black
+2026-08-25T16:43:37.116Z generic ok 3DJAKE easyPETG Matte Bronze (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-bronze
+2026-08-25T16:43:38.616Z generic ok 3DJAKE easyPETG Matte Brown (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-brown
+2026-08-25T16:43:40.118Z generic ok 3DJAKE easyPETG Matte Dark Blue (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-dark-blue
+2026-08-25T16:43:41.621Z generic ok 3DJAKE easyPETG Matte Dark Green (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-dark-green
+2026-08-25T16:43:43.116Z generic ok 3DJAKE easyPETG Matte Dark Grey (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-dark-grey
+2026-08-25T16:43:44.618Z generic ok 3DJAKE easyPETG Matte Light Green (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-light-green
+2026-08-25T16:43:46.154Z generic ok 3DJAKE easyPETG Matte Light Grey (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-light-grey
+2026-08-25T16:43:47.619Z generic ok 3DJAKE easyPETG Matte Neon Green (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-neon-green
+2026-08-25T16:43:49.122Z generic ok 3DJAKE easyPETG Matte Neon Orange (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-neon-orange
+2026-08-25T16:43:50.625Z generic ok 3DJAKE easyPETG Matte Neon Yellow (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-neon-yellow
+2026-08-25T16:43:52.118Z generic ok 3DJAKE easyPETG Matte Orange (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-orange
+2026-08-25T16:43:53.671Z generic ok 3DJAKE easyPETG Matte Pastel Blue (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-pastel-blue
+2026-08-25T16:43:55.162Z generic ok 3DJAKE easyPETG Matte Pastel Green (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-pastel-green
+2026-08-25T16:43:56.657Z generic ok 3DJAKE easyPETG Matte Pastel Pink (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-pastel-pink
+2026-08-25T16:43:58.125Z generic ok 3DJAKE easyPETG Matte Pink (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-pink
+2026-08-25T16:43:59.698Z generic ok 3DJAKE easyPETG Matte Purple (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-purple
+2026-08-25T16:44:01.125Z generic ok 3DJAKE easyPETG Matte Red (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-red
+2026-08-25T16:44:02.700Z generic ok 3DJAKE easyPETG Matte Silver (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-silver
+2026-08-25T16:44:04.138Z generic ok 3DJAKE easyPETG Matte Sky Blue (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-sky-blue
+2026-08-25T16:44:05.625Z generic ok 3DJAKE easyPETG Matte White (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-white
+2026-08-25T16:44:07.238Z generic ok 3DJAKE easyPETG Matte Yellow (nozzle 225°C / bed 75°C) https://www.3djake.com/3djake/easypetg-matte-yellow
+2026-08-25T16:44:08.621Z generic ok 3DJAKE ecoPLA CF Black (nozzle 225°C / bed 40°C) https://www.3djake.com/3djake/ecopla-cf-black
+2026-08-25T16:44:10.121Z generic ok 3DJAKE ecoPLA CF Dark Grey (nozzle 225°C / bed 40°C) https://www.3djake.com/3djake/ecopla-cf-dark-grey
+2026-08-25T16:44:11.660Z generic ok 3DJAKE ecoPLA CF Dark Blue (nozzle 225°C / bed 40°C) https://www.3djake.com/3djake/ecopla-cf-dark-blue
+2026-08-25T16:44:13.118Z generic ok 3DJAKE ecoPLA CF Red (nozzle 225°C / bed 40°C) https://www.3djake.com/3djake/ecopla-cf-red
+2026-08-25T16:44:14.615Z generic ok 3DJAKE easyPETG CF Black (nozzle 235°C / bed 75°C) https://www.3djake.com/3djake/easypetg-cf-black
+2026-08-25T16:44:16.113Z generic ok 3DJAKE easyPETG CF Dark Grey (nozzle 235°C / bed 75°C) https://www.3djake.com/3djake/easypetg-cf-dark-grey
+2026-08-25T16:44:19.115Z generic ok 3DJAKE easyPETG CF Red (nozzle 235°C / bed 75°C) https://www.3djake.com/3djake/easypetg-cf-red
+2026-08-25T16:44:20.623Z generic ok 3DJAKE ASA CF Black (nozzle 250°C / bed 110°C) https://www.3djake.com/3djake/asa-cf-black-2
+2026-08-25T16:44:22.130Z generic ok 3DJAKE ASA CF Dark Grey (nozzle 250°C / bed 110°C) https://www.3djake.com/3djake/asa-cf-dark-grey
+2026-08-25T16:44:23.620Z generic ok 3DJAKE ASA CF Dark Blue (nozzle 250°C / bed 110°C) https://www.3djake.com/3djake/asa-cf-dark-blue
+2026-08-25T16:44:25.118Z generic ok 3DJAKE ASA CF Red (nozzle 250°C / bed 110°C) https://www.3djake.com/3djake/asa-cf-red-1
+2026-08-25T16:44:26.631Z generic ok 3DJAKE ABS CF Black (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-cf-black-1
+2026-08-25T16:44:28.118Z generic ok 3DJAKE ABS CF Dark Grey (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-cf-dark-grey
+2026-08-25T16:44:29.667Z generic ok 3DJAKE ABS CF Dark Blue (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-cf-dark-blue-1
+2026-08-25T16:44:31.168Z generic ok 3DJAKE ABS CF Red (nozzle 235°C / bed 105°C) https://www.3djake.com/3djake/abs-cf-red
+2026-08-25T16:44:32.674Z generic ok 3DJAKE ASA Neon Pink (nozzle 230°C / bed 80°C) https://www.3djake.com/3djake/asa-neon-pink
+2026-08-25T16:44:34.156Z generic ok 3DJAKE ecoPLA Color Mix Value Pack, 5 x (nozzle 205°C / bed 30°C) https://www.3djake.com/3djake/ecopla-color-mix-value-pack
+2026-08-25T16:44:34.174Z generic ok MetalFil - Ancient Bronze (nozzle 210°C / bed 30°C) https://www.formfutura.com/filaments/pla/metalfil-ancient-bronze
+2026-08-25T16:44:34.189Z generic ok EasyFil ePLA (nozzle 238°C / bed 55°C) https://www.formfutura.com/filaments/pla/easyfil-epla
+2026-08-25T16:44:34.200Z generic ok Bulk PLA (nozzle 213°C / bed 55°C) https://www.formfutura.com/filaments/pla/bulk-pla
+2026-08-25T16:44:34.207Z generic ok ReForm - rPLA (nozzle 203°C / bed 50°C) https://www.formfutura.com/filaments/pla/reform-rpla
+2026-08-25T16:44:34.214Z generic ok ReFill PLA (nozzle 208°C / bed 55°C) https://www.formfutura.com/filaments/pla/refill-pla
+2026-08-25T16:44:34.221Z generic ok Premium PLA (nozzle 198°C / bed 55°C) https://www.formfutura.com/filaments/pla/premium-pla
+2026-08-25T16:44:34.229Z generic ok Tough PLA (nozzle 210°C / bed 55°C) https://www.formfutura.com/filaments/pla/tough-pla
+2026-08-25T16:44:34.235Z generic ok Premium PLA Flame Retardant (nozzle 225°C / bed 50°C) https://www.formfutura.com/filaments/pla/premium-pla-flame-retardant
+2026-08-25T16:44:34.672Z generic ok Premium PLA CF03 (nozzle 255°C / bed 55°C) https://www.formfutura.com/filaments/pla/premium-pla-cf03
+2026-08-25T16:44:35.847Z generic ok Volcano PLA 150C (nozzle 210°C / bed 53°C) https://www.formfutura.com/filaments/pla/volcano-pla-150c
+2026-08-25T16:44:37.341Z generic ok Volcano PLA (nozzle 248°C / bed 30°C) https://www.formfutura.com/filaments/pla/volcano-pla
+2026-08-25T16:44:39.161Z generic ok Matt PLA (nozzle 223°C / bed 55°C) https://www.formfutura.com/filaments/pla/matt-pla
+2026-08-25T16:44:40.351Z generic ok Transparent PLA (nozzle 208°C / bed 50°C) https://www.formfutura.com/filaments/pla/transparent-pla
+2026-08-25T16:44:42.082Z generic ok High Gloss PLA (nozzle 225°C / bed 50°C) https://www.formfutura.com/filaments/pla/high-gloss-pla
+2026-08-25T16:44:43.568Z generic ok High Gloss PLA ColorMorph (nozzle 230°C / bed 60°C) https://www.formfutura.com/filaments/pla/high-gloss-pla-colormorph
+2026-08-25T16:44:44.847Z generic ok Galaxy PLA (nozzle 200°C / bed 55°C) https://www.formfutura.com/filaments/pla/galaxy-pla
+2026-08-25T16:44:46.580Z generic ok EasyFil PLA - Glow in the Dark (nozzle 210°C / bed 60°C) https://www.formfutura.com/filaments/pla/easyfil-pla-glow-in-the-dark
+2026-08-25T16:44:47.852Z generic ok StoneFil (nozzle 205°C / bed 55°C) https://www.formfutura.com/filaments/pla/stonefil
+2026-08-25T16:44:49.667Z generic ok EasyWood (nozzle 215°C / bed 55°C) https://www.formfutura.com/filaments/pla/easywood
+2026-08-25T16:44:50.854Z generic ok MetalFil - Classic Copper (nozzle 205°C / bed 30°C) https://www.formfutura.com/filaments/pla/metalfil-classic-copper
+2026-08-25T16:44:52.364Z generic ok Premium PETG Flame Retardant (nozzle 260°C / bed 70°C) https://www.formfutura.com/filaments/petg/premium-petg-flame-retardant
+2026-08-25T16:44:54.228Z generic ok EasyFil ePETG (nozzle 255°C / bed 80°C) https://www.formfutura.com/filaments/petg/easyfil-epetg
+2026-08-25T16:44:55.667Z generic ok HDglass (nozzle 248°C / bed 85°C) https://www.formfutura.com/filaments/petg/hdglass
+2026-08-25T16:44:56.853Z generic ok Bulk PETG (nozzle 243°C / bed 85°C) https://www.formfutura.com/filaments/petg/bulk-petg
+2026-08-25T16:44:58.353Z generic ok ReFill PETG (nozzle 235°C / bed 78°C) https://www.formfutura.com/filaments/petg/refill-petg
+2026-08-25T16:44:59.858Z generic ok ReForm - rPET (nozzle 243°C / bed 70°C) https://www.formfutura.com/filaments/petg/reform-rpet
+2026-08-25T16:45:01.649Z generic ok CarbonFil (nozzle 253°C / bed 85°C) https://www.formfutura.com/filaments/petg/carbonfil
+2026-08-25T16:45:02.863Z generic ok CarbonFil CF03 (nozzle 260°C / bed 80°C) https://www.formfutura.com/filaments/petg/carbonfil-cf03
+2026-08-25T16:45:04.581Z generic ok EasyFil ABS - Glow in the Dark (nozzle 243°C / bed 100°C) https://www.formfutura.com/filaments/abs/easyfil-abs-glow-in-the-dark
+2026-08-25T16:45:05.854Z generic ok TitanX (nozzle 258°C / bed 105°C) https://www.formfutura.com/filaments/abs/titanx
+2026-08-25T16:45:07.576Z generic ok ABSpro (nozzle 243°C / bed 105°C) https://www.formfutura.com/filaments/abs/abspro
+2026-08-25T16:45:09.134Z generic ok EasyFil ABS (nozzle 243°C / bed 100°C) https://www.formfutura.com/filaments/abs/easyfil-abs
+2026-08-25T16:45:10.345Z generic ok ReForm - rTitan (nozzle 255°C / bed 85°C) https://www.formfutura.com/filaments/abs/reform-rtitan
+2026-08-25T16:45:12.053Z generic ok ABSpro Flame Retardant (nozzle 253°C / bed 105°C) https://www.formfutura.com/filaments/abs/abspro-flame-retardant
+2026-08-25T16:45:13.363Z generic ok Premium ABS Medical (nozzle 248°C / bed 95°C) https://www.formfutura.com/filaments/abs/premium-abs-medical
+2026-08-25T16:45:15.080Z generic ok ApolloX Flame Retardant (nozzle 255°C / bed 100°C) https://www.formfutura.com/filaments/asa/apollox-flame-retardant
+2026-08-25T16:45:16.357Z generic ok ApolloX (nozzle 255°C / bed 100°C) https://www.formfutura.com/filaments/asa/apollox
+2026-08-25T16:45:18.094Z generic ok ReForm - rApollo (nozzle 250°C / bed 70°C) https://www.formfutura.com/filaments/asa/reform-rapollo
+2026-08-25T16:45:19.364Z generic ok Premium ASA (nozzle 283°C / bed 100°C) https://www.formfutura.com/filaments/asa/premium-asa
+2026-08-25T16:45:21.076Z generic ok ApolloX CF10 (nozzle 253°C / bed 100°C) https://www.formfutura.com/filaments/asa/apollox-cf10
+2026-08-25T16:45:22.576Z generic ok ApolloX Kevlar (nozzle 260°C / bed 90°C) https://www.formfutura.com/filaments/asa/apollox-kevlar
+2026-08-25T16:45:24.091Z generic ok ApolloX Foaming (nozzle 253°C / bed 75°C) https://www.formfutura.com/filaments/asa/apollox-foaming
+2026-08-25T16:45:25.350Z generic ok LUVOCOM 3F PAHT KK 50056 FR (nozzle 285°C / bed 100°C) https://www.formfutura.com/filaments/pa-nylon/luvocom-3f-paht-kk-50056-fr
+2026-08-25T16:45:26.871Z generic ok STYX PA6 (nozzle 270°C / bed 100°C) https://www.formfutura.com/filaments/pa-nylon/styx-pa6
+2026-08-25T16:45:28.631Z generic ok STYX PA6-CF15 (nozzle 275°C / bed 100°C) https://www.formfutura.com/filaments/pa-nylon/styx-pa6-cf15
+2026-08-25T16:45:29.867Z generic ok STYX PA6-GF30 (nozzle 275°C / bed 100°C) https://www.formfutura.com/filaments/pa-nylon/styx-pa6-gf30
+2026-08-25T16:45:31.529Z generic ok LUVOCOM 3F PAHT 9936 (nozzle 265°C / bed 65°C) https://www.formfutura.com/filaments/pa-nylon/luvocom-3f-paht-9936
+2026-08-25T16:45:33.041Z generic ok LUVOCOM 3F PAHT 9825 (nozzle 265°C / bed 65°C) https://www.formfutura.com/filaments/pa-nylon/luvocom-3f-paht-9825
+2026-08-25T16:45:34.366Z generic ok LUVOCOM 3F PAHT CF 9891 (nozzle 265°C / bed 75°C) https://www.formfutura.com/filaments/pa-nylon/luvocom-3f-paht-cf-9891
+2026-08-25T16:45:36.056Z generic ok LUVOCOM 3F PAHT CF 9742 (nozzle 275°C / bed 70°C) https://www.formfutura.com/filaments/pa-nylon/luvocom-3f-paht-cf-9742
+2026-08-25T16:45:37.372Z generic ok LUVOCOM 3F PP CF 9928 (nozzle 225°C / bed 70°C) https://www.formfutura.com/filaments/pp/luvocom-3f-pp-cf-9928
+2026-08-25T16:45:38.869Z generic ok Centaur PP (nozzle 258°C / bed 83°C) https://www.formfutura.com/filaments/pp/centaur-pp
+2026-08-25T16:45:40.587Z generic ok FlexiFil TPC 30D (nozzle 245°C / bed 75°C) https://www.formfutura.com/filaments/tpc/flexifil-tpc-30d
+2026-08-25T16:45:42.251Z generic ok FlexiFil TPC 40D (nozzle 245°C / bed 75°C) https://www.formfutura.com/filaments/tpc/flexifil-tpc-40d
+2026-08-25T16:45:43.586Z generic ok ReForm - rTPU 95A (nozzle 235°C / bed 70°C) https://www.formfutura.com/filaments/tpu/reform-rtpu-95a
+2026-08-25T16:45:44.885Z generic ok Python Flex TPU 90A (nozzle 235°C / bed 30°C) https://www.formfutura.com/filaments/tpu/python-flex-tpu-90a
+2026-08-25T16:45:46.379Z generic ok Python Flex TPU 98A (nozzle 235°C / bed 30°C) https://www.formfutura.com/filaments/tpu/python-flex-tpu-98a
+2026-08-25T16:45:47.872Z generic ok ReForm - rTPU 85A (nozzle 235°C / bed 70°C) https://www.formfutura.com/filaments/tpu/reform-rtpu-85a
+2026-08-25T16:45:49.371Z generic ok ReForm - rTPU 90A (nozzle 235°C / bed 70°C) https://www.formfutura.com/filaments/tpu/reform-rtpu-90a
+2026-08-25T16:45:50.869Z generic ok ABSpro Flame Retardant (nozzle 253°C / bed 105°C) https://www.formfutura.com/filaments/pc/abspro-flame-retardant
+2026-08-25T16:45:52.622Z generic ok Kratos PC (nozzle 305°C / bed 115°C) https://www.formfutura.com/filaments/pc/kratos-pc
+2026-08-25T16:45:53.875Z generic ok Kratos PC CF10 (nozzle 290°C / bed 115°C) https://www.formfutura.com/filaments/pc/kratos-pc-cf10
+2026-08-25T16:45:55.383Z generic ok ABSpro (nozzle 243°C / bed 105°C) https://www.formfutura.com/filaments/pc/abspro
+2026-08-25T16:45:58.594Z generic ok BioFil - Wood (nozzle 190°C / bed 45°C) https://www.formfutura.com/filaments/pcl/biofil-wood
+2026-08-25T16:45:59.877Z generic ok AthenaX GF10 (nozzle 270°C / bed 93°C) https://www.formfutura.com/filaments/pctg/athenax-gf10
+2026-08-25T16:46:01.677Z generic ok AthenaX (nozzle 270°C / bed 93°C) https://www.formfutura.com/filaments/pctg/athenax
+2026-08-25T16:46:02.874Z generic ok AthenaX CF10 (nozzle 270°C / bed 93°C) https://www.formfutura.com/filaments/pctg/athenax-cf10
+2026-08-25T16:46:04.386Z generic ok EasyFil HIPS (nozzle 238°C / bed 90°C) https://www.formfutura.com/filaments/hips/easyfil-hips
+2026-08-25T16:46:06.069Z generic ok BVOH (nozzle 215°C / bed 70°C) https://www.formfutura.com/filaments/support-materials/bvoh
+2026-08-25T16:46:07.611Z generic ok Atlas Support (nozzle 195°C / bed 30°C) https://www.formfutura.com/filaments/support-materials/atlas-support
+2026-08-25T16:46:09.106Z generic ok AquaSolve - PVA (nozzle 200°C / bed 30°C) https://www.formfutura.com/filaments/support-materials/aquasolve-pva
+2026-08-25T16:46:10.597Z generic ok LUVOCOM 3F PPS CF 9938 (nozzle 320°C / bed 110°C) https://www.formfutura.com/filaments/carbon/luvocom-3f-pps-cf-9938
+2026-08-25T16:46:11.893Z generic ok Premium PLA CF03 (nozzle 255°C / bed 55°C) https://www.formfutura.com/filaments/carbon/premium-pla-cf03
+2026-08-25T16:46:13.382Z generic ok CarbonFil (nozzle 253°C / bed 85°C) https://www.formfutura.com/filaments/carbon/carbonfil
+2026-08-25T16:46:15.113Z generic ok CarbonFil CF03 (nozzle 260°C / bed 80°C) https://www.formfutura.com/filaments/carbon/carbonfil-cf03
+2026-08-25T16:46:16.625Z generic ok Kratos PC CF10 (nozzle 290°C / bed 115°C) https://www.formfutura.com/filaments/carbon/kratos-pc-cf10
+2026-08-25T16:46:17.887Z generic ok ApolloX CF10 (nozzle 253°C / bed 100°C) https://www.formfutura.com/filaments/carbon/apollox-cf10
+2026-08-25T16:46:19.382Z generic ok STYX PA6-CF15 (nozzle 275°C / bed 100°C) https://www.formfutura.com/filaments/carbon/styx-pa6-cf15
+2026-08-25T16:46:20.887Z generic ok LUVOCOM 3F PAHT CF 9891 (nozzle 265°C / bed 75°C) https://www.formfutura.com/filaments/carbon/luvocom-3f-paht-cf-9891
+2026-08-25T16:46:22.728Z generic ok LUVOCOM 3F PAHT CF 9742 (nozzle 275°C / bed 70°C) https://www.formfutura.com/filaments/carbon/luvocom-3f-paht-cf-9742
+2026-08-25T16:46:23.886Z generic ok LUVOCOM 3F PP CF 9928 (nozzle 225°C / bed 70°C) https://www.formfutura.com/filaments/carbon/luvocom-3f-pp-cf-9928
+2026-08-25T16:46:25.565Z generic ok LUVOCOM 3F PEEK CF 9676 (nozzle 425°C / bed 120°C) https://www.formfutura.com/filaments/carbon/luvocom-3f-peek-cf-9676
+2026-08-25T16:46:26.888Z generic ok AthenaX CF10 (nozzle 270°C / bed 93°C) https://www.formfutura.com/filaments/carbon/athenax-cf10
+2026-08-25T16:46:28.395Z generic ok MetalFil - Brass (nozzle 190°C / bed 30°C) https://www.formfutura.com/filaments/metal/metalfil-brass
+2026-08-25T16:46:29.885Z generic ok MetalFil - Classic Copper (nozzle 205°C / bed 30°C) https://www.formfutura.com/filaments/metal/metalfil-classic-copper
+2026-08-25T16:46:31.573Z generic ok MetalFil - Ancient Bronze (nozzle 210°C / bed 30°C) https://www.formfutura.com/filaments/metal/metalfil-ancient-bronze
+2026-08-25T16:46:32.883Z generic ok EasyWood (nozzle 215°C / bed 55°C) https://www.formfutura.com/filaments/wood/easywood
+2026-08-25T16:46:34.389Z generic ok BioFil - Wood (nozzle 190°C / bed 45°C) https://www.formfutura.com/filaments/wood/biofil-wood
+2026-08-25T16:46:35.895Z generic ok StoneFil (nozzle 205°C / bed 55°C) https://www.formfutura.com/filaments/stone/stonefil
+2026-08-25T16:46:37.393Z generic ok LUVOCOM 3F PEEK CF 9676 (nozzle 425°C / bed 120°C) https://www.formfutura.com/filaments/chemical-resistant/luvocom-3f-peek-cf-9676
+2026-08-25T16:46:38.897Z generic ok EasyFil ePETG (nozzle 255°C / bed 80°C) https://www.formfutura.com/filaments/chemical-resistant/easyfil-epetg
+2026-08-25T16:46:40.381Z generic ok HDglass (nozzle 248°C / bed 85°C) https://www.formfutura.com/filaments/chemical-resistant/hdglass
+2026-08-25T16:46:41.905Z generic ok Bulk PETG (nozzle 243°C / bed 85°C) https://www.formfutura.com/filaments/chemical-resistant/bulk-petg
+2026-08-25T16:46:43.394Z generic ok ReFill PETG (nozzle 235°C / bed 78°C) https://www.formfutura.com/filaments/chemical-resistant/refill-petg
+2026-08-25T16:46:44.906Z generic ok ReForm - rPET (nozzle 243°C / bed 70°C) https://www.formfutura.com/filaments/chemical-resistant/reform-rpet
+2026-08-25T16:46:46.400Z generic ok Premium PETG Flame Retardant (nozzle 260°C / bed 70°C) https://www.formfutura.com/filaments/chemical-resistant/premium-petg-flame-retardant
+2026-08-25T16:46:47.900Z generic ok Premium ASA (nozzle 283°C / bed 100°C) https://www.formfutura.com/filaments/chemical-resistant/premium-asa
+2026-08-25T16:46:49.398Z generic ok STYX PA6 (nozzle 270°C / bed 100°C) https://www.formfutura.com/filaments/chemical-resistant/styx-pa6
+2026-08-25T16:46:50.896Z generic ok STYX PA6-CF15 (nozzle 275°C / bed 100°C) https://www.formfutura.com/filaments/chemical-resistant/styx-pa6-cf15
+2026-08-25T16:46:52.402Z generic ok STYX PA6-GF30 (nozzle 275°C / bed 100°C) https://www.formfutura.com/filaments/chemical-resistant/styx-pa6-gf30
+2026-08-25T16:46:53.905Z generic ok LUVOCOM 3F PAHT 9936 (nozzle 265°C / bed 65°C) https://www.formfutura.com/filaments/chemical-resistant/luvocom-3f-paht-9936
+2026-08-25T16:46:55.438Z generic ok LUVOCOM 3F PAHT 9825 (nozzle 265°C / bed 65°C) https://www.formfutura.com/filaments/chemical-resistant/luvocom-3f-paht-9825
+2026-08-25T16:46:56.906Z generic ok LUVOCOM 3F PAHT CF 9891 (nozzle 265°C / bed 75°C) https://www.formfutura.com/filaments/chemical-resistant/luvocom-3f-paht-cf-9891
+2026-08-25T16:46:58.410Z generic ok LUVOCOM 3F PAHT CF 9742 (nozzle 275°C / bed 70°C) https://www.formfutura.com/filaments/chemical-resistant/luvocom-3f-paht-cf-9742
+2026-08-25T16:46:59.907Z generic ok LUVOCOM 3F PAHT KK 50056 FR (nozzle 285°C / bed 100°C) https://www.formfutura.com/filaments/chemical-resistant/luvocom-3f-paht-kk-50056-fr
+2026-08-25T16:47:01.408Z generic ok Centaur PP (nozzle 258°C / bed 83°C) https://www.formfutura.com/filaments/chemical-resistant/centaur-pp
+2026-08-25T16:47:02.907Z generic ok AthenaX (nozzle 270°C / bed 93°C) https://www.formfutura.com/filaments/chemical-resistant/athenax
+2026-08-25T16:47:04.599Z generic ok LUVOCOM 3F PEKK 50082 (nozzle 340°C / bed 120°C) https://www.formfutura.com/filaments/chemical-resistant/luvocom-3f-pekk-50082
+2026-08-25T16:47:06.082Z generic ok LUVOCOM 3F PEEK 9581 (nozzle 395°C / bed 120°C) https://www.formfutura.com/filaments/chemical-resistant/luvocom-3f-peek-9581
+2026-08-25T16:47:07.418Z generic ok ApolloX Flame Retardant (nozzle 255°C / bed 100°C) https://www.formfutura.com/filaments/uv-resistant/apollox-flame-retardant
+2026-08-25T16:47:08.922Z generic ok EasyFil ePETG (nozzle 255°C / bed 80°C) https://www.formfutura.com/filaments/uv-resistant/easyfil-epetg
+2026-08-25T16:47:10.411Z generic ok HDglass (nozzle 248°C / bed 85°C) https://www.formfutura.com/filaments/uv-resistant/hdglass
+2026-08-25T16:47:12.161Z generic ok Bulk PETG (nozzle 243°C / bed 85°C) https://www.formfutura.com/filaments/uv-resistant/bulk-petg
+2026-08-25T16:47:13.592Z generic ok ReFill PETG (nozzle 235°C / bed 78°C) https://www.formfutura.com/filaments/uv-resistant/refill-petg
+2026-08-25T16:47:14.912Z generic ok ReForm - rPET (nozzle 243°C / bed 70°C) https://www.formfutura.com/filaments/uv-resistant/reform-rpet
+2026-08-25T16:47:16.409Z generic ok Premium PETG Flame Retardant (nozzle 260°C / bed 70°C) https://www.formfutura.com/filaments/uv-resistant/premium-petg-flame-retardant
+2026-08-25T16:47:17.921Z generic ok ApolloX (nozzle 255°C / bed 100°C) https://www.formfutura.com/filaments/uv-resistant/apollox
+2026-08-25T16:47:19.411Z generic ok ReForm - rApollo (nozzle 250°C / bed 70°C) https://www.formfutura.com/filaments/uv-resistant/reform-rapollo
+2026-08-25T16:47:20.916Z generic ok Premium ASA (nozzle 283°C / bed 100°C) https://www.formfutura.com/filaments/uv-resistant/premium-asa
+2026-08-25T16:47:22.418Z generic ok ApolloX CF10 (nozzle 253°C / bed 100°C) https://www.formfutura.com/filaments/uv-resistant/apollox-cf10
+2026-08-25T16:47:23.924Z generic ok ApolloX Kevlar (nozzle 260°C / bed 90°C) https://www.formfutura.com/filaments/uv-resistant/apollox-kevlar
+2026-08-25T16:47:25.420Z generic ok ApolloX Foaming (nozzle 253°C / bed 75°C) https://www.formfutura.com/filaments/uv-resistant/apollox-foaming
+2026-08-25T16:47:25.427Z generic ok ReFill PLA Starter Gray (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-gray-refill-1kg-175mm
+2026-08-25T16:47:25.434Z generic ok PLA Magic Neon Sunrise (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-neon-sunrise-03kg-175mm
+2026-08-25T16:47:25.441Z generic ok PLA Magic Dragon Fruit (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-dragon-fruit-03kg-175mm
+2026-08-25T16:47:25.444Z generic ok PLA Magic Fire (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-fire-03kg-175mm
+2026-08-25T16:47:25.449Z generic ok PLA Magic Frozen (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-frozen-03kg-175mm
+2026-08-25T16:47:25.452Z generic ok PLA Magic Gold-Silver (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-gold-silver-03kg-175mm
+2026-08-25T16:47:25.455Z generic ok PLA Magic Mistic Green (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-mistic-green-03kg-175mm
+2026-08-25T16:47:25.458Z generic ok PLA Magic Mistic Tiger (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-mistic-tiger-03kg-175mm
+2026-08-25T16:47:26.061Z generic ok ReFill PLA Magic Neon Sunrise (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-neon-sunrise-refill-1kg-175mm
+2026-08-25T16:47:27.254Z generic ok ReFill PLA Magic Dragon Fruit (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-dragon-fruit-refill-1kg-175mm
+2026-08-25T16:47:29.013Z generic ok ReFill PLA Magic Frozen (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-frozen-refill-1kg-175mm
+2026-08-25T16:47:30.351Z generic ok ReFill PLA Magic Gold-Silver (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-gold-silver-refill-1kg-175mm
+2026-08-25T16:47:31.866Z generic ok ReFill PLA Magic Mistic Green (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-mistic-green-refill-1kg-175mm
+2026-08-25T16:47:33.460Z generic ok ReFill PLA Magic Mistic Purple (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-mistic-purple-refill-1kg-175mm
+2026-08-25T16:47:34.901Z generic ok ReFill PLA Magic Mistic Tiger (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-mistic-tiger-refill-1kg-175mm
+2026-08-25T16:47:36.350Z generic ok ReFill PLA Multicolour Flower (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-multicolour-flower-refill-1kg-175mm
+2026-08-25T16:47:37.986Z generic ok ReFill PLA Starter Emerald Green Satin (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-emerald-green-satin-refill-1kg-175mm
+2026-08-25T16:47:39.377Z generic ok ReFill PLA Pastel Green (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-pastel-green-refill-1kg-175mm
+2026-08-25T16:47:41.276Z generic ok ReFill PLA Rainbow Fire (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-rainbow-fire-refill-1kg-175mm
+2026-08-25T16:47:42.326Z generic ok PLA Starter Black (nozzle 208°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-black-100g-175mm
+2026-08-25T16:47:44.171Z generic ok ASA Black (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-asa-black-50g-175mm
+2026-08-25T16:47:45.465Z generic ok ReFill PLA Starter Dark Blue (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-dark-blue-refill-1kg-175mm
+2026-08-25T16:47:47.446Z generic ok ReFill PLA Starter Green (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-green-refill-1kg-175mm
+2026-08-25T16:47:49.006Z generic ok ReFill PLA Starter Red (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-red-refill-1kg-175mm
+2026-08-25T16:47:50.480Z generic ok ReFill PLA Starter Pearl Gold (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-pearl-gold-refill-1kg-175mm
+2026-08-25T16:47:51.484Z generic ok ReFill PLA Starter Rubin Red (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-rubin-red-refill-1kg-175mm
+2026-08-25T16:47:53.338Z generic ok PLA-Silk Graphite (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-silk-graphite-0100-175mm
+2026-08-25T16:47:54.931Z generic ok ReFill PLA Starter Orange (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-orange-refill-1kg-175mm
+2026-08-25T16:47:55.945Z generic ok ReFill PLA Starter Blue Pearl (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-blue-pearl-refill-1kg-175mm
+2026-08-25T16:47:57.940Z generic ok ReFill PLA Starter Neon Green (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-neon-green-refill-1kg-175mm
+2026-08-25T16:47:59.408Z generic ok ReFill PLA Starter Neon Orange (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-neon-orange-refill-1kg-175mm
+2026-08-25T16:48:00.959Z generic ok ReFill PLA Starter Neon Yellow (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-neon-yellow-refill-1kg-175mm
+2026-08-25T16:48:02.440Z generic ok ReFill PLA Starter Satin Gray (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-satin-gray-refill-1kg-175mm
+2026-08-25T16:48:03.730Z generic ok ReFill PLA Pastel Yellow (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-pastel-yellow-refill-1kg-175mm
+2026-08-25T16:48:04.788Z generic ok ReFill PLA Pastel Blue (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-pastel-blue-refill-1kg-175mm
+2026-08-25T16:48:06.797Z generic ok ReFill PLA Pastel Lavender (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-pastel-lavender-refill-1kg-175mm
+2026-08-25T16:48:08.263Z generic ok ReFill PLA Pastel Peach (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-pastel-peach-refill-1kg-175mm
+2026-08-25T16:48:09.373Z generic ok ReFill PLA Pastel Pink (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-pastel-pink-refill-1kg-175mm
+2026-08-25T16:48:11.222Z generic ok PLA Plus ProSpeed(Impact) White (nozzle 210°C / bed 60°C) https://www.rosa3d.pl/filament-3d-pla-plus-prospeedimpact-white-3kg-175mm
+2026-08-25T16:48:12.802Z generic ok ReFill PLA Starter Lithophane White (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-lithophane-white-refill-1kg-175mm
+2026-08-25T16:48:14.123Z generic ok PLA Rainbow Tropical (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-rainbow-tropical-035kg-175mm
+2026-08-25T16:48:15.304Z generic ok ReFill PLA Rainbow Tropical (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-rainbow-tropical-refill-1kg-175mm
+2026-08-25T16:48:17.281Z generic ok PLA CarbonLook CarbonLook (nozzle 223°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-carbonlook-carbonlook-05kg-175mm
+2026-08-25T16:48:18.725Z generic ok PET-G CarbonLook Carbon Black (nozzle 238°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-carbonlook-carbon-black-05kg-175mm
+2026-08-25T16:48:19.699Z generic ok ReFill PET-G CarbonLook Carbon Black (nozzle 238°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-carbonlook-carbon-black-refill-1kg-175mm
+2026-08-25T16:48:21.188Z generic ok ReFill PLA CarbonLook CarbonLook (nozzle 223°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-carbonlook-carbonlook-refill-1kg-175mm
+2026-08-25T16:48:23.226Z generic ok PET-G Standard HS Glow in the Dark Green (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-glow-in-the-dark-green-05kg-175mm
+2026-08-25T16:48:24.162Z generic ok PLA Starter Glow in the Dark Blue (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-glow-in-the-dark-blue-05kg-175mm
+2026-08-25T16:48:26.145Z generic ok PLA Starter Glow in the Dark Green (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-glow-in-the-dark-green-05kg-175mm
+2026-08-25T16:48:27.332Z generic ok ReFill PLA-Silk Yellow (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-yellow-refill-1kg-175mm
+2026-08-25T16:48:29.327Z generic ok ReFill PLA-Silk White (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-white-refill-1kg-175mm
+2026-08-25T16:48:30.864Z generic ok ReFill PLA-Silk Violet (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-violet-refill-1kg-175mm
+2026-08-25T16:48:31.764Z generic ok ReFill PLA-Silk Steel (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-steel-refill-1kg-175mm
+2026-08-25T16:48:33.895Z generic ok ReFill PLA-Silk Silver (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-silver-refill-1kg-175mm
+2026-08-25T16:48:35.338Z generic ok ReFill PLA-Silk Red (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-red-refill-1kg-175mm
+2026-08-25T16:48:36.377Z generic ok ReFill PLA-Silk Graphite (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-graphite-refill-1kg-175mm
+2026-08-25T16:48:38.355Z generic ok ReFill PLA-Silk Gold (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-gold-refill-1kg-175mm
+2026-08-25T16:48:39.354Z generic ok ReFill PLA-Silk Fuchsia (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-fuchsia-refill-1kg-175mm
+2026-08-25T16:48:41.308Z generic ok ReFill PLA-Silk Copper (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-copper-refill-1kg-175mm
+2026-08-25T16:48:42.364Z generic ok ReFill PLA-Silk Bronze (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-bronze-refill-1kg-175mm
+2026-08-25T16:48:44.336Z generic ok ReFill PLA-Silk Blue (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-blue-refill-1kg-175mm
+2026-08-25T16:48:45.797Z generic ok ReFill PLA Multicolour Frozen (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-multicolour-frozen-refill-1kg-175mm
+2026-08-25T16:48:47.292Z generic ok ReFill PLA Multicolour Candy (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-multicolour-candy-refill-1kg-175mm
+2026-08-25T16:48:48.314Z generic ok ReFill PLA Magic Mistic Violet (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-mistic-violet-refill-1kg-175mm
+2026-08-25T16:48:50.375Z generic ok PLA Magic Mistic Purple (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-mistic-purple-03kg-175mm
+2026-08-25T16:48:51.906Z generic ok ReFill PLA Magic Lagoon (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-lagoon-refill-1kg-175mm
+2026-08-25T16:48:53.239Z generic ok PLA Rainbow Pastel (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-rainbow-pastel-03kg-175mm
+2026-08-25T16:48:54.253Z generic ok ABS+ Matt Black (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-plus-matt-black-1kg-175mm
+2026-08-25T16:48:56.365Z generic ok PET-G Standard HS White (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-white-100g-175mm
+2026-08-25T16:48:57.711Z generic ok ReFill PLA Multicolour Pacific (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-multicolour-pacific-refill-1kg-175mm
+2026-08-25T16:48:58.754Z generic ok PLA Multicolour Candy (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-multicolour-candy-035kg-175mm
+2026-08-25T16:49:00.254Z generic ok R-PLA Black (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-r-pla-black-3kg-175mm
+2026-08-25T16:49:01.706Z generic ok PLA Multicolour Flower (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-multicolour-flower-035kg-175mm
+2026-08-25T16:49:03.860Z generic ok PLA Multicolour Frozen (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-multicolour-frozen-035kg-175mm
+2026-08-25T16:49:04.789Z generic ok PVA-2 Natural (nozzle 225°C / bed 60°C) https://www.rosa3d.pl/filament-3d-pva-2-natural-50g-175mm
+2026-08-25T16:49:06.706Z generic ok PLA Multicolour Jungle (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-multicolour-jungle-035kg-175mm
+2026-08-25T16:49:08.375Z generic ok PLA Multicolour Moon (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-multicolour-moon-035kg-175mm
+2026-08-25T16:49:09.066Z generic ok PLA Rainbow Fire (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-rainbow-fire-035kg-175mm
+2026-08-25T16:49:11.415Z generic ok PLA Magic Mistic Violet (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-mistic-violet-03kg-175mm
+2026-08-25T16:49:12.848Z generic ok ReFill PLA Magic Goblin (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-goblin-refill-1kg-175mm
+2026-08-25T16:49:14.362Z generic ok PLA Magic Goblin (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-goblin-03kg-175mm
+2026-08-25T16:49:15.862Z generic ok PLA Magic Midnight City (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-midnight-city-03kg-175mm
+2026-08-25T16:49:16.845Z generic ok ReFill PLA Magic Midnight City (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-midnight-city-refill-1kg-175mm
+2026-08-25T16:49:18.270Z generic ok ASA Black (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-asa-black-07kg-175mm
+2026-08-25T16:49:20.313Z generic ok ReFill PET-G Structure HS Light Gray (nozzle 245°C / bed 65°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-structure-hs-light-gray-refill-1kg-175mm
+2026-08-25T16:49:22.778Z generic ok ROSA-Flex 85A White (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-85a-white-05kg-175mm
+2026-08-25T16:49:24.189Z generic ok ROSA-Flex 85A Transparent (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-85a-transparent-05kg-175mm
+2026-08-25T16:49:25.735Z generic ok ROSA-Flex 85A Red (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-85a-red-05kg-175mm
+2026-08-25T16:49:27.272Z generic ok ROSA-Flex 85A Black (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-85a-black-05kg-175mm
+2026-08-25T16:49:28.747Z generic ok ROSA-Flex 85A Yellow (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-85a-yellow-05kg-175mm
+2026-08-25T16:49:30.888Z generic ok ROSA-Flex 96A Red (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-red-05kg-175mm
+2026-08-25T16:49:32.439Z generic ok ROSA-Flex 96A Green (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-green-05kg-175mm
+2026-08-25T16:49:34.438Z generic ok ROSA-Flex 96A Glow in the Dark Green (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-glow-in-the-dark-green-05kg-175mm
+2026-08-25T16:49:34.780Z generic ok ROSA-Flex 96A Black (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-black-05kg-175mm
+2026-08-25T16:49:36.468Z generic ok ReFill PLA Magic Aurora (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-aurora-refill-1kg-175mm
+2026-08-25T16:49:37.891Z generic ok PLA Magic Aurora (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-aurora-03kg-175mm
+2026-08-25T16:49:39.292Z generic ok PLA Magic Treasure (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-treasure-03kg-175mm
+2026-08-25T16:49:41.075Z generic ok ReFill PLA Magic Treasure (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-treasure-refill-1kg-175mm
+2026-08-25T16:49:42.834Z generic ok R-PLA Black (nozzle 215°C / bed 50°C) https://www.rosa3d.pl/filament-3d-r-pla-black-1kg-175mm
+2026-08-25T16:49:43.832Z generic ok PLA Magic Carnival (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-carnival-03kg-175mm
+2026-08-25T16:49:45.353Z generic ok ReFill PLA Magic Carnival (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-carnival-refill-1kg-175mm
+2026-08-25T16:49:46.897Z generic ok PLA Starter Black (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-black-1kg-175mm
+2026-08-25T16:49:48.415Z generic ok ReFill PLA Starter Pink (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-pink-refill-1kg-175mm
+2026-08-25T16:49:50.466Z generic ok PLA Magic Lagoon (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-lagoon-03kg-175mm
+2026-08-25T16:49:51.986Z generic ok ReFill PLA Magic Storm Shadow (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-storm-shadow-refill-1kg-175mm
+2026-08-25T16:49:53.492Z generic ok PLA Magic Storm Shadow (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-storm-shadow-03kg-175mm
+2026-08-25T16:49:54.861Z generic ok ReFill PLA Magic Army (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-army-refill-1kg-175mm
+2026-08-25T16:49:56.653Z generic ok PLA Magic Army (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-army-03kg-175mm
+2026-08-25T16:49:57.869Z generic ok ReFill PLA Magic Vintage Glass (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-vintage-glass-refill-1kg-175mm
+2026-08-25T16:49:59.432Z generic ok PLA Magic Vintage Glass (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-vintage-glass-03kg-175mm
+2026-08-25T16:50:00.925Z generic ok ReFill PET-G Standard HS Red Wine Transparent (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-red-wine-transparent-refill-1kg-175mm
+2026-08-25T16:50:01.938Z generic ok ReFill PET-G Standard HS Red Transparent (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-red-transparent-refill-1kg-175mm
+2026-08-25T16:50:03.897Z generic ok ABS V0 FR White (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-v0-fr-white-25kg-175mm
+2026-08-25T16:50:05.913Z generic ok ReFill PET-G Standard HS Pure Green Transparent (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-pure-green-transparent-refill-1kg-175mm
+2026-08-25T16:50:07.156Z generic ok ReFill PET-G Standard HS Pearl Gold (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-pearl-gold-refill-1kg-175mm
+2026-08-25T16:50:08.566Z generic ok ReFill PET-G Standard HS Neon Yellow (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-neon-yellow-refill-1kg-175mm
+2026-08-25T16:50:10.075Z generic ok PET-G Standard HS Black (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-black-100g-175mm
+2026-08-25T16:50:11.103Z generic ok ReFill PET-G Standard HS Navy Blue Transparent (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-navy-blue-transparent-refill-1kg-175mm
+2026-08-25T16:50:12.883Z generic ok ReFill PET-G Standard HS Light Green Transparent (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-light-green-transparent-refill-1kg-175mm
+2026-08-25T16:50:14.330Z generic ok PET-G Standard HS Gray (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-gray-100g-175mm
+2026-08-25T16:50:15.434Z generic ok ReFill PET-G Standard HS Juicy Orange (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-juicy-orange-refill-1kg-175mm
+2026-08-25T16:50:17.581Z generic ok ReFill PET-G Standard HS Gray (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-gray-refill-1kg-175mm
+2026-08-25T16:50:19.028Z generic ok ReFill PET-G Standard HS Gold Metallic (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-gold-metallic-refill-1kg-175mm
+2026-08-25T16:50:20.630Z generic ok ReFill PET-G Standard HS Glitter Brillant Silver (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-glitter-brillant-silver-refill-1kg-175mm
+2026-08-25T16:50:21.503Z generic ok ReFill PET-G Standard HS Blue Sky Transparent (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-blue-sky-transparent-refill-1kg-175mm
+2026-08-25T16:50:23.000Z generic ok ReFill PET-G Standard HS Black (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-black-refill-1kg-175mm
+2026-08-25T16:50:25.515Z generic ok ReFill PET-G Standard HS Army Green (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-army-green-refill-1kg-175mm
+2026-08-25T16:50:26.516Z generic ok ReFill PET-G Standard HS Aluminium (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-aluminium-refill-1kg-175mm
+2026-08-25T16:50:27.837Z generic ok ASA White (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-asa-white-25kg-175mm
+2026-08-25T16:50:29.288Z generic ok ABS V0 FR White (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-v0-fr-white-07kg-175mm
+2026-08-25T16:50:30.965Z generic ok PLA Magic XMAS (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-xmas-03kg-175mm
+2026-08-25T16:50:32.422Z generic ok ReFill PLA Magic XMAS (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-xmas-refill-1kg-175mm
+2026-08-25T16:50:33.394Z generic ok PLA Magic Pink Dynamic (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-pink-dynamic-03kg-175mm
+2026-08-25T16:50:35.141Z generic ok ReFill PLA Magic Pink Dynamic (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-pink-dynamic-refill-1kg-175mm
+2026-08-25T16:50:36.946Z generic ok ReFill PLA-Silk Green (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-green-refill-1kg-175mm
+2026-08-25T16:50:37.807Z generic ok PET-G Standard HS Transparent (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-transparent-3kg-175mm
+2026-08-25T16:50:39.860Z generic ok PET-G Standard HS Black (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-black-3kg-175mm
+2026-08-25T16:50:41.511Z generic ok PET-G Standard HS Black (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-black-45kg-175mm
+2026-08-25T16:50:42.891Z generic ok PET-G Standard HS Gray (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-gray-3kg-175mm
+2026-08-25T16:50:44.353Z generic ok PET-G Standard HS White (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-white-3kg-175mm
+2026-08-25T16:50:45.849Z generic ok PET-G Standard HS Black (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-black-1kg-175mm
+2026-08-25T16:50:47.140Z generic ok ReFill PET-G Standard HS White (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pet-g-standard-hs-white-refill-1kg-175mm
+2026-08-25T16:50:48.966Z generic ok ReFill R-PET-G Impact Black (nozzle 245°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-r-pet-g-impact-black-refill-1kg-175mm
+2026-08-25T16:50:50.352Z generic ok PLA Starter Yellow (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-yellow-1kg-175mm
+2026-08-25T16:50:51.750Z generic ok ReFill R-PET-G Impact White (nozzle 245°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-r-pet-g-impact-white-refill-1kg-175mm
+2026-08-25T16:50:52.930Z generic ok ABS+ Matt Gray (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-plus-matt-gray-1kg-175mm
+2026-08-25T16:50:54.241Z generic ok ABS+ Matt Juicy Orange (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-plus-matt-juicy-orange-1kg-175mm
+2026-08-25T16:50:55.757Z generic ok ABS+ Matt Red (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-plus-matt-red-1kg-175mm
+2026-08-25T16:50:57.258Z generic ok ABS+ Matt White (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-plus-matt-white-1kg-175mm
+2026-08-25T16:50:58.779Z generic ok ABS+ Matt Yellow (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-plus-matt-yellow-1kg-175mm
+2026-08-25T16:51:00.341Z generic ok ReFill ABS+ Matt Black (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-refill-abs-plus-matt-black-refill-1kg-175mm
+2026-08-25T16:51:02.411Z generic ok PC-PBT(HT-UV-IMPACT) Black (nozzle 250°C / bed 100°C) https://www.rosa3d.pl/filament-3d-pc-pbtht-uv-impact-black-05kg-175mm
+2026-08-25T16:51:03.877Z generic ok PC-PBT(HT-UV-IMPACT) Black (nozzle 250°C / bed 100°C) https://www.rosa3d.pl/filament-3d-pc-pbtht-uv-impact-black-1kg-175mm
+2026-08-25T16:51:05.433Z generic ok PVA-2 Natural (nozzle 225°C / bed 60°C) https://www.rosa3d.pl/filament-3d-pva-2-natural-03kg-175mm
+2026-08-25T16:51:06.752Z generic ok PC + PTFE White (nozzle 285°C / bed 105°C) https://www.rosa3d.pl/filament-3d-pc-plus-ptfe-white-05kg-175mm
+2026-08-25T16:51:07.732Z generic ok ABS+ Matt Black (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-plus-matt-black-25kg-175mm
+2026-08-25T16:51:09.371Z generic ok ReFill PLA-Silk Emerald Green (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-emerald-green-refill-1kg-175mm
+2026-08-25T16:51:11.446Z generic ok ROSA-Flex 96A Ivory Skin (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-ivory-skin-05kg-175mm
+2026-08-25T16:51:12.870Z generic ok ROSA-Flex 96A Neon Green (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-neon-green-05kg-175mm
+2026-08-25T16:51:14.392Z generic ok PLA Magic Gold-Copper (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-gold-copper-03kg-175mm
+2026-08-25T16:51:15.972Z generic ok ABS V0 FR Black (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-v0-fr-black-25kg-175mm
+2026-08-25T16:51:17.738Z generic ok ReFill PLA Starter Juicy Green (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-juicy-green-refill-1kg-175mm
+2026-08-25T16:51:18.984Z generic ok ReFill PLA Magic Mistic Red (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-mistic-red-refill-1kg-175mm
+2026-08-25T16:51:19.852Z generic ok PLA Magic Mistic Red (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-mistic-red-03kg-175mm
+2026-08-25T16:51:21.434Z generic ok ReFill PLA Magic Fire (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-fire-refill-1kg-175mm
+2026-08-25T16:51:23.617Z generic ok ReFill PLA Starter Blue Sky (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-blue-sky-refill-1kg-175mm
+2026-08-25T16:51:24.931Z generic ok PLA Starter Blue Sky (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-blue-sky-1kg-175mm
+2026-08-25T16:51:25.904Z generic ok ASA White (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-asa-white-07kg-175mm
+2026-08-25T16:51:27.856Z generic ok PLA Galaxy Brillant Silver (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-galaxy-brillant-silver-05kg-175mm
+2026-08-25T16:51:29.382Z generic ok PLA Galaxy Sapphire (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-galaxy-sapphire-05kg-175mm
+2026-08-25T16:51:30.851Z generic ok PLA Galaxy Black (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-galaxy-black-05kg-175mm
+2026-08-25T16:51:32.384Z generic ok PLA Galaxy Emerald Green (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-galaxy-emerald-green-05kg-175mm
+2026-08-25T16:51:33.888Z generic ok PLA Galaxy Karmin Red (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-galaxy-karmin-red-05kg-175mm
+2026-08-25T16:51:35.437Z generic ok PLA Galaxy Navy Blue (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-galaxy-navy-blue-05kg-175mm
+2026-08-25T16:51:36.903Z generic ok PLA Galaxy Red Wine (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-galaxy-red-wine-05kg-175mm
+2026-08-25T16:51:37.866Z generic ok PLA Galaxy Violet (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-galaxy-violet-05kg-175mm
+2026-08-25T16:51:39.297Z generic ok PET-G Standard HS White (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-white-1kg-175mm
+2026-08-25T16:51:40.770Z generic ok ReFill ASA Yellow (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-refill-asa-yellow-refill-1kg-175mm
+2026-08-25T16:51:42.332Z generic ok ABS V0 FR Black (nozzle 250°C / bed 95°C) https://www.rosa3d.pl/filament-3d-abs-v0-fr-black-07kg-175mm
+2026-08-25T16:51:44.574Z generic ok PLA Pastel Mint (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-pastel-mint-035kg-175mm
+2026-08-25T16:51:45.877Z generic ok PLA Starter Red (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-red-1kg-175mm
+2026-08-25T16:51:47.054Z generic ok ReFill PLA Rainbow Pastel (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-rainbow-pastel-refill-1kg-175mm
+2026-08-25T16:51:48.260Z generic ok ReFill PLA Rainbow Silk 1,75mm 1kg (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-rainbow-silk-175mm-1kg
+2026-08-25T16:51:50.393Z generic ok ReFill PLA Rainbow Ocean (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-rainbow-ocean-refill-1kg-175mm
+2026-08-25T16:51:51.487Z generic ok ReFill PLA Starter Blue (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-blue-refill-1kg-175mm
+2026-08-25T16:51:52.780Z generic ok PLA Starter Juicy Green (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-juicy-green-1kg-175mm
+2026-08-25T16:51:54.528Z generic ok ReFill PLA Magic Gold-Copper (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-gold-copper-refill-1kg-175mm
+2026-08-25T16:51:56.414Z generic ok PLA Magic Glamour (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-magic-glamour-03kg-175mm
+2026-08-25T16:51:57.412Z generic ok ReFill PLA Magic Glamour (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-magic-glamour-refill-1kg-175mm
+2026-08-25T16:51:58.936Z generic ok ReFill PLA Starter Light Gray (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-light-gray-refill-1kg-175mm
+2026-08-25T16:52:00.265Z generic ok PET-G + CF Carbon Black (nozzle 265°C / bed 80°C) https://www.rosa3d.pl/filament-3d-pet-g-plus-cf-carbon-black-05kg-175mm
+2026-08-25T16:52:02.007Z generic ok ReFill PLA Starter Tanned Skin (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-tanned-skin-refill-1kg-175mm
+2026-08-25T16:52:03.829Z generic ok PET-G + CF Carbon Black (nozzle 265°C / bed 80°C) https://www.rosa3d.pl/filament-3d-pet-g-plus-cf-carbon-black-1kg-175mm
+2026-08-25T16:52:04.982Z generic ok ReFill PLA Starter Porcelain Skin (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-porcelain-skin-refill-1kg-175mm
+2026-08-25T16:52:06.854Z generic ok PLA Starter Gray (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-gray-1kg-175mm
+2026-08-25T16:52:08.002Z generic ok ReFill PLA Starter Light Brown (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-light-brown-refill-1kg-175mm
+2026-08-25T16:52:10.083Z generic ok ReFill PLA Starter White (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-white-refill-1kg-175mm
+2026-08-25T16:52:11.604Z generic ok ReFill PLA Starter White Pearl Satin (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-white-pearl-satin-refill-1kg-175mm
+2026-08-25T16:52:13.080Z generic ok ReFill PLA Starter Satin Pink (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-satin-pink-refill-1kg-175mm
+2026-08-25T16:52:14.095Z generic ok ReFill PLA Starter Natural Transparent (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-natural-transparent-refill-1kg-175mm
+2026-08-25T16:52:15.123Z generic ok ReFill PLA Starter Chocolate Brown (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-chocolate-brown-refill-1kg-175mm
+2026-08-25T16:52:17.676Z generic ok ReFill PLA Starter Army Green (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-army-green-refill-1kg-175mm
+2026-08-25T16:52:18.976Z generic ok ReFill PLA Starter Lithophane Cyan (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-lithophane-cyan-refill-1kg-175mm
+2026-08-25T16:52:20.370Z generic ok ReFill PLA Starter Lithophane Magenta (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-lithophane-magenta-refill-1kg-175mm
+2026-08-25T16:52:21.846Z generic ok ReFill PLA Starter Lithophane Yellow (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-lithophane-yellow-refill-1kg-175mm
+2026-08-25T16:52:23.075Z generic ok ReFill PLA Starter Black (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-black-refill-1kg-175mm
+2026-08-25T16:52:24.265Z generic ok PLA Starter White (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-white-1kg-175mm
+2026-08-25T16:52:26.448Z generic ok ReFill ASA Gray (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-refill-asa-gray-refill-1kg-175mm
+2026-08-25T16:52:27.367Z generic ok ASA Gray (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-asa-gray-25kg-175mm
+2026-08-25T16:52:29.339Z generic ok PCTG Black (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pctg-black-03kg-175mm
+2026-08-25T16:52:30.389Z generic ok PCTG+10CF Black (nozzle 265°C / bed 80°C) https://www.rosa3d.pl/filament-3d-pctg-plus-10cf-black-03kg-175mm
+2026-08-25T16:52:31.730Z generic ok ReFill R-PCTG Black (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-r-pctg-black-refill-1kg-175mm
+2026-08-25T16:52:33.425Z generic ok ReFill PCTG Winter White (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-winter-white-refill-1kg-175mm
+2026-08-25T16:52:35.776Z generic ok ReFill PCTG Yellow (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-yellow-refill-1kg-175mm
+2026-08-25T16:52:36.274Z generic ok PLA Starter Black (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-black-45kg-175mm
+2026-08-25T16:52:38.393Z generic ok ReFill PCTG Gray (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-gray-refill-1kg-175mm
+2026-08-25T16:52:39.433Z generic ok ReFill PCTG Army Green (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-army-green-refill-1kg-175mm
+2026-08-25T16:52:40.904Z generic ok ReFill PCTG Juicy Orange (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-juicy-orange-refill-1kg-175mm
+2026-08-25T16:52:42.845Z generic ok ReFill PCTG Dark Brown (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-dark-brown-refill-1kg-175mm
+2026-08-25T16:52:43.830Z generic ok ReFill PCTG+10CF Black (nozzle 265°C / bed 80°C) https://www.rosa3d.pl/filament-3d-refill-pctg-plus-10cf-black-refill-1kg-175mm
+2026-08-25T16:52:45.131Z generic ok ReFill PCTG Blue Transparent (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-blue-transparent-refill-1kg-175mm
+2026-08-25T16:52:47.353Z generic ok PCTG Black (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pctg-black-3kg-175mm
+2026-08-25T16:52:48.418Z generic ok ReFill PCTG Dark Blue (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-dark-blue-refill-1kg-175mm
+2026-08-25T16:52:50.429Z generic ok ReFill PCTG Transparent (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-transparent-refill-1kg-175mm
+2026-08-25T16:52:51.321Z generic ok ReFill PCTG Juicy Green (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-juicy-green-refill-1kg-175mm
+2026-08-25T16:52:53.587Z generic ok ReFill PCTG+10GF Light Gray (nozzle 265°C / bed 80°C) https://www.rosa3d.pl/filament-3d-refill-pctg-plus-10gf-light-gray-refill-1kg-175mm
+2026-08-25T16:52:54.904Z generic ok ReFill PCTG Glitter Brillant Silver (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-glitter-brillant-silver-refill-1kg-175mm
+2026-08-25T16:52:56.469Z generic ok ReFill PCTG Green Transparent (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-green-transparent-refill-1kg-175mm
+2026-08-25T16:52:57.864Z generic ok ReFill PCTG Red (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-red-refill-1kg-175mm
+2026-08-25T16:52:59.445Z generic ok ReFill PCTG Red Transparent (nozzle 255°C / bed 70°C) https://www.rosa3d.pl/filament-3d-refill-pctg-red-transparent-refill-1kg-175mm
+2026-08-25T16:53:00.600Z generic ok PCTG+10GF Black (nozzle 265°C / bed 80°C) https://www.rosa3d.pl/filament-3d-pctg-plus-10gf-black-03kg-175mm
+2026-08-25T16:53:02.372Z generic ok ReFill PCTG+10GF Black (nozzle 265°C / bed 80°C) https://www.rosa3d.pl/filament-3d-refill-pctg-plus-10gf-black-refill-1kg-175mm
+2026-08-25T16:53:03.400Z generic ok ReFill PLA Galaxy Black (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-galaxy-black-refill-1kg-175mm
+2026-08-25T16:53:05.397Z generic ok ReFill PLA Galaxy Brillant Silver (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-galaxy-brillant-silver-refill-1kg-175mm
+2026-08-25T16:53:06.899Z generic ok ReFill PLA Galaxy Emerald Green (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-galaxy-emerald-green-refill-1kg-175mm
+2026-08-25T16:53:08.478Z generic ok ReFill PLA Galaxy Karmin Red (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-galaxy-karmin-red-refill-1kg-175mm
+2026-08-25T16:53:09.385Z generic ok ReFill PLA Galaxy Navy Blue (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-galaxy-navy-blue-refill-1kg-175mm
+2026-08-25T16:53:11.198Z generic ok ReFill PLA Galaxy Red Wine (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-galaxy-red-wine-refill-1kg-175mm
+2026-08-25T16:53:12.846Z generic ok ReFill PLA Galaxy Sapphire (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-galaxy-sapphire-refill-1kg-175mm
+2026-08-25T16:53:14.461Z generic ok ReFill PLA Galaxy Violet (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-galaxy-violet-refill-1kg-175mm
+2026-08-25T16:53:15.365Z generic ok PLA Pastel Lavender (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-pastel-lavender-035kg-175mm
+2026-08-25T16:53:17.437Z generic ok PLA Pastel Yellow (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-pastel-yellow-035kg-175mm
+2026-08-25T16:53:18.319Z generic ok PLA Starter Black (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-black-3kg-175mm
+2026-08-25T16:53:20.354Z generic ok PLA Pastel Peach (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-pastel-peach-035kg-175mm
+2026-08-25T16:53:21.974Z generic ok PLA Starter Gray (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-gray-3kg-175mm
+2026-08-25T16:53:23.319Z generic ok ReFill PLA Pastel Mint (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-pastel-mint-refill-1kg-175mm
+2026-08-25T16:53:24.291Z generic ok PLA Pastel Pink (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-pastel-pink-035kg-175mm
+2026-08-25T16:53:26.298Z generic ok PLA Pastel Green (nozzle 205°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-pastel-green-035kg-175mm
+2026-08-25T16:53:27.973Z generic ok ReFill PLA Starter Karmin Red (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-karmin-red-refill-1kg-175mm
+2026-08-25T16:53:29.431Z generic ok ROSA-Flex 96A Blue (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-blue-05kg-175mm
+2026-08-25T16:53:30.482Z generic ok ReFill PLA Starter Rose Beige Skin (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-rose-beige-skin-refill-1kg-175mm
+2026-08-25T16:53:32.498Z generic ok ROSA-Flex 96A Gray (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-gray-05kg-175mm
+2026-08-25T16:53:33.525Z generic ok ReFill PLA Starter Red Jasper Satin (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-red-jasper-satin-refill-1kg-175mm
+2026-08-25T16:53:35.434Z generic ok ROSA-Flex 96A Orange (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-orange-05kg-175mm
+2026-08-25T16:53:36.859Z generic ok PLA Starter White (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-starter-white-3kg-175mm
+2026-08-25T16:53:38.455Z generic ok ROSA-Flex 96A Pink (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-pink-05kg-175mm
+2026-08-25T16:53:39.425Z generic ok PET-G Standard HS Pearl Gold (nozzle 235°C / bed 70°C) https://www.rosa3d.pl/filament-3d-pet-g-standard-hs-pearl-gold-1kg-175mm
+2026-08-25T16:53:41.445Z generic ok ROSA-Flex 96A Neon Yellow (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-neon-yellow-05kg-175mm
+2026-08-25T16:53:42.146Z generic ok ROSA-Flex 96A Transparent (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-transparent-05kg-175mm
+2026-08-25T16:53:44.397Z generic ok PET-G + CF Carbon Black (nozzle 265°C / bed 80°C) https://www.rosa3d.pl/filament-3d-pet-g-plus-10cf-3kg
+2026-08-25T16:53:45.916Z generic ok ROSA-Flex 96A White (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-white-05kg-175mm
+2026-08-25T16:53:46.822Z generic ok ROSA-Flex 96A White (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-white-1kg-175mm
+2026-08-25T16:53:48.928Z generic ok ROSA-Flex 96A Transparent (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-transparent-1kg-175mm
+2026-08-25T16:53:50.398Z generic ok ROSA-Flex 96A Red (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-red-1kg-175mm
+2026-08-25T16:53:51.935Z generic ok ROSA-Flex 96A Pink (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-pink-1kg-175mm
+2026-08-25T16:53:52.936Z generic ok ROSA-Flex 96A Orange (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-orange-1kg-175mm
+2026-08-25T16:53:54.921Z generic ok ROSA-Flex 96A Neon Yellow (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-neon-yellow-1kg-175mm
+2026-08-25T16:53:56.471Z generic ok ASA Black (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-asa-black-25kg-175mm
+2026-08-25T16:53:58.171Z generic ok ROSA-Flex 96A Neon Green (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-neon-green-1kg-175mm
+2026-08-25T16:53:59.476Z generic ok ROSA-Flex 96A Ivory Skin (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-ivory-skin-1kg-175mm
+2026-08-25T16:54:01.008Z generic ok ROSA-Flex 96A Green (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-green-1kg-175mm
+2026-08-25T16:54:02.446Z generic ok ROSA-Flex 96A Gray (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-gray-1kg-175mm
+2026-08-25T16:54:03.413Z generic ok ReFill PLA-Silk Navy Blue (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-navy-blue-refill-1kg-175mm
+2026-08-25T16:54:05.491Z generic ok ROSA-Flex 96A Blue (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-blue-1kg-175mm
+2026-08-25T16:54:06.419Z generic ok ReFill PLA-Silk Rose Gold (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-silk-rose-gold-refill-1kg-175mm
+2026-08-25T16:54:08.410Z generic ok ROSA-Flex 96A Black (nozzle 235°C / bed 45°C) https://www.rosa3d.pl/filament-3d-rosa-flex-96a-black-1kg-175mm
+2026-08-25T16:54:09.868Z generic ok PA12 + 15CF Carbon Black (nozzle 275°C / bed 95°C) https://www.rosa3d.pl/filament-3d-pa12-plus-15cf-carbon-black-05kg-175mm
+2026-08-25T16:54:11.171Z generic ok ReFill PLA Multicolour Moon (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-multicolour-moon-refill-1kg-175mm
+2026-08-25T16:54:13.290Z generic ok ReFill PLA Starter Violet Dynamic (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-violet-dynamic-refill-1kg-175mm
+2026-08-25T16:54:14.537Z generic ok ReFill PLA Starter Signal Violet (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-signal-violet-refill-1kg-175mm
+2026-08-25T16:54:15.819Z generic ok ReFill ASA Juicy Orange (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-refill-asa-juicy-orange-refill-1kg-175mm
+2026-08-25T16:54:16.922Z generic ok ReFill ASA Green (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-refill-asa-green-refill-1kg-175mm
+2026-08-25T16:54:18.924Z generic ok ReFill ASA Natural (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-refill-asa-natural-refill-1kg-175mm
+2026-08-25T16:54:20.399Z generic ok ReFill ASA Red (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-refill-asa-red-refill-1kg-175mm
+2026-08-25T16:54:21.901Z generic ok ReFill ASA Silver (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-refill-asa-silver-refill-1kg-175mm
+2026-08-25T16:54:23.401Z generic ok ReFill ASA White (nozzle 245°C / bed 90°C) https://www.rosa3d.pl/filament-3d-refill-asa-white-refill-1kg-175mm
+2026-08-25T16:54:24.509Z generic ok ReFill PLA Starter Capri Blue Satin (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-capri-blue-satin-refill-1kg-175mm
+2026-08-25T16:54:26.503Z generic ok ReFill PLA Starter Winter White (nozzle 220°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-starter-winter-white-refill-1kg-175mm
+2026-08-25T16:54:27.338Z generic ok ReFill PLA Rainbow Army Forest (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-refill-pla-rainbow-army-forest-refill-1kg-175mm
+2026-08-25T16:54:29.390Z generic ok PC-PBT+15CF (HT-UV-IMPACT) Black (nozzle 265°C / bed 100°C) https://www.rosa3d.pl/filament-3d-pc-pbt-plus-15cf-ht-uv-impact-black-05kg-175mm
+2026-08-25T16:54:30.933Z generic ok PC-PBT+15GF (HT-UV-IMPACT) Black (nozzle 265°C / bed 100°C) https://www.rosa3d.pl/filament-3d-pc-pbt-plus-15gf-ht-uv-impact-black-05kg-175mm
+2026-08-25T16:54:32.521Z generic ok PLA-Silk Blue (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-silk-blue-05kg-175mm
+2026-08-25T16:54:33.161Z generic ok PLA-Silk Bronze (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-silk-bronze-05kg-175mm
+2026-08-25T16:54:35.374Z generic ok PLA-Silk Copper (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-silk-copper-05kg-175mm
+2026-08-25T16:54:36.944Z generic ok PLA-Silk Fuchsia (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-silk-fuchsia-05kg-175mm
+2026-08-25T16:54:38.522Z generic ok PLA-Silk Gold (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-silk-gold-05kg-175mm
+2026-08-25T16:54:39.794Z generic ok PLA-Silk Graphite (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-silk-graphite-05kg-175mm
+2026-08-25T16:54:41.406Z generic ok PLA-Silk Green (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-silk-green-05kg-175mm
+2026-08-25T16:54:42.944Z generic ok PLA-Silk Navy Blue (nozzle 210°C / bed 50°C) https://www.rosa3d.pl/filament-3d-pla-silk-navy-blue-05kg-175mm
+2026-08-25T16:54:43.008Z generic ok AURAPOL PLA 3D Filament Metallic Turquoise (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-metallic-turquoise-1-kg-1-75-mm
+2026-08-25T16:54:43.025Z generic ok AURAPOL PLA 3D Filament Black (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-black-1-kg-1-75-mm
+2026-08-25T16:54:43.707Z generic ok AURAPOL PLA 3D Filament White (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-white-1-kg-1-75-mm
+2026-08-25T16:54:44.894Z generic ok AURAPOL PLA 3D Filament L-EGO Brown (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-l-ego-brown-1-kg-1-75-mm
+2026-08-25T16:54:46.425Z generic ok AURAPOL PLA 3D Filament L-EGO Red (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-l-ego-red-1-kg-1-75-mm
+2026-08-25T16:54:47.876Z generic ok AURAPOL PLA 3D Filament L-EGO Yellow (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-l-ego-yellow-1-kg-1-75-mm
+2026-08-25T16:54:49.339Z generic ok AURAPOL PLA 3D Filament Leaf green (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-leaf-green-1-kg-1-75-mm
+2026-08-25T16:54:50.800Z generic ok AURAPOL PLA 3D Filament Raspberry partially transparent (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-raspberry-partially-transparent-1-kg-1-75-mm
+2026-08-25T16:54:52.333Z generic ok AURAPOL PLA 3D Filament Honey partially transparent (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-honey-partially-transparent-1-kg-1-75-mm
+2026-08-25T16:54:53.912Z generic ok AURAPOL PLA 3D Filament L-EGO Blue (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-l-ego-blue-1-kg-1-75-mm
+2026-08-25T16:54:55.427Z generic ok AURAPOL PET-G Filament Graphite black (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-graphite-black-1-kg-1-75-mm
+2026-08-25T16:54:56.857Z generic ok AURAPOL PET-G Filament White (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-white-1-kg-1-75-mm
+2026-08-25T16:54:58.377Z generic ok AURAPOL PLA 3D Filament Grey (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-grey-1-kg-1-75-mm
+2026-08-25T16:54:59.855Z generic ok AURAPOL PLA 3D Filament Galaxy Black (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-galaxy-black-1-kg-1-75-mm
+2026-08-25T16:55:01.413Z generic ok AURAPOL PLA 3D Filament Silver (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-silver-1-kg-1-75-mm
+2026-08-25T16:55:05.929Z generic ok AURAPOL PLA 3D Filament Body color (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-body-color-1-kg-1-75-mm
+2026-08-25T16:55:07.435Z generic ok AURAPOL PLA 3D Filament Natural (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-natural-1-kg-1-75-mm
+2026-08-25T16:55:08.899Z generic ok AURAPOL PLA 3D Filament White (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-white-1-kg-2-85-mm
+2026-08-25T16:55:10.549Z generic ok AURAPOL PLA 3D Filament Black (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-black-1-kg-2-85-mm
+2026-08-25T16:55:12.659Z generic ok AURAPOL PLA 3D Filament Peach flame částečně transparentní (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-peach-flame-castecne-transparentni-1-kg-1-75-mm
+2026-08-25T16:55:13.360Z generic ok AURAPOL PLA 3D Filament Neon coral částečně transparentní (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-neon-coral-castecne-transparentni-1-kg-1-75-mm
+2026-08-25T16:55:14.887Z generic ok AURAPOL PLA 3D Filament Mint breeze částečně transparentní (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-mint-breeze-castecne-transparentni-1-kg-1-75-mm
+2026-08-25T16:55:16.367Z generic ok AURAPOL PLA 3D Filament Lilac mist částečně transparentní (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-lilac-mist-castecne-transparentni-1-kg-1-75-mm
+2026-08-25T16:55:17.847Z generic ok AURAPOL PLA 3D Filament Banana peel (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-banana-peel-1-kg-1-75-mm
+2026-08-25T16:55:19.412Z generic ok AURAPOL PLA 3D Filament Lavender field částečně transparentní (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-lavender-field-castecne-transparentni-1-kg-1-75-mm
+2026-08-25T16:55:20.875Z generic ok AURAPOL PLA 3D Filament Fuchsia dream částečně transparentní (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-fuchsia-dream-castecne-transparentni-1-kg-1-75-mm
+2026-08-25T16:55:22.356Z generic ok AURAPOL PLA 3D Filament Aqua dream částečně transparentní (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-aqua-dream-castecne-transparentni-1-kg-1-75-mm
+2026-08-25T16:55:24.248Z generic ok AURAPOL PLA 3D Filament Yellow Green (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-yellow-green-1-kg-1-75-mm
+2026-08-25T16:55:25.393Z generic ok AURAPOL PET-G Filament Natural transparent (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-natural-transparent-1-kg-1-75-mm
+2026-08-25T16:55:26.826Z generic ok AURAPOL PLA 3D Filament Skeleton White (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-skeleton-white-1-kg-1-75-mm
+2026-08-25T16:55:28.339Z generic ok AURAPOL PLA 3D Filament Tulip Purple (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-tulip-purple-1-kg-1-75-mm
+2026-08-25T16:55:29.840Z generic ok AURAPOL PLA 3D Filament Magenta (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-magenta-1-kg-1-75-mm
+2026-08-25T16:55:31.344Z generic ok AURAPOL PLA 3D Filament Lemon Yellow (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-lemon-yellow-1-kg-1-75-mm
+2026-08-25T16:55:32.908Z generic ok AURAPOL PLA 3D Filament Light Blue (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-light-blue-1-kg-1-75-mm
+2026-08-25T16:55:34.362Z generic ok AURAPOL PLA 3D Filament Frosted Mint (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-frosted-mint-1-kg-1-75-mm
+2026-08-25T16:55:35.874Z generic ok AURAPOL PLA 3D Filament Evergreen Moss (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-evergreen-moss-1-kg-1-75-mm
+2026-08-25T16:55:37.325Z generic ok AURAPOL PLA 3D Filament Aqua Relic (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-aqua-relic-1-kg-1-75-mm
+2026-08-25T16:55:38.878Z generic ok AURAPOL PLA 3D Filament Blue Sapphire (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-blue-sapphire-1-kg-1-75-mm
+2026-08-25T16:55:40.367Z generic ok AURAPOL PLA 3D Filament Black (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-black-2-5-kg-1-75-mm
+2026-08-25T16:55:41.883Z generic ok AURAPOL PLA 3D Filament White (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-white-2-5-kg-1-75-mm
+2026-08-25T16:55:43.360Z generic ok AURAPOL PLA 3D Filament Natural (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-natural-2-5-kg-1-75-mm
+2026-08-25T16:55:44.847Z generic ok AURAPOL PLA 3D Filament Machine Blue (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-machine-blue-2-5-kg-1-75-mm
+2026-08-25T16:55:47.334Z generic ok AURAPOL PLA 3D Filament Raspberry partially transparent (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-raspberry-partially-transparent-2-5-kg-1-75-mm
+2026-08-25T16:55:48.085Z generic ok AURAPOL PLA 3D Filament WOOD CORK (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-wood-cork-850-g-1-75-mm
+2026-08-25T16:55:49.390Z generic ok AURAPOL PLA 3D Filament WOOD BAMBOO (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-wood-bamboo-850-g-1-75-mm
+2026-08-25T16:55:50.916Z generic ok AURAPOL PLA 3D Filament WOOD PINE (nozzle 225°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-wood-pine-850-g-1-75-mm
+2026-08-25T16:55:52.361Z generic ok AURAPOL PLA 3D Filament White (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-white-2-5-kg-2-85-mm
+2026-08-25T16:55:54.760Z generic ok AURAPOL PLA 3D Filament Black (nozzle 220°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-3d-filament-black-2-5-kg-2-85-mm
+2026-08-25T16:55:56.028Z generic ok AURAPOL PLA HT110 3D Filament Black (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-black-1-kg-1-75-mm
+2026-08-25T16:55:56.847Z generic ok AURAPOL PLA HT110 3D Filament White (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-white-1-kg-1-75-mm
+2026-08-25T16:55:58.348Z generic ok AURAPOL PLA HT110 3D Filament Machine Blue (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-machine-blue-1-kg-1-75-mm
+2026-08-25T16:55:59.873Z generic ok AURAPOL PLA HT110 3D Filament Black (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-black-2-5-kg-1-75-mm
+2026-08-25T16:56:01.371Z generic ok AURAPOL PLA HT110 3D Filament Bodycolor (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-bodycolor-1-kg-1-75-mm
+2026-08-25T16:56:02.881Z generic ok AURAPOL PLA HT110 3D Filament Red (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-red-1-kg-1-75-mm
+2026-08-25T16:56:04.340Z generic ok AURAPOL PLA HT110 3D Filament Brown (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-brown-1-kg-1-75-mm
+2026-08-25T16:56:05.884Z generic ok AURAPOL PLA HT110 3D Filament Blue (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-blue-1-kg-1-75-mm
+2026-08-25T16:56:07.352Z generic ok AURAPOL PLA HT110 3D Filament Yellow (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-yellow-1-kg-1-75-mm
+2026-08-25T16:56:08.848Z generic ok AURAPOL PLA HT110 3D Filament Green (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-green-1-kg-1-75-mm
+2026-08-25T16:56:10.360Z generic ok AURAPOL PLA HT110 3D Filament White (nozzle 230°C / bed 50°C) https://www.aurapol.com/cz/p/aurapol-pla-ht110-3d-filament-white-2-5-kg-1-75-mm
+2026-08-25T16:56:11.879Z generic ok AURAPOL PET-G Filament Signal Grey (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-signal-grey-1-kg-1-75-mm
+2026-08-25T16:56:13.414Z generic ok AURAPOL PET-G Filament Silver (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-silver-1-kg-1-75-mm
+2026-08-25T16:56:14.882Z generic ok AURAPOL PET-G Filament Traffic Red (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-traffic-red-1-kg-1-75-mm
+2026-08-25T16:56:16.394Z generic ok AURAPOL PET-G Filament ARMY Panzer Grau (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-army-panzer-grau-1-kg-1-75-mm
+2026-08-25T16:56:17.904Z generic ok AURAPOL PET-G Filament Nuclear Orange (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-nuclear-orange-1-kg-1-75-mm
+2026-08-25T16:56:19.391Z generic ok AURAPOL PET-G Filament Graphite black (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-graphite-black-2-5-kg-1-75-mm
+2026-08-25T16:56:20.877Z generic ok AURAPOL PET-G Filament Twilight Fluff (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-twilight-fluff-1-kg-1-75-mm
+2026-08-25T16:56:22.361Z generic ok AURAPOL PET-G Filament Misty Forest (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-misty-forest-1-kg-1-75-mm
+2026-08-25T16:56:23.855Z generic ok AURAPOL PET-G Filament Mint Cream (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-mint-cream-1-kg-1-75-mm
+2026-08-25T16:56:25.437Z generic ok AURAPOL PET-G Filament Cotton Candy (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-cotton-candy-1-kg-1-75-mm
+2026-08-25T16:56:26.907Z generic ok AURAPOL PET-G Filament Bright White (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-bright-white-1-kg-1-75-mm
+2026-08-25T16:56:28.345Z generic ok AURAPOL PET-G Filament Sugar Sunbeam (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-sugar-sunbeam-1-kg-1-75-mm
+2026-08-25T16:56:29.860Z generic ok AURAPOL PET-G Filament Sunset Mochi (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-sunset-mochi-1-kg-1-75-mm
+2026-08-25T16:56:31.393Z generic ok AURAPOL PET-G Filament Misty Grey (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-misty-grey-1-kg-1-75-mm
+2026-08-25T16:56:32.898Z generic ok AURAPOL PET-G Filament Stained Orange Glass Transparent (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-stained-orange-glass-transparent-1-kg-1-75-mm
+2026-08-25T16:56:34.975Z generic ok AURAPOL PET-G Filament Dragonfruit Transparent (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-dragonfruit-transparent-1-kg-1-75-mm
+2026-08-25T16:56:35.905Z generic ok AURAPOL PET-G Filament Mysterious Atlantis Transparent (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-mysterious-atlantis-transparent-1-kg-1-75-mm
+2026-08-25T16:56:37.389Z generic ok AURAPOL PET-G Filament Red Wine Transparent (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-red-wine-transparent-1-kg-1-75-mm
+2026-08-25T16:56:38.885Z generic ok AURAPOL PET-G Filament Clear Diamond Transparent (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-clear-diamond-transparent-1-kg-1-75-mm
+2026-08-25T16:56:40.392Z generic ok AURAPOL PET-G Filament Copper brown (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-copper-brown-1-kg-1-75-mm
+2026-08-25T16:56:41.921Z generic ok AURAPOL PET-G Filament ARMY Highland zelená (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-army-highland-zelena-1-kg-1-75-mm
+2026-08-25T16:56:43.413Z generic ok AURAPOL PET-G Filament ARMY Desert Storm (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-army-desert-storm-1-kg-1-75-mm
+2026-08-25T16:56:44.885Z generic ok AURAPOL PET-G Filament Signal Blue (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-signal-blue-1-kg-1-75-mm
+2026-08-25T16:56:46.488Z generic ok AURAPOL PET-G Filament Pistachio Cream (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-pistachio-cream-1-kg-1-75-mm
+2026-08-25T16:56:47.906Z generic ok AURAPOL PET-G Rose Dust Filament (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-rose-dust-filament-1-kg-1-75-mm
+2026-08-25T16:56:49.399Z generic ok AURAPOL PET-G Filament Light Terracotta (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-light-terracotta-1-kg-1-75-mm
+2026-08-25T16:56:50.959Z generic ok AURAPOL PET-G Filament Baby Blue (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-baby-blue-1-kg-1-75-mm
+2026-08-25T16:56:53.130Z generic ok AURAPOL PET-G Filament Sky Grey (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-sky-grey-1-kg-1-75-mm
+2026-08-25T16:56:53.854Z generic ok AURAPOL PET-G Filament Signal grey (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-signal-grey-2-5-kg-1-75-mm
+2026-08-25T16:56:55.425Z generic ok AURAPOL PET-G 3D Filament White (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-3d-filament-white-2-5-kg-1-75-mm
+2026-08-25T16:56:56.893Z generic ok AURAPOL PET-G Filament Natural transparent (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-natural-transparent-2-5-kg-1-75-mm
+2026-08-25T16:56:58.377Z generic ok AURAPOL PET-G Filament Bright orange (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-bright-orange-2-5-kg-1-75-mm
+2026-08-25T16:56:59.916Z generic ok AURAPOL PET-G Filament ARMY Survival Grey (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-army-survival-grey-1-kg-1-75-mm
+2026-08-25T16:57:01.455Z generic ok AURAPOL PET-G Filament ARMY Sand Storm (nozzle 250°C / bed 90°C) https://www.aurapol.com/cz/p/aurapol-pet-g-filament-army-sand-storm-1-kg-1-75-mm
+2026-08-25T16:57:01.462Z generic ok PETG Fibra de Carbono (nozzle 245°C / bed 80°C) https://winkle.shop/filamento-impresora-3d/petg/petg-fibra-de-carbono/
+2026-08-25T16:57:01.474Z generic ok PLA Mate (nozzle 200°C / bed 50°C) https://winkle.shop/filamento-impresora-3d/pla/filamento-pla-mate/
+2026-08-25T16:57:01.560Z generic ok PETG Estándar (nozzle 230°C / bed 70°C) https://winkle.shop/filamento-impresora-3d/petg/petg-estandar/
+2026-08-25T16:57:03.669Z generic ok PLA High Speed (Alta Velocidad) (nozzle 235°C / bed 50°C) https://winkle.shop/filamento-impresora-3d/pla/filamento-pla-alta-velocidad/
+2026-08-25T16:57:04.735Z generic ok PETG Cristal (nozzle 230°C / bed 70°C) https://winkle.shop/filamento-impresora-3d/petg/petg-cristal/
+2026-08-25T16:57:06.798Z generic ok PLA Silk (Seda) (nozzle 215°C / bed 60°C) https://winkle.shop/filamento-impresora-3d/pla/filamento-pla-seda/
+2026-08-25T16:57:08.828Z generic ok PETG Reciclado (nozzle 230°C / bed 70°C) https://winkle.shop/filamento-impresora-3d/reciclado/petg-reciclado/
+2026-08-25T16:57:13.611Z generic ok PLA PRO (nozzle 215°C / bed 55°C) https://winkle.shop/filamento-impresora-3d/pla/filamento-pla-pro/
+2026-08-25T16:57:17.241Z generic ok PLA HD (nozzle 210°C / bed 60°C) https://winkle.shop/filamento-impresora-3d/pla/filamento-pla-hd/
+2026-08-25T16:57:17.714Z generic ok Nobufil PLAx Astro Black Filament (nozzle 225°C / bed 65°C) https://www.nobufil.com/en/product-page/pla-filament-astro-black
+2026-08-25T16:57:17.782Z generic ok Nobufil ABSx Astro Gray Filament (nozzle 260°C / bed 100°C) https://www.nobufil.com/en/product-page/abs-filament-astro-grey
+2026-08-25T16:57:17.854Z generic ok Nobufil PCTG Industrial Red Filament (nozzle 255°C / bed 85°C) https://www.nobufil.com/en/product-page/pctg-filament-industrial-red
+2026-08-25T16:57:17.959Z generic ok Nobufil ABSx Neon Orange Filament (nozzle 260°C / bed 100°C) https://www.nobufil.com/en/product-page/abs-filament-neon-orange
+2026-08-25T16:57:18.001Z generic ok Nobufil ABSx Industrial Beige Filament (nozzle 260°C / bed 100°C) https://www.nobufil.com/en/product-page/abs-filament-industrial-beige
+2026-08-25T16:57:18.042Z generic ok Nobufil ABSx Industrial Orange Filament (nozzle 260°C / bed 100°C) https://www.nobufil.com/en/product-page/abs-filament-industrial-orange
