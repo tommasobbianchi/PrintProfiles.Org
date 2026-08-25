@@ -286,3 +286,37 @@
 2026-08-25T16:56:55.180Z slicerprofiles ok PLA (nozzle 225°C / bed 60°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Prusa/filament/Prusament%20PLA%20@CORE%20One.json
 2026-08-25T16:57:04.181Z slicerprofiles ok PVB (nozzle 215°C / bed 75°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Prusa/filament/Prusament%20PVB%20@CORE%20One.json
 2026-08-25T16:57:08.688Z slicerprofiles ok ASA-CF (nozzle 275°C / bed 90°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/QIDI%20ASA-CF.json
+2026-08-25T16:57:26.699Z slicerprofiles ok ABS (nozzle 260°C / bed 90°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/HATCHBOX%20ABS%20@Q2.json
+2026-08-25T16:57:28.191Z slicerprofiles ok PETG (nozzle 250°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/HATCHBOX%20PETG%20@Q2.json
+2026-08-25T16:57:29.704Z slicerprofiles ok PLA (nozzle 210°C / bed 60°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/HATCHBOX%20PLA%20@Q2.json
+2026-08-25T16:57:37.203Z slicerprofiles ok ABS (nozzle 260°C / bed 90°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20ABS%20Odorless%20@Q2.json
+2026-08-25T16:57:38.685Z slicerprofiles ok ABS Metal (nozzle 260°C / bed 90°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20ABS%20Rapido%20Metal%20@Q2.json
+2026-08-25T16:57:41.695Z slicerprofiles ok ABS-GF (nozzle 270°C / bed 90°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20ABS-GF%20@Q2.json
+2026-08-25T16:57:43.191Z slicerprofiles ok ASA-AERO (nozzle 260°C / bed 90°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20ASA-Aero%20@Q2.json
+2026-08-25T16:57:46.197Z slicerprofiles ok ASA (nozzle 255°C / bed 90°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20ASA%20@Q2.json
+2026-08-25T16:57:47.780Z slicerprofiles ok PA12-CF (nozzle 280°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PA12-CF%20@Q2.json
+2026-08-25T16:57:49.205Z slicerprofiles ok PA-CF CF (nozzle 300°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PAHT-CF%20@Q2.json
+2026-08-25T16:57:50.686Z slicerprofiles ok PA-GF GF (nozzle 300°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PAHT-GF%20@Q2.json
+2026-08-25T16:57:52.239Z slicerprofiles ok PC ABS FR (nozzle 250°C / bed 90°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PC-ABS-FR%20@Q2.json
+2026-08-25T16:57:53.706Z slicerprofiles ok PEBA 95A (nozzle 250°C / bed 35°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PEBA%2095A%20@Q2.json
+2026-08-25T16:57:55.203Z slicerprofiles ok PET-CF (nozzle 280°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PET-CF%20@Q2.json
+2026-08-25T16:57:56.701Z slicerprofiles ok PET-GF (nozzle 300°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PET-GF%20@Q2.json
+2026-08-25T16:57:58.347Z slicerprofiles ok PETG (nozzle 250°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PETG%20Basic%20@Q2.json
+2026-08-25T16:58:01.213Z slicerprofiles ok PETG Tough (nozzle 250°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PETG%20Tough%20@Q2.json
+2026-08-25T16:58:02.705Z slicerprofiles ok PETG Translucent (nozzle 250°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PETG%20Translucent%20@Q2.json
+2026-08-25T16:58:04.247Z slicerprofiles ok PETG-CF (nozzle 255°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PETG-CF%20@Q2.json
+2026-08-25T16:58:05.746Z slicerprofiles ok PETG-GF (nozzle 255°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PETG-GF%20@Q2.json
+2026-08-25T16:58:07.395Z slicerprofiles ok PLA (nozzle 210°C / bed 60°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PLA%20Basic%20@Q2.json
+2026-08-25T16:58:08.746Z slicerprofiles ok PLA Matte (nozzle 210°C / bed 60°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PLA%20Matte%20Basic%20@Q2.json
+2026-08-25T16:58:11.867Z slicerprofiles ok PLA Metal (nozzle 210°C / bed 60°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PLA%20Rapido%20Metal%20@Q2.json
+2026-08-25T16:58:13.221Z slicerprofiles ok PLA Silk (nozzle 220°C / bed 55°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PLA%20Rapido%20Silk%20@Q2.json
+2026-08-25T16:58:16.208Z slicerprofiles ok PLA-CF (nozzle 220°C / bed 60°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PLA-CF%20@Q2.json
+2026-08-25T16:58:17.713Z slicerprofiles ok PPS-CF (nozzle 320°C / bed 110°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PPS-CF%20@Q2.json
+2026-08-25T16:58:19.203Z slicerprofiles ok PPS-GF (nozzle 320°C / bed 90°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20PPS-GF%20@Q2.json
+2026-08-25T16:58:20.715Z slicerprofiles ok Nylon Support (nozzle 280°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20Support%20For%20PAHT%20@Q2.json
+2026-08-25T16:58:22.247Z slicerprofiles ok Support PET PA (nozzle 280°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20Support%20For%20PET-PA%20@Q2.json
+2026-08-25T16:58:23.714Z slicerprofiles ok TPU 95A HF (nozzle 230°C / bed 35°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20TPU%2095A-HF%20@Q2.json
+2026-08-25T16:58:25.207Z slicerprofiles ok TPU-AERO (nozzle 250°C / bed 35°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20TPU-Aero%20@Q2.json
+2026-08-25T16:58:26.730Z slicerprofiles ok TPU-GF (nozzle 240°C / bed 35°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20TPU-GF%20@Q2.json
+2026-08-25T16:58:28.209Z slicerprofiles ok Other (nozzle 300°C / bed 80°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20UltraPA-CF25%20@Q2.json
+2026-08-25T16:58:31.234Z slicerprofiles ok PLA Wood (nozzle 210°C / bed 60°C) https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20WOOD%20Rapido%20@Q2.json

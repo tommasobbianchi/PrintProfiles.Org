@@ -39,6 +39,37 @@ export const LICENSE = 'AGPL-3.0 — parameter values used as facts, with attrib
 const API_DIRS = 'https://api.github.com/repos/SoftFever/OrcaSlicer/contents/resources/profiles';
 const RAW = 'https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/';
 
+// A local OrcaSlicer checkout is used when present: 7684 profile files behind a 1.5 s/domain
+// rate limit is hours of wall-clock, and the same files on disk are read in seconds. Set
+// ORCA_PROFILES to a resources/profiles directory; it is synced, gitignored and never
+// committed, which keeps the AGPL corpus out of this repo while its parameter values are used
+// as facts. Falls back to the network when the directory is absent.
+import { readFile as _readFile, readdir as _readdir } from 'node:fs/promises';
+import { join as _join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+const LOCAL = process.env.ORCA_PROFILES
+  || _join(dirname(fileURLToPath(import.meta.url)), '..', 'orca-profiles');
+let localOk = null;
+async function localAvailable() {
+  if (localOk !== null) return localOk;
+  try { await _readdir(LOCAL); localOk = true; } catch { localOk = false; }
+  return localOk;
+}
+// Mirrors get()'s shape so callers need no branching.
+async function readProfile(url) {
+  if (await localAvailable() && url.startsWith(RAW)) {
+    const rel = decodeURIComponent(url.slice(RAW.length));
+    try { return { ok: true, status: 200, body: await _readFile(_join(LOCAL, rel), 'utf8'), fromCache: true }; }
+    catch { return { ok: false, status: 404, body: '' }; }
+  }
+  return get(url);
+}
+async function listLocalDirs() {
+  const ents = await _readdir(LOCAL, { withFileTypes: true });
+  return ents.filter((e) => e.isDirectory()).map((e) => e.name);
+}
+
 const rawUrl = (vendorDir, subPath) => RAW + encodeURI(`${vendorDir}/${subPath}`);
 
 // A vendor string that identifies nobody. Attributing a profile to "Generic" would invent a
@@ -51,7 +82,7 @@ const indexes = new Map(); // vendorDir -> Map(profileName -> subPath)
 
 async function indexFor(vendorDir) {
   if (indexes.has(vendorDir)) return indexes.get(vendorDir);
-  const res = await get(RAW + encodeURI(`${vendorDir}.json`));
+  const res = await readProfile(RAW + encodeURI(`${vendorDir}.json`));
   const map = new Map();
   if (res.ok) {
     try {
@@ -77,7 +108,7 @@ async function pathForName(vendorDir, name) {
   let found = idx.get(name) ?? null;
   if (!found) {
     for (const guess of [`filament/${name}.json`, `filament/base/${name}.json`]) {
-      const probe = await get(rawUrl(vendorDir, guess));
+      const probe = await readProfile(rawUrl(vendorDir, guess));
       if (probe.ok) { found = guess; break; }
     }
   }
@@ -115,7 +146,7 @@ async function resolveChain(vendorDir, subPath) {
   for (let depth = 0; path && depth < 12; depth++) {
     if (seen.has(path)) break;
     seen.add(path);
-    const res = await get(rawUrl(vendorDir, path));
+    const res = await readProfile(rawUrl(vendorDir, path));
     if (!res.ok) break;
     let json;
     try {
