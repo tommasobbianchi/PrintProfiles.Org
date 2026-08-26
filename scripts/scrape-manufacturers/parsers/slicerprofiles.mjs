@@ -202,7 +202,7 @@ const canonPolymer = (t) => t.replace(/^(ht|lw|hs)-/i, (m) => m.toUpperCase())
 //   "PolyLite ABS @base"          -> "ABS"
 //   "Bambu PLA Basic @BBL X1C"    -> "PLA"
 //   "Fiberon PA6-CF @base"        -> "PA6-CF"
-function deriveBrand(profileName, filamentType) {
+export function deriveBrand(profileName, filamentType) {
   const core = String(profileName).replace(/\s*@.*$/, '');
   const kept = [];
   let hasPolymer = false;
@@ -243,7 +243,7 @@ function deriveBrand(profileName, filamentType) {
 }
 
 // filament_type -> the FilamentType union in types.ts.
-function mapType(raw) {
+export function mapType(raw) {
   const s = String(raw || '').toUpperCase().replace(/\s+/g, '');
   if (/^PA(6|-6)/.test(s)) return 'PA6';
   if (/^PA(12|-12)/.test(s)) return 'PA12';
