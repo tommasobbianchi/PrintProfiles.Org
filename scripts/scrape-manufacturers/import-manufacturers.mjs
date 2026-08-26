@@ -11,6 +11,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { canonManufacturer } from './manufacturer-aliases.mjs';
+import { isAbrasive, ABRASIVE_NOTE } from './abrasive.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA = join(HERE, 'data');
@@ -45,14 +46,11 @@ const ATTRIB = {
   },
 };
 
-// Carbon, glass and aramid fill make a filament abrasive: it chews a brass nozzle. The fill is
-// already preserved in the product name by deriveBrand, but a name is not a warning, and the
-// person reading the preset is about to load the spool. Appended to notes for any filled row.
-const ABRASIVE = /(^|[^a-z])(r?CF|GF|AF)\d*([^a-z]|$)|carbon|glass\s*fib|aramid|kevlar|\bmetal\b|\bsteel\b|glow/i;
+// Fill harder than brass gets a warning in the note. The detector and the reasoning behind
+// its exclusions live in abrasive.mjs; the sourceUrl is included because a storefront slug
+// often names the fill ("prusament-petg-tungsten-75") after the product title has lost it.
 const abrasiveNote = (r) =>
-  ABRASIVE.test(`${r.brand || ''} ${r.sourceProfile || ''}`)
-    ? ' Abrasive — hardened nozzle required.'
-    : '';
+  isAbrasive(r.brand, r.sourceProfile, r.sourceUrl) ? ABRASIVE_NOTE : '';
 
 const JUNK = /\b(sample|gift\s*card|voucher|spool\s*holder|nozzle|bundle|sticker|t-shirt|dryer)\b|MOQ:|\bbe the first\b|\bnew colou?r collection\b|\bsuper\s*pack\b|\bmaster\s*spool\b|^\s*unset\b|\bunset\b|^\s*\d+\s*x\s|\s\+\s|\b3d\s*printer\b|\bprinter\b|\bdiscontinued\b|\bresin\b|\bbuild\s*plate\b|\bhotend\b|\bextruder\b|\bkit\b|\bupgrade\b|\bfilament\s*dryer\b|\benclosure\b|\bbelt\b|\bmotor\b|\bscreen\b|\bcable\b/i;
 
@@ -66,6 +64,16 @@ const IDENTITY = new Set([
   'hips','pvb','pva','bvoh','peba','pei','peek','pps','cpe','copolyester','pha','pbt','pmma',
   // fills and reinforcements — these change how it prints, so they are identity
   'cf','gf','carbon','glass','fiber','fibre','wood','metal','marble','stone','mineral','ceramic',
+  // Named fills. Without these the whitelist treats them as colour words and drops them, which
+  // is how Prusament PETG Tungsten 75 and Magnetite 40 — metal-filled and abrasive — came to be
+  // stored as plain "PETG", indistinguishable from the unfilled product.
+  'tungsten','magnetite','kevlar','aramid','glitter','sparkle','galaxy',
+  'granite','basalt','slate','clay','bamboo','cork',
+  // Deliberately NOT here: bronze, copper, brass, steel, iron, aluminium, sand. Those are metal
+  // COLOUR names far more often than fills — 3DJake sells "Bronze" in ecoPLA, easyPETG, ABS and
+  // mattePLA alike — and whitelisting them would split one colour range into four presets. The
+  // genuinely filled ones announce it another way ("MetalFil", "PLA Metal Brass", "Composite
+  // Steel PLA"), which 'metal' and 'composite' already keep.
   'glow','silk','matt','matte','satin','gloss','glossy','foaming','lw','lightweight','conductive',
   'esd','flame','fr','v0','recycled','bio','composite','hemp','wheat','coffee','shell','cork',
   // grades and product lines
