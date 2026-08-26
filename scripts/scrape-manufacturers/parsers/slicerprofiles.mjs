@@ -29,6 +29,11 @@
 // { name, sub_path } — that is the name -> file index used for inheritance, and it costs one
 // raw file per vendor instead of one GitHub API call per directory (the unauthenticated API
 // allows only 60 requests/hour).
+//
+// The resolver body below is parameterised as createSlicerResolver(); bambuprofiles.mjs drives
+// the same factory with the BambuStudio values, because BambuStudio ships the identical JSON
+// schema and inherits chain. Do not copy this resolver — every fix to the chain logic must be
+// made once.
 
 import { get, log } from '../fetch.mjs';
 
@@ -50,129 +55,13 @@ import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 const LOCAL = process.env.ORCA_PROFILES
   || _join(dirname(fileURLToPath(import.meta.url)), '..', 'orca-profiles');
-let localOk = null;
-async function localAvailable() {
-  if (localOk !== null) return localOk;
-  try { await _readdir(LOCAL); localOk = true; } catch { localOk = false; }
-  return localOk;
-}
-// Mirrors get()'s shape so callers need no branching.
-async function readProfile(url) {
-  if (await localAvailable() && url.startsWith(RAW)) {
-    const rel = decodeURIComponent(url.slice(RAW.length));
-    try { return { ok: true, status: 200, body: await _readFile(_join(LOCAL, rel), 'utf8'), fromCache: true }; }
-    catch { return { ok: false, status: 404, body: '' }; }
-  }
-  return get(url);
-}
-async function listLocalDirs() {
-  const ents = await _readdir(LOCAL, { withFileTypes: true });
-  return ents.filter((e) => e.isDirectory()).map((e) => e.name);
-}
 
 // Where run-all.mjs keeps this parser's rows; read back so a resumed run stays deduplicated.
 const DATA_FILE = _join(dirname(fileURLToPath(import.meta.url)), '..', 'data', 'slicerprofiles.json');
 
-const rawUrl = (vendorDir, subPath) => RAW + encodeURI(`${vendorDir}/${subPath}`);
-
 // A vendor string that identifies nobody. Attributing a profile to "Generic" would invent a
 // manufacturer that does not exist, so those rows are dropped.
 const ANON_VENDOR = /^(generic|unknown|orca(slicer)?|custom|third[- ]?party|n\/a|none)$/i;
-
-// ---------------------------------------------------------------- vendor index
-
-const indexes = new Map(); // vendorDir -> Map(profileName -> subPath)
-
-async function indexFor(vendorDir) {
-  if (indexes.has(vendorDir)) return indexes.get(vendorDir);
-  const res = await readProfile(RAW + encodeURI(`${vendorDir}.json`));
-  const map = new Map();
-  if (res.ok) {
-    try {
-      for (const f of JSON.parse(res.body).filament_list || []) {
-        if (f && f.name && f.sub_path) map.set(f.name, f.sub_path);
-      }
-    } catch {
-      await log(`slicerprofiles: ${vendorDir}.json is not valid JSON`);
-    }
-  }
-  indexes.set(vendorDir, map);
-  return map;
-}
-
-// The index misses a few roots (BBL's fdm_filament_* are not all listed), so fall back to the
-// two conventional locations before giving up.
-const pathMemo = new Map(); // vendorDir|name -> subPath|null (a miss costs two 404s, pay once)
-
-async function pathForName(vendorDir, name) {
-  const memoKey = `${vendorDir}|${name}`;
-  if (pathMemo.has(memoKey)) return pathMemo.get(memoKey);
-  const idx = await indexFor(vendorDir);
-  let found = idx.get(name) ?? null;
-  if (!found) {
-    for (const guess of [`filament/${name}.json`, `filament/base/${name}.json`]) {
-      const probe = await readProfile(rawUrl(vendorDir, guess));
-      if (probe.ok) { found = guess; break; }
-    }
-  }
-  pathMemo.set(memoKey, found);
-  return found;
-}
-
-// ---------------------------------------------------------------- value helpers
-
-// Orca stores scalars as single-element arrays of strings; "nil" means inherit/unset.
-function val(v) {
-  const s = Array.isArray(v) ? v[0] : v;
-  if (s === undefined || s === null) return undefined;
-  const t = String(s).trim();
-  return t === '' || t === 'nil' ? undefined : t;
-}
-
-function num(v, { zeroIsUnset = true } = {}) {
-  const s = val(v);
-  if (s === undefined) return undefined;
-  const n = parseFloat(s);
-  if (!Number.isFinite(n)) return undefined;
-  if (zeroIsUnset && n === 0) return undefined; // "0" is the source's placeholder for unset
-  return n;
-}
-
-// ---------------------------------------------------------------- inheritance
-
-// Walk leaf -> root, returning the chain of parsed profiles. Depth-capped and cycle-guarded
-// because a malformed "inherits" would otherwise loop forever.
-async function resolveChain(vendorDir, subPath) {
-  const chain = [];
-  const seen = new Set();
-  let path = subPath;
-  for (let depth = 0; path && depth < 12; depth++) {
-    if (seen.has(path)) break;
-    seen.add(path);
-    const res = await readProfile(rawUrl(vendorDir, path));
-    if (!res.ok) break;
-    let json;
-    try {
-      json = JSON.parse(res.body);
-    } catch {
-      await log(`slicerprofiles: unparseable JSON at ${vendorDir}/${path}`);
-      break;
-    }
-    chain.push({ path, json, name: json.name || path });
-    const parent = val(json.inherits);
-    if (!parent) break;
-    path = await pathForName(vendorDir, parent);
-  }
-  return chain;
-}
-
-// First non-nil value down the chain, with the profile that supplied it.
-function pick(chain, key) {
-  for (const node of chain) {
-    if (val(node.json[key]) !== undefined) return { value: node.json[key], from: node.name, depth: chain.indexOf(node) };
-  }
-  return { value: undefined, from: null, depth: -1 };
-}
 
 // ---------------------------------------------------------------- material identity
 
@@ -274,166 +163,307 @@ export function mapType(raw) {
   return 'Other';
 }
 
-// ---------------------------------------------------------------- listing
+// ---------------------------------------------------------------- value helpers
 
-// A group is one distinct filament: every "<name> @<printer/nozzle>" variant of the same
-// product folds into it. Keyed on the containing directory (the vendor folder inside the
-// profile pack) + the name without its "@…" suffix, lower-cased.
-const groups = new Map(); // key -> { vendorDir, members: [{ name, subPath }] }
+// Orca stores scalars as single-element arrays of strings; "nil" means inherit/unset.
+function val(v) {
+  const s = Array.isArray(v) ? v[0] : v;
+  if (s === undefined || s === null) return undefined;
+  const t = String(s).trim();
+  return t === '' || t === 'nil' ? undefined : t;
+}
 
-const groupKey = (subPath, name) => {
-  const seg = subPath.split('/');
-  const dir = seg.length > 2 ? seg[seg.length - 2] : '_root';
-  return `${dir}|${name.replace(/\s*@.*$/, '')}`.toLowerCase();
-};
+function num(v, { zeroIsUnset = true } = {}) {
+  const s = val(v);
+  if (s === undefined) return undefined;
+  const n = parseFloat(s);
+  if (!Number.isFinite(n)) return undefined;
+  if (zeroIsUnset && n === 0) return undefined; // "0" is the source's placeholder for unset
+  return n;
+}
 
-// The "@base" member holds the shared truth for the product; printer variants only re-tune it.
-const representative = (members) =>
-  members.find((m) => /@base$/i.test(m.name)) ||
-  members.find((m) => !m.name.includes('@')) ||
-  members[0];
+// ---------------------------------------------------------------- factory
 
-export async function listProducts() {
-  const dirs = await get(API_DIRS);
-  if (!dirs.ok) {
-    await log(`slicerprofiles: cannot list vendor dirs (${dirs.status})`);
-    return [];
+// One resolver drives OrcaSlicer and BambuStudio: they share the JSON schema, the filament_list
+// index, the "nil" placeholder and the inherits chain. Every parameter differs only in the raw
+// base URL, the local checkout path, the data file and the GitHub origin. The factory closes
+// over its own index/path/group/emitted caches so two parsers never share state in one process.
+export function createSlicerResolver({ rawBase, localDir, dataFile, origin, apiDirs, name }) {
+  const RAW = rawBase;
+  const LOCAL = localDir;
+  const DATA_FILE = dataFile;
+
+  let localOk = null;
+  async function localAvailable() {
+    if (localOk !== null) return localOk;
+    try { await _readdir(LOCAL); localOk = true; } catch { localOk = false; }
+    return localOk;
   }
-  let entries;
-  try {
-    entries = JSON.parse(dirs.body).filter((e) => e.type === 'dir').map((e) => e.name);
-  } catch {
-    return [];
-  }
-
-  let files = 0;
-  for (const vendorDir of entries.sort()) {
-    const idx = await indexFor(vendorDir);
-    for (const [name, subPath] of idx) {
-      if (!subPath.startsWith('filament/')) continue;
-      files++;
-      // Roots are shared machinery, not products; they are reached through inheritance only.
-      if (/^fdm_filament_/i.test(name)) continue;
-      const key = groupKey(subPath, name);
-      const g = groups.get(key) || { vendorDir, members: [] };
-      g.members.push({ name, subPath });
-      groups.set(key, g);
+  // Mirrors get()'s shape so callers need no branching.
+  async function readProfile(url) {
+    if (await localAvailable() && url.startsWith(RAW)) {
+      const rel = decodeURIComponent(url.slice(RAW.length));
+      try { return { ok: true, status: 200, body: await _readFile(_join(LOCAL, rel), 'utf8'), fromCache: true }; }
+      catch { return { ok: false, status: 404, body: '' }; }
     }
+    return get(url);
   }
 
-  // run-all.mjs resumes by skipping URLs already in data/<parser>.json, but the collapse below
-  // lives in this process's memory: without re-seeding it, a resumed run re-emits a second row
-  // for every filament the first run had already folded away. Seed from what is on disk.
-  try {
-    const prior = JSON.parse(await _readFile(DATA_FILE, 'utf8'));
-    if (Array.isArray(prior)) for (const r of prior) emitted.add(`${norm(r.manufacturer)}|${norm(r.brand)}`);
-    if (emitted.size) await log(`slicerprofiles: ${emitted.size} filaments already in data/slicerprofiles.json — not re-emitting`);
-  } catch {
-    // no previous run
-  }
+  const rawUrl = (vendorDir, subPath) => RAW + encodeURI(`${vendorDir}/${subPath}`);
 
-  const urls = [];
-  for (const g of groups.values()) {
-    const rep = representative(g.members);
-    urls.push(rawUrl(g.vendorDir, rep.subPath));
-  }
-  await log(`slicerprofiles: ${entries.length} vendor dirs, ${files} filament files, ${groups.size} distinct filaments`);
-  return [...new Set(urls)];
-}
+  // ---------------------------------------------------------------- vendor index
 
-// ---------------------------------------------------------------- parsing
+  const indexes = new Map(); // vendorDir -> Map(profileName -> subPath)
 
-const emitted = new Set(); // norm(vendor)|norm(brand) — the same filament ships in several packs
-
-const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
-
-function splitUrl(url) {
-  const rest = decodeURIComponent(url.slice(RAW.length));
-  const i = rest.indexOf('/');
-  return { vendorDir: rest.slice(0, i), subPath: rest.slice(i + 1) };
-}
-
-// Other files of the same product, used when the representative resolves without temperatures.
-async function siblings(vendorDir, subPath, exclude) {
-  const idx = await indexFor(vendorDir);
-  const want = groupKey(subPath, exclude);
-  const out = [];
-  for (const [name, p] of idx) {
-    if (!p.startsWith('filament/') || p === subPath) continue;
-    if (groupKey(p, name) === want) out.push({ name, subPath: p });
-  }
-  return out;
-}
-
-export async function parseProduct(url) {
-  if (!url.startsWith(RAW)) return null;
-  const { vendorDir, subPath } = splitUrl(url);
-  const leafName = subPath.split('/').pop().replace(/\.json$/, '');
-
-  let chain = await resolveChain(vendorDir, subPath);
-  if (!chain.length) return null;
-  let sourceUrl = url;
-
-  // A representative whose chain never states a temperature (some packs put every value in the
-  // printer-specific variants) — retry through one sibling before giving up.
-  const hasTemps = (c) => pick(c, 'nozzle_temperature').value !== undefined && pick(c, 'hot_plate_temp').value !== undefined;
-  if (!hasTemps(chain)) {
-    for (const sib of await siblings(vendorDir, subPath, leafName)) {
-      const alt = await resolveChain(vendorDir, sib.subPath);
-      if (hasTemps(alt)) {
-        chain = alt;
-        sourceUrl = rawUrl(vendorDir, sib.subPath);
-        break;
+  async function indexFor(vendorDir) {
+    if (indexes.has(vendorDir)) return indexes.get(vendorDir);
+    const res = await readProfile(RAW + encodeURI(`${vendorDir}.json`));
+    const map = new Map();
+    if (res.ok) {
+      try {
+        for (const f of JSON.parse(res.body).filament_list || []) {
+          if (f && f.name && f.sub_path) map.set(f.name, f.sub_path);
+        }
+      } catch {
+        await log(`${name}: ${vendorDir}.json is not valid JSON`);
       }
     }
+    indexes.set(vendorDir, map);
+    return map;
   }
 
-  const nozzleTemp = num(pick(chain, 'nozzle_temperature').value);
-  const bedTemp = num(pick(chain, 'hot_plate_temp').value);
-  // Required. Never invent them.
-  if (nozzleTemp === undefined || bedTemp === undefined) return null;
+  // The index misses a few roots (BBL's fdm_filament_* are not all listed), so fall back to the
+  // two conventional locations before giving up.
+  const pathMemo = new Map(); // vendorDir|name -> subPath|null (a miss costs two 404s, pay once)
 
-  const vendor = val(pick(chain, 'filament_vendor').value);
-  if (!vendor || ANON_VENDOR.test(vendor)) return null;
-
-  const sourceProfile = chain[0].name;
-  const filamentType = mapType(val(pick(chain, 'filament_type').value));
-  const brand = deriveBrand(sourceProfile, filamentType);
-  if (!brand) return null;
-
-  const key = `${norm(vendor)}|${norm(brand)}`;
-  if (emitted.has(key)) return null; // same filament, another printer pack
-  emitted.add(key);
-
-  const out = {
-    manufacturer: vendor,
-    brand,
-    filamentType,
-    nozzleTemp,
-    bedTemp,
-    sourceType: 'slicer-profile',
-    sourceUrl,
-    sourceProfile,
-  };
-
-  const opt = {
-    nozzleTempInitial: num(pick(chain, 'nozzle_temperature_initial_layer').value),
-    bedTempInitial: num(pick(chain, 'hot_plate_temp_initial_layer').value),
-    maxVolumetricSpeed: num(pick(chain, 'filament_max_volumetric_speed').value),
-    flowRatio: num(pick(chain, 'filament_flow_ratio').value),
-    fanSpeedMin: num(pick(chain, 'fan_min_speed').value, { zeroIsUnset: false }),
-    fanSpeedMax: num(pick(chain, 'fan_max_speed').value, { zeroIsUnset: false }),
-    density: num(pick(chain, 'filament_density').value),
-    filamentDiameter: num(pick(chain, 'filament_diameter').value),
-  };
-  for (const [k, v] of Object.entries(opt)) if (v !== undefined) out[k] = v;
-
-  // Attribution detail: which ancestors the required values actually came from.
-  const nz = pick(chain, 'nozzle_temperature');
-  const bd = pick(chain, 'hot_plate_temp');
-  if (nz.depth > 0 || bd.depth > 0) {
-    out.inheritedFrom = [...new Set([nz.from, bd.from].filter((n) => n && n !== sourceProfile))];
+  async function pathForName(vendorDir, name) {
+    const memoKey = `${vendorDir}|${name}`;
+    if (pathMemo.has(memoKey)) return pathMemo.get(memoKey);
+    const idx = await indexFor(vendorDir);
+    let found = idx.get(name) ?? null;
+    if (!found) {
+      for (const guess of [`filament/${name}.json`, `filament/base/${name}.json`]) {
+        const probe = await readProfile(rawUrl(vendorDir, guess));
+        if (probe.ok) { found = guess; break; }
+      }
+    }
+    pathMemo.set(memoKey, found);
+    return found;
   }
 
-  return out;
+  // ---------------------------------------------------------------- inheritance
+
+  // Walk leaf -> root, returning the chain of parsed profiles. Depth-capped and cycle-guarded
+  // because a malformed "inherits" would otherwise loop forever.
+  async function resolveChain(vendorDir, subPath) {
+    const chain = [];
+    const seen = new Set();
+    let path = subPath;
+    for (let depth = 0; path && depth < 12; depth++) {
+      if (seen.has(path)) break;
+      seen.add(path);
+      const res = await readProfile(rawUrl(vendorDir, path));
+      if (!res.ok) break;
+      let json;
+      try {
+        json = JSON.parse(res.body);
+      } catch {
+        await log(`${name}: unparseable JSON at ${vendorDir}/${path}`);
+        break;
+      }
+      chain.push({ path, json, name: json.name || path });
+      const parent = val(json.inherits);
+      if (!parent) break;
+      path = await pathForName(vendorDir, parent);
+    }
+    return chain;
+  }
+
+  // First non-nil value down the chain, with the profile that supplied it.
+  function pick(chain, key) {
+    for (const node of chain) {
+      if (val(node.json[key]) !== undefined) return { value: node.json[key], from: node.name, depth: chain.indexOf(node) };
+    }
+    return { value: undefined, from: null, depth: -1 };
+  }
+
+  // ---------------------------------------------------------------- listing
+
+  // A group is one distinct filament: every "<name> @<printer/nozzle>" variant of the same
+  // product folds into it. Keyed on the containing directory (the vendor folder inside the
+  // profile pack) + the name without its "@…" suffix, lower-cased.
+  const groups = new Map(); // key -> { vendorDir, members: [{ name, subPath }] }
+
+  const groupKey = (subPath, name) => {
+    const seg = subPath.split('/');
+    const dir = seg.length > 2 ? seg[seg.length - 2] : '_root';
+    return `${dir}|${name.replace(/\s*@.*$/, '')}`.toLowerCase();
+  };
+
+  // The "@base" member holds the shared truth for the product; printer variants only re-tune it.
+  const representative = (members) =>
+    members.find((m) => /@base$/i.test(m.name)) ||
+    members.find((m) => !m.name.includes('@')) ||
+    members[0];
+
+  async function listProducts() {
+    const dirs = await get(apiDirs);
+    if (!dirs.ok) {
+      await log(`${name}: cannot list vendor dirs (${dirs.status})`);
+      return [];
+    }
+    let entries;
+    try {
+      entries = JSON.parse(dirs.body).filter((e) => e.type === 'dir').map((e) => e.name);
+    } catch {
+      return [];
+    }
+
+    let files = 0;
+    for (const vendorDir of entries.sort()) {
+      const idx = await indexFor(vendorDir);
+      for (const [name, subPath] of idx) {
+        if (!subPath.startsWith('filament/')) continue;
+        files++;
+        // Roots are shared machinery, not products; they are reached through inheritance only.
+        if (/^fdm_filament_/i.test(name)) continue;
+        const key = groupKey(subPath, name);
+        const g = groups.get(key) || { vendorDir, members: [] };
+        g.members.push({ name, subPath });
+        groups.set(key, g);
+      }
+    }
+
+    // run-all.mjs resumes by skipping URLs already in data/<parser>.json, but the collapse below
+    // lives in this process's memory: without re-seeding it, a resumed run re-emits a second row
+    // for every filament the first run had already folded away. Seed from what is on disk.
+    try {
+      const prior = JSON.parse(await _readFile(DATA_FILE, 'utf8'));
+      if (Array.isArray(prior)) for (const r of prior) emitted.add(`${norm(r.manufacturer)}|${norm(r.brand)}`);
+      if (emitted.size) await log(`${name}: ${emitted.size} filaments already in data/${name}.json — not re-emitting`);
+    } catch {
+      // no previous run
+    }
+
+    const urls = [];
+    for (const g of groups.values()) {
+      const rep = representative(g.members);
+      urls.push(rawUrl(g.vendorDir, rep.subPath));
+    }
+    await log(`${name}: ${entries.length} vendor dirs, ${files} filament files, ${groups.size} distinct filaments`);
+    return [...new Set(urls)];
+  }
+
+  // ---------------------------------------------------------------- parsing
+
+  const emitted = new Set(); // norm(vendor)|norm(brand) — the same filament ships in several packs
+
+  const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+
+  function splitUrl(url) {
+    const rest = decodeURIComponent(url.slice(RAW.length));
+    const i = rest.indexOf('/');
+    return { vendorDir: rest.slice(0, i), subPath: rest.slice(i + 1) };
+  }
+
+  // Other files of the same product, used when the representative resolves without temperatures.
+  async function siblings(vendorDir, subPath, exclude) {
+    const idx = await indexFor(vendorDir);
+    const want = groupKey(subPath, exclude);
+    const out = [];
+    for (const [name, p] of idx) {
+      if (!p.startsWith('filament/') || p === subPath) continue;
+      if (groupKey(p, name) === want) out.push({ name, subPath: p });
+    }
+    return out;
+  }
+
+  async function parseProduct(url) {
+    if (!url.startsWith(RAW)) return null;
+    const { vendorDir, subPath } = splitUrl(url);
+    const leafName = subPath.split('/').pop().replace(/\.json$/, '');
+
+    let chain = await resolveChain(vendorDir, subPath);
+    if (!chain.length) return null;
+    let sourceUrl = url;
+
+    // A representative whose chain never states a temperature (some packs put every value in the
+    // printer-specific variants) — retry through one sibling before giving up.
+    const hasTemps = (c) => pick(c, 'nozzle_temperature').value !== undefined && pick(c, 'hot_plate_temp').value !== undefined;
+    if (!hasTemps(chain)) {
+      for (const sib of await siblings(vendorDir, subPath, leafName)) {
+        const alt = await resolveChain(vendorDir, sib.subPath);
+        if (hasTemps(alt)) {
+          chain = alt;
+          sourceUrl = rawUrl(vendorDir, sib.subPath);
+          break;
+        }
+      }
+    }
+
+    const nozzleTemp = num(pick(chain, 'nozzle_temperature').value);
+    const bedTemp = num(pick(chain, 'hot_plate_temp').value);
+    // Required. Never invent them.
+    if (nozzleTemp === undefined || bedTemp === undefined) return null;
+
+    const vendor = val(pick(chain, 'filament_vendor').value);
+    if (!vendor || ANON_VENDOR.test(vendor)) return null;
+
+    const sourceProfile = chain[0].name;
+    const filamentType = mapType(val(pick(chain, 'filament_type').value));
+    const brand = deriveBrand(sourceProfile, filamentType);
+    if (!brand) return null;
+
+    const key = `${norm(vendor)}|${norm(brand)}`;
+    if (emitted.has(key)) return null; // same filament, another printer pack
+    emitted.add(key);
+
+    const out = {
+      manufacturer: vendor,
+      brand,
+      filamentType,
+      nozzleTemp,
+      bedTemp,
+      sourceType: 'slicer-profile',
+      sourceUrl,
+      sourceProfile,
+    };
+
+    const opt = {
+      nozzleTempInitial: num(pick(chain, 'nozzle_temperature_initial_layer').value),
+      bedTempInitial: num(pick(chain, 'hot_plate_temp_initial_layer').value),
+      maxVolumetricSpeed: num(pick(chain, 'filament_max_volumetric_speed').value),
+      flowRatio: num(pick(chain, 'filament_flow_ratio').value),
+      fanSpeedMin: num(pick(chain, 'fan_min_speed').value, { zeroIsUnset: false }),
+      fanSpeedMax: num(pick(chain, 'fan_max_speed').value, { zeroIsUnset: false }),
+      density: num(pick(chain, 'filament_density').value),
+      filamentDiameter: num(pick(chain, 'filament_diameter').value),
+    };
+    for (const [k, v] of Object.entries(opt)) if (v !== undefined) out[k] = v;
+
+    // Attribution detail: which ancestors the required values actually came from.
+    const nz = pick(chain, 'nozzle_temperature');
+    const bd = pick(chain, 'hot_plate_temp');
+    if (nz.depth > 0 || bd.depth > 0) {
+      out.inheritedFrom = [...new Set([nz.from, bd.from].filter((n) => n && n !== sourceProfile))];
+    }
+
+    return out;
+  }
+
+  return { listProducts, parseProduct };
 }
+
+// ---------------------------------------------------------------- OrcaSlicer resolver
+
+const orca = createSlicerResolver({
+  rawBase: RAW,
+  localDir: LOCAL,
+  dataFile: DATA_FILE,
+  origin: ORIGIN,
+  apiDirs: API_DIRS,
+  name: 'slicerprofiles',
+});
+
+export const listProducts = orca.listProducts;
+export const parseProduct = orca.parseProduct;
