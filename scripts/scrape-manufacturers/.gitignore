@@ -3,3 +3,4 @@ nohup*.out
 run.log
 orca-profiles/
 data/.*.lock
+vendor/
