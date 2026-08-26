@@ -44,6 +44,23 @@ const REPRESENTABLE = Object.keys(ENVELOPE);
 const nameRe = (t) => new RegExp(`(^|[^A-Z0-9])${t.toUpperCase().replace('-', '[- ]?')}([^A-Z0-9]|$)`);
 const field = (l, re) => (re.exec(l) || [])[1] || '';
 
+// The rule itself, exported so import-manufacturers.mjs applies it to incoming rows. Without
+// that, every re-import re-adds an 'Other'-typed twin of a row this script has already fixed:
+// the settings dedup key includes filamentType, so correcting it here alone makes the stored
+// row and the source row look like different products.
+export function inferType(name, storedType, nozzle, bed) {
+  const pool = FOUR.includes(storedType) ? FOUR : (storedType === 'Other' ? REPRESENTABLE : null);
+  if (!pool) return storedType;
+  const said = pool.filter((p) => nameRe(p).test(String(name).toUpperCase()));
+  if (said.length !== 1 || said[0] === storedType) return storedType;
+  const want = said[0];
+  if (!ENVELOPE[want] || tooCold(want, nozzle, bed)) return storedType;
+  return want;
+}
+
+if (import.meta.url !== `file://${process.argv[1]}`) {
+  // imported for inferType only
+} else {
 const src = await readFile(CONSTANTS, 'utf8');
 const lines = src.split('\n');
 
@@ -84,3 +101,4 @@ skipped.forEach((s) => console.log(`  SKIPPED ${s}`));
 if (DRY) { console.log('--dry: constants.ts not written'); process.exit(0); }
 await writeFile(CONSTANTS, out.join('\n'));
 console.log('constants.ts rewritten');
+}

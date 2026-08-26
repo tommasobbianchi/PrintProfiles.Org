@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { canonManufacturer } from './manufacturer-aliases.mjs';
 import { isAbrasive, ABRASIVE_NOTE } from './abrasive.mjs';
 import { tooCold } from './envelopes.mjs';
+import { inferType } from './fix-filament-type.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA = join(HERE, 'data');
@@ -199,6 +200,13 @@ async function main() {
       // wheat / scallop / coffee filled PLA all print at 205/55 but are different products,
       // as are FilaFlex 82A and 95A. So the key is the colour-stripped product name plus the
       // settings — same product different colour collapses, different products never do.
+      // Correct the polymer before any key is built from it. Storefront parsers pick the wrong
+      // one off busy pages, and rows predating the FilamentType union's expansion arrive as
+      // 'Other'. Doing this after the dedup key would let an 'Other'-typed twin of an
+      // already-corrected preset import as a separate product.
+      raw.filamentType = inferType(`${raw.brand || ''} ${raw.manufacturer || ''} ${raw.brand || ''}`,
+        raw.filamentType, raw.nozzleTemp, raw.bedTemp);
+
       // Below the plausibility floor for its own polymer. The existing guard only rejects the
       // universally impossible (nozzle under 150, nozzle cooler than bed), which lets through
       // "ABS at bed 43" and "PETG at 150" — values scraped off multi-product bundle pages where
