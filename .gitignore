@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# local skill/tool prefs, not project config
+.claude/settings.local.json

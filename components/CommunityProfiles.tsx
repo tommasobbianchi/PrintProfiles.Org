@@ -1,368 +1,337 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { FilamentProfile, PrinterBrand } from '../types';
-import { PRINTER_BRANDS, PRINTER_MODELS, NOZZLE_DIAMETERS, FILAMENT_MANUFACTURERS, FILAMENT_TYPES } from '../constants';
-import DownloadIcon from './icons/DownloadIcon';
-import { generateBambuJson, generatePrusaIni, generateIdeaMakerJson } from '../utils/exporters';
+import { PRINTER_BRANDS, PRINTER_MODELS } from '../constants';
+import { reinforcementOf, isAbrasive, REINFORCEMENTS, REINFORCEMENT_LABEL, Reinforcement } from '../utils/reinforcement';
+import ProfileDetail, { downloadProfile } from './ProfileDetail';
 
 interface CommunityProfilesProps {
   profiles: FilamentProfile[];
   isLoading: boolean;
 }
 
-const Detail: React.FC<{ label: string; value: string | number }> = ({ label, value }) => (
-  <div>
-    <span className="text-stone-500">{label}: </span>
-    <span className="font-semibold text-stone-800">{value}</span>
+// The five a visitor reaches for first. Everything else lives in the rail.
+const QUICK_TYPES = ['PLA', 'PETG', 'ABS', 'ASA', 'TPU'];
+
+const toggle = <T,>(list: T[], v: T): T[] =>
+  list.includes(v) ? list.filter((x) => x !== v) : [...list, v];
+
+const Chip: React.FC<{ on: boolean; onClick: () => void; children: React.ReactNode }> = ({ on, onClick, children }) => (
+  <button
+    onClick={onClick}
+    className={`inline-flex items-center h-9 px-4 rounded-full text-[13px] font-medium border transition-colors ${
+      on ? 'bg-stone-900 border-stone-900 text-[#fdfbf7]' : 'bg-white border-stone-300 text-stone-700 hover:border-stone-400'
+    }`}
+  >
+    {children}
+  </button>
+);
+
+const FacetRow: React.FC<{ on: boolean; label: string; count: number; onClick: () => void }> = ({ on, label, count, onClick }) => (
+  <button
+    onClick={onClick}
+    className={`flex items-center justify-between w-full h-8 px-2 rounded-md text-[13.5px] text-left transition-colors ${
+      on ? 'bg-stone-100 text-stone-900 font-semibold' : 'text-stone-700 hover:bg-stone-50'
+    }`}
+  >
+    <span className="flex items-center gap-2.5 min-w-0">
+      <span className={`inline-block h-3.5 w-3.5 rounded-[3px] shrink-0 border-[1.5px] ${on ? 'bg-amber-800 border-amber-800' : 'bg-white border-stone-300'}`} />
+      <span className="truncate">{label}</span>
+    </span>
+    <span className="text-stone-400 tabular-nums shrink-0 ml-2">{count}</span>
+  </button>
+);
+
+const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
+  <div className="flex flex-col gap-2">
+    <h3 className="text-[11px] font-semibold uppercase tracking-[0.09em] text-stone-400">{title}</h3>
+    {children}
+  </div>
+);
+
+const LoadingSpinner: React.FC = () => (
+  <div className="flex flex-col items-center justify-center py-24 gap-3">
+    <div className="h-8 w-8 rounded-full border-2 border-stone-200 border-t-stone-700 animate-spin" />
+    <p className="text-sm text-stone-500">Loading the repository…</p>
   </div>
 );
 
 const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoading }) => {
-  const [filterBrand, setFilterBrand] = useState<string>('All');
-  const [filterModel, setFilterModel] = useState<string>('All');
-  const [filterNozzle, setFilterNozzle] = useState<string>('All');
-  const [filterManufacturer, setFilterManufacturer] = useState<string>('All');
-  const [filterMaterial, setFilterMaterial] = useState<string>('All');
-  const [filterText, setFilterText] = useState('');
-  
-  // Track if filters have been applied
-  const hasFiltersApplied = filterBrand !== 'All' || filterModel !== 'All' || filterNozzle !== 'All' || filterManufacturer !== 'All' || filterMaterial !== 'All' || filterText.length > 0;
+  const [query, setQuery] = useState('');
+  const [types, setTypes] = useState<string[]>([]);
+  const [fills, setFills] = useState<Reinforcement[]>([]);
+  const [brands, setBrands] = useState<string[]>([]);
+  const [printerBrand, setPrinterBrand] = useState<string>('All');
+  const [printerModel, setPrinterModel] = useState<string>('All');
+  const [showAllBrands, setShowAllBrands] = useState(false);
+  const [limit, setLimit] = useState(60);
+  const [selected, setSelected] = useState<FilamentProfile | null>(null);
 
-  // --- Filtering & Scoring Logic ---
-  
-  // 1. Calculate score for sorting (Specificity Score)
-  const getMatchScore = (p: FilamentProfile) => {
-      let score = 0;
-      
-      // Brand Match (Highest priority)
-      if (filterBrand !== 'All') {
-          if (p.printerBrand === filterBrand) score += 100;
-          else if (p.printerBrand === 'Other') score += 10; // Generic brand fallback
-      }
-
-      // Model Match
-      if (filterModel !== 'All') {
-          if (p.printerModel === filterModel) score += 50;
-          else if (p.printerModel === 'Generic' || !p.printerModel) score += 5; // Generic model fallback
-      }
-
-      // Nozzle Match
-      if (filterNozzle !== 'All') {
-          const targetNozzle = parseFloat(filterNozzle);
-          if (p.nozzleDiameter === targetNozzle) score += 20;
-          else if (!p.nozzleDiameter) score += 2; // Generic nozzle fallback
-      }
-
-      return score;
-  };
-
-  const getMatchLabel = (p: FilamentProfile): { text: string, color: string } | null => {
-      if (filterBrand === 'All') return null;
-
-      const isBrandMatch = p.printerBrand === filterBrand;
-      const isModelMatch = filterModel !== 'All' && p.printerModel === filterModel;
-      const isNozzleMatch = filterNozzle !== 'All' && p.nozzleDiameter === parseFloat(filterNozzle);
-
-      if (isBrandMatch && isModelMatch && isNozzleMatch) return { text: 'Perfect Match', color: 'bg-green-100 text-green-800 border-green-300' };
-      if (isBrandMatch && isModelMatch) return { text: 'Model Match', color: 'bg-blue-100 text-blue-800 border-blue-300' };
-      if (isBrandMatch) return { text: 'Brand Compatible', color: 'bg-indigo-100 text-indigo-800 border-indigo-300' };
-      if (p.printerBrand === 'Other') return { text: 'Generic / Universal', color: 'bg-stone-200 text-stone-600 border-stone-300' };
-      
-      return null;
-  };
-
-  const filteredProfiles = profiles
-    .filter(p => {
-        // 1. Text Search
-        const search = filterText.toLowerCase();
-        const matchesText = p.profileName.toLowerCase().includes(search) || 
-                            p.manufacturer.toLowerCase().includes(search) ||
-                            p.filamentType.toLowerCase().includes(search);
-        if (!matchesText) return false;
-
-        // 2. Brand Filter (Show Exact Brand OR 'Other' as fallback)
-        const matchesBrand = filterBrand === 'All' || p.printerBrand === filterBrand || p.printerBrand === 'Other';
-        
-        // 3. Model Filter (Show Exact Model OR 'Generic' OR undefined)
-        const matchesModel = filterModel === 'All' || 
-                             (p.printerModel === filterModel) || 
-                             (p.printerModel === 'Generic') || 
-                             (!p.printerModel);
-
-        // 4. Nozzle Filter (Show Exact Nozzle OR undefined)
-        const matchesNozzle = filterNozzle === 'All' || 
-                              (p.nozzleDiameter === parseFloat(filterNozzle)) || 
-                              (!p.nozzleDiameter);
-
-        // 5. Manufacturer Filter
-        const matchesManufacturer = filterManufacturer === 'All' || p.manufacturer === filterManufacturer;
-
-        // 6. Material Filter
-        const matchesMaterial = filterMaterial === 'All' || p.filamentType === filterMaterial;
-                              
-        return matchesBrand && matchesModel && matchesNozzle && matchesManufacturer && matchesMaterial;
-    })
-    .sort((a, b) => {
-        // Sort by score descending
-        return getMatchScore(b) - getMatchScore(a);
-    });
-
-  // Reset dependent filters when parent changes
-  const handleBrandChange = (brand: string) => {
-      setFilterBrand(brand);
-      setFilterModel('All'); // Reset model
-      setFilterNozzle('All'); // Optional: Reset nozzle or keep it
-  };
-
-  const availableModels = filterBrand !== 'All' && filterBrand !== 'Other' 
-    ? PRINTER_MODELS[filterBrand as PrinterBrand] || [] 
-    : [];
-
-
-  // --- Export Generators ---
-
-  const downloadFile = (profile: FilamentProfile, type: 'bambu' | 'prusa' | 'ideamaker') => {
-    let content = '';
-    let mimeType = 'text/plain';
-    let extension = '';
-    let prefix = '';
-
-    if (type === 'bambu') {
-        content = JSON.stringify(generateBambuJson(profile), null, 2);
-        mimeType = 'text/json';
-        extension = 'json';
-        prefix = 'BambuOrca';
-    } else if (type === 'prusa') {
-        content = generatePrusaIni(profile);
-        mimeType = 'text/plain';
-        extension = 'ini';
-        prefix = 'Prusa';
-    } else if (type === 'ideamaker') {
-        content = JSON.stringify(generateIdeaMakerJson(profile), null, 2);
-        mimeType = 'text/json';
-        extension = 'json';
-        prefix = 'IdeaMaker';
-    }
-    
-    const blob = new Blob([content], { type: `${mimeType};charset=utf-8` });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    const safeName = profile.profileName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-    link.download = `${safeName}_${prefix}.${extension}`;
-    link.click();
-    URL.revokeObjectURL(url);
-  };
-
-  const ProfileCard: React.FC<{ profile: FilamentProfile }> = ({ profile }) => {
-      const matchLabel = getMatchLabel(profile);
-
-      return (
-        <div className="bg-white rounded-lg p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:scale-[1.02] relative overflow-hidden border border-stone-200 hover:border-blue-300">
-        
-        {matchLabel && (
-            <div className={`absolute top-0 right-0 px-3 py-1 text-xs font-bold rounded-bl-lg border-b border-l ${matchLabel.color}`}>
-                {matchLabel.text}
-            </div>
-        )}
-
-        <div>
-            <div className="flex items-center justify-between mb-1 pr-20">
-                <h3 className="text-lg font-bold text-stone-800 truncate pr-2" title={profile.profileName}>{profile.profileName}</h3>
-            </div>
-            <div className="flex items-center mb-2">
-                 {profile.colorHex && <div className="w-4 h-4 rounded-full border border-stone-300 mr-2" title={profile.colorName} style={{ backgroundColor: profile.colorHex }}></div>}
-                 <p className="text-sm text-stone-500 truncate">
-                    {profile.manufacturer} {profile.brand ? `- ${profile.brand}` : ''}
-                 </p>
-            </div>
-
-            {/* Hardware Specs */}
-            <div className="flex gap-2 mb-3">
-                 <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${profile.printerBrand === 'Other' ? 'bg-stone-100 text-stone-600' : 'bg-blue-50 text-blue-700 border border-blue-100'}`}>
-                     {profile.printerBrand}
-                 </span>
-                 <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-stone-50 text-stone-600 border border-stone-200">
-                     {profile.printerModel || 'Generic'}
-                 </span>
-                 <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-stone-50 text-stone-600 border border-stone-200">
-                     {profile.nozzleDiameter ? `⌀ ${profile.nozzleDiameter}mm` : 'All Nozzles'}
-                 </span>
-            </div>
-            
-            <div className="border-t border-stone-100 pt-3">
-            <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm mb-3">
-                <Detail label="Nozzle" value={`${profile.nozzleTemp}°C`} />
-                <Detail label="Bed" value={`${profile.bedTemp}°C`} />
-                <Detail label="Max Flow" value={`${profile.maxVolumetricSpeed} mm³/s`} />
-                <Detail label="Fan" value={`${profile.fanSpeedMin}-${profile.fanSpeedMax}%`} />
-                {profile.density && <Detail label="Density" value={`${profile.density} g/cm³`} />}
-                {profile.dryingTemp && <Detail label="Drying" value={`${profile.dryingTemp}°C ${profile.dryingTime ? `(${profile.dryingTime})` : ''}`} />}
-            </div>
-            </div>
-            
-            {profile.notes && <p className="text-xs text-stone-600 italic bg-stone-50 p-2 rounded-md mt-2 border border-stone-100">"{profile.notes}"</p>}
-        </div>
-        
-        <div className="mt-4 pt-3 border-t border-stone-100">
-            <p className="text-xs text-stone-400 text-center mb-2">Download For:</p>
-            <div className="flex flex-col gap-2">
-                <button
-                    onClick={() => downloadFile(profile, 'bambu')}
-                    className="w-full flex items-center justify-center gap-1 bg-green-600 hover:bg-green-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors shadow-sm"
-                    title="Bambu Studio / Orca Slicer"
-                >
-                    <DownloadIcon /> Bambu/Orca
-                </button>
-                <button
-                    onClick={() => downloadFile(profile, 'prusa')}
-                    className="w-full flex items-center justify-center gap-1 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors shadow-sm"
-                    title="Prusa Slicer"
-                >
-                    <DownloadIcon /> Prusa
-                </button>
-                <button
-                    onClick={() => downloadFile(profile, 'ideamaker')}
-                    className="w-full flex items-center justify-center gap-1 bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2 px-2 rounded-md transition-colors shadow-sm"
-                    title="ideaMaker"
-                >
-                    <DownloadIcon /> IdeaMaker
-                </button>
-            </div>
-        </div>
-        </div>
-      );
-  };
-
-  const LoadingSpinner = () => (
-    <div className="flex justify-center items-center p-10">
-      <svg className="animate-spin h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-      </svg>
-    </div>
+  // Reinforcement is derived from the product name (see utils/reinforcement.ts), so it is
+  // computed once per profile rather than on every keystroke.
+  const indexed = useMemo(
+    () => profiles.map((p) => ({
+      p,
+      fill: reinforcementOf(p),
+      abrasive: isAbrasive(p),
+      haystack: `${p.manufacturer} ${p.brand ?? ''} ${p.profileName} ${p.filamentType}`.toLowerCase(),
+    })),
+    [profiles],
   );
 
+  const counts = useMemo(() => {
+    const type: Record<string, number> = {};
+    const fill: Record<string, number> = {};
+    const brand: Record<string, number> = {};
+    for (const { p, fill: f } of indexed) {
+      type[p.filamentType] = (type[p.filamentType] ?? 0) + 1;
+      brand[p.manufacturer] = (brand[p.manufacturer] ?? 0) + 1;
+      if (f) fill[f] = (fill[f] ?? 0) + 1;
+    }
+    return {
+      type: Object.entries(type).sort((a, b) => b[1] - a[1]),
+      fill,
+      brand: Object.entries(brand).sort((a, b) => b[1] - a[1]),
+    };
+  }, [indexed]);
+
+  const results = useMemo(() => {
+    const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    return indexed
+      .filter(({ p, fill, haystack }) => {
+        // Every word must land somewhere, so "petg cf" narrows instead of widening.
+        if (words.length && !words.every((w) => haystack.includes(w))) return false;
+        if (types.length && !types.includes(p.filamentType)) return false;
+        if (fills.length && !(fill && fills.includes(fill))) return false;
+        if (brands.length && !brands.includes(p.manufacturer)) return false;
+        if (printerBrand !== 'All' && p.printerBrand !== printerBrand && p.printerBrand !== 'Other') return false;
+        if (printerModel !== 'All' && p.printerModel !== printerModel && p.printerModel && p.printerModel !== 'Generic') return false;
+        return true;
+      })
+      .sort((a, b) => a.p.manufacturer.localeCompare(b.p.manufacturer) || (a.p.brand ?? '').localeCompare(b.p.brand ?? ''));
+  }, [indexed, query, types, fills, brands, printerBrand, printerModel]);
+
+  const active = query.trim().length > 0 || types.length > 0 || fills.length > 0 || brands.length > 0 || printerBrand !== 'All';
+  const clearAll = () => {
+    setQuery(''); setTypes([]); setFills([]); setBrands([]);
+    setPrinterBrand('All'); setPrinterModel('All'); setLimit(60);
+  };
+
+  const visibleBrands = showAllBrands ? counts.brand : counts.brand.slice(0, 8);
+  const availableModels = printerBrand !== 'All' && printerBrand !== 'Other'
+    ? PRINTER_MODELS[printerBrand as PrinterBrand] ?? []
+    : [];
+
   return (
-    <div>
-      <h2 className="text-2xl font-bold text-center text-stone-800 mb-2">Download Profiles</h2>
-      <p className="text-center text-stone-500 mb-1">
-        Browse and download Official Brand Approved Profiles. Use filters to find your perfect match.
-      </p>
-      <p className="text-center text-stone-400 text-sm mb-6">
-        <span className="font-semibold text-stone-600">{profiles.length.toLocaleString()}</span> filament profiles available
-        {hasFiltersApplied && !isLoading && <> — <span className="font-semibold text-stone-600">{filteredProfiles.length.toLocaleString()}</span> matching</>}
-      </p>
-      
-      {/* Smart Filter Bar */}
-      <div className="flex flex-col gap-4 mb-6 bg-stone-100 p-4 rounded-lg shadow-sm border border-stone-200">
-          
-          {/* Row 1: Printer Hardware */}
-          <div className="flex flex-col md:flex-row gap-4">
-              {/* 1. Printer Brand */}
-              <div className="flex-1">
-                  <label className="block text-xs text-stone-500 mb-1">1. Printer Brand</label>
-                  <select 
-                    value={filterBrand} 
-                    onChange={(e) => handleBrandChange(e.target.value)}
-                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  >
-                      <option value="All">All Brands</option>
-                      {PRINTER_BRANDS.map(b => <option key={b} value={b}>{b}</option>)}
-                  </select>
-              </div>
+    <div className="relative">
+      {/* The mark as ground, not decoration: oversized, faint, never competing with the data. */}
+      <img
+        src="/logo-mark.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute -right-32 top-24 w-[680px] max-w-[85vw] opacity-[0.05]"
+      />
 
-              {/* 2. Printer Model (Conditional) */}
-              <div className={`flex-1 transition-opacity duration-200 ${filterBrand === 'All' ? 'opacity-50 pointer-events-none' : 'opacity-100'}`}>
-                   <label className="block text-xs text-stone-500 mb-1">2. Model (Optional)</label>
-                   <select 
-                    value={filterModel} 
-                    onChange={(e) => setFilterModel(e.target.value)}
-                    disabled={filterBrand === 'All'}
-                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  >
-                      <option value="All">All / Generic</option>
-                      {availableModels.map(m => <option key={m} value={m}>{m}</option>)}
-                  </select>
-              </div>
+      {/* Hero */}
+      <div className="relative flex flex-col items-center gap-5 pt-10 pb-2 px-2">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-stone-900 text-center max-w-3xl leading-[1.05]">
+          Find the settings for the spool in your hand
+        </h1>
+        <p className="text-base sm:text-[17px] text-stone-600 text-center max-w-xl leading-relaxed">
+          {profiles.length.toLocaleString()} profiles from {counts.brand.length.toLocaleString()} brands, each one citing where its numbers came from.
+        </p>
 
-              {/* 3. Nozzle Diameter (Conditional) */}
-               <div className={`w-full md:w-40 transition-opacity duration-200 ${filterBrand === 'All' ? 'opacity-50 pointer-events-none' : 'opacity-100'}`}>
-                   <label className="block text-xs text-stone-500 mb-1">3. Nozzle (Optional)</label>
-                   <select 
-                    value={filterNozzle} 
-                    onChange={(e) => setFilterNozzle(e.target.value)}
-                    disabled={filterBrand === 'All'}
-                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  >
-                      <option value="All">All</option>
-                      {NOZZLE_DIAMETERS.map(d => <option key={d} value={d}>{d} mm</option>)}
-                  </select>
-              </div>
+        <div className="w-full max-w-2xl flex flex-col gap-3.5 mt-1">
+          <div className="relative flex items-center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#78716c" strokeWidth={1.8} strokeLinecap="round" className="absolute left-4 h-5 w-5">
+              <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
+            </svg>
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => { setQuery(e.target.value); setLimit(60); }}
+              placeholder="Try “Polymaker”, “PETG CF”, or “ASA”"
+              className="w-full h-14 pl-12 pr-4 text-[17px] bg-white border border-stone-300 rounded-xl text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-900/10 focus:border-stone-400 transition-shadow"
+            />
           </div>
 
-          {/* Row 2: Material & Manufacturer */}
-          <div className="flex flex-col md:flex-row gap-4">
-               {/* 4. Manufacturer */}
-               <div className="flex-1">
-                  <label className="block text-xs text-stone-500 mb-1">4. Manufacturer</label>
-                  <select 
-                    value={filterManufacturer} 
-                    onChange={(e) => setFilterManufacturer(e.target.value)}
-                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  >
-                      <option value="All">All Manufacturers</option>
-                      {FILAMENT_MANUFACTURERS.map(m => <option key={m} value={m}>{m}</option>)}
-                  </select>
-              </div>
-
-              {/* 5. Material */}
-              <div className="flex-1">
-                   <label className="block text-xs text-stone-500 mb-1">5. Material Type</label>
-                   <select 
-                    value={filterMaterial} 
-                    onChange={(e) => setFilterMaterial(e.target.value)}
-                    className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  >
-                      <option value="All">All Materials</option>
-                      {FILAMENT_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
-                  </select>
-              </div>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {QUICK_TYPES.map((t) => (
+              <Chip key={t} on={types.includes(t)} onClick={() => { setTypes(toggle(types, t)); setLimit(60); }}>
+                {t}<span className="ml-1.5 opacity-55 tabular-nums">{counts.type.find(([k]) => k === t)?.[1] ?? 0}</span>
+              </Chip>
+            ))}
+            {REINFORCEMENTS.map((f) => (
+              <Chip key={f} on={fills.includes(f)} onClick={() => { setFills(toggle(fills, f)); setLimit(60); }}>
+                {f}<span className="ml-1.5 opacity-55 tabular-nums">{counts.fill[f] ?? 0}</span>
+              </Chip>
+            ))}
           </div>
-
-          {/* Row 3: Search */}
-          <div>
-              <input 
-                type="text" 
-                placeholder="Search by profile name, manufacturer, material type..." 
-                value={filterText}
-                onChange={(e) => setFilterText(e.target.value)}
-                className="w-full bg-white border border-stone-300 rounded-md px-3 py-2 text-stone-900 focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-stone-400"
-              />
-          </div>
+        </div>
       </div>
 
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : !hasFiltersApplied ? (
-        <div className="text-center py-20 bg-stone-50 rounded-lg border border-stone-200">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-stone-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <h3 className="text-xl font-bold text-stone-600 mb-2">Search or Filter to view profiles</h3>
-            <p className="text-stone-400 max-w-md mx-auto">
-                Select a Printer Brand, Manufacturer, or type in the search bar to find the perfect filament profile for your setup.
-            </p>
-        </div>
-      ) : filteredProfiles.length === 0 ? (
-        <div className="text-center py-10 bg-stone-50 rounded-lg border border-dashed border-stone-300">
-            <p className="text-stone-500 text-lg">No profiles match your specific criteria.</p>
-            <p className="text-stone-400 text-sm mt-2">Try resetting the filters to see more results.</p>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
-          {filteredProfiles.map(p => <ProfileCard key={p.id} profile={p} />)}
+      {isLoading ? <LoadingSpinner /> : (
+        <div className="relative flex flex-col lg:flex-row gap-8 pt-10 pb-10 items-start">
+
+          {/* Filter rail */}
+          <aside className="w-full lg:w-[236px] shrink-0 flex flex-col gap-6 lg:sticky lg:top-24">
+            <div className="flex items-baseline justify-between">
+              <h2 className="text-[12px] font-semibold uppercase tracking-[0.09em] text-stone-500">Filters</h2>
+              {active && (
+                <button onClick={clearAll} className="text-xs text-amber-800 hover:text-amber-900 underline">Clear</button>
+              )}
+            </div>
+
+            <Section title="Material">
+              <div className="flex flex-col gap-0.5 max-h-72 overflow-y-auto pr-1">
+                {counts.type.map(([t, n]) => (
+                  <FacetRow key={t} on={types.includes(t)} label={t} count={n} onClick={() => { setTypes(toggle(types, t)); setLimit(60); }} />
+                ))}
+              </div>
+            </Section>
+
+            {/* The facet the data model does not have: a PETG-CF is filamentType PETG with
+                "CF" in its name, so without this the filled grades cannot be searched at all. */}
+            <Section title="Reinforcement">
+              <div className="flex flex-col gap-0.5">
+                {REINFORCEMENTS.map((f) => (
+                  <FacetRow key={f} on={fills.includes(f)} label={REINFORCEMENT_LABEL[f]} count={counts.fill[f] ?? 0}
+                            onClick={() => { setFills(toggle(fills, f)); setLimit(60); }} />
+                ))}
+              </div>
+            </Section>
+
+            <Section title="Brand">
+              <div className="flex flex-col gap-0.5 max-h-72 overflow-y-auto pr-1">
+                {visibleBrands.map(([b, n]) => (
+                  <FacetRow key={b} on={brands.includes(b)} label={b} count={n} onClick={() => { setBrands(toggle(brands, b)); setLimit(60); }} />
+                ))}
+              </div>
+              {counts.brand.length > 8 && (
+                <button onClick={() => setShowAllBrands(!showAllBrands)} className="self-start text-xs text-amber-800 hover:text-amber-900 underline mt-1">
+                  {showAllBrands ? 'Show fewer' : `All ${counts.brand.length} brands`}
+                </button>
+              )}
+            </Section>
+
+            <Section title="Printer">
+              <select
+                value={printerBrand}
+                onChange={(e) => { setPrinterBrand(e.target.value); setPrinterModel('All'); setLimit(60); }}
+                className="w-full h-9 px-2 bg-white border border-stone-300 rounded-md text-[13px] text-stone-800 focus:outline-none focus:ring-2 focus:ring-stone-900/10"
+              >
+                <option value="All">Any printer</option>
+                {PRINTER_BRANDS.map((b) => <option key={b} value={b}>{b}</option>)}
+              </select>
+              {availableModels.length > 0 && (
+                <select
+                  value={printerModel}
+                  onChange={(e) => { setPrinterModel(e.target.value); setLimit(60); }}
+                  className="w-full h-9 px-2 mt-2 bg-white border border-stone-300 rounded-md text-[13px] text-stone-800 focus:outline-none focus:ring-2 focus:ring-stone-900/10"
+                >
+                  <option value="All">Any model</option>
+                  {availableModels.map((m) => <option key={m} value={m}>{m}</option>)}
+                </select>
+              )}
+            </Section>
+          </aside>
+
+          {/* Results */}
+          <div className="flex-grow min-w-0 flex flex-col gap-4">
+            <div className="flex items-baseline justify-between border-b border-stone-200 pb-3">
+              <p className="text-sm text-stone-600">
+                {active
+                  ? <><span className="font-semibold text-stone-900 tabular-nums">{results.length.toLocaleString()}</span> matching this filter</>
+                  : <>All <span className="font-semibold text-stone-900 tabular-nums">{results.length.toLocaleString()}</span> profiles</>}
+              </p>
+              <p className="text-[13px] text-stone-400 hidden sm:block">Sorted by brand</p>
+            </div>
+
+            {results.length === 0 ? (
+              <div className="flex flex-col items-center gap-2 py-20 border border-dashed border-stone-300 rounded-xl text-center px-6">
+                <p className="text-[17px] font-semibold text-stone-700">Nothing matches those filters</p>
+                <p className="text-sm text-stone-500 max-w-sm">
+                  Try clearing the reinforcement filter — not every material is made in a filled grade.
+                </p>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                  {results.slice(0, limit).map(({ p, fill, abrasive }) => (
+                    <article
+                      key={p.id}
+                      onClick={() => setSelected(p)}
+                      className="group flex flex-col gap-3 p-[18px] bg-white border border-stone-200 rounded-xl cursor-pointer hover:border-stone-400 hover:shadow-sm transition-all"
+                    >
+                      <div className="flex flex-col gap-0.5 min-w-0">
+                        <span className="text-xs text-stone-500 truncate">{p.manufacturer}</span>
+                        <h3 className="text-[17px] font-semibold tracking-tight text-stone-900 leading-snug break-words">
+                          {p.brand || p.filamentType}
+                        </h3>
+                      </div>
+
+                      <div className="flex flex-wrap gap-1.5">
+                        <span className="inline-flex items-center h-[22px] px-2 border border-stone-300 rounded text-[11px] font-medium text-stone-700">{p.filamentType}</span>
+                        {fill && <span className="inline-flex items-center h-[22px] px-2 rounded bg-stone-900 text-[#fdfbf7] text-[11px] font-semibold tracking-wide">{fill}</span>}
+                      </div>
+
+                      <div className="flex gap-5 pt-0.5">
+                        <div className="flex flex-col gap-0.5">
+                          <span className="text-[10px] uppercase tracking-[0.07em] text-stone-400">Nozzle</span>
+                          <span className="text-[19px] font-semibold text-stone-900 tabular-nums leading-none">{p.nozzleTemp}°</span>
+                        </div>
+                        <div className="flex flex-col gap-0.5">
+                          <span className="text-[10px] uppercase tracking-[0.07em] text-stone-400">Bed</span>
+                          <span className="text-[19px] font-semibold text-stone-900 tabular-nums leading-none">{p.bedTemp}°</span>
+                        </div>
+                        <div className="flex flex-col gap-0.5">
+                          <span className="text-[10px] uppercase tracking-[0.07em] text-stone-400">Flow</span>
+                          <span className="text-[19px] font-semibold text-stone-900 tabular-nums leading-none">{p.maxVolumetricSpeed}</span>
+                        </div>
+                      </div>
+
+                      {/* A hardware fact belongs where the choice is made, not one click deeper. */}
+                      {abrasive && (
+                        <div className="flex items-center gap-1.5">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#92400e" strokeWidth={1.8} strokeLinecap="round" className="h-[15px] w-[15px] shrink-0">
+                            <path d="M12 3.5 2.5 20h19L12 3.5Z" /><path d="M12 10v4" /><path d="M12 17.2v.1" />
+                          </svg>
+                          <span className="text-[11.5px] text-amber-800">Abrasive — hardened nozzle</span>
+                        </div>
+                      )}
+
+                      <div className="flex gap-2 pt-1 mt-auto opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity">
+                        <button
+                          onClick={(e) => { e.stopPropagation(); downloadProfile(p, 'bambu'); }}
+                          className="h-7 px-2.5 rounded-md border border-stone-300 text-[11.5px] font-medium text-stone-600 hover:border-stone-500 hover:text-stone-900 transition-colors"
+                        >Orca</button>
+                        <button
+                          onClick={(e) => { e.stopPropagation(); downloadProfile(p, 'prusa'); }}
+                          className="h-7 px-2.5 rounded-md border border-stone-300 text-[11.5px] font-medium text-stone-600 hover:border-stone-500 hover:text-stone-900 transition-colors"
+                        >Prusa</button>
+                        <button
+                          onClick={(e) => { e.stopPropagation(); downloadProfile(p, 'ideamaker'); }}
+                          className="h-7 px-2.5 rounded-md border border-stone-300 text-[11.5px] font-medium text-stone-600 hover:border-stone-500 hover:text-stone-900 transition-colors"
+                        >ideaMaker</button>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+
+                {results.length > limit && (
+                  <button
+                    onClick={() => setLimit(limit + 60)}
+                    className="self-center mt-4 h-11 px-6 rounded-lg border border-stone-300 bg-white text-sm font-medium text-stone-700 hover:border-stone-500 transition-colors"
+                  >
+                    Show 60 more · {(results.length - limit).toLocaleString()} left
+                  </button>
+                )}
+              </>
+            )}
+          </div>
         </div>
       )}
+
+      {selected && <ProfileDetail profile={selected} onClose={() => setSelected(null)} />}
     </div>
   );
 };
