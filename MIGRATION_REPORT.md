@@ -330,3 +330,109 @@ bad trade.
 3. The 84 envelope outliers, checked against their sources one at a time.
 4. FilamentColors.xyz (2,258 swatches, 329 manufacturers) — only if the site grows a colour
    layer; it carries no print settings.
+
+---
+
+## 12. Data quality pass (2026-08-26)
+
+Section 11 added brands. This section is about the presets already there being *correct*.
+
+### Manufacturer aliasing — 236 → 205
+
+Four corpora named the same company four ways, so a reader filtering by manufacturer saw one
+catalogue split across two or three rows. 199 rows renamed across 31 spellings: 20 case or
+punctuation only (`eSun`→`eSUN`, `3D Fuel`→`3D-Fuel`, `Proto-pasta`→`Protopasta`), 11
+corporate, each with its reason in `manufacturer-aliases.mjs` — Forward AM is BASF's AM brand,
+Prusament is the brand Prusa Polymers makes, "Made for Prusa" is Prusa's own label.
+
+Companies that only *look* alike are recorded there as explicitly **not** aliases: Duramic 3D,
+IC3D, Tectonic-3D, Infinity3D, CR3D, R3D, re3D, Raise3D, IMADE3D and E3D all match each other
+on a substring test and are ten different companies.
+
+**The dedupe key is `(manufacturer, brand, filamentType, nozzleTemp, bedTemp)`.** Both shorter
+keys destroy data. On `(manufacturer, brand)`, "3DXTech CarbonX" and "BASF Ultrafuse" collapse
+across four polymers each. Even adding `filamentType` is unsafe: four rows read
+`manufacturer: "Prusa", brand: "PETG"` and were Prusament PETG **Ultraglow, Magnetite 40, plain
+and Tungsten 75**, printing at 260/85, 270/100, 250/80 and 260/80 — four products whose
+distinguishing names had been stripped as if they were colours. Requiring the settings to agree
+cut the drop from 76 presets to 26. A duplicate *name* is a naming defect to fix at the source;
+on its own it is never a licence to delete a row.
+
+### Abrasive filaments — 51 → 582 warned
+
+Prusament PETG Tungsten 75 and Magnetite 40 are metal-filled, and were stored as plain "PETG"
+with no warning: the colour-collapse whitelist did not know those words were fills. Third
+occurrence of this defect class, so the detector is now one shared, tested module,
+`abrasive.mjs`, with a 44-case self-check — run it directly.
+
+Finding fills is easy. Not warning on look-alikes is the hard part, and every exclusion came
+out of the real data: `polycarbonate` contains "carbon"; `carbonlook` and "Carbon Black" are a
+finish and a pigment; `metallic`, `metal-shine` and `gun-metal-gray` are colours; `hdglass` and
+`orange-glass-transparent` are clear PETG. COEX ships "Stone Gray" in PLA, ABS, ASA, PCTG and
+PETG alike — **a fill does not travel across five polymers under one name, a colour does.**
+
+Ordering is `STRONG > DENY > ALLOW`: an explicit CF/GF/Kevlar token outranks every exclusion,
+because `ultimaker_ppscf_metallic-anthracite` is PPS-CF in a metallic colour and must not lose
+its warning to the word "metallic".
+
+`IDENTITY` gained tungsten, magnetite, kevlar, aramid, glitter, sparkle, galaxy, granite,
+basalt, slate, clay, bamboo and cork, which surfaced 24 filled grades previously collapsed onto
+their unfilled siblings. It deliberately did **not** gain bronze, copper, brass, steel, iron or
+aluminium: 3DJake sells "Bronze" in ecoPLA, easyPETG, ABS and mattePLA, so those are colours.
+
+### The two Orca forks — 1 preset
+
+QIDIStudio and AnycubicSlicerNext are AGPL forks, each a 40-line wrapper around
+`createSlicerResolver`. Measured before building, as with BambuStudio: QIDIStudio's 2,341
+profile JSONs name five vendors, all already held; AnycubicSlicerNext's 7,786 name 35, of which
+only Aliz and DeltaMaker were absent and neither yielded a row. Combined yield: **one preset**.
+
+They are kept because they cannot drift from the shared resolver and will pick up future
+additions free — not for the data.
+
+What they surfaced is worth more: AnycubicSlicerNext ships renamed-PLA profiles. `Artillery PC`
+declares `inherits: "Artillery Generic PLA"`, `filament_type: PC` and `nozzle_temperature: 210`.
+It never reached `constants.ts` only because OrcaSlicer's Artillery pack had already supplied
+correct values under the same key — ordering luck, not a guard.
+
+### The 42 cold outliers, reviewed one at a time
+
+**31 were correct and the envelope was wrong.** Verified against what the vendors publish:
+Spectrum ASA 275 bed 50-80; Polymaker Fiberon PA6-CF20 bed 25-50 (SpoolmanDB's
+`bed_temp_range` — `bed_temp` itself is null); PolyCast PVB bed 25-70; FormFutura AquaSolve PVA
+bed 30; PrimaSelect PC-CF bed 70; BASF Ultrafuse PP-GF30 bed 40; Wax-Alike MoldLay nozzle 175,
+a casting wax that ships typed PLA. A low bed on ASA or nylon is a product decision — Polymaker
+prints their PA line on an adhesive-prepped bed. Envelopes moved to `envelopes.mjs`, shared by
+the audit and the importer, each widened floor carrying the source that justifies it.
+
+**10 had the wrong type**, and 67 more were `Other` when the union could now represent them.
+`fix-filament-type.mjs` rewrites only when two independent signals agree: the name states
+exactly one polymer, and the stored temperatures are not *cold* for it. Temperature is the
+independent evidence — a mislabelled row prints at the temperature its name implies, which is
+why nobody noticed. The test is cold-only for the same reason the audit is: "PET-CF at 285" is
+still a PET and should be typed one.
+
+**9 could not print and were dropped** by `prune-implausible.mjs`: ABS at bed 43, PETG at nozzle
+150, ABS at bed 0 — traced to multi-roll bundle listings where the scraped number belongs to
+another product, and to two `fdm_materials` entries stating no heated bed. A preset that cannot
+print is worse than a missing one: the user loads it, it fails, and the database loses
+credibility. `tooCold()` rejects them at import so they cannot return. Dropping Geeetech's bogus
+`ABS+` (200/43) unblocked a correct Geeetech ABS (240/100) that its key had been shadowing.
+
+**Direction matters more than distance.** The 42 remaining outliers all run hot and are left
+alone; that is what filled and engineering grades do.
+
+### Current state
+
+**2,433 presets**, 205 manufacturers, 582 carrying a hardened-nozzle warning, 122 still typed
+`Other`. `tsc`, `npm run build`, `robots.test.mjs`, `abrasive.mjs` (44 cases) all pass; zero
+duplicate ids, zero implausible rows, zero cold outliers, and the import is idempotent at
+`new=0`.
+
+### Next
+
+1. The 122 rows still typed `Other` — mostly genuine (PEEK, PPS, metal-filled, exotic blends),
+   some needing new members in the `FilamentType` union.
+2. FilamentColors.xyz, only if the site grows a colour layer: 2,258 swatches and 329
+   manufacturers, but no print settings at all.
+3. The 42 hot outliers, if ever — each needs its datasheet read, and none is suspected wrong.

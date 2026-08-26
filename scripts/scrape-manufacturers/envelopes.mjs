@@ -39,13 +39,13 @@ export const ENVELOPE = {
   BVOH: [170, 230, 25, 80],
   HIPS: [210, 260, 60, 120],
   PP: [190, 280, 30, 120],
-  PCTG: [220, 280, 45, 110],
+  PCTG: [220, 280, 35, 110],     // 35: 3D-Fuel publishes bed 39 across its whole Pro PCTG line
   PVB: [190, 250, 25, 90],
   PET: [210, 280, 45, 110],
   CPE: [220, 280, 45, 110],
   PEBA: [200, 260, 0, 80],
   PHA: [180, 240, 0, 80],
-  PEI: [350, 450, 120, 180],
+  PEI: [350, 450, 120, 200],     // 200: Kexcelled K11 PEI; ULTEM-class beds run this hot
   Copolyester: [210, 280, 45, 110],
 };
 
