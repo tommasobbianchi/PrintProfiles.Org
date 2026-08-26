@@ -125,13 +125,28 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
     <div className="relative">
       {/* The mark as ground, not decoration: oversized, faint, never competing with the data.
           Pushed up and right so it sits behind the hero's whitespace rather than under the
-          middle and right cards of the result grid, where it read as noise on the data. */}
-      <img
-        src="/logo-mark.png"
-        alt=""
+          middle and right cards of the result grid, where it read as noise on the data.
+
+          Two layers, because they do different jobs. The photograph is the logo actually
+          printed — layer lines, extrusion texture, raised lettering — so it says what the site
+          is about in a way a vector never could; it carries the texture. The line art sits over
+          it and keeps the silhouette legible, which the photo alone loses once it is faint
+          enough to be safe behind text.
+
+          Both are masked to fade out before they reach the result grid. The two knobs worth
+          touching are the opacities: photo 0.09, line art 0.05. */}
+      <div
         aria-hidden="true"
-        className="pointer-events-none select-none absolute -right-52 -top-24 w-[620px] max-w-[80vw] opacity-[0.05]"
-      />
+        className="pointer-events-none select-none absolute -right-52 -top-24 w-[620px] max-w-[80vw] aspect-square"
+        style={{
+          // Fades to nothing toward the bottom-left, so nothing ever sits under a card.
+          maskImage: 'radial-gradient(closest-side at 70% 30%, black 35%, transparent 78%)',
+          WebkitMaskImage: 'radial-gradient(closest-side at 70% 30%, black 35%, transparent 78%)',
+        }}
+      >
+        <img src="/logo-print.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-[0.09]" />
+        <img src="/logo-mark.png" alt="" className="absolute inset-0 h-full w-full object-contain opacity-[0.05]" />
+      </div>
 
       {/* Hero */}
       <div className="relative flex flex-col items-center gap-5 pt-10 pb-2 px-2">
