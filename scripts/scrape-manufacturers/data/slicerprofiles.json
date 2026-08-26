@@ -355,7 +355,7 @@
   },
   {
     "manufacturer": "Anycubic",
-    "brand": "PA-CF CF",
+    "brand": "PA-CF",
     "filamentType": "PA-CF",
     "nozzleTemp": 260,
     "bedTemp": 100,
@@ -1033,7 +1033,7 @@
   },
   {
     "manufacturer": "BETA",
-    "brand": "PA-CF CF",
+    "brand": "PA-CF",
     "filamentType": "PA-CF",
     "nozzleTemp": 290,
     "bedTemp": 100,
@@ -1110,27 +1110,6 @@
     "fanSpeedMin": 10,
     "fanSpeedMax": 30,
     "density": 1.14,
-    "filamentDiameter": 1.75,
-    "inheritedFrom": [
-      "fdm_filament_pa"
-    ]
-  },
-  {
-    "manufacturer": "Bambu Lab",
-    "brand": "PA-CF CF",
-    "filamentType": "PA-CF",
-    "nozzleTemp": 290,
-    "bedTemp": 100,
-    "sourceType": "slicer-profile",
-    "sourceUrl": "https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/BBL/filament/Bambu%20PAHT-CF%20@base.json",
-    "sourceProfile": "Bambu PAHT-CF @base",
-    "nozzleTempInitial": 290,
-    "bedTempInitial": 100,
-    "maxVolumetricSpeed": 8,
-    "flowRatio": 0.96,
-    "fanSpeedMin": 10,
-    "fanSpeedMax": 30,
-    "density": 1.06,
     "filamentDiameter": 1.75,
     "inheritedFrom": [
       "fdm_filament_pa"
@@ -1705,7 +1684,7 @@
   },
   {
     "manufacturer": "Polymaker",
-    "brand": "PETG",
+    "brand": "PETG rCF08",
     "filamentType": "PETG",
     "nozzleTemp": 270,
     "bedTemp": 70,
@@ -1720,6 +1699,27 @@
     "fanSpeedMax": 80,
     "density": 1.3,
     "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Polymaker",
+    "brand": "PETG",
+    "filamentType": "PETG",
+    "nozzleTemp": 255,
+    "bedTemp": 70,
+    "sourceType": "slicer-profile",
+    "sourceUrl": "https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/BBL/filament/Polymaker/PolyLite%20PETG%20@base.json",
+    "sourceProfile": "PolyLite PETG @base",
+    "nozzleTempInitial": 255,
+    "bedTempInitial": 70,
+    "maxVolumetricSpeed": 25,
+    "flowRatio": 0.95,
+    "fanSpeedMin": 40,
+    "fanSpeedMax": 90,
+    "density": 1.27,
+    "filamentDiameter": 1.75,
+    "inheritedFrom": [
+      "fdm_filament_pet"
+    ]
   },
   {
     "manufacturer": "SUNLU",
@@ -2641,7 +2641,7 @@
   },
   {
     "manufacturer": "SUNLU",
-    "brand": "PLA Silk",
+    "brand": "Silk PLA",
     "filamentType": "PLA",
     "nozzleTemp": 230,
     "bedTemp": 55,
@@ -3067,7 +3067,7 @@
   },
   {
     "manufacturer": "addnorth",
-    "brand": "PC HT",
+    "brand": "PC HT CF",
     "filamentType": "PC",
     "nozzleTemp": 285,
     "bedTemp": 80,
@@ -3832,7 +3832,7 @@
   },
   {
     "manufacturer": "Creality",
-    "brand": "PA-CF CF",
+    "brand": "PA-CF",
     "filamentType": "PA-CF",
     "nozzleTemp": 300,
     "bedTemp": 90,
@@ -3999,6 +3999,24 @@
     "fanSpeedMin": 40,
     "fanSpeedMax": 80,
     "density": 1.27,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "eSUN",
+    "brand": "PETG HS",
+    "filamentType": "PETG",
+    "nozzleTemp": 250,
+    "bedTemp": 70,
+    "sourceType": "slicer-profile",
+    "sourceUrl": "https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Creality/filament/eSUN%20PETG+HS%20@K2%20Plus-all.json",
+    "sourceProfile": "eSUN PETG+HS @K2 Plus-all",
+    "nozzleTempInitial": 250,
+    "bedTempInitial": 70,
+    "maxVolumetricSpeed": 7,
+    "flowRatio": 1,
+    "fanSpeedMin": 40,
+    "fanSpeedMax": 80,
+    "density": 1.26,
     "filamentDiameter": 1.75
   },
   {
@@ -4994,7 +5012,7 @@
   },
   {
     "manufacturer": "FusRock",
-    "brand": "PA-CF",
+    "brand": "PA-CF CF25",
     "filamentType": "PA-CF",
     "nozzleTemp": 295,
     "bedTemp": 75,
@@ -5012,7 +5030,7 @@
   },
   {
     "manufacturer": "FusRock",
-    "brand": "PA-CF CF",
+    "brand": "PA-CF",
     "filamentType": "PA-CF",
     "nozzleTemp": 295,
     "bedTemp": 75,
@@ -5138,7 +5156,7 @@
   },
   {
     "manufacturer": "FusRock",
-    "brand": "PA-GF GF",
+    "brand": "PA-GF",
     "filamentType": "PA-GF",
     "nozzleTemp": 295,
     "bedTemp": 70,
@@ -5773,27 +5791,6 @@
     "fanSpeedMin": 0,
     "fanSpeedMax": 60,
     "density": 1.09,
-    "filamentDiameter": 1.75,
-    "inheritedFrom": [
-      "fdm_filament_pa"
-    ]
-  },
-  {
-    "manufacturer": "Orca Arena",
-    "brand": "PA-CF CF",
-    "filamentType": "PA-CF",
-    "nozzleTemp": 290,
-    "bedTemp": 100,
-    "sourceType": "slicer-profile",
-    "sourceUrl": "https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/OrcaArena/filament/Arena%20PAHT-CF%20@base.json",
-    "sourceProfile": "Arena PAHT-CF @base",
-    "nozzleTempInitial": 290,
-    "bedTempInitial": 100,
-    "maxVolumetricSpeed": 8,
-    "flowRatio": 0.96,
-    "fanSpeedMin": 10,
-    "fanSpeedMax": 30,
-    "density": 1.06,
     "filamentDiameter": 1.75,
     "inheritedFrom": [
       "fdm_filament_pa"
@@ -6913,6 +6910,24 @@
     "filamentDiameter": 1.75
   },
   {
+    "manufacturer": "FILL3D",
+    "brand": "PP CF",
+    "filamentType": "PP",
+    "nozzleTemp": 300,
+    "bedTemp": 80,
+    "sourceType": "slicer-profile",
+    "sourceUrl": "https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/OrcaFilamentLibrary/filament/FILL3D/FILL3D%20PPCF%20@base.json",
+    "sourceProfile": "FILL3D PPCF @base",
+    "nozzleTempInitial": 295,
+    "bedTempInitial": 80,
+    "maxVolumetricSpeed": 17,
+    "flowRatio": 1.015,
+    "fanSpeedMin": 0,
+    "fanSpeedMax": 80,
+    "density": 0.97,
+    "filamentDiameter": 1.75
+  },
+  {
     "manufacturer": "DREMC",
     "brand": "PPA-CF",
     "filamentType": "Other",
@@ -7427,7 +7442,7 @@
   },
   {
     "manufacturer": "QIDI",
-    "brand": "PA-CF CF",
+    "brand": "PA-CF",
     "filamentType": "PA-CF",
     "nozzleTemp": 300,
     "bedTemp": 80,
@@ -7445,7 +7460,7 @@
   },
   {
     "manufacturer": "QIDI",
-    "brand": "PA-GF GF",
+    "brand": "PA-GF",
     "filamentType": "PA-GF",
     "nozzleTemp": 300,
     "bedTemp": 80,
@@ -7841,7 +7856,7 @@
   },
   {
     "manufacturer": "QIDI",
-    "brand": "Other",
+    "brand": "Other CF25",
     "filamentType": "Other",
     "nozzleTemp": 300,
     "bedTemp": 80,
@@ -7855,6 +7870,24 @@
     "fanSpeedMin": 20,
     "fanSpeedMax": 40,
     "density": 1.23,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "QIDI",
+    "brand": "Other",
+    "filamentType": "Other",
+    "nozzleTemp": 280,
+    "bedTemp": 80,
+    "sourceType": "slicer-profile",
+    "sourceUrl": "https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/Qidi/filament/Q2/QIDI%20UltraPA%20@Q2.json",
+    "sourceProfile": "QIDI UltraPA@Q2-Series",
+    "nozzleTempInitial": 280,
+    "bedTempInitial": 80,
+    "maxVolumetricSpeed": 4,
+    "flowRatio": 0.96,
+    "fanSpeedMin": 20,
+    "fanSpeedMax": 40,
+    "density": 1.21,
     "filamentDiameter": 1.75
   },
   {
@@ -8986,7 +9019,7 @@
   },
   {
     "manufacturer": "Volumic",
-    "brand": "PA6",
+    "brand": "PA6 CF20",
     "filamentType": "PA6",
     "nozzleTemp": 270,
     "bedTemp": 45,
@@ -9522,7 +9555,7 @@
   },
   {
     "manufacturer": "iQ Materials",
-    "brand": "Other",
+    "brand": "Other GF25",
     "filamentType": "Other",
     "nozzleTemp": 220,
     "bedTemp": 110,
@@ -9572,6 +9605,24 @@
     "fanSpeedMin": 100,
     "fanSpeedMax": 100,
     "density": 1.25,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "iQ Materials",
+    "brand": "Other",
+    "filamentType": "Other",
+    "nozzleTemp": 235,
+    "bedTemp": 100,
+    "sourceType": "slicer-profile",
+    "sourceUrl": "https://raw.githubusercontent.com/SoftFever/OrcaSlicer/main/resources/profiles/iQ/filament/VXL90%20TiQ2%20P2%20@iQ%20TiQ2%200.4%20Nozzle.json",
+    "sourceProfile": "VXL90 TiQ2 P2 @iQ TiQ2 0.4 Nozzle",
+    "nozzleTempInitial": 235,
+    "bedTempInitial": 100,
+    "maxVolumetricSpeed": 12,
+    "flowRatio": 1,
+    "fanSpeedMin": 10,
+    "fanSpeedMax": 80,
+    "density": 1.1,
     "filamentDiameter": 1.75
   },
   {

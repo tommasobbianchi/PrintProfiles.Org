@@ -206,16 +206,24 @@ function deriveBrand(profileName, filamentType) {
   const core = String(profileName).replace(/\s*@.*$/, '');
   const kept = [];
   let hasPolymer = false;
-  // A hyphen is a compound separator in "PA6-CF" (one polymer token) but a plain joiner in
-  // "PLA-Marble" / "eSUN PLA-Basic". Split it only when the whole token is not a polymer,
-  // otherwise "PLA-Marble" would lose its fill and collide with plain PLA.
-  const tokens = core.split(/[\s_/]+/).flatMap((t) => (POLYMER.test(t.replace(/[(),]/g, '')) ? [t] : t.split('-')));
+  // A hyphen or plus is a compound separator in "PA6-CF" / "PA12+CF15" (a polymer token plus
+  // its fill) but a plain joiner in "PLA-Marble" / "eSUN PLA-Basic". Split it only when the
+  // whole token is not a polymer, otherwise "PLA-Marble" would lose its fill and collide with
+  // plain PLA.
+  const tokens = core.split(/[\s_/]+/).flatMap((t) => (POLYMER.test(t.replace(/[(),]/g, '')) ? [t] : t.split(/[-+]/)));
   for (const tok of tokens) {
     const t = tok.replace(/[(),]/g, '');
     if (!t) continue;
+    const fibre = /(r?cf|gf|af)\d*/i.exec(t);
     if (POLYMER.test(t)) {
       hasPolymer = true;
       kept.push(canonPolymer(t).toUpperCase().replace(/^COPE$/, 'CoPE'));
+    } else if (fibre && !/[a-z]/.test(t[fibre.index + fibre[0].length] || '')) {
+      // Fibre fill ("CF20", "GF30", "rCF08", "CFJet", "HPP4GF25") is material identity and a
+      // hardened-nozzle fact, not marketing: an abrasive must not be shown as unfilled PETG/PA.
+      kept.push(fibre[0].replace(/^(r?)(cf|gf|af)/i, (_, r, a) => r.toLowerCase() + a.toUpperCase()));
+    } else if (/^(kevlar|aramid|carbon|glass)$/i.test(t)) {
+      kept.push(t[0].toUpperCase() + t.slice(1).toLowerCase());
     } else if (DESCRIPTORS.has(t.toLowerCase())) {
       const lower = t.toLowerCase();
       kept.push(ACRONYMS.has(lower) ? lower.toUpperCase() : t[0].toUpperCase() + t.slice(1).toLowerCase());
@@ -224,8 +232,13 @@ function deriveBrand(profileName, filamentType) {
     }
   }
   if (!hasPolymer && filamentType) kept.unshift(filamentType);
+  // canonPolymer folds "PAHT-CF" to "PA-CF", which already states the fill. The bare "CF"
+  // token split off the same name would then render as "PA-CF CF". Drop the bare one only —
+  // "CF20" carries a fill percentage the polymer token does not.
+  const compoundFill = kept.some((k) => /-(r?CF|GF|AF)\d*$/i.test(k));
+  const pruned = compoundFill ? kept.filter((k) => !/^(r?CF|GF|AF)$/i.test(k)) : kept;
   // "PLA+" would be dropped downstream by the importer's junk filter (it rejects '+').
-  const out = [...new Set(kept)].join(' ').replace(/\+/g, ' Plus').replace(/\s+/g, ' ').trim();
+  const out = [...new Set(pruned)].join(' ').replace(/\+/g, ' Plus').replace(/\s+/g, ' ').trim();
   return out;
 }
 
