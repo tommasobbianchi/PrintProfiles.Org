@@ -148,7 +148,7 @@ function render(d) {
 
 <div class="wrap">
 <h1>Filament preset database — status</h1>
-<p class="sub">PrintProfiles.Org · generated from <code>constants.ts</code> and <code>data/*.json</code> by
+<p class="sub">FilamentProfiles.Org · generated from <code>constants.ts</code> and <code>data/*.json</code> by
 <code>gen-status.mjs</code> · ${d.generated.toISOString().slice(0, 16).replace('T', ' ')} UTC</p>
 
 <div class="grid kpis">
@@ -200,7 +200,7 @@ its bed — which indicates the parser paired the wrong two numbers.</p>
 <div class="card">
 <h2 style="margin-top:0">Crawler conduct</h2>
 <table><tbody>
-<tr><td>User-agent</td><td><code>PrintProfilesOrg-bot/1.0</code> + contact</td></tr>
+<tr><td>User-agent</td><td><code>FilamentProfilesOrg-bot/1.0</code> + contact</td></tr>
 <tr><td>Rate limit</td><td>≥1.5 s per domain</td></tr>
 <tr><td>robots.txt</td><td>RFC 9309, longest-match</td></tr>
 <tr><td>On robots 5xx</td><td>Fails <strong>closed</strong></td></tr>

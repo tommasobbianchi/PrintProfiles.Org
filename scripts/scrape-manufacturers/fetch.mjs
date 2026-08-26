@@ -24,7 +24,7 @@ import { fileURLToPath } from 'node:url';
 const HERE = dirname(fileURLToPath(import.meta.url));
 const CACHE = join(HERE, 'cache');
 const LOG = join(HERE, 'run.log');
-const UA = 'PrintProfilesOrg-bot/1.0 (+https://printprofiles.org; contact tommaso.b.bianchi@gmail.com)';
+const UA = 'FilamentProfilesOrg-bot/1.0 (+https://filamentprofiles.org; contact tommaso.b.bianchi@gmail.com)';
 // ms between requests to the same domain. RATE_FLOOR_MS raises it for hosts that answer 429
 // at the default pace — store.anycubic.com returned 172 of them, so its data was never
 // collected. Backing off is both the polite and the effective response.

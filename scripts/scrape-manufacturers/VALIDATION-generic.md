@@ -5,7 +5,7 @@ Separate from `VALIDATION.md` on purpose (that file is owned by the Shopify job)
 Scope: the 59 brand-registry hosts whose `platform` is `'other'`, minus the five that already
 have dedicated parsers (Prusament, Prusa, Fillamentum, Fiberlogy, Extrudr).
 
-All traffic goes through `fetch.mjs` — robots gate, ≥1.5 s per-domain, `PrintProfilesOrg-bot/1.0`,
+All traffic goes through `fetch.mjs` — robots gate, ≥1.5 s per-domain, `FilamentProfilesOrg-bot/1.0`,
 disk cache. Nothing here bypasses a bot wall; hosts that refuse are recorded as refusing.
 
 Commands below are the parser's own self-test entry point, run from the repo root:

@@ -5,7 +5,7 @@
 import assert from 'node:assert';
 import { __parseRobotsForTest as parseRobots } from './fetch.mjs';
 
-const UA = 'PrintProfilesOrg-bot/1.0 (+https://printprofiles.org)';
+const UA = 'FilamentProfilesOrg-bot/1.0 (+https://filamentprofiles.org)';
 
 // The real shape of fiberlogy.com/robots.txt (fetched 2026-08-25).
 const FIBERLOGY = `
@@ -37,7 +37,7 @@ assert.equal(fib.allowed('/wp/wp-admin/'), false, 'wp-admin blocked');
 assert.equal(fib.allowed('/wp/wp-admin/admin-ajax.php'), true, 'admin-ajax carved back out by Allow');
 
 // A group that really does name us must bind.
-const mine = parseRobots('User-agent: printprofilesorg-bot\nDisallow: /private/\n', UA);
+const mine = parseRobots('User-agent: filamentprofilesorg-bot\nDisallow: /private/\n', UA);
 assert.equal(mine.allowed('/private/x'), false, 'our own named group must apply');
 assert.equal(mine.allowed('/public/x'), true);
 

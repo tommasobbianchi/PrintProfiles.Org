@@ -19,7 +19,7 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA = join(HERE, 'data');
 const LOG = join(HERE, 'scrape.log');
 const ORIGIN = 'https://3dfilamentprofiles.com';
-const UA = 'PrintProfilesBot/1.0 (+https://printprofiles.org; contact tommaso.b.bianchi@gmail.com)';
+const UA = 'FilamentProfilesBot/1.0 (+https://filamentprofiles.org; contact tommaso.b.bianchi@gmail.com)';
 const DELAY_MS = 1500; // floor; bumped by Retry-After and by backoff
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
