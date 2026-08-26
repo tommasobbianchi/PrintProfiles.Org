@@ -13180,5 +13180,2380 @@
     "printSpeed": 50,
     "density": 1.3,
     "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/95a-tpu-3d-printer-filament-1-75mm-1-kg-fluorescent-yellow-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber TPU Filament",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-tpu-filament-1-75mm-1-kg-frosted-light-grey",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 50,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber TPU Filament",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-tpu-filament-1-75mm-1-kg-frosted-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 50,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber TPU Filament",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-tpu-filament-1-75mm-1-kg-frosted-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 50,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PC",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-pc-3d-printer-filament-1-75mm-1-kg-carter-yellow",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 285,
+    "bedTemp": 105
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PC",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-pc-3d-printer-filament-1-75mm-1-kg-turquoise-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 285,
+    "bedTemp": 105
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PC",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-pc-3d-printer-filament-1-75mm-1-kg-apricot",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 285,
+    "bedTemp": 105
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PC",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-pc-3d-printer-filament-1-75mm-1-kg-signal-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 285,
+    "bedTemp": 105
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PC",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-pc-3d-printer-filament-1-75mm-1-kg-traffic-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 285,
+    "bedTemp": 105
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PC",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-pc-3d-printer-filament-1-75mm-1-kg-light-grey",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 285,
+    "bedTemp": 105
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-ivory-white",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-white-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-smog-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-smog-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-scarlet-red-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-scarlet-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-brown",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-emerald-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-light-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-black-副本-1",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-petg-3d-printer-filament-1-75mm-1-kg-matte-black-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/matte-pla-3d-printer-filament-1-75mm-1-kg-matte-pumpkin-yellow-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 250,
+    "bedTemp": 73,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber Reinforced PA6 Filament,",
+    "filamentType": "Nylon",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-reinforced-pa6-filament-1-kg-1-spool-jade-white",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 280,
+    "bedTemp": 100
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber Reinforced PA6 Filament,",
+    "filamentType": "Nylon",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-reinforced-pa6-filament-1-kg-1-spool-black-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 280,
+    "bedTemp": 100
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber Reinforced PA6 Filament,",
+    "filamentType": "Nylon",
+    "sourceUrl": "https://www.tinmorry.com/products/carbon-fiber-reinforced-abs-filament-1-kg-1-spool-black-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 280,
+    "bedTemp": 100
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Carbon Fiber Reinforced ABS Filament,",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/new-formula-pla-3d-printer-filament-1-75mm-1-kg-magenta-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls Carbon Fiber PP Filament,",
+    "filamentType": "Other",
+    "sourceUrl": "https://www.tinmorry.com/products/10-rolls-carbon-fiber-pp-filament-1-kg-1-spool-matte-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 95,
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-petg-3d-printer-filament-1-75mm-1-kg-frosted-dark-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-petg-3d-printer-filament-1-75mm-1-kg-frosted-pine-green-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-petg-3d-printer-filament-1-75mm-1-kg-frosted-water-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Carbon Fiber ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/asa-3d-printer-filament-1-75mm-1-kg-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Sparkly PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/sparkly-petg-3d-printer-filament-1-75mm-1-kg-sparkly-green-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls Matte PLA Filament,",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/10-rolls-matte-pla-filament-1-kg-1-spool",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber ABS Filament",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-tpu-filament-1-75mm-1-kg-frosted-black-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 265,
+    "bedTemp": 95
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/10-rolls-asa-3d-printer-filament-1-75mm-1-kg-1-spool-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/10-rolls-asa-3d-printer-filament-1-75mm-1-kg-1-spool",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls Glass Fiber PC",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.tinmorry.com/products/glass-fiber-pc-3d-printer-filament-1-75mm-1-kg-frosted-white-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 285,
+    "bedTemp": 105
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "PETG-ECO Filament Pack,",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/2rolls-petg-eco-filament-1-kg-1-spool-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG Filament Pack,",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/10-rolls-value-pack-save-petg-eco-filament-1-kg-1-spool-副本-1",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls Carbon Fiber PLA Filament,",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/10rolls-carbon-fiber-pla-3d-printer-filament-1-75mm-1-kg-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 68,
+    "printSpeed": 165,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls Carbon Fiber PAHT Filament,",
+    "filamentType": "Other",
+    "sourceUrl": "https://www.tinmorry.com/products/10rolls-carbon-fiber-paht-3d-printer-filament-1-75mm-1-kg-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 275,
+    "bedTemp": 90
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls PETG-ECO Filament,",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/10-rolls-value-pack-save-petg-eco-filament-1-kg-1-spool",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls Glass Fiber PETG Filament,",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/10-rolls-glass-fiber-petg-filament-1-75mm-tinmorry-petg-gf-3d-printing-filament-for-fdm-3d-printers-1kg-roll-10-kg-black-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls Sparkly PETG Filament,",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/10-rolls-petg-filament-1-75mm-tinmorry-petg-3d-printing-filament-for-fdm-3d-printers-10-kg-sparkly-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "10 Rolls 95A TPU Filament",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/10-rolls-petg-eco-filament-1-75mm-tinmorry-petg-eco-3d-printing-filament-for-fdm-3d-printers-10-kg-black-复制-2",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Sparkly PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/sparkly-petg-3d-printer-filament-1-75mm-1-kg-sparkly-black-副本-2",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Sparkly PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/sparkly-petg-3d-printer-filament-1-75mm-1-kg-sparkly-black-副本-1",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Sparkly PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/sparkly-petg-3d-printer-filament-1-75mm-1-kg-sparkly-black-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glowing PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75-mm-tinmorry-filament-petg-3d-printing-materials-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-glow-green-副本-4",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glowing PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75-mm-tinmorry-filament-petg-3d-printing-materials-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-glow-green-副本-3",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glowing PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75-mm-tinmorry-filament-petg-3d-printing-materials-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-glow-green-副本-2",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glowing PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75-mm-tinmorry-filament-petg-3d-printing-materials-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-glow-green-副本-1",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-pla-filament-1-75-mm-3d-printer-filament-dimensional-accuracy-0-03-mm-1-kg-spool-compatible-with-bambu-fdm-3d-printer-galaxy-green-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 210,
+    "bedTemp": 60,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-pla-filament-1-75-mm-3d-printer-filament-dimensional-accuracy-0-03-mm-1-kg-spool-compatible-with-bambu-fdm-3d-printer-galaxy-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 210,
+    "bedTemp": 60,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-pla-filament-1-75-mm-3d-printer-filament-dimensional-accuracy-0-03-mm-1-kg-spool-compatible-with-bambu-fdm-3d-printer-galaxy-brown-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 210,
+    "bedTemp": 60,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-water-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 210,
+    "bedTemp": 60,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-ruby-red-副本-1",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-ruby-red-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-warm-light-grey-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-ice-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-traffic-yellow-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-pale-pink-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-telecom-grey-副本-1",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-telecom-grey-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber TPU Filament",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-tpu-filament-1-75mm-resistant-to-impact-tpu-gf-3d-printing-filament-flexible-tough-fits-bambu-lab-fdm-3d-printers-1-kg-1-spool-frosted-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 50,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-metallic-petg-filament-1-75mm-rapid-petg-3d-printer-filament-petg-with-a-rapid-flow-rate-compatible-with-bambu-lab-fdm-3d-printer-1kg-1-spool-metallic-bronzebu-lab-fdm-3d-printer-1-kg-1-spool-metallic-green-副本-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-metallic-petg-filament-1-75mm-petg-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-metallic-green-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-horizon-green-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-ice-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-ice-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-skin-colour-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-skin-colour",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-telecom-grey",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-pale-pink",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-violet",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-fluorescent-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-fluorescent-purple-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-fluorescent-red-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-fluorescent-rose-red-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-fluorescent-rose-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-fluorescent-green-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-emerald-green-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-fluorescent-yellow-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-fluorescent-yellow",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-amp-durable-dimensional-accuracy-0-03-mm-purple",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-olive-green-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-olive-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-pomelo-orange-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-spinach-green-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-spinach-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-durable-dimensional-accuracy-0-03-mm-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-amp-durable-dimensional-accuracy-0-03-mm-cool-white",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-durable-dimensional-accuracy-0-03-mm-warm-grey",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-durable-dimensional-accuracy-0-03-mm-cool-grey",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-durable-dimensional-accuracy-0-03-mm-cyan",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-amp-durable-dimensional-accuracy-0-03-mm-orange",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-durable-dimensional-accuracy-0-03-mm-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-durable-dimensional-accuracy-0-03-mm-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-durable-dimensional-accuracy-0-03-mm-lake-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ABS-Pro",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-abs-filament-1-75-mm-abs-pro-3d-printer-filament-1-kg-good-heat-resistance-strong-durable-dimensional-accuracy-0-03-mm-yellow",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PC",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-pc-filament-1-75mm-excellent-heat-resistance-pc-gf-3d-printing-filament-strength-rigidity-1kg-1-spool-white",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 285,
+    "bedTemp": 105
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PC",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-navy-blue-副本",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 285,
+    "bedTemp": 105
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-light-brown",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-metallic-petg-filament-1-75mm-petg-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-metallic-midnight",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-mint-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-navy-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-dark-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-sakura-pink",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-lilac-purple",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-ice-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PET",
+    "filamentType": "Other",
+    "sourceUrl": "https://www.tinmorry.com/products/carbon-fiber-pet-filament-1-75mm-tinmorry-pet-cf-3d-printing-filament-with-exceptional-thermal-resistance-and-mechanical-properties-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-matt-black-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 275,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-coffee-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-sakura-pink-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-fluorescent-purple-red-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-fluorescent-yellow-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-meeple-white-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-fluorescent-green-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-rapid-petg-eco-3d-printing-filament-compatible-with-bambu-lab-creality-k1c-flashforge-adventurer-5m-fdm-3d-printer-1-kg-1-spool-black-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75-mm-galaxy-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-galaxy-purple-gold-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75-mm-galaxy-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-galaxy-green-gold-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75-mm-galaxy-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-galaxy-gemstone-green-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Marble PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-petg-filament-1-75mm-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-marble-granite-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 238,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-white-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-grey-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-brown-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-yellow-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-orange-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-light-blue-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-pink-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-light-green-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-red-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-purple-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-skin-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Matte PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-matte-pla-filament-1-75mm-pla-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-matte-skin",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 68
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-metallic-petg-filament-1-75mm-petg-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-metallic-blue-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-metallic-petg-filament-1-75mm-petg-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-metallic-rose-gold-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-metallic-petg-filament-1-75mm-petg-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-metallic-purple-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-metallic-petg-filament-1-75mm-petg-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-metallic-champagne-gold-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-metallic-petg-filament-1-75mm-petg-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-metallic-space-grey-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-filament-tpu-1-75-mm-tpu-filament-3d-printing-materials-for-3d-printer-1-kg-1-spool-yellow-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-carter-yellow-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-white-复制-1",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-white-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/metallic-petg-filament-1-75mm-tinmorry-petg-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1kg-chrome-metal-silver-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Metallic PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/metallic-petg-filament-1-75mm-tinmorry-petg-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1kg-chrome-metal-silver",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Marble PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-marble-magic-purple-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 238,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Marble PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-marble-magic-green-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 238,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Marble PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-marble-magic-blue-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 238,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Marble PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-marble-magic-brown-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 238,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Marble PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-marble-light-grey-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 238,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-galaxy-jewel-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-petg-3d-printer-filament-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-galaxy-gemstone-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glowing PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75-mm-tinmorry-filament-petg-3d-printing-materials-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-glow-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 83
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-1-kg-1-spule-bright-yellow",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Carbon Fiber PAHT",
+    "filamentType": "Other",
+    "sourceUrl": "https://www.tinmorry.com/products/carbon-fiber-paht-filament-1-75mm-tinmorry-paht-cf-3d-printing-filament-with-exceptional-heat-resistance-compatible-with-bambu-lab-fdm-3d-printers-1-kg-1-spool-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 275,
+    "bedTemp": 90
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Carbon Fiber Reinforced PA6 Filament,",
+    "filamentType": "Nylon",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-pa6-cf-carbon-fiber-nylon-filament-1-75mm-high-strength-stiffness-nylon-filament-toughness-vibration-resistance-3d-printer-filament-dimensional-accuracy-0-03-mm-1kg-spool-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 275,
+    "bedTemp": 90,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Sparkly PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/sparkly-petg-filament-1-75-mm-tinmorry-filament-petg-3d-printing-materials-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Sparkly PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/sparkly-petg-filament-1-75-mm-tinmorry-filament-petg-3d-printing-materials-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Sparkly PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/sparkly-petg-filament-1-75-mm-tinmorry-filament-petg-3d-printing-materials-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-violet-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Sparkly PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/sparkly-petg-filament-1-75-mm-tinmorry-filament-petg-3d-printing-materials-compatible-with-bambu-fdm-3d-printers-1-kg-1-spool-violet",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Carbon Fiber PET",
+    "filamentType": "Other",
+    "sourceUrl": "https://www.tinmorry.com/products/carbon-fiber-pet-filament-1-75mm-tinmorry-pet-cf-3d-printer-filament-high-dimensional-stability-exceptional-thermal-resistance-compatible-with-most-fdm-3d-printers-1-kg-1-spool-light-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 275,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/filament-tpu-1-75-mm-tinmorry-3d-printing-materials-tpu-filament-for-fdm-3d-printer-1-kg-1-spool-white",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/filament-tpu-1-75-mm-tinmorry-3d-printing-materials-tpu-filament-for-fdm-3d-printer-1-kg-1-spool-transparent-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/filament-tpu-1-75-mm-tinmorry-3d-printing-materials-tpu-filament-for-fdm-3d-printer-1-kg-1-spool-transparent-violet",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/filament-tpu-1-75-mm-tinmorry-3d-printing-materials-tpu-filament-for-fdm-3d-printer-1-kg-1-spool-transparent-emerald-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/filament-tpu-1-75-mm-tinmorry-3d-printing-materials-tpu-filament-for-fdm-3d-printer-1-kg-1-spool-transparent-yellow",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/filament-tpu-1-75-mm-tinmorry-3d-printing-materials-tpu-filament-for-fdm-3d-printer-1-kg-1-spool-transparent",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/filament-tpu-1-75-mm-tinmorry-3d-printing-materials-tpu-filament-for-fdm-3d-printer-1-kg-1-spool-transparent-light-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-sky-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-transparent",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-dark-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-grey",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-olive-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-carter-yellow",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-klein-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-apricot",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-ivorywhite",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-cold-white",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-orange",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-1-kg-1-spule-dark-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-1-kg-1-spule-vinca-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-1-kg-1-spule-mint-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-1-kg-1-spule-pink",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-1-kg-1-spule-transparentes-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-1-kg-1-spule-transparent-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-1-kg-1-spule-transparent-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Marble PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-marble-light-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 238,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Marble PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-marble-white",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 238,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-1-kg-1-spule-skin",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Galaxy PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-chameleon-blue-purple",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Rapid PETG-Eco",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/petg-filament-1-75mm-tinmorry-improved-petg-eco-3d-printing-materials-compatible-with-bambu-fdm-3d-printer-1-kg-1-spool-fluorescent-rose-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 83,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-white",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-grey",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Glass Fiber PETG",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-glass-fiber-reinforced-petg-filament-high-impact-resistance-petg-gf-3d-printing-filament-durability-stiffness-perfect-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-frosted-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 70
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Carbon Fiber PP",
+    "filamentType": "Other",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-carbon-fiber-polypropylene-3d-printer-filament-heat-resistant-pp-cf-3d-printing-filament-1-75mm-lightweight-durability-compatible-with-bambu-fdm-3d-printer-700g-1-spool-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 95,
+    "printSpeed": 65,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-asa-filament-1-75mm-high-uv-heat-resistant-3d-printer-filament-durable-toughness-dimensional-accuracy-0-03mm-perfect-for-printing-outdoor-functional-parts-1kg-spool-gray",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-asa-filament-1-75mm-high-uv-heat-resistant-3d-printer-filament-durable-toughness-dimensional-accuracy-0-03mm-perfect-for-printing-outdoor-functional-parts-1kg-spool-olive-green",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-asa-filament-1-75mm-high-uv-heat-resistant-3d-printer-filament-durable-toughness-dimensional-accuracy-0-03mm-perfect-for-printing-outdoor-functional-parts-1kg-spool-navy-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-asa-filament-1-75mm-high-uv-heat-resistant-3d-printer-filament-durable-toughness-dimensional-accuracy-0-03mm-perfect-for-printing-outdoor-functional-parts-1kg-spool-white",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-asa-filament-1-75mm-high-uv-heat-resistant-3d-printer-filament-durable-toughness-dimensional-accuracy-0-03mm-perfect-for-printing-outdoor-functional-parts-1kg-spool-orange",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-asa-filament-1-75mm-high-uv-heat-resistant-3d-printer-filament-durable-toughness-dimensional-accuracy-0-03mm-perfect-for-printing-outdoor-functional-parts-1kg-spool-purple",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-asa-filament-1-75mm-high-uv-heat-resistant-3d-printer-filament-durable-toughness-dimensional-accuracy-0-03mm-perfect-for-printing-outdoor-functional-parts-1kg-spool-red",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "ASA",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.tinmorry.com/products/tinmorry-asa-filament-1-75mm-high-uv-heat-resistant-3d-printer-filament-durable-toughness-dimensional-accuracy-0-03mm-perfect-for-printing-outdoor-functional-parts-1kg-spool-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 95,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Carbon Fiber PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/carbon-fiber-pla-filament-1-75mm-tinmorry-pla-cf-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-carbon-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 68,
+    "printSpeed": 165,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Carbon Fiber PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/carbon-fiber-pla-filament-1-75mm-tinmorry-pla-cf-3d-printing-filament-compatible-with-bambu-lab-fdm-3d-printer-1-kg-1-spool-brickred-复制",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 68,
+    "printSpeed": 165,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/filament-tpu-1-75-mm-tinmorry-3d-printing-materials-tpu-filament-for-fdm-3d-printer-1-kg-1-spool-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "Carbon Fiber PLA",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.tinmorry.com/products/carbon-fiber-pla-filament-1-75mm-1kg-tinmorry-pla-3d-printing-materials-for-fdm-3d-printer-1-spool-black",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 68,
+    "printSpeed": 165,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Tinmorry",
+    "brand": "95A TPU",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.tinmorry.com/products/filament-tpu-1-75-mm-tinmorry-3d-printing-materials-tpu-filament-for-fdm-3d-printer-1-kg-1-spool-blue",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 225,
+    "bedTemp": 40,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic Glow in The Dark PLA Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-glow-in-the-dark-pla-filament-1-75mm",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "density": 1.1,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PLA-CF15 Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-pla-cf15-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 230,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 50,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PETG-CF10 Filament",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-petg-cf10-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 230,
+    "bedTemp": 75,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 50,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic ABS-GF10 Filament",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-abs-gf10-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 95,
+    "density": 1.106,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic NebuLux PLA Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/nebulux-pla-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 215,
+    "bedTemp": 55,
+    "density": 1.2225,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PC Filament",
+    "filamentType": "PC",
+    "sourceUrl": "https://www.inslogic3d.com/products/pc-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 105,
+    "density": 1.15,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PEEK Filament",
+    "filamentType": "Other",
+    "sourceUrl": "https://www.inslogic3d.com/products/peek-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 405,
+    "bedTemp": 110,
+    "density": 1.1965,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic High-Speed PLA Pro Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/high-speed-pla-pro-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 208,
+    "bedTemp": 55,
+    "density": 1.26,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PA6-GF25 Filament",
+    "filamentType": "Nylon",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-pa6-gf25-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 280,
+    "bedTemp": 60,
+    "density": 1.27,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PC-ABS Filament",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-pc-abs-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 105,
+    "density": 1.08,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic ABS FR V0 Filament",
+    "filamentType": "ABS",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-abs-fr-v0-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 245,
+    "bedTemp": 90,
+    "density": 1.1,
+    "filamentDiameter": 1.75
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic High-Speed Marble PLA Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-high-speed-marble-pla",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "density": 1.25,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PA6-CF Filament",
+    "filamentType": "Nylon",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-pa6-cf-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 280,
+    "bedTemp": 60,
+    "density": 1.2,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 30,
+    "fanSpeedMax": 30
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PA12-CF Filament",
+    "filamentType": "Nylon",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-pa12-cf-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 270,
+    "bedTemp": 65,
+    "density": 1.0466,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 70,
+    "fanSpeedMax": 70
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic Multicolor Silk PLA Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-pla-multicolor-silk-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 210,
+    "bedTemp": 55,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic WoodFill PLA Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-woodfill-pla-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "density": 1.1,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic High-Speed PLA Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/inslogic-high-speed-pla",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "density": 1.26,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic TPU 95A Filament",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.inslogic3d.com/products/tpu95a-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "density": 1.23,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 70,
+    "fanSpeedMax": 70
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PETG Pro Filament",
+    "filamentType": "PETG",
+    "sourceUrl": "https://www.inslogic3d.com/products/petg-pro-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 235,
+    "bedTemp": 65,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic Nylon PA6/66 Filament",
+    "filamentType": "Nylon",
+    "sourceUrl": "https://www.inslogic3d.com/products/nylon-pa6-66-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 260,
+    "bedTemp": 40,
+    "density": 1.08,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic Matte PLA Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/matte-pla",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 210,
+    "bedTemp": 55,
+    "density": 1.3,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic ASA Filament",
+    "filamentType": "ASA",
+    "sourceUrl": "https://www.inslogic3d.com/products/asa-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 255,
+    "bedTemp": 90,
+    "density": 1.05,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PLA Pro Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/pla-pro-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "density": 1.2,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic PP (Polypropylene) Filament",
+    "filamentType": "Other",
+    "sourceUrl": "https://www.inslogic3d.com/products/pp-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 220,
+    "bedTemp": 55,
+    "density": 0.9,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic TPU 90A Filament",
+    "filamentType": "TPU",
+    "sourceUrl": "https://www.inslogic3d.com/products/tpu90a-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 230,
+    "bedTemp": 45,
+    "density": 1.17,
+    "filamentDiameter": 1.75,
+    "fanSpeedMin": 100,
+    "fanSpeedMax": 100
+  },
+  {
+    "manufacturer": "Inslogic",
+    "brand": "Inslogic LW-PLA Filament",
+    "filamentType": "PLA",
+    "sourceUrl": "https://www.inslogic3d.com/products/lw-pla-filament",
+    "sourceType": "manufacturer",
+    "nozzleTemp": 200,
+    "bedTemp": 55,
+    "density": 0.84,
+    "filamentDiameter": 1.75
   }
 ]

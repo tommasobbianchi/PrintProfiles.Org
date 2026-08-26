@@ -44,7 +44,9 @@ export const BRANDS = [
   { manufacturer: 'TecBears', host: 'tecbears.com', hosts: ['tecbears.com'], platform: 'shopify' },
   { manufacturer: 'PanChroma', host: 'panchroma.com', hosts: ['panchroma.com', 'us.polymaker.com'], platform: 'blocked', note: 'Polymaker sub-brand' },
   { manufacturer: '3DHoJor', host: '3dhojor.com', hosts: ['3dhojor.com'], platform: 'shopify' },
-  { manufacturer: 'Tinmorry', host: 'tinmorry.com', hosts: ['tinmorry.com'], platform: 'other' },
+  // The apex 404s on /products.json; the store lives on www and is plain Shopify. Recorded as
+  // 'other' until 2026-08-26 purely because the probe used the wrong host.
+  { manufacturer: 'Tinmorry', host: 'www.tinmorry.com', hosts: ['www.tinmorry.com', 'tinmorry.com'], platform: 'shopify' },
   { manufacturer: 'Hatchbox', host: 'hatchbox3d.com', hosts: ['hatchbox3d.com'], platform: 'blocked' },
   { manufacturer: 'iSanmate', host: 'isanmate.com', hosts: ['isanmate.com'], platform: 'woocommerce' },
   { manufacturer: 'Prusament', host: 'prusament.com', hosts: ['prusament.com'], platform: 'other', note: 'bespoke parser already exists: parsers/prusament.mjs' },
@@ -58,7 +60,9 @@ export const BRANDS = [
   { manufacturer: 'OVV3D', host: null, hosts: [], platform: 'unresolved', note: 'no domain resolves; Amazon-only brand' },
   { manufacturer: '3DJake', host: '3djake.com', hosts: ['3djake.com', 'www.3djake.uk', '3djake.de'], platform: 'other', note: 'retailer, not a manufacturer' },
   { manufacturer: 'Extrudr', host: 'extrudr.com', hosts: ['extrudr.com'], platform: 'other', note: 'bespoke parser already exists: parsers/extrudr.mjs' },
-  { manufacturer: 'Inslogic', host: 'inslogic.com', hosts: ['inslogic.com', 'inslogic3d.com'], platform: 'blocked' },
+  // inslogic.com robots-disallows, which is why this read 'blocked'. The actual storefront is
+  // inslogic3d.com, whose robots explicitly permits crawling and serves a Shopify feed.
+  { manufacturer: 'Inslogic', host: 'www.inslogic3d.com', hosts: ['www.inslogic3d.com', 'inslogic3d.com', 'inslogic.com'], platform: 'shopify' },
   { manufacturer: 'AzureFilm', host: 'azurefilm.com', hosts: ['azurefilm.com', 'azurefilm.si'], platform: 'woocommerce' },
   { manufacturer: 'DURAMIC 3D', host: 'duramic3d.com', hosts: ['duramic3d.com'], platform: 'shopify' },
   { manufacturer: 'Fiberon', host: 'fiberon3d.com', hosts: ['fiberon3d.com', 'fiberlogy.com'], platform: 'other', note: 'Fiberlogy sub-brand' },

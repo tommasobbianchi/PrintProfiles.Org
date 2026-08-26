@@ -20,7 +20,15 @@ export const MANUFACTURER = 'Shopify'; // multi-brand; the real brand is per-BRA
 export const ORIGIN = null;
 
 export const BRANDS = [
+  // NOTE: this list is the parser's own, NOT brand-registry.mjs. A brand can be marked
+  // 'shopify' in the registry and still never be crawled if it is missing here — which is
+  // exactly what kept Tinmorry and Inslogic out of the catalogue until 2026-08-26.
   { manufacturer: 'Elegoo',      host: 'elegoo.com' },
+  // Both were long recorded unreachable for the wrong reason: the registry probed the apex
+  // tinmorry.com (404s on /products.json) and inslogic.com (robots-disallowed), while the
+  // real storefronts are on www and serve a plain Shopify feed that robots permits.
+  { manufacturer: 'Tinmorry',    host: 'www.tinmorry.com' },
+  { manufacturer: 'Inslogic',    host: 'www.inslogic3d.com' },
   { manufacturer: 'Overture',    host: 'overture3d.com' },
   { manufacturer: 'Jayo',        host: 'jayo3d.com' },
   { manufacturer: 'Protopasta',  host: 'proto-pasta.com' },
@@ -117,6 +125,54 @@ const UNIT = `(?=\\s*(?:°\\s*C?|℃|C\\b))`;
 const NOZZLE_RE_STRICT = new RegExp(`(?:nozzle|print(?:ing)?|extruder|hot\\s*end|hotend)\\s*(?:temp(?:erature)?s?)?\\s*${CONN_STRICT}\\s*(${TEMP_VAL_STRICT})${UNIT}`, 'i');
 const BED_RE_STRICT = new RegExp(`(?:heated\\s*bed|build\\s*plate|print\\s*bed|heat\\s*bed|bed)\\s*(?:temp(?:erature)?s?)?\\s*${CONN_STRICT}\\s*(${TEMP_VAL_STRICT})${UNIT}`, 'i');
 
+// ---------- labelled spec block ----------
+//
+// Some stores publish a "Printing Settings" panel of `Label: value` pairs, and write labels
+// the general patterns cannot read:
+//
+//   Nozzle Temperature & Printing Speed: 215-245 °C, 50-200mm/s
+//   Bed Temperature: not heated with glue, heated 70-80 °C can not be coated with glue
+//
+// The first buries the value behind a compound label; the second behind a caveat. Loosening
+// the page-wide patterns to cope was tried and rejected: free text gave them room to wander
+// to the next number on the page, silently changing four already-correct rows (FlashForge
+// PET-GF fell from 275 °C to 100 °C).
+//
+// So the relaxation is confined to the block instead. This finds the panel, keeps only the
+// text up to the next section, and reads the labels there. A store without such a panel takes
+// exactly the path it always did — which is what makes this safe to add.
+const SPEC_HEAD = /(?:printing|print|recommended|suggested)\s+(?:settings|parameters)/i;
+const SPEC_END = /\*\s*(?:the|all)\s|downloads|specifications|description|reviews/i;
+
+function specBlockTemps(text) {
+  // The heading occurs more than once: these pages carry a tab strip ("Description
+  // Specifications Printing Settings Downloads") long before the panel itself, and slicing at
+  // the first hit yields nothing but nav. So try every occurrence and keep the first that
+  // actually reads as a spec block.
+  for (const m of text.matchAll(new RegExp(SPEC_HEAD.source, 'gi'))) {
+    const got = readSpecBlock(text.slice(m.index, m.index + 700));
+    if (got) return got;
+  }
+  return null;
+}
+
+function readSpecBlock(slice) {
+  let block = slice;
+  const end = block.slice(40).search(SPEC_END);
+  if (end !== -1) block = block.slice(0, end + 40);
+
+  // Inside the block a label owns everything up to the next label, so the value may sit
+  // behind words — but never behind another colon, which is where the next label starts.
+  const pick = (labels) => {
+    const re = new RegExp(`(?:${labels})[^:0-9°]{0,40}:[^0-9°]{0,40}?([0-9][0-9.,\\s~–—-]*)(?=\\s*(?:°\\s*C?|℃|C\\b))`, 'i');
+    return mid((re.exec(block) || [])[1]);
+  };
+  const nozzleTemp = pick('nozzle|extruder|hot\\s*end|hotend');
+  const bedTemp = pick('heated\\s*bed|build\\s*plate|print\\s*bed|heat\\s*bed|bed');
+  if (!okNozzle(nozzleTemp) || !okBed(bedTemp)) return null;
+  return { nozzleTemp, bedTemp };
+}
+
 // Plausibility guards: throw away obvious non-temperatures (print size, build volume, …).
 const okNozzle = (n) => n !== undefined && n >= 100 && n <= 450;
 const okBed = (n) => n !== undefined && n >= 0 && n <= 200;
@@ -144,6 +200,10 @@ function cleanBrand(title) {
     .replace(/\s+\d+(?:\.\d+)?\s*(?:kg|g)\b.*$/i, '')          // trailing weight tail
     .replace(new RegExp(`\\s+[-–]?\\s*(?:${COLOURS})\\s*$`, 'i'), '') // obvious trailing colour
     .replace(/\s+/g, ' ')
+    // Trailing punctuation is what is left when a colour or size tail is cut off the title
+    // ("Glass Fiber Reinforced PA6 Filament, Black" -> "…Filament,"). It reads as a typo on
+    // the card, so it goes with the tail rather than being carried into the product name.
+    .replace(/[\s,;:—–-]+$/, '')
     .trim();
   return s;
 }
@@ -259,7 +319,9 @@ export async function parseProduct(url) {
     const page = await get(`https://${host}/products/${handle}`);
     if (!page.ok) return null;
     const rendered = renderedText(page.body);
-    spec = tempsFrom(rendered, true);
+    // The labelled panel first: it is the store's own spec table, so when one exists its
+    // numbers beat anything scraped out of the surrounding prose.
+    spec = specBlockTemps(strip(rendered)) || tempsFrom(rendered, true);
     if (!spec) return null;
     specText = strip(rendered);
   }
