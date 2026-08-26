@@ -24,11 +24,34 @@ const OTHER_MAKERS = ['colorFabb', 'Polymaker', 'Fillamentum', 'Prusament', 'Fib
 
 // Attribution wording per provenance. A slicer-profile value is NOT the vendor's own figure
 // and must not be presented as one, so each class gets its own sentence.
+// A 'slicer-profile' row now comes from one of four repos, so the sentence names the right
+// one and its licence instead of always claiming OrcaSlicer.
+const SLICER_REPO = [
+  [/prusa3d\/PrusaSlicer/, 'PrusaSlicer', 'AGPL-3.0, values cited as facts'],
+  [/bambulab\/BambuStudio/, 'BambuStudio', 'AGPL-3.0, values cited as facts'],
+  [/Ultimaker\/fdm_materials/, 'Ultimaker fdm_materials', 'CC0-1.0'],
+  [/SoftFever\/OrcaSlicer/, 'OrcaSlicer', 'AGPL-3.0, values cited as facts'],
+];
+
 const ATTRIB = {
   manufacturer: (r) => `Official ${r.manufacturer} data — ${r.sourceUrl}`,
   spoolmandb: (r) => `SpoolmanDB (MIT) — ${r.sourceUrl}`,
-  'slicer-profile': (r) => `OrcaSlicer profile "${r.sourceProfile}" (AGPL-3.0, values cited as facts) — ${r.sourceUrl}`,
+  'slicer-profile': (r) => {
+    const hit = SLICER_REPO.find(([re]) => re.test(r.sourceUrl || ''));
+    const [, repo, lic] = hit || [, 'slicer', 'values cited as facts'];
+    const via = r.machineFallback ? ', printer-specific value used where the material states none' : '';
+    return `${repo} profile "${r.sourceProfile}" (${lic}${via}) — ${r.sourceUrl}`;
+  },
 };
+
+// Carbon, glass and aramid fill make a filament abrasive: it chews a brass nozzle. The fill is
+// already preserved in the product name by deriveBrand, but a name is not a warning, and the
+// person reading the preset is about to load the spool. Appended to notes for any filled row.
+const ABRASIVE = /(^|[^a-z])(r?CF|GF|AF)\d*([^a-z]|$)|carbon|glass\s*fib|aramid|kevlar|\bmetal\b|\bsteel\b|glow/i;
+const abrasiveNote = (r) =>
+  ABRASIVE.test(`${r.brand || ''} ${r.sourceProfile || ''}`)
+    ? ' Abrasive — hardened nozzle required.'
+    : '';
 
 const JUNK = /\b(sample|gift\s*card|voucher|spool\s*holder|nozzle|bundle|sticker|t-shirt|dryer)\b|MOQ:|\bbe the first\b|\bnew colou?r collection\b|\bsuper\s*pack\b|\bmaster\s*spool\b|^\s*unset\b|\bunset\b|^\s*\d+\s*x\s|\s\+\s|\b3d\s*printer\b|\bprinter\b|\bdiscontinued\b|\bresin\b|\bbuild\s*plate\b|\bhotend\b|\bextruder\b|\bkit\b|\bupgrade\b|\bfilament\s*dryer\b|\benclosure\b|\bbelt\b|\bmotor\b|\bscreen\b|\bcable\b/i;
 
@@ -210,7 +233,7 @@ async function main() {
         bedTempInitial: raw.bedTempInitial,
         maxVolumetricSpeed: raw.maxVolumetricSpeed,
         flowRatio: raw.flowRatio,
-        notes: ATTRIB[raw.sourceType ?? 'manufacturer'](raw),
+        notes: ATTRIB[raw.sourceType ?? 'manufacturer'](raw) + abrasiveNote(raw),
         sourceType: raw.sourceType ?? 'manufacturer',
         sourceUrl: raw.sourceUrl,
         sourceProfile: raw.sourceProfile,
