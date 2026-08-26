@@ -123,12 +123,14 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
 
   return (
     <div className="relative">
-      {/* The mark as ground, not decoration: oversized, faint, never competing with the data. */}
+      {/* The mark as ground, not decoration: oversized, faint, never competing with the data.
+          Pushed up and right so it sits behind the hero's whitespace rather than under the
+          middle and right cards of the result grid, where it read as noise on the data. */}
       <img
         src="/logo-mark.png"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none select-none absolute -right-32 top-24 w-[680px] max-w-[85vw] opacity-[0.05]"
+        className="pointer-events-none select-none absolute -right-52 -top-24 w-[620px] max-w-[80vw] opacity-[0.05]"
       />
 
       {/* Hero */}
