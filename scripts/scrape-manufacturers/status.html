@@ -42,14 +42,14 @@
 <div class="wrap">
 <h1>Filament preset database — status</h1>
 <p class="sub">PrintProfiles.Org · generated from <code>constants.ts</code> and <code>data/*.json</code> by
-<code>gen-status.mjs</code> · 2026-08-26 11:20 UTC</p>
+<code>gen-status.mjs</code> · 2026-08-26 11:36 UTC</p>
 
 <div class="grid kpis">
-  <div class="card kpi"><div class="n">2,439</div><div class="l">presets</div><div class="d">+1,985 from 454</div></div>
-  <div class="card kpi"><div class="n">1,989</div><div class="l">with a cited source</div><div class="d">was 0</div></div>
+  <div class="card kpi"><div class="n">2,440</div><div class="l">presets</div><div class="d">+1,986 from 454</div></div>
+  <div class="card kpi"><div class="n">1,990</div><div class="l">with a cited source</div><div class="d">was 0</div></div>
   <div class="card kpi"><div class="n">205</div><div class="l">manufacturers</div><div class="d">from 109</div></div>
-  <div class="card kpi"><div class="n">631</div><div class="l">with volumetric speed</div><div class="d">unavailable elsewhere</div></div>
-  <div class="card kpi"><div class="n">4,965</div><div class="l">source rows harvested</div><div class="d">18,142 pages cached</div></div>
+  <div class="card kpi"><div class="n">632</div><div class="l">with volumetric speed</div><div class="d">unavailable elsewhere</div></div>
+  <div class="card kpi"><div class="n">5,312</div><div class="l">source rows harvested</div><div class="d">18,146 pages cached</div></div>
 </div>
 
 <h2>Where the data comes from</h2>
@@ -58,7 +58,7 @@
 <thead><tr><th>Provenance</th><th class="n">Presets</th><th>Licence</th><th>What only this source gives</th></tr></thead>
 <tbody>
 <tr><td><code>manufacturer</code></td><td class="n">1,027</td><td>Public pages</td><td>The vendor's own published figures</td></tr>
-<tr><td><code>slicer-profile</code></td><td class="n">736</td><td>AGPL-3.0 <span class="pill p-warn">facts only</span></td><td><strong>Max volumetric speed, flow ratio</strong> — no vendor page publishes these</td></tr>
+<tr><td><code>slicer-profile</code></td><td class="n">737</td><td>AGPL-3.0 <span class="pill p-warn">facts only</span></td><td><strong>Max volumetric speed, flow ratio</strong> — no vendor page publishes these</td></tr>
 <tr><td><code>seed</code></td><td class="n">450</td><td>—</td><td>Original hand-written presets, unattributed</td></tr>
 <tr><td><code>spoolmandb</code></td><td class="n">226</td><td>MIT</td><td>The vendors whose own sites serve a bot challenge</td></tr>
 </tbody>
@@ -80,12 +80,14 @@ as product names.</p>
 <tr><td><code>slicerprofiles</code></td><td>65 vendor packs</td><td class="n">501</td><td>7,643 files → 1,719 filaments → rows</td></tr>
 <tr><td><code>spoolmandb</code></td><td>53 vendors</td><td class="n">409</td><td>MIT community database</td></tr>
 <tr><td><code>prusaprofiles</code></td><td>—</td><td class="n">342</td><td>—</td></tr>
+<tr><td><code>anycubicprofiles</code></td><td>—</td><td class="n">302</td><td>—</td></tr>
 <tr><td><code>fillamentum</code></td><td>Fillamentum</td><td class="n">210</td><td>—</td></tr>
 <tr><td><code>extrudr</code></td><td>Extrudr</td><td class="n">136</td><td>Structured __NEXT_DATA__</td></tr>
 <tr><td><code>fdmmaterials</code></td><td>—</td><td class="n">122</td><td>—</td></tr>
 <tr><td><code>bambuprofiles</code></td><td>—</td><td class="n">79</td><td>—</td></tr>
 <tr><td><code>fiberlogy</code></td><td>Fiberlogy</td><td class="n">69</td><td>—</td></tr>
 <tr><td><code>eryone</code></td><td>Eryone</td><td class="n">60</td><td>—</td></tr>
+<tr><td><code>qidiprofiles</code></td><td>—</td><td class="n">45</td><td>—</td></tr>
 <tr><td><code>prusament</code></td><td>Prusa</td><td class="n">22</td><td>—</td></tr>
 </tbody>
 </table>
@@ -97,8 +99,8 @@ non-filament listings and cross-source overlaps collapse during import.</p>
 <div class="card">
 <h2 style="margin-top:0">Integrity</h2>
 <table><tbody>
-<tr><td>Duplicate preset ids</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,439</span></td></tr>
-<tr><td>Physically implausible rows</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,439</span></td></tr>
+<tr><td>Duplicate preset ids</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,440</span></td></tr>
+<tr><td>Physically implausible rows</td><td><span class="pill p-ok">pass</span> <span class="note">0 of 2,440</span></td></tr>
 <tr><td>Cross-source conflicts &gt;15 °C</td><td><span class="pill p-ok">pass</span> <span class="note">0</span></td></tr>
 <tr><td>Import re-run</td><td><span class="pill p-ok">idempotent</span></td></tr>
 </tbody></table>
@@ -131,7 +133,7 @@ defeating the block.</p>
 <tr><td>Nylon</td><td class="n">92</td></tr>
 <tr><td>PC</td><td class="n">84</td></tr>
 <tr><td>PA-CF</td><td class="n">72</td></tr>
-<tr><td>PET</td><td class="n">26</td></tr>
+<tr><td>PET</td><td class="n">27</td></tr>
 <tr><td>PP</td><td class="n">24</td></tr>
 <tr><td>PCTG</td><td class="n">19</td></tr>
 </tbody></table>

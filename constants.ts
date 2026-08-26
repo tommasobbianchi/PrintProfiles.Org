@@ -2745,4 +2745,8 @@ export const PRESET_PROFILES: FilamentProfile[] = [
   createPreset({ id: "mfr-woocommerce-1909", profileName: "Print-Me SmartFit NF PLA Bamboo", printerBrand: "Other", manufacturer: "Print-Me", brand: "SmartFit NF PLA Bamboo", filamentType: "PLA", nozzleTemp: 210, bedTemp: 53, fanSpeedMin: 60, fanSpeedMax: 100, filamentDiameter: 1.75, notes: "Official Print-Me data — https://print-me.pl/sklep/produkty/hobby-design/pla/natural-fibers/smartfit-pla-bamboo-200g/ Abrasive — hardened nozzle required.", sourceType: "manufacturer", sourceUrl: "https://print-me.pl/sklep/produkty/hobby-design/pla/natural-fibers/smartfit-pla-bamboo-200g/" }),
 
 // 24 presets. Paste into PRESET_PROFILES in constants.ts, then run: npx tsc --noEmit
+// --- Imported from official manufacturer sites (2026-08-26) ---
+  createPreset({ id: "mfr-anycubicprofiles-1910", profileName: "Elegoo PET", printerBrand: "Other", manufacturer: "Elegoo", brand: "PET", filamentType: "PET", nozzleTemp: 250, bedTemp: 80, fanSpeedMin: 20, fanSpeedMax: 100, density: 1.27, filamentDiameter: 1.75, nozzleTempInitial: 250, bedTempInitial: 80, maxVolumetricSpeed: 12, flowRatio: 0.98, notes: "slicer profile \"fdm_elegoo_filament_pet\" (values cited as facts) — https://raw.githubusercontent.com/ANYCUBIC-3D/AnycubicSlicerNext/main/resources/profiles/Elegoo/filament/ELEGOO/fdm_elegoo_filament_pet.json", sourceType: "slicer-profile", sourceUrl: "https://raw.githubusercontent.com/ANYCUBIC-3D/AnycubicSlicerNext/main/resources/profiles/Elegoo/filament/ELEGOO/fdm_elegoo_filament_pet.json", sourceProfile: "fdm_elegoo_filament_pet" }),
+
+// 1 presets. Paste into PRESET_PROFILES in constants.ts, then run: npx tsc --noEmit
 ];
