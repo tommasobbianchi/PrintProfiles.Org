@@ -43,23 +43,23 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fdfbf7]">
+    <div className="min-h-screen">
       <Header logoSrc={`${logoSrc}${logoSrc.startsWith('data:') ? '' : `?v=${logoKey}`}`} />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
         {/* Tabs */}
         <div className="flex justify-center mb-8">
-            <div className="flex bg-white p-1 rounded-xl border border-stone-200 shadow-sm">
+            <div className="flex bg-black/30 backdrop-blur-md p-1 rounded-xl border border-white/15">
                 <button
-                    className={`py-2 px-6 font-medium text-sm rounded-lg transition-all duration-200 flex items-center gap-2 ${activeTab === 'create' ? 'bg-stone-800 text-white shadow-md' : 'text-stone-500 hover:text-stone-700 hover:bg-stone-50'}`}
+                    className={`py-2 px-6 font-medium text-sm rounded-lg transition-all duration-200 flex items-center gap-2 ${activeTab === 'create' ? 'bg-stone-100 text-stone-900' : 'text-stone-300 hover:text-white hover:bg-white/10'}`}
                     onClick={() => setActiveTab('create')}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
                     Add a profile
                 </button>
                 <button
-                    className={`py-2 px-6 font-medium text-sm rounded-lg transition-all duration-200 ${activeTab === 'community' ? 'bg-stone-800 text-white shadow-md' : 'text-stone-500 hover:text-stone-700 hover:bg-stone-50'}`}
+                    className={`py-2 px-6 font-medium text-sm rounded-lg transition-all duration-200 ${activeTab === 'community' ? 'bg-stone-100 text-stone-900' : 'text-stone-300 hover:text-white hover:bg-white/10'}`}
                     onClick={() => setActiveTab('community')}
                 >
                     Repository
@@ -75,7 +75,11 @@ const App: React.FC = () => {
                 <div className="max-w-4xl mx-auto">
                         <div className="space-y-8">
                             {/* The Create Form */}
-                            <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                            {/* The form keeps a LIGHT surface. It is a dense work surface of labelled inputs, and
+                                 inverting it would mean re-checking every label, helper line and select for
+                                 contrast; a light panel on the photograph reads perfectly well and risks
+                                 nothing. The browse view is the one that had to go dark. */}
+                            <div className="bg-[#fdfbf7]/95 backdrop-blur-md p-6 rounded-xl border border-white/25 shadow-2xl text-stone-800">
                                 <CreateProfileForm onShare={addProfileToCommunity} />
                             </div>
                         </div>
@@ -85,7 +89,7 @@ const App: React.FC = () => {
 
       </main>
       
-      <footer className="mt-20 py-8 border-t border-stone-200/50">
+      <footer className="mt-20 py-8 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 text-center text-stone-400 text-xs">
               &copy; {new Date().getFullYear()} PrintProfiles.Org. All rights reserved.
           </div>

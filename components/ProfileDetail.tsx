@@ -37,9 +37,9 @@ const SOURCE_COPY: Record<string, { label: string; blurb: string }> = {
 };
 
 const Stat: React.FC<{ label: string; value: React.ReactNode }> = ({ label, value }) => (
-    <div className="flex flex-col gap-1 bg-white border border-stone-200 rounded-lg px-4 py-3">
+    <div className="flex flex-col gap-1 bg-white/[0.06] border border-white/15 rounded-lg px-4 py-3">
         <span className="text-[10px] uppercase tracking-[0.06em] text-stone-400">{label}</span>
-        <span className="text-xl font-semibold text-stone-900 tabular-nums leading-none">{value}</span>
+        <span className="text-xl font-semibold text-stone-50 tabular-nums leading-none">{value}</span>
     </div>
 );
 
@@ -58,35 +58,35 @@ const ProfileDetail: React.FC<{ profile: FilamentProfile; onClose: () => void }>
     }, [onClose]);
 
     return (
-        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-stone-900/40 backdrop-blur-sm p-4 sm:p-8" onClick={onClose}>
-            <div className="w-full max-w-4xl bg-[#fdfbf7] rounded-xl border border-stone-200 shadow-2xl my-4" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/70 backdrop-blur-sm p-4 sm:p-8" onClick={onClose}>
+            <div className="w-full max-w-4xl bg-stone-950/85 backdrop-blur-xl rounded-xl border border-white/15 shadow-2xl my-4" onClick={(e) => e.stopPropagation()}>
 
-                <div className="flex items-start justify-between gap-6 p-6 border-b border-stone-200">
+                <div className="flex items-start justify-between gap-6 p-6 border-b border-white/15">
                     <div className="min-w-0">
-                        <p className="text-sm text-stone-500">{profile.manufacturer}</p>
-                        <h2 className="text-3xl font-bold text-stone-900 tracking-tight leading-tight mt-1 break-words">
+                        <p className="text-sm text-stone-400">{profile.manufacturer}</p>
+                        <h2 className="text-3xl font-bold text-stone-50 tracking-tight leading-tight mt-1 break-words">
                             {profile.brand || profile.filamentType}
                         </h2>
                         <div className="flex flex-wrap gap-2 mt-3">
-                            <span className="inline-flex items-center h-6 px-2 border border-stone-300 rounded text-[11px] font-medium">{profile.filamentType}</span>
-                            {fill && <span className="inline-flex items-center h-6 px-2 rounded bg-stone-900 text-[#fdfbf7] text-[11px] font-semibold tracking-wide">{fill}</span>}
-                            <span className="inline-flex items-center h-6 px-2 border border-stone-300 rounded text-[11px] font-medium">{profile.filamentDiameter} mm</span>
+                            <span className="inline-flex items-center h-6 px-2 border border-white/30 rounded text-[11px] font-medium text-stone-200">{profile.filamentType}</span>
+                            {fill && <span className="inline-flex items-center h-6 px-2 rounded bg-stone-100 text-stone-900 text-[11px] font-semibold tracking-wide">{fill}</span>}
+                            <span className="inline-flex items-center h-6 px-2 border border-white/30 rounded text-[11px] font-medium text-stone-200">{profile.filamentDiameter} mm</span>
                             {profile.printerBrand !== 'Other' && (
-                                <span className="inline-flex items-center h-6 px-2 border border-stone-300 rounded text-[11px] font-medium">{profile.printerBrand}</span>
+                                <span className="inline-flex items-center h-6 px-2 border border-white/30 rounded text-[11px] font-medium text-stone-200">{profile.printerBrand}</span>
                             )}
                         </div>
                     </div>
-                    <button onClick={onClose} aria-label="Close" className="shrink-0 text-stone-400 hover:text-stone-700 transition-colors">
+                    <button onClick={onClose} aria-label="Close" className="shrink-0 text-stone-400 hover:text-white transition-colors">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" className="h-6 w-6"><path d="M6 6l12 12M18 6L6 18" /></svg>
                     </button>
                 </div>
 
                 {abrasive && (
-                    <div className="flex items-start gap-3 mx-6 mt-6 px-4 py-3 border border-amber-200 bg-amber-50/70 rounded-lg">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#92400e" strokeWidth={1.8} strokeLinecap="round" className="h-[18px] w-[18px] shrink-0 mt-0.5"><path d="M12 3.5 2.5 20h19L12 3.5Z" /><path d="M12 10v4" /><path d="M12 17.2v.1" /></svg>
+                    <div className="flex items-start gap-3 mx-6 mt-6 px-4 py-3 border border-amber-400/40 bg-amber-400/10 rounded-lg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fcd34d" strokeWidth={1.8} strokeLinecap="round" className="h-[18px] w-[18px] shrink-0 mt-0.5"><path d="M12 3.5 2.5 20h19L12 3.5Z" /><path d="M12 10v4" /><path d="M12 17.2v.1" /></svg>
                         <div>
-                            <p className="text-sm font-semibold text-amber-900">Abrasive — hardened nozzle required</p>
-                            <p className="text-[13px] text-amber-800 leading-snug mt-0.5">
+                            <p className="text-sm font-semibold text-amber-200">Abrasive — hardened nozzle required</p>
+                            <p className="text-[13px] text-amber-100/80 leading-snug mt-0.5">
                                 This fill wears a brass nozzle out in hours. Fit hardened steel or a ruby before printing it.
                             </p>
                         </div>
@@ -126,39 +126,39 @@ const ProfileDetail: React.FC<{ profile: FilamentProfile; onClose: () => void }>
                         </section>
                     </div>
 
-                    <aside className="flex flex-col gap-4 bg-white border border-stone-200 rounded-xl p-5 h-fit">
+                    <aside className="flex flex-col gap-4 bg-white/[0.06] border border-white/15 rounded-xl p-5 h-fit">
                         <h3 className="text-[11px] font-semibold uppercase tracking-[0.09em] text-stone-400">Where these numbers come from</h3>
-                        <span className="inline-flex items-center self-start h-6 px-2 rounded bg-stone-100 text-[11px] font-semibold tracking-wide text-stone-700">
+                        <span className="inline-flex items-center self-start h-6 px-2 rounded bg-white/15 text-[11px] font-semibold tracking-wide text-stone-100">
                             {source.label.toUpperCase()}
                         </span>
-                        <p className="text-[13px] text-stone-600 leading-relaxed">{source.blurb}</p>
+                        <p className="text-[13px] text-stone-300 leading-relaxed">{source.blurb}</p>
                         {profile.sourceProfile && (
-                            <p className="text-[13px] text-stone-600 leading-relaxed">
-                                Cited profile: <span className="font-medium text-stone-800">{profile.sourceProfile}</span>
+                            <p className="text-[13px] text-stone-300 leading-relaxed">
+                                Cited profile: <span className="font-medium text-stone-100">{profile.sourceProfile}</span>
                             </p>
                         )}
                         {profile.sourceUrl && (
                             <a href={profile.sourceUrl} target="_blank" rel="noopener noreferrer"
-                               className="text-[13px] text-amber-800 hover:text-amber-900 underline break-all">
+                               className="text-[13px] text-amber-300 hover:text-amber-200 underline break-all">
                                 View the source
                             </a>
                         )}
 
-                        <div className="h-px bg-stone-200" />
+                        <div className="h-px bg-white/15" />
 
                         <h3 className="text-[11px] font-semibold uppercase tracking-[0.09em] text-stone-400">Export</h3>
                         <div className="flex flex-wrap gap-2">
                             {FORMATS.map((f) => (
                                 <button key={f.id} onClick={() => setFormat(f.id)}
                                     className={`h-8 px-3 rounded-md text-[13px] font-medium border transition-colors ${
-                                        format === f.id ? 'border-stone-900 bg-stone-100 text-stone-900' : 'border-stone-300 bg-white text-stone-600 hover:border-stone-400'
+                                        format === f.id ? 'border-stone-100 bg-stone-100 text-stone-900' : 'border-white/25 bg-black/30 text-stone-300 hover:border-white/50 hover:text-white'
                                     }`}>
                                     {f.label}
                                 </button>
                             ))}
                         </div>
                         <button onClick={() => downloadProfile(profile, format)}
-                            className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-lg bg-stone-900 text-[#fdfbf7] text-sm font-medium hover:bg-stone-800 transition-colors">
+                            className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-lg bg-stone-100 text-stone-900 text-sm font-medium hover:bg-white transition-colors">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><path d="M12 3v12" /><path d="M7 11l5 5 5-5" /><path d="M4 20h16" /></svg>
                             Download {chosen.ext.toUpperCase()}
                         </button>

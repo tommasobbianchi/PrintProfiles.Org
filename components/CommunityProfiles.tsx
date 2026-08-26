@@ -19,7 +19,7 @@ const Chip: React.FC<{ on: boolean; onClick: () => void; children: React.ReactNo
   <button
     onClick={onClick}
     className={`inline-flex items-center h-9 px-4 rounded-full text-[13px] font-medium border transition-colors ${
-      on ? 'bg-stone-900 border-stone-900 text-[#fdfbf7]' : 'bg-white border-stone-300 text-stone-700 hover:border-stone-400'
+      on ? 'bg-stone-100 border-stone-100 text-stone-900' : 'bg-black/30 border-white/25 text-stone-200 hover:border-white/50 hover:bg-black/40'
     }`}
   >
     {children}
@@ -30,11 +30,11 @@ const FacetRow: React.FC<{ on: boolean; label: string; count: number; onClick: (
   <button
     onClick={onClick}
     className={`flex items-center justify-between w-full h-8 px-2 rounded-md text-[13.5px] text-left transition-colors ${
-      on ? 'bg-stone-100 text-stone-900 font-semibold' : 'text-stone-700 hover:bg-stone-50'
+      on ? 'bg-white/15 text-white font-semibold' : 'text-stone-300 hover:bg-white/10 hover:text-stone-100'
     }`}
   >
     <span className="flex items-center gap-2.5 min-w-0">
-      <span className={`inline-block h-3.5 w-3.5 rounded-[3px] shrink-0 border-[1.5px] ${on ? 'bg-amber-800 border-amber-800' : 'bg-white border-stone-300'}`} />
+      <span className={`inline-block h-3.5 w-3.5 rounded-[3px] shrink-0 border-[1.5px] ${on ? 'bg-amber-400 border-amber-400' : 'bg-transparent border-white/40'}`} />
       <span className="truncate">{label}</span>
     </span>
     <span className="text-stone-400 tabular-nums shrink-0 ml-2">{count}</span>
@@ -50,8 +50,8 @@ const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title
 
 const LoadingSpinner: React.FC = () => (
   <div className="flex flex-col items-center justify-center py-24 gap-3">
-    <div className="h-8 w-8 rounded-full border-2 border-stone-200 border-t-stone-700 animate-spin" />
-    <p className="text-sm text-stone-500">Loading the repository…</p>
+    <div className="h-8 w-8 rounded-full border-2 border-white/20 border-t-stone-100 animate-spin" />
+    <p className="text-sm text-stone-300">Loading the repository…</p>
   </div>
 );
 
@@ -123,43 +123,18 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
 
   return (
     <div className="relative">
-      {/* The mark as ground, not decoration: oversized, faint, never competing with the data.
-          Pushed up and right so it sits behind the hero's whitespace rather than under the
-          middle and right cards of the result grid, where it read as noise on the data.
-
-          Two layers, because they do different jobs. The photograph is the logo actually
-          printed — layer lines, extrusion texture, raised lettering — so it says what the site
-          is about in a way a vector never could; it carries the texture. The line art sits over
-          it and keeps the silhouette legible, which the photo alone loses once it is faint
-          enough to be safe behind text.
-
-          Both are masked to fade out before they reach the result grid. The two knobs worth
-          touching are the opacities: photo 0.09, line art 0.05. */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute -right-52 -top-24 w-[620px] max-w-[80vw] aspect-square"
-        style={{
-          // Fades to nothing toward the bottom-left, so nothing ever sits under a card.
-          maskImage: 'radial-gradient(closest-side at 70% 30%, black 35%, transparent 78%)',
-          WebkitMaskImage: 'radial-gradient(closest-side at 70% 30%, black 35%, transparent 78%)',
-        }}
-      >
-        <img src="/logo-print.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-[0.09]" />
-        <img src="/logo-mark.png" alt="" className="absolute inset-0 h-full w-full object-contain opacity-[0.05]" />
-      </div>
-
       {/* Hero */}
       <div className="relative flex flex-col items-center gap-5 pt-10 pb-2 px-2">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-stone-900 text-center max-w-3xl leading-[1.05]">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white text-center drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] max-w-3xl leading-[1.05]">
           Find the settings for the spool in your hand
         </h1>
-        <p className="text-base sm:text-[17px] text-stone-600 text-center max-w-xl leading-relaxed">
+        <p className="text-base sm:text-[17px] text-stone-300 text-center max-w-xl leading-relaxed">
           {profiles.length.toLocaleString()} profiles from {counts.brand.length.toLocaleString()} brands, each one citing where its numbers came from.
         </p>
 
         <div className="w-full max-w-2xl flex flex-col gap-3.5 mt-1">
           <div className="relative flex items-center">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#78716c" strokeWidth={1.8} strokeLinecap="round" className="absolute left-4 h-5 w-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#d6d3d1" strokeWidth={1.8} strokeLinecap="round" className="absolute left-4 h-5 w-5">
               <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
             </svg>
             <input
@@ -167,7 +142,7 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
               value={query}
               onChange={(e) => { setQuery(e.target.value); setLimit(60); }}
               placeholder="Try “Polymaker”, “PETG CF”, or “ASA”"
-              className="w-full h-14 pl-12 pr-4 text-[17px] bg-white border border-stone-300 rounded-xl text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-900/10 focus:border-stone-400 transition-shadow"
+              className="w-full h-14 pl-12 pr-4 text-[17px] bg-black/40 backdrop-blur-md border border-white/25 rounded-xl text-stone-50 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-300/40 focus:border-white/50 transition-shadow"
             />
           </div>
 
@@ -192,9 +167,9 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
           {/* Filter rail */}
           <aside className="w-full lg:w-[236px] shrink-0 flex flex-col gap-6 lg:sticky lg:top-24">
             <div className="flex items-baseline justify-between">
-              <h2 className="text-[12px] font-semibold uppercase tracking-[0.09em] text-stone-500">Filters</h2>
+              <h2 className="text-[12px] font-semibold uppercase tracking-[0.09em] text-stone-300">Filters</h2>
               {active && (
-                <button onClick={clearAll} className="text-xs text-amber-800 hover:text-amber-900 underline">Clear</button>
+                <button onClick={clearAll} className="text-xs text-amber-300 hover:text-amber-200 underline">Clear</button>
               )}
             </div>
 
@@ -224,7 +199,7 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
                 ))}
               </div>
               {counts.brand.length > 8 && (
-                <button onClick={() => setShowAllBrands(!showAllBrands)} className="self-start text-xs text-amber-800 hover:text-amber-900 underline mt-1">
+                <button onClick={() => setShowAllBrands(!showAllBrands)} className="self-start text-xs text-amber-300 hover:text-amber-200 underline mt-1">
                   {showAllBrands ? 'Show fewer' : `All ${counts.brand.length} brands`}
                 </button>
               )}
@@ -234,7 +209,7 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
               <select
                 value={printerBrand}
                 onChange={(e) => { setPrinterBrand(e.target.value); setPrinterModel('All'); setLimit(60); }}
-                className="w-full h-9 px-2 bg-white border border-stone-300 rounded-md text-[13px] text-stone-800 focus:outline-none focus:ring-2 focus:ring-stone-900/10"
+                className="w-full h-9 px-2 bg-black/40 border border-white/25 rounded-md text-[13px] text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-300/40"
               >
                 <option value="All">Any printer</option>
                 {PRINTER_BRANDS.map((b) => <option key={b} value={b}>{b}</option>)}
@@ -243,7 +218,7 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
                 <select
                   value={printerModel}
                   onChange={(e) => { setPrinterModel(e.target.value); setLimit(60); }}
-                  className="w-full h-9 px-2 mt-2 bg-white border border-stone-300 rounded-md text-[13px] text-stone-800 focus:outline-none focus:ring-2 focus:ring-stone-900/10"
+                  className="w-full h-9 px-2 mt-2 bg-black/40 border border-white/25 rounded-md text-[13px] text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-300/40"
                 >
                   <option value="All">Any model</option>
                   {availableModels.map((m) => <option key={m} value={m}>{m}</option>)}
@@ -254,19 +229,19 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
 
           {/* Results */}
           <div className="flex-grow min-w-0 flex flex-col gap-4">
-            <div className="flex items-baseline justify-between border-b border-stone-200 pb-3">
-              <p className="text-sm text-stone-600">
+            <div className="flex items-baseline justify-between border-b border-white/15 pb-3">
+              <p className="text-sm text-stone-300">
                 {active
-                  ? <><span className="font-semibold text-stone-900 tabular-nums">{results.length.toLocaleString()}</span> matching this filter</>
-                  : <>All <span className="font-semibold text-stone-900 tabular-nums">{results.length.toLocaleString()}</span> profiles</>}
+                  ? <><span className="font-semibold text-white tabular-nums">{results.length.toLocaleString()}</span> matching this filter</>
+                  : <>All <span className="font-semibold text-white tabular-nums">{results.length.toLocaleString()}</span> profiles</>}
               </p>
               <p className="text-[13px] text-stone-400 hidden sm:block">Sorted by brand</p>
             </div>
 
             {results.length === 0 ? (
-              <div className="flex flex-col items-center gap-2 py-20 border border-dashed border-stone-300 rounded-xl text-center px-6">
-                <p className="text-[17px] font-semibold text-stone-700">Nothing matches those filters</p>
-                <p className="text-sm text-stone-500 max-w-sm">
+              <div className="flex flex-col items-center gap-2 py-20 border border-dashed border-white/25 rounded-xl text-center px-6 bg-black/20">
+                <p className="text-[17px] font-semibold text-stone-100">Nothing matches those filters</p>
+                <p className="text-sm text-stone-400 max-w-sm">
                   Try clearing the reinforcement filter — not every material is made in a filled grade.
                 </p>
               </div>
@@ -277,57 +252,57 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
                     <article
                       key={p.id}
                       onClick={() => setSelected(p)}
-                      className="group flex flex-col gap-3 p-[18px] bg-white border border-stone-200 rounded-xl cursor-pointer hover:border-stone-400 hover:shadow-sm transition-all"
+                      className="group flex flex-col gap-3 p-[18px] bg-black/45 backdrop-blur-md border border-white/15 rounded-xl cursor-pointer hover:bg-black/55 hover:border-white/35 transition-all"
                     >
                       <div className="flex flex-col gap-0.5 min-w-0">
-                        <span className="text-xs text-stone-500 truncate">{p.manufacturer}</span>
-                        <h3 className="text-[17px] font-semibold tracking-tight text-stone-900 leading-snug break-words">
+                        <span className="text-xs text-stone-400 truncate">{p.manufacturer}</span>
+                        <h3 className="text-[17px] font-semibold tracking-tight text-stone-50 leading-snug break-words">
                           {p.brand || p.filamentType}
                         </h3>
                       </div>
 
                       <div className="flex flex-wrap gap-1.5">
-                        <span className="inline-flex items-center h-[22px] px-2 border border-stone-300 rounded text-[11px] font-medium text-stone-700">{p.filamentType}</span>
-                        {fill && <span className="inline-flex items-center h-[22px] px-2 rounded bg-stone-900 text-[#fdfbf7] text-[11px] font-semibold tracking-wide">{fill}</span>}
+                        <span className="inline-flex items-center h-[22px] px-2 border border-white/30 rounded text-[11px] font-medium text-stone-200">{p.filamentType}</span>
+                        {fill && <span className="inline-flex items-center h-[22px] px-2 rounded bg-stone-100 text-stone-900 text-[11px] font-semibold tracking-wide">{fill}</span>}
                       </div>
 
                       <div className="flex gap-5 pt-0.5">
                         <div className="flex flex-col gap-0.5">
                           <span className="text-[10px] uppercase tracking-[0.07em] text-stone-400">Nozzle</span>
-                          <span className="text-[19px] font-semibold text-stone-900 tabular-nums leading-none">{p.nozzleTemp}°</span>
+                          <span className="text-[19px] font-semibold text-stone-50 tabular-nums leading-none">{p.nozzleTemp}°</span>
                         </div>
                         <div className="flex flex-col gap-0.5">
                           <span className="text-[10px] uppercase tracking-[0.07em] text-stone-400">Bed</span>
-                          <span className="text-[19px] font-semibold text-stone-900 tabular-nums leading-none">{p.bedTemp}°</span>
+                          <span className="text-[19px] font-semibold text-stone-50 tabular-nums leading-none">{p.bedTemp}°</span>
                         </div>
                         <div className="flex flex-col gap-0.5">
                           <span className="text-[10px] uppercase tracking-[0.07em] text-stone-400">Flow</span>
-                          <span className="text-[19px] font-semibold text-stone-900 tabular-nums leading-none">{p.maxVolumetricSpeed}</span>
+                          <span className="text-[19px] font-semibold text-stone-50 tabular-nums leading-none">{p.maxVolumetricSpeed}</span>
                         </div>
                       </div>
 
                       {/* A hardware fact belongs where the choice is made, not one click deeper. */}
                       {abrasive && (
                         <div className="flex items-center gap-1.5">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="#92400e" strokeWidth={1.8} strokeLinecap="round" className="h-[15px] w-[15px] shrink-0">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#fcd34d" strokeWidth={1.8} strokeLinecap="round" className="h-[15px] w-[15px] shrink-0">
                             <path d="M12 3.5 2.5 20h19L12 3.5Z" /><path d="M12 10v4" /><path d="M12 17.2v.1" />
                           </svg>
-                          <span className="text-[11.5px] text-amber-800">Abrasive — hardened nozzle</span>
+                          <span className="text-[11.5px] text-amber-300">Abrasive — hardened nozzle</span>
                         </div>
                       )}
 
                       <div className="flex gap-2 pt-1 mt-auto opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity">
                         <button
                           onClick={(e) => { e.stopPropagation(); downloadProfile(p, 'bambu'); }}
-                          className="h-7 px-2.5 rounded-md border border-stone-300 text-[11.5px] font-medium text-stone-600 hover:border-stone-500 hover:text-stone-900 transition-colors"
+                          className="h-7 px-2.5 rounded-md border border-white/25 text-[11.5px] font-medium text-stone-300 hover:border-white/60 hover:text-white transition-colors"
                         >Orca</button>
                         <button
                           onClick={(e) => { e.stopPropagation(); downloadProfile(p, 'prusa'); }}
-                          className="h-7 px-2.5 rounded-md border border-stone-300 text-[11.5px] font-medium text-stone-600 hover:border-stone-500 hover:text-stone-900 transition-colors"
+                          className="h-7 px-2.5 rounded-md border border-white/25 text-[11.5px] font-medium text-stone-300 hover:border-white/60 hover:text-white transition-colors"
                         >Prusa</button>
                         <button
                           onClick={(e) => { e.stopPropagation(); downloadProfile(p, 'ideamaker'); }}
-                          className="h-7 px-2.5 rounded-md border border-stone-300 text-[11.5px] font-medium text-stone-600 hover:border-stone-500 hover:text-stone-900 transition-colors"
+                          className="h-7 px-2.5 rounded-md border border-white/25 text-[11.5px] font-medium text-stone-300 hover:border-white/60 hover:text-white transition-colors"
                         >ideaMaker</button>
                       </div>
                     </article>
@@ -337,7 +312,7 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
                 {results.length > limit && (
                   <button
                     onClick={() => setLimit(limit + 60)}
-                    className="self-center mt-4 h-11 px-6 rounded-lg border border-stone-300 bg-white text-sm font-medium text-stone-700 hover:border-stone-500 transition-colors"
+                    className="self-center mt-4 h-11 px-6 rounded-lg border border-white/25 bg-black/35 backdrop-blur-md text-sm font-medium text-stone-200 hover:border-white/55 hover:text-white transition-colors"
                   >
                     Show 60 more · {(results.length - limit).toLocaleString()} left
                   </button>
