@@ -245,8 +245,12 @@ const CommunityProfiles: React.FC<CommunityProfilesProps> = ({ profiles, isLoadi
   return (
     <div>
       <h2 className="text-2xl font-bold text-center text-stone-800 mb-2">Download Profiles</h2>
-      <p className="text-center text-stone-500 mb-6">
+      <p className="text-center text-stone-500 mb-1">
         Browse and download Official Brand Approved Profiles. Use filters to find your perfect match.
+      </p>
+      <p className="text-center text-stone-400 text-sm mb-6">
+        <span className="font-semibold text-stone-600">{profiles.length.toLocaleString()}</span> filament profiles available
+        {hasFiltersApplied && !isLoading && <> — <span className="font-semibold text-stone-600">{filteredProfiles.length.toLocaleString()}</span> matching</>}
       </p>
       
       {/* Smart Filter Bar */}
