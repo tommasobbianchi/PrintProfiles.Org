@@ -10,6 +10,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { canonManufacturer } from './manufacturer-aliases.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA = join(HERE, 'data');
@@ -147,6 +148,11 @@ async function main() {
     if (!Array.isArray(rows)) continue;
 
     for (const raw of rows) {
+      // Fold the manufacturer to one canonical spelling FIRST. Every check below keys on it —
+      // the dedup against constants.ts, the resold-brand test, the attribution sentence — so
+      // doing it later would let an incoming "BASF" row miss the "BASF Forward AM" already
+      // present and be imported a second time.
+      raw.manufacturer = canonManufacturer(raw.manufacturer);
       // Shop listings carry entries that are not distinct filaments: sample lengths
       // ("15 m Sample"), gift cards, spool holders. They would become junk presets.
       if (JUNK.test(raw.brand)) { junk++; continue; }
