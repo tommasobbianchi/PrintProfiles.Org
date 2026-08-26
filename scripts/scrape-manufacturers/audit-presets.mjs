@@ -15,21 +15,11 @@
 import { readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { ENVELOPE } from './envelopes.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const CONSTANTS = join(HERE, '..', '..', 'constants.ts');
 
-// [nozzleMin, nozzleMax, bedMin, bedMax]
-const ENVELOPE = {
-  PLA: [180, 250, 0, 80], PETG: [210, 275, 50, 110], ABS: [210, 285, 80, 120],
-  ASA: [220, 290, 80, 120], TPU: [190, 260, 0, 80], TPE: [190, 260, 0, 80],
-  PC: [240, 320, 90, 130], Nylon: [220, 320, 40, 120], 'PA-CF': [240, 320, 40, 120],
-  'PA-GF': [240, 320, 40, 120], PA6: [230, 320, 40, 120], PA12: [230, 320, 40, 120],
-  PVA: [170, 230, 40, 80], BVOH: [170, 230, 40, 80], HIPS: [210, 260, 80, 120],
-  PP: [200, 280, 60, 120], PCTG: [220, 280, 50, 110], PVB: [190, 250, 50, 90],
-  PET: [210, 280, 50, 110], CPE: [220, 280, 50, 110], PEBA: [200, 260, 0, 80],
-  PHA: [180, 240, 0, 80], PEI: [350, 450, 120, 180], Copolyester: [210, 280, 50, 110],
-};
 
 const field = (l, re) => re.exec(l)?.[1];
 

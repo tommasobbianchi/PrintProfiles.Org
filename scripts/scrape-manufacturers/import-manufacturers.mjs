@@ -12,6 +12,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { canonManufacturer } from './manufacturer-aliases.mjs';
 import { isAbrasive, ABRASIVE_NOTE } from './abrasive.mjs';
+import { tooCold } from './envelopes.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA = join(HERE, 'data');
@@ -198,6 +199,16 @@ async function main() {
       // wheat / scallop / coffee filled PLA all print at 205/55 but are different products,
       // as are FilaFlex 82A and 95A. So the key is the colour-stripped product name plus the
       // settings — same product different colour collapses, different products never do.
+      // Below the plausibility floor for its own polymer. The existing guard only rejects the
+      // universally impossible (nozzle under 150, nozzle cooler than bed), which lets through
+      // "ABS at bed 43" and "PETG at 150" — values scraped off multi-product bundle pages where
+      // the numbers belong to something else. A preset that cannot print is worse than a
+      // missing one, so these are dropped rather than shipped. The floors are evidence-based
+      // and documented in envelopes.mjs; being ABOVE the ceiling is left alone, since that is
+      // what filled and engineering grades legitimately do.
+      const cold = tooCold(raw.filamentType, raw.nozzleTemp, raw.bedTemp);
+      if (cold) { implausible++; continue; }
+
       const skey = [norm(raw.manufacturer), stripColour(raw.brand), raw.filamentType, raw.nozzleTemp, raw.bedTemp].join('|');
       if (existingSettings.has(skey)) { dup++; continue; }
 
