@@ -78,7 +78,7 @@ export const downloadBulkTemplate = () => {
 
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Template");
-    XLSX.writeFile(workbook, "PrintProfiles_BulkImport_Template.xlsx");
+    XLSX.writeFile(workbook, "FilamentProfiles_BulkImport_Template.xlsx");
 };
 
 export interface BulkImportResult {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PrintProfiles.Org — filament profiles for every slicer</title>
+    <title>FilamentProfiles.Org — filament profiles for every slicer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       if (typeof process === 'undefined') {
@@ -34,14 +34,14 @@
         background: #14100e url('/logo-bg.jpg') center center / cover no-repeat fixed;
         min-height: 100vh;
       }
-      /* Scrim. The photo's mean luminance is 81/255 but its highlights (the raised lettering)
+      /* Scrim. The photo's mean luminance is 102/255 but its highlights (the raised lettering)
          run far brighter, and text has to clear those too. This pins the whole range down so
          stone-100 stays legible everywhere, without flattening the layer lines out of it. */
       body::before {
         content: '';
         position: fixed;
         inset: 0;
-        background: linear-gradient(180deg, rgba(20,16,14,0.62) 0%, rgba(20,16,14,0.55) 45%, rgba(20,16,14,0.72) 100%);
+        background: linear-gradient(180deg, rgba(20,16,14,0.70) 0%, rgba(20,16,14,0.64) 45%, rgba(20,16,14,0.80) 100%);
         pointer-events: none;
         z-index: 0;
       }

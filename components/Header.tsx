@@ -14,13 +14,13 @@ const Header: React.FC<HeaderProps> = ({ logoSrc }) => {
             {/* Logo */}
             <img 
               src={logoSrc} 
-              alt="PrintProfiles.Org" 
+              alt="FilamentProfiles.Org" 
               className="h-12 w-auto object-contain invert opacity-90"
             />
             
             <div className="flex flex-col justify-center">
                 <span className="text-xl font-bold text-stone-50 tracking-tight leading-none">
-                    PrintProfiles.Org
+                    FilamentProfiles.Org
                 </span>
                 <span className="text-[10px] sm:text-xs text-stone-400 font-medium mt-1 leading-tight max-w-[220px] sm:max-w-md">
                     The largest repository of FDM 3D printing filament profiles

@@ -91,7 +91,7 @@ const App: React.FC = () => {
       
       <footer className="mt-20 py-8 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 text-center text-stone-400 text-xs">
-              &copy; {new Date().getFullYear()} PrintProfiles.Org. All rights reserved.
+              &copy; {new Date().getFullYear()} FilamentProfiles.Org. All rights reserved.
           </div>
       </footer>
     </div>

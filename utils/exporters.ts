@@ -136,7 +136,7 @@ export const generateIdeaMakerJson = (profile: Omit<FilamentProfile, 'id'>) => {
             filament_name: profile.profileName,
             brand: profile.manufacturer,
             material: profile.filamentType,
-            created_by: "PrintProfiles.Org"
+            created_by: "FilamentProfiles.Org"
         },
         settings: {
             filament_diameter: profile.filamentDiameter,
