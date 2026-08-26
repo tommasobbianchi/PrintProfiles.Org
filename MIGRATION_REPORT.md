@@ -226,3 +226,107 @@ Zero duplicate ids, zero physically implausible rows across the whole database.
    usage. The long tail is mostly 1-3 users per brand and many are Amazon-only resellers with
    no datasheet to cite.
 4. 23 pre-existing normalised manufacturer|brand collisions in constants.ts remain untouched.
+
+---
+
+## 11. Three slicer corpora (2026-08-26)
+
+Sections 1–10 describe the storefront-scraping phase and their numbers are superseded here.
+Two claims in section 10 are also withdrawn: the database is not at 716 presets, and the "23
+pre-existing normalised collisions" were an artefact of the normalisation used to look for
+them, not real collisions in `constants.ts`.
+
+### Why this phase happened
+
+The site had 2,133 presets against 3dfilamentprofiles.com's 32,071, which looked like a
+2,000% coverage gap. It is not one. That site counts **one row per colour SKU**; this database
+collapses colour variants deliberately, so the same catalogue is counted an order of magnitude
+differently. Confirmed as the intended behaviour — the count stays in the low thousands.
+
+The real gap was *brands*, and it was closed from three open corpora rather than from more
+storefronts.
+
+| Corpus | Licence | Corpus size | Rows | New manufacturers |
+|---|---|---|---|---|
+| `prusa3d/PrusaSlicer` `resources/profiles/*.ini` | AGPL-3.0 | 35 bundles, 7,528 sections | **342** | 85 seen, ~60 new |
+| `Ultimaker/fdm_materials` | **CC0-1.0** | 281 XML | **122** | 27 seen, ~20 new |
+| `bambulab/BambuStudio` | AGPL-3.0 | 3,823 files | 79 | **1 net new row** |
+
+Net: **2,133 → 2,441 presets**, **186 → 236 manufacturers**.
+
+ColorFabb, BASF/Forward AM and UltiMaker had been recorded in section 9 as reachable only
+through TDS PDFs. All three are in these repos with full parameters, so the PDF-extraction
+work that was queued is no longer needed for them.
+
+### What each corpus actually taught
+
+**File count is never material count.** Every estimate made before measuring was wrong in the
+same direction: 281 XML files are 129 brand+material pairs and only 112 with both temperatures;
+6,069 `.ini` sections are 264 branded products; 3,823 BambuStudio files declare **7** distinct
+`filament_vendor` values in total, one of them "Generic". Thresholds were re-derived from the
+source each time rather than relaxed until they passed.
+
+**BambuStudio is not worth mining again.** 79 rows, of which exactly one was not already
+covered by Orca, Prusa, fdm_materials or SpoolmanDB. Its parser was kept because it forced a
+worthwhile refactor — `createSlicerResolver` now drives both it and the Orca parser from one
+implementation — not for the data.
+
+**`<machine>` blocks nest inside `<settings>`.** A naive reader of `fdm_materials` gives
+Ultimaker PLA the Ultimaker 2+ override of 210 °C instead of its stated 200 °C. Where a
+required temperature exists *only* in machine blocks, it is used **only if every machine block
+agrees**; that recovers BASF, Polymaker and Verbatim without inventing a number, and the one
+file whose machines disagree stays dropped. Those rows say so in their attribution.
+
+### Safety: fibre fill is not marketing
+
+`deriveBrand` had been discarding carbon/glass/aramid tokens along with product-line names, so
+`ColorFabb XT-CF20` shipped as "ColorFabb PETG" and `Ultrafuse PA6 GF30` as "PA6" — an abrasive
+presented as unfilled. Nine new rows and four existing ones carried it, `Fiberon PETG-rCF08`
+among them. That row had already caused a hardened-nozzle correction in an earlier session:
+the fix went into `constants.ts` but not into the generator, so a re-import would have restored
+it. Fixing the artefact without fixing the generator is not a fix.
+
+CF/GF/AF/Kevlar tokens are now material identity, preserved with their percentage
+(`CF20`, `GF30`, `rCF08`), and **51 imported presets carry "Abrasive — hardened nozzle
+required."** in their notes.
+
+### Attribution
+
+`sourceType: 'slicer-profile'` now spans four repos, so the note names the right one and its
+licence: 218 rows cite PrusaSlicer, 85 Ultimaker fdm_materials, 3 BambuStudio, 2 OrcaSlicer.
+The facts-only posture is unchanged — numeric parameter values and the material identifier,
+never profile files, creative product names, g-code or prose.
+
+### Current state
+
+**2,441 presets**, **1,987 attributed**, **236 manufacturers**, 4,965 source rows across 13
+data files. Provenance: 1,006 manufacturer, 755 slicer-profile, 226 SpoolmanDB, 455 seed.
+`npx tsc --noEmit`, `npm run build` and `robots.test.mjs` pass; zero duplicate ids, zero
+physically implausible rows.
+
+### Known-bad, deliberately not corrected
+
+84 presets sit outside their material envelope (73 before this phase), none from seed data.
+Nearly all are engineering grades that a generic envelope cannot hold — PET-CF at 300 °C is
+correct. Three are genuinely mislabelled **upstream** and are carried faithfully rather than
+patched:
+
+- `Fiberon PPS-GF20` — Snapmaker's Orca pack declares `filament_type: "ABS"` for a PPS filament
+- `Polymaker CoPE` — declared PLA
+- `BETA PEBA 90A` — declared TPU
+
+A rule preferring the product name over the declared type was measured and **rejected**: 60
+rows disagree, but in ~57 of them the declared type is the more specific and correct one
+(`PA-CF` beats a leading-token read of `PA` → Nylon). Corrupting 57 correct rows to fix 3 is a
+bad trade.
+
+### Next, in value order
+
+1. Manufacturer aliasing: `3D Fuel`/`3D-Fuel`, `DAS FILAMENT`/`Das Filament`,
+   `Proto-pasta`/`ProtoPasta` appear as separate manufacturers; `Made for Prusa` and `VOXELPLA`
+   are not manufacturers at all.
+2. QIDIStudio and AnycubicSlicerNext — AGPL Orca forks with their own vendor packs, now nearly
+   free to add via `createSlicerResolver`. Anycubic is the storefront that rate-limited us.
+3. The 84 envelope outliers, checked against their sources one at a time.
+4. FilamentColors.xyz (2,258 swatches, 329 manufacturers) — only if the site grows a colour
+   layer; it carries no print settings.
