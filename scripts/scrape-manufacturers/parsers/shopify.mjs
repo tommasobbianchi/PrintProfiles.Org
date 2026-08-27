@@ -35,9 +35,13 @@ export const BRANDS = [
   { manufacturer: 'Amolen',      host: 'amolen.com' },
   { manufacturer: 'Siraya Tech', host: 'siraya.tech' },
   { manufacturer: 'Kexcelled',   host: 'kexcelled3d.com' },
-  // Verified Shopify via /products.json (brand-registry.mjs probe). Eryone and the
-  // kexcelled.com alias are omitted: Eryone has its own parser, kexcelled.com duplicates
-  // kexcelled3d.com and would import the same catalogue twice.
+  // Eryone WAS omitted here on the grounds that it "has its own parser". That bespoke parser
+  // saw 60 of the 207 products the store actually publishes, so the entire ASA line — including
+  // ASA Fiberglass, a real spool you can buy — was invisible. A hand-written parser is only a
+  // reason to skip the generic path when it collects MORE, and this one collected less.
+  { manufacturer: 'Eryone',      host: 'eryone3d.com' },
+  // The kexcelled.com alias stays omitted: it duplicates kexcelled3d.com and would import the
+  // same catalogue twice.
   { manufacturer: 'Geeetech',        host: 'geeetech.com' },
   { manufacturer: 'FlashForge',      host: 'flashforge.com' },
   { manufacturer: 'Kingroon',        host: 'kingroon.com' },

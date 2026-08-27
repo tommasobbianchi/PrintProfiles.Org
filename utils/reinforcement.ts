@@ -31,7 +31,7 @@ const flatten = (s: string) => s.replace(/[_\-\s]+/g, ' ').trim();
 
 const RULES: Array<[Reinforcement, RegExp]> = [
     ['AF', /(^|[^a-z])af\d*([^a-z]|$)|\b(aramid|kevlar)\b/i],
-    ['GF', /(^|[^a-z])gf\d*([^a-z]|$)|glass ?fib|glasfaser|\b(pps|ppa|pa\d*|pet|petg|pctg|abs|asa|pc|pla|pp|pekk|peek|pei|htn|tpu)gf\d*\b/i],
+    ['GF', /(^|[^a-z])gf\d*([^a-z]|$)|glass ?fib|fib(er|re) ?glass|glasfaser|\b(pps|ppa|pa\d*|pet|petg|pctg|abs|asa|pc|pla|pp|pekk|peek|pei|htn|tpu)gf\d*\b/i],
     ['CF', /(^|[^a-z])r?cf\d*([^a-z]|$)|carbon ?fib|fibra de carbono|\bcarbone\b|\b(carbonx|carbonfil)\b|\b(pps|ppa|pa\d*|pet|petg|pctg|abs|asa|pc|pla|pp|pekk|peek|pei|htn|tpu)r?cf\d*\b|\bcarbon\b/i],
 ];
 

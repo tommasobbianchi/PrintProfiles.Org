@@ -32,6 +32,10 @@ const STRONG = [
   // /[a-z](cf|gf)/ would fire on any word that happens to end in those two letters.
   /\b(pps|ppa|pa\d*|pet|petg|pctg|abs|asa|pc|pla|pp|pekk|peek|pei|htn|tpu)(r?cf|gf|af)\d*\b/i,
   /\b(kevlar|aramid)\b/i,
+  // Eryone names its entire filled line "ASA Fiberglass", never "ASA-GF". The token rule
+  // above only ever saw the abbreviation, so 13 abrasive products read as unfilled and
+  // shipped without a hardened-nozzle warning.
+  /fib(er|re) ?glass/i,
   /\b(carbonx|carbonfil|metalfil)\b/i,
   /(bronze|copper|steel|brass|iron|wood|cork|glow|bamboo|stone)fill/i,
 ];
@@ -95,6 +99,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     'colorFabb bronzeFill', 'PLA Stone',
     'ultimaker_ppscf_metallic-anthracite', 'Kimya PETG Carbon', 'Extrudr PLA Carbon',
     'galaxy-black-high-impact-carbon-fiber-htpetg',
+    // Eryone spells its filled line out in full; the abbreviation never appears.
+    'ASA Fiberglass Filament - 1.75mm±0.03mm (1kg)', 'ABS-Fiberglass-Black',
+    '3D Printer Filament, PETG Fiberglass Filament - 1.75mm±0.03mm (1kg)',
   ];
   const no = [
     'polycarbonate-pc-filament', 'ezpc-polycarbonate-1', 'PC Blend',
@@ -104,6 +111,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     'hdglass', 'aurapol-pet-g-filament-stained-orange-glass-transparent',
     'swift-pet-g-orange-glass-250g', 'PLA Silk', 'PETG', 'PLA Basic', 'ABS',
     'Stone Gray PETG', 'ABSx Matt Stone Grey', 'PETG Marble White', 'Stone Gray PLA Prime',
+    'ERYONE ER-20 GLASS HEATED BED', 'Scratch-Resistant Coating Glass Bed 235mmx235mmx4mm',
   ];
   for (const s of yes) assert.equal(isAbrasive(s), true, `should be abrasive: ${s}`);
   for (const s of no) assert.equal(isAbrasive(s), false, `should NOT be abrasive: ${s}`);
