@@ -72,6 +72,9 @@ export const BRANDS = [
   { manufacturer: 'GreenGate3D',     host: 'greengate3d.com' },
   { manufacturer: 'X3D',             host: 'x3d.com.au' },
   { manufacturer: 'Copymaster3D',    host: 'copymaster3d.com' },
+  // R3D's registry host was r3d.store, which 404s. The real storefront is www.r3dprint.com —
+  // the fourth time a wrong host, not an unreachable brand, is what kept a vendor out.
+  { manufacturer: 'R3D',             host: 'www.r3dprint.com' },
   { manufacturer: 'Anycubic',        host: 'store.anycubic.com' },
 ];
 

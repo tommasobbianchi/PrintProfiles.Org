@@ -72,7 +72,7 @@ export const BRANDS = [
   { manufacturer: 'Stronghero3d', host: 'stronghero3d.com', hosts: ['stronghero3d.com'], platform: 'other' },
   { manufacturer: 'Comgrow', host: 'comgrow.com', hosts: ['comgrow.com'], platform: 'other' },
   { manufacturer: 'Yousu', host: 'yousu3d.com', hosts: ['yousu3d.com', 'yousu.com'], platform: 'other' },
-  { manufacturer: 'R3D', host: 'r3d.store', hosts: ['r3d.store'], platform: 'other', note: 'storefront gone: /products.json 404 live 2026-08-27' },
+  { manufacturer: 'R3D', host: 'www.r3dprint.com', hosts: ['www.r3dprint.com', 'r3d.store'], platform: 'shopify', note: 'r3d.store 404s; the live storefront is www.r3dprint.com (26 products, Shopify), found 2026-08-27' },
   { manufacturer: 'VOXELPLA', host: 'voxelpla.com', hosts: ['voxelpla.com'], platform: 'shopify' },
   { manufacturer: 'Fiberlogy', host: 'fiberlogy.com', hosts: ['fiberlogy.com'], platform: 'other', note: 'bespoke parser already exists: parsers/fiberlogy.mjs' },
   { manufacturer: 'LANDU', host: 'landu3d.com', hosts: ['landu3d.com'], platform: 'shopify' },
