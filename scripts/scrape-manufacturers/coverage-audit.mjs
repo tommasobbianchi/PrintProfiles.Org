@@ -26,6 +26,9 @@ import { get } from './fetch.mjs';
 import { BRANDS as REGISTRY } from './brand-registry.mjs';
 import { BRANDS as SHOPIFY_BRANDS, isFilamentLike, detectType } from './parsers/shopify.mjs';
 import { BRANDS as WOO_BRANDS } from './parsers/woocommerce.mjs';
+import { canonManufacturer } from './manufacturer-aliases.mjs';
+
+const norm = (v) => String(v ?? '').trim().toLowerCase();
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA = join(HERE, 'data');
@@ -102,6 +105,11 @@ async function wooCatalogue(host) {
 async function capturedByHost() {
   const byHost = new Map();
   const typesByHost = new Map();
+  // Also indexed by manufacturer, because "do we hold this material" is a question about the
+  // BRAND, not about which server we happened to read it from. Push Plastic's PLA, PC and ABS
+  // come from the PrusaSlicer pack, so their sourceUrl host is raw.githubusercontent.com — and
+  // a host-keyed count reported three gaps for materials the catalogue already contained.
+  const typesByMaker = new Map();
   for (const f of await readdir(DATA)) {
     if (!f.endsWith('.json')) continue;
     let rows;
@@ -118,16 +126,21 @@ async function capturedByHost() {
       // a row filed as PA-CF still proves we saw the Nylon product it came from.
       if (r.filamentType) typesByHost.get(h).add(r.filamentType);
       typesByHost.get(h).add(detectType(`${r.brand ?? ''} ${r.profileName ?? ''}`));
+      const mk = norm(canonManufacturer(r.manufacturer ?? ''));
+      if (mk) {
+        if (!typesByMaker.has(mk)) typesByMaker.set(mk, new Set());
+        if (r.filamentType) typesByMaker.get(mk).add(r.filamentType);
+      }
     }
   }
-  return { byHost, typesByHost };
+  return { byHost, typesByHost, typesByMaker };
 }
 
 // ---------------------------------------------------------------- audit
 
 async function main() {
   const bespoke = await bespokeHosts();
-  const { byHost: captured, typesByHost: capturedTypes } = await capturedByHost();
+  const { byHost: captured, typesByHost: capturedTypes, typesByMaker } = await capturedByHost();
   const claimedShopify = new Set(SHOPIFY_BRANDS.map((b) => b.host));
   const claimedWoo = new Set(WOO_BRANDS.map((b) => b.host));
 
@@ -162,7 +175,11 @@ async function main() {
       storeTypes.set(t, (storeTypes.get(t) ?? 0) + 1);
     }
     const expected = [...storeTypes].filter(([, n]) => n >= MIN_PRODUCTS_PER_TYPE).map(([t]) => t);
-    const held = capturedTypes.get(b.host) ?? new Set();
+    // Union of what this host yielded and what we hold for this manufacturer from any source.
+    const held = new Set([
+      ...(capturedTypes.get(b.host) ?? []),
+      ...(typesByMaker.get(norm(canonManufacturer(b.manufacturer))) ?? []),
+    ]);
     const missing = expected.filter((t) => !held.has(t));
     const coverage = expected.length ? (expected.length - missing.length) / expected.length : 1;
 

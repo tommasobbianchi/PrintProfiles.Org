@@ -109,7 +109,12 @@ export const detectType = (name) => {
   if (/\bCPE\b|COPOLYESTER|PETT/.test(s)) return 'Copolyester';
   if (/NYLON|PA6|PA11|PA12|POLYAMIDE/.test(s)) return 'Nylon';
   if (/WOOD/.test(s)) return 'PLA';
-  if (/PLA/.test(s)) return 'PLA';
+  // "PLA" must not match inside "PLATINUM" or "PLASTIC". Siraya's "Platinum Silicone" is a
+  // two-part mould rubber and MarsWork's "Plastic Reusable Spool S1" is an empty spool; the
+  // bare /PLA/ typed both as PLA, and the coverage audit then read them as the store selling
+  // PLA — inventing gaps that never existed. PLA+, PLA-CF, Silk PLA and HTPLA still match.
+  // (PLATINUM found by the DeepSeek worker.)
+  if (/PLA(?!TIN|STIC)/.test(s)) return 'PLA';
   return 'Other';
 };
 
