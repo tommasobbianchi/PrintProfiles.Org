@@ -33,7 +33,7 @@
     "dataviz": "off",
     "debug-ui": "on",
     "delegate_ds": "on",
-    "design": "off",
+    "design": "on",
     "docx": "off",
     "error-check": "off",
     "fewer-permission-prompts": "off",
