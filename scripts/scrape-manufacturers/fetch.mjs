@@ -194,12 +194,17 @@ export async function get(url) {
   const htmlPath = join(CACHE, `${key}.html`);
   const metaPath = join(CACHE, `${key}.meta.json`);
 
-  try {
-    const body = await readFile(htmlPath, 'utf8');
-    const meta = JSON.parse(await readFile(metaPath, 'utf8'));
-    return { ok: true, status: meta.status ?? 200, body, fromCache: true };
-  } catch {
-    // miss -> fetch
+  // NO_CACHE=1 forces a live request. Errors are never cached, so a cached hit proves only that
+  // the URL worked ONCE — it says nothing about whether the store still exists. Confirming that
+  // a host is genuinely dead (and should be delisted) needs the live answer.
+  if (!process.env.NO_CACHE) {
+    try {
+      const body = await readFile(htmlPath, 'utf8');
+      const meta = JSON.parse(await readFile(metaPath, 'utf8'));
+      return { ok: true, status: meta.status ?? 200, body, fromCache: true };
+    } catch {
+      // miss -> fetch
+    }
   }
 
   const res = await rawFetch(url, 3);

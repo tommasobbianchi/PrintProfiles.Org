@@ -40,18 +40,19 @@ export const BRANDS = [
   // ASA Fiberglass, a real spool you can buy — was invisible. A hand-written parser is only a
   // reason to skip the generic path when it collects MORE, and this one collected less.
   { manufacturer: 'Eryone',      host: 'eryone3d.com' },
-  // The kexcelled.com alias stays omitted: it duplicates kexcelled3d.com and would import the
-  // same catalogue twice.
+  // kexcelled.com serves a catalogue byte-identical to kexcelled3d.com (107 products, same
+  // first title, measured 2026-08-27). It is crawled anyway by operator decision so that the
+  // coverage audit has no silently-excluded host; the importer's settings-based dedupe absorbs
+  // the overlap, which is why the duplicate costs rows in data/ but not presets in constants.ts.
+  { manufacturer: 'Kexcelled',   host: 'kexcelled.com' },
   { manufacturer: 'Geeetech',        host: 'geeetech.com' },
   { manufacturer: 'FlashForge',      host: 'flashforge.com' },
   { manufacturer: 'Kingroon',        host: 'kingroon.com' },
   { manufacturer: 'Ziro',            host: 'ziro3d.com' },
   { manufacturer: 'TecBears',        host: 'tecbears.com' },
   { manufacturer: '3DHoJor',         host: '3dhojor.com' },
-  { manufacturer: 'Cookiecad',       host: 'cookiecad.com' },
   { manufacturer: 'MarsWork',        host: 'marswork3d.com' },
   { manufacturer: 'Duramic 3D',      host: 'duramic3d.com' },
-  { manufacturer: 'R3D',             host: 'r3d.store' },
   { manufacturer: 'VoxelPLA',        host: 'voxelpla.com' },
   { manufacturer: 'LANDU',           host: 'landu3d.com' },
   { manufacturer: '3D-Fuel',         host: '3dfuel.com' },
