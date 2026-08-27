@@ -15,6 +15,7 @@
 // nozzle/bed temp and simply parse to null.
 
 import { get, decodeEntities } from '../fetch.mjs';
+import { canonManufacturer } from '../manufacturer-aliases.mjs';
 
 export const MANUFACTURER = 'Shopify'; // multi-brand; the real brand is per-BRAND below
 export const ORIGIN = null;
@@ -76,6 +77,17 @@ export const BRANDS = [
   // the fourth time a wrong host, not an unreachable brand, is what kept a vendor out.
   { manufacturer: 'R3D',             host: 'www.r3dprint.com' },
   { manufacturer: 'Anycubic',        host: 'store.anycubic.com' },
+  // A multi-brand retailer, not a maker. `vendorField` takes the manufacturer from each
+  // product's Shopify `vendor` rather than the host, because filamentor.it carries two house
+  // lines nobody else sells (Prof. Lab 195 products, Smart Print 171) alongside eSUN and
+  // Polymaker spools it merely resells. Attributing the whole catalogue to one name would both
+  // invent a manufacturer and hide the two real ones. The importer's existing resold-brand test
+  // is what drops the eSUN/Polymaker rows.
+  // `localePrefix` because this store's default locale is Italian ("Ugello: 230-260 °C",
+  // "Piano: 90-110 °C") and every spec label here is English. Fetching /en/ is a per-host fix;
+  // teaching the shared label list Italian would change matching for ~40 other stores to serve
+  // one, which is exactly the loosening that has corrupted rows here before.
+  { manufacturer: 'Filamentor',      host: 'filamentor.it', vendorField: true, localePrefix: '/en' },
 ];
 
 // ---------- shared helpers (same heuristics as eryone.mjs) ----------
@@ -309,12 +321,20 @@ export async function parseProduct(url) {
   const rec = map.get(handle);
   if (!rec) return null;
 
+  // On a vendorField host an unknown/empty vendor is not attributable to anyone, and guessing
+  // would file someone else's spool under the shop's name. Drop it instead.
+  const vendor = brand.vendorField ? canonManufacturer(String(rec.vendor || '').trim()) : null;
+  if (brand.vendorField && !vendor) return null;
+
   const out = {
-    manufacturer: brand.manufacturer,
+    manufacturer: vendor ?? brand.manufacturer,
     brand: cleanBrand(rec.title),
     filamentType: detectType(`${rec.title} ${rec.product_type || ''} ${(rec.tags || []).join(' ')}`),
-    sourceUrl: `https://${host}/products/${handle}`,
-    sourceType: 'manufacturer',
+    // The locale-prefixed URL is what we actually read, so it is what we cite.
+    sourceUrl: `https://${host}${brand.localePrefix ?? ''}/products/${handle}`,
+    // A vendorField host is a shop, not the maker. The numbers are still the ones it publishes,
+    // but the provenance is weaker and the row says so rather than claiming to be official.
+    sourceType: brand.vendorField ? 'retailer' : 'manufacturer',
   };
 
   // fast path — products.json body_html (already cached, no network)
@@ -324,7 +344,7 @@ export async function parseProduct(url) {
   // fallback — rendered product page, where several stores publish the spec table
   if (!spec) {
     if (!isFilamentLike(rec)) return null;
-    const page = await get(`https://${host}/products/${handle}`);
+    const page = await get(`https://${host}${brand.localePrefix ?? ''}/products/${handle}`);
     if (!page.ok) return null;
     const rendered = renderedText(page.body);
     // The labelled panel first: it is the store's own spec table, so when one exists its

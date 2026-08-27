@@ -39,6 +39,9 @@ const SLICER_REPO = [
 
 const ATTRIB = {
   manufacturer: (r) => `Official ${r.manufacturer} data — ${r.sourceUrl}`,
+  // A shop's published figures for someone else's spool. Same numbers, weaker provenance than
+  // the maker's own page, and saying "Official" over a retailer URL would simply be false.
+  retailer: (r) => `${r.manufacturer} data published by the retailer — ${r.sourceUrl}`,
   spoolmandb: (r) => `SpoolmanDB (MIT) — ${r.sourceUrl}`,
   'slicer-profile': (r) => {
     const hit = SLICER_REPO.find(([re]) => re.test(r.sourceUrl || ''));

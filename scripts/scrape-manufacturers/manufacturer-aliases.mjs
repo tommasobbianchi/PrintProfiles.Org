@@ -20,6 +20,9 @@
 // which rewrote the presets already in constants.ts.
 
 export const MANUFACTURER_ALIASES = {
+  // filamentor.it's Shopify vendor field abbreviates it; the brand trades as Professional Lab.
+  'Prof. Lab': 'Professional Lab',
+  'Prof Lab': 'Professional Lab',
   // -- case and punctuation only -------------------------------------------------
   '3DJAKE': '3DJake',
   '3DXTECH': '3DXTech',

@@ -31,6 +31,7 @@ export const downloadProfile = (profile: FilamentProfile, type: Format) => {
 // plain words rather than left as a raw sourceType string.
 const SOURCE_COPY: Record<string, { label: string; blurb: string }> = {
     manufacturer: { label: 'Manufacturer', blurb: "The vendor's own published figures." },
+    retailer: { label: 'Retailer', blurb: 'Published by a shop that sells this spool, not by the maker. The figures are theirs, so check the maker\'s own datasheet before a critical print.' },
     spoolmandb: { label: 'SpoolmanDB', blurb: 'From SpoolmanDB, the MIT-licensed community database.' },
     'slicer-profile': { label: 'Slicer profile', blurb: "Parameter values from an open-source slicer's tuned profile — not the vendor's own figure." },
     generic: { label: 'Unattributed', blurb: 'A hand-written starting point with no cited source. Treat it as a starting point, not a datasheet.' },

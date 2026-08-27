@@ -55,7 +55,7 @@ export interface FilamentProfile {
   //   'spoolmandb'     SpoolmanDB, the MIT-licensed community database
   //   'slicer-profile' parameter values from an open-source slicer's tuned profile
   //   'generic'        hand-written, unattributed — the original seed presets
-  sourceType?: 'manufacturer' | 'spoolmandb' | 'slicer-profile' | 'generic';
+  sourceType?: 'manufacturer' | 'retailer' | 'spoolmandb' | 'slicer-profile' | 'generic';
   sourceUrl?: string;
   sourceProfile?: string; // e.g. 'Bambu PETG HF @base' — names the exact profile cited
 }

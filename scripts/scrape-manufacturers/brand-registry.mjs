@@ -22,6 +22,7 @@ import { get } from './fetch.mjs';
 /** @typedef {'shopify'|'woocommerce'|'other'|'blocked'|'unresolved'} Platform */
 
 export const BRANDS = [
+  { manufacturer: 'Filamentor', host: 'filamentor.it', hosts: ['filamentor.it'], platform: 'shopify', note: 'multi-brand retailer; crawled with vendorField so its house lines Professional Lab and Smart Print are attributed correctly' },
   { manufacturer: 'Bambu Lab', host: 'bambulab.com', hosts: ['bambulab.com', 'us.store.bambulab.com'], platform: 'blocked', note: 'robots.txt disallows /products.json and the store paths' },
   { manufacturer: 'SUNLU', host: 'sunlu.com', hosts: ['sunlu.com'], platform: 'other' },
   { manufacturer: 'ELEGOO', host: 'elegoo.com', hosts: ['elegoo.com', 'us.elegoo.com'], platform: 'shopify' },
