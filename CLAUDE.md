@@ -71,6 +71,26 @@ Injection is **not** `import.meta.env`. `vite.config.ts:6` calls `loadEnv(mode, 
 
 Note: `process.env.GEMINI_API_KEY` is also injected (`vite.config.ts:15`) but is never read anywhere — dead define.
 
+
+## Long-running work: `/watchjob` is mandatory
+
+Crawls in `scripts/scrape-manufacturers/` run at 1.5 s per domain by design — a full sweep is
+tens of minutes and a delegated convergence run is hours. **Every one of them goes under
+`watchjob`, and so does any delegated sub-agent:**
+
+```bash
+~/.claude/skills/watchjob/scripts/watchjob.sh <name> -- 'HOSTS=<host> ONLY=<parser> node scripts/scrape-manufacturers/run-all.mjs'
+```
+
+Binding on the main session, on subagents, and on any delegated model (opencode, DeepSeek, Kimi,
+agy). Delegation specs must carry this obligation forward to the executor.
+
+Never `nohup`, `setsid`, a bare `&`, hand-rolled `systemd-run`, or a terminal polling loop.
+Never answer "is it still running?" with `pgrep`/`ps | grep` — use `~/.claude/scripts/job status
+<name>`. A crawl is not finished until `job status` says so, and `watchjob` announces failures
+as well as successes.
+
+
 ## Commands
 
 | Task | Command |
