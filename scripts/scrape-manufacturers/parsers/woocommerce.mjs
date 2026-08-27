@@ -43,6 +43,14 @@ const HOST_FILTER = (process.env.WOO_HOSTS || '')
 const activeBrands = () => (HOST_FILTER.length ? BRANDS.filter((b) => HOST_FILTER.includes(b.host)) : BRANDS);
 const brandForHost = (host) => BRANDS.find((b) => b.host === host || `www.${b.host}` === host);
 
+// Hosts whose Store API `description` is marketing copy without a spec table, while the rendered
+// product page carries the print settings ("Print Guidelines" section). For these the <200-char
+// description heuristic below (an optimisation that avoids a page fetch per accessory) must NOT
+// apply: fetch the rendered page whenever the API description yields no specs. Confirmed on
+// ninjatek.com, where every NinjaTek TPU/TPE product ships a long marketing description and the
+// temperatures live only on the rendered page.
+const PAGE_FALLBACK_HOSTS = new Set(['ninjatek.com']);
+
 // ---------------------------------------------------------------------------
 // text normalisation
 // ---------------------------------------------------------------------------
@@ -79,6 +87,11 @@ const nums = (s) => [...String(s).matchAll(/\d+(?:\.\d+)?/g)].map((m) => parseFl
 const mid = (v) => {
   const n = nums(v);
   if (!n.length) return undefined;
+  // An inverted range is a typo on the vendor's page, not a range. francofil.fr publishes
+  // "Plateau chauffant : 190 - 110C" for its FME ABS (90 mistyped as 190); averaging that
+  // yields a 150C bed for ABS, which no printer will do and which shipped as a real preset.
+  // Refusing the value drops that one product's bed temp and leaves the honest rows alone.
+  if (n.length >= 2 && n[0] > n[1]) return undefined;
   return Math.round(n.length >= 2 ? (n[0] + n[1]) / 2 : n[0]);
 };
 
@@ -113,6 +126,7 @@ function firstMatch(text, labels, { requireUnit = true } = {}) {
 // DE (dasfilament), ES (recreus/smartfil style), SI/EN prose (azurefilm).
 const NOZZLE_LABELS = [
   'extrusion\\s+temperature',
+  'extruder\\s+temperature', // ninjatek.com labels the nozzle "Extruder Temperature" (verb-agent form)
   'printing\\s+temperature',
   'print\\s+temperature',
   'nozzle\\s+temperature',
@@ -140,6 +154,11 @@ const BED_LABELS = [
   'recommended\\s+bed\\s+temp\\S*',
   'temp\\S*\\s+(?:du\\s+)?plateau',
   'temp\\S*\\s+(?:du\\s+)?lit\\s+chauffant',
+  // francofil.fr spec line: "Plateau chauffant : 90 - 110°C". The colon is REQUIRED: without it
+  // this matched the marketing prose "imprimantes 3D equipees de plateaux chauffants" and then
+  // took the next number on the page, which was the 150 in an image filename
+  // (Design-sans-titre-15-150x150.png) -> ABS with a 150 degree bed.
+  'plateau\\s+chauffant\\s*[:=]',
   'podgrzewany\\s+st[oó][lł]',
   'temperatura\\s+st[oó][lł]u',
   'temperatura\\s+(?:de\\s+la\\s+)?(?:cama|base)\\s*(?:caliente)?',
@@ -148,6 +167,7 @@ const BED_LABELS = [
   'heizbett\\w*',
   'heated\\s+bed\\s*[:=]',
   'printing\\s+table\\s+to', // azurefilm prose: "preheating your printing table to 50-60°C"
+  'printing\\s+table\\s+temperature', // azurefilm prose: "Recommended printing table temperature is 40–60°C"
 ];
 
 const FIRST_LAYER_NOZZLE = ['first\\s+layer\\s+(?:nozzle\\s+)?temperature', 'temperatura\\s+pierwszej\\s+warstwy'];
@@ -304,9 +324,22 @@ function attrValue(product, ...needles) {
   return undefined;
 }
 
+// "Température du plateau Non chauffé" / "Bed: not heated" — the store states the bed is NOT
+// heated. That is a bed temperature of ambient (0), not a missing value; flexible filaments are
+// routinely printed unheated. Read it as 0 so the row is still captured rather than dropped.
+const NO_HEAT = '(?:non\\s+chauff[ée]|pas\\s+chauff[ée]|sans\\s+chauffage?|not\\s+heated|unheated|no\\s+heated\\s+bed|nie\\s+podgrzewan[ey]|sin\\s+calefacci[oó]n|sin\\s+cama\\s+caliente)';
+
+function isUnheatedBed(text) {
+  for (const label of BED_LABELS) {
+    if (new RegExp(label + '[^\\d]{0,40}' + NO_HEAT, 'i').exec(text)) return true;
+  }
+  return false;
+}
+
 function extract(text, name) {
   const nozzleTemp = firstMatch(text, NOZZLE_LABELS);
-  const bedTemp = firstMatch(text, BED_LABELS);
+  let bedTemp = firstMatch(text, BED_LABELS);
+  if (bedTemp === undefined && isUnheatedBed(text)) bedTemp = 0;
   if (nozzleTemp === undefined || bedTemp === undefined) return null;
 
   const out = { nozzleTemp, bedTemp };
@@ -389,8 +422,10 @@ export async function parseProduct(url) {
   // Only pay for the rendered page when the API gave us nothing to read. A description that
   // exists but carries no temperatures is a genuine "no specs published", not a fetch problem,
   // and re-fetching every such product would cost one request per accessory in the catalogue.
+  // PAGE_FALLBACK_HOSTS are the exception: their API descriptions are marketing copy, so a
+  // no-specs description is a signal to read the page, never "no specs published".
   let pageTitle = '';
-  if (!specs && text.length < 200) {
+  if (!specs && (text.length < 200 || PAGE_FALLBACK_HOSTS.has(brand.host))) {
     const page = await get(url);
     if (!page.ok) return null;
     pageTitle = decodeEntities(
