@@ -43,6 +43,14 @@ const resolver = createSlicerResolver({
   origin: ORIGIN,
   apiDirs: API_DIRS,
   name: 'bambuprofiles',
+  // The H series (H2C, H2D, H2DP, H2S) is a distinct printer generation with its own tuning:
+  // 760 filament files in this pack carry an H-series suffix, and every one of them was being
+  // folded into the base product and discarded, so the catalogue held no H-series profile at
+  // all. Only these models are opted in — the P/X/A machines are the ones the base profiles
+  // were already written for, so emitting those variants would duplicate rows that say the
+  // same thing. A variant that re-tunes nothing still collapses: it collides with the base on
+  // the importer's (manufacturer, brand, type, nozzle, bed) key and is dropped there.
+  printerVariants: { match: /@BBL\s+(H2DP|H2D|H2S|H2C)\b/i, brand: 'Bambu Lab' },
 });
 
 export const listProducts = resolver.listProducts;

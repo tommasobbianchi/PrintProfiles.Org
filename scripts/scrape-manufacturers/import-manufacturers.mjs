@@ -100,7 +100,7 @@ const stripColour = (b) => {
 const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
 
 const ORDER = [
-  'id', 'profileName', 'printerBrand', 'manufacturer', 'brand', 'filamentType',
+  'id', 'profileName', 'printerBrand', 'printerModel', 'manufacturer', 'brand', 'filamentType',
   'nozzleTemp', 'bedTemp', 'printSpeed', 'fanSpeedMin', 'fanSpeedMax',
   'dryingTemp', 'dryingTime', 'density', 'filamentDiameter',
   'nozzleTempInitial', 'bedTempInitial', 'maxVolumetricSpeed', 'flowRatio',
@@ -133,9 +133,23 @@ async function main() {
   // Settings already represented in constants.ts. Brand text is not a stable key across runs
   // (the variant collapse picks a representative name), so the import would otherwise re-add
   // near-identical presets every time. Settings are stable, so dedup on those too.
+  // Read each preset's fields individually rather than as one positional match: printerModel
+  // is serialised BEFORE manufacturer and is absent on most presets, so a single ordered regex
+  // silently skips it — and a seed key that omits the printer no longer matches the key built
+  // at import time, which makes every existing preset look new.
+  const field = (line, k) => {
+    const m = new RegExp(k + ':\\s*(["\'])(.*?)\\1').exec(line);
+    return m ? m[2] : '';
+  };
+  const numField = (line, k) => {
+    const m = new RegExp(k + ':\\s*(\\d+)').exec(line);
+    return m ? m[1] : '';
+  };
   const existingSettings = new Set(
-    [...constants.matchAll(/manufacturer:\s*(['"])(.*?)\1,\s*brand:\s*(['"])(.*?)\3,\s*filamentType:\s*(['"])(.*?)\5,\s*nozzleTemp:\s*(\d+),\s*bedTemp:\s*(\d+)/g)]
-      .map((m) => [norm(m[2]), stripColour(m[4]), m[6], m[7], m[8]].join('|'))
+    constants.split('\n').filter((l) => l.includes('createPreset(')).map((l) => [
+      norm(field(l, 'manufacturer')), stripColour(field(l, 'brand')), field(l, 'filamentType'),
+      numField(l, 'nozzleTemp'), numField(l, 'bedTemp'), field(l, 'printerModel'),
+    ].join('|'))
   );
 
   // Highest mfr-*-N already issued, so new ids continue the sequence instead of restarting.
@@ -148,7 +162,25 @@ async function main() {
   let dup = 0;
   let junk = 0;
   let resold = 0;
+  let sameAsBase = 0;
+  // Fields a printer variant is allowed to re-tune. Temperatures included: if a printer changed
+  // those too, that is exactly the difference worth keeping.
+  const VARIANT_FIELDS = ['nozzleTemp', 'bedTemp', 'nozzleTempInitial', 'bedTempInitial',
+    'maxVolumetricSpeed', 'fanSpeedMin', 'fanSpeedMax', 'flowRatio', 'printSpeed'];
   let implausible = 0;
+
+  // Base rows indexed before the main pass, because a printer variant may be read before its
+  // base and cannot be judged without it.
+  const baseRows = new Map();
+  for (const f of files) {
+    let rows;
+    try { rows = JSON.parse(await readFile(join(DATA, f), 'utf8')); } catch { continue; }
+    if (!Array.isArray(rows)) continue;
+    for (const r of rows) {
+      if (r.printerModel) continue;
+      baseRows.set(norm(canonManufacturer(r.manufacturer)) + '|' + norm(r.brand), r);
+    }
+  }
 
   for (const f of files) {
     const parser = f.replace(/\.json$/, '');
@@ -184,8 +216,18 @@ async function main() {
       const foreign = OTHER_MAKERS.find((m) => norm(raw.brand).includes(norm(m)) && norm(m) !== norm(raw.manufacturer));
       if (foreign) { resold++; continue; }
 
-      const key = norm(raw.manufacturer) + '|' + norm(raw.brand);
+      // A printer-specific row is its own product only when the printer actually re-tunes
+      // something. BambuStudio's H-series profiles keep the base temperatures and change flow,
+      // fan and volumetric limits instead — 103 of 190 differ, and a key that covered only
+      // manufacturer/brand discarded every one of them as a duplicate. The other 87 restate the
+      // base exactly and are still dropped, because a variant that changes nothing is noise.
+      const key = norm(raw.manufacturer) + '|' + norm(raw.brand)
+        + (raw.printerModel ? '|' + norm(raw.printerModel) : '');
       if (existing.has(key)) { dup++; continue; }
+      if (raw.printerModel) {
+        const base = baseRows.get(norm(raw.manufacturer) + '|' + norm(raw.brand));
+        if (base && VARIANT_FIELDS.every((f) => base[f] === raw[f])) { sameAsBase++; continue; }
+      }
       if (raw.nozzleTemp === undefined || raw.bedTemp === undefined) continue;
 
       // Physical sanity. No filament extrudes below ~150C, and a nozzle cooler than the bed
@@ -220,12 +262,18 @@ async function main() {
       const cold = tooCold(raw.filamentType, raw.nozzleTemp, raw.bedTemp);
       if (cold) { implausible++; continue; }
 
-      const skey = [norm(raw.manufacturer), stripColour(raw.brand), raw.filamentType, raw.nozzleTemp, raw.bedTemp].join('|');
+      // printerModel belongs in both keys below. Without it an H2D tuning lands in the base
+      // product's slot and is discarded as a duplicate, which is how 760 H-series profiles
+      // stayed invisible: they keep the base temperatures and re-tune flow, fan and volumetric
+      // limits, none of which these keys look at.
+      const skey = [norm(raw.manufacturer), stripColour(raw.brand), raw.filamentType,
+        raw.nozzleTemp, raw.bedTemp, raw.printerModel ?? ''].join('|');
       if (existingSettings.has(skey)) { dup++; continue; }
 
       const vkey = [
         norm(raw.manufacturer), stripColour(raw.brand), raw.filamentType,
         raw.nozzleTemp, raw.bedTemp, raw.printSpeed ?? '', raw.density ?? '',
+        raw.printerModel ?? '',
       ].join('|');
       const seen = variants.get(vkey);
       if (seen) {
@@ -248,7 +296,10 @@ async function main() {
         // 1 every run, so a second import re-issued mfr-<parser>-1 and collided.
         id: `mfr-${parser}-${idBase + n}`,
         profileName: `${raw.manufacturer} ${raw.brand}`.trim(),
-        printerBrand: 'Other',
+        // A row that carries a printer model was tuned FOR that machine; saying 'Other' would
+        // throw away the only thing that makes it a distinct preset.
+        printerBrand: raw.printerBrand ?? 'Other',
+        printerModel: raw.printerModel,
         manufacturer: raw.manufacturer,
         brand: raw.brand,
         filamentType: raw.filamentType || 'Other',
@@ -277,7 +328,7 @@ async function main() {
       lines.push(serialize(p));
   }
 
-  console.log(`data files=${files.length} alreadyPresent=${dup} skippedNonFilament=${junk} resold=${resold} implausible=${implausible} variantsCollapsed=${collapsed} new=${lines.length}`);
+  console.log(`data files=${files.length} alreadyPresent=${dup} skippedNonFilament=${junk} resold=${resold} sameAsBase=${sameAsBase} implausible=${implausible} variantsCollapsed=${collapsed} new=${lines.length}`);
   if (!lines.length) return;
 
   console.log(`\n// --- Imported from official manufacturer sites (${new Date().toISOString().slice(0, 10)}) ---`);

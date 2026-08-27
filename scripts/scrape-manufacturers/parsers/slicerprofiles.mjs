@@ -188,7 +188,14 @@ function num(v, { zeroIsUnset = true } = {}) {
 // index, the "nil" placeholder and the inherits chain. Every parameter differs only in the raw
 // base URL, the local checkout path, the data file and the GitHub origin. The factory closes
 // over its own index/path/group/emitted caches so two parsers never share state in one process.
-export function createSlicerResolver({ rawBase, localDir, dataFile, origin, apiDirs, name }) {
+// `printerVariants` is opt-in per driver. Without it the resolver behaves exactly as before:
+// one representative per product, every "@<printer>" variant folded away. That collapse is right
+// for the general case — a variant that re-tunes nothing is noise — but it hid an entire printer
+// generation: BambuStudio ships 760 H-series filament files and we held zero, because every one
+// of them was a variant of a product we had already emitted from its base.
+//
+// { match, brand } — `match` captures the printer model out of the "@…" suffix.
+export function createSlicerResolver({ rawBase, localDir, dataFile, origin, apiDirs, name, printerVariants = null }) {
   const RAW = rawBase;
   const LOCAL = localDir;
   const DATA_FILE = dataFile;
@@ -339,7 +346,13 @@ export function createSlicerResolver({ rawBase, localDir, dataFile, origin, apiD
     // for every filament the first run had already folded away. Seed from what is on disk.
     try {
       const prior = JSON.parse(await _readFile(DATA_FILE, 'utf8'));
-      if (Array.isArray(prior)) for (const r of prior) emitted.add(`${norm(r.manufacturer)}|${norm(r.brand)}`);
+      // Must mirror the key built at emit time, printer token included — seeding the base key
+      // for a row that is actually an H2D variant would block the base, and vice versa.
+      if (Array.isArray(prior)) {
+        for (const r of prior) {
+          emitted.add(`${norm(r.manufacturer)}|${norm(r.brand)}${r.printerModel ? `|${norm(r.printerModel)}` : ''}`);
+        }
+      }
       if (emitted.size) await log(`${name}: ${emitted.size} filaments already in data/${name}.json — not re-emitting`);
     } catch {
       // no previous run
@@ -349,6 +362,19 @@ export function createSlicerResolver({ rawBase, localDir, dataFile, origin, apiD
     for (const g of groups.values()) {
       const rep = representative(g.members);
       urls.push(rawUrl(g.vendorDir, rep.subPath));
+      if (!printerVariants) continue;
+      // One row per (product, printer model). Nozzle-size variants of the same model collapse:
+      // prefer the member with no nozzle qualifier, else the 0.4 that every machine ships with.
+      const best = new Map();
+      for (const m of g.members) {
+        const hit = printerVariants.match.exec(m.name);
+        if (!hit) continue;
+        const model = hit[1];
+        const cur = best.get(model);
+        const rank = /\bnozzle\b/i.test(m.name) ? (/0\.4\s*nozzle/i.test(m.name) ? 1 : 2) : 0;
+        if (!cur || rank < cur.rank) best.set(model, { m, rank });
+      }
+      for (const { m } of best.values()) urls.push(rawUrl(g.vendorDir, m.subPath));
     }
     await log(`${name}: ${entries.length} vendor dirs, ${files} filament files, ${groups.size} distinct filaments`);
     return [...new Set(urls)];
@@ -414,7 +440,10 @@ export function createSlicerResolver({ rawBase, localDir, dataFile, origin, apiD
     const brand = deriveBrand(sourceProfile, filamentType);
     if (!brand) return null;
 
-    const key = `${norm(vendor)}|${norm(brand)}`;
+    // A printer variant is a different row from the base, so it needs its own dedupe slot —
+    // otherwise the base emits first and every variant is discarded as "same filament".
+    const pv = printerVariants ? printerVariants.match.exec(sourceProfile) : null;
+    const key = `${norm(vendor)}|${norm(brand)}${pv ? `|${norm(pv[1])}` : ''}`;
     if (emitted.has(key)) return null; // same filament, another printer pack
     emitted.add(key);
 
@@ -427,6 +456,7 @@ export function createSlicerResolver({ rawBase, localDir, dataFile, origin, apiD
       sourceType: 'slicer-profile',
       sourceUrl,
       sourceProfile,
+      ...(pv ? { printerBrand: printerVariants.brand, printerModel: pv[1] } : {}),
     };
 
     const opt = {

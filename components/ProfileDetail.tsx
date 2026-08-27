@@ -73,7 +73,9 @@ const ProfileDetail: React.FC<{ profile: FilamentProfile; onClose: () => void }>
                             {fill && <span className="inline-flex items-center h-6 px-2 rounded bg-stone-100 text-stone-900 text-[11px] font-semibold tracking-wide">{fill}</span>}
                             <span className="inline-flex items-center h-6 px-2 border border-white/30 rounded text-[11px] font-medium text-stone-200">{profile.filamentDiameter} mm</span>
                             {profile.printerBrand !== 'Other' && (
-                                <span className="inline-flex items-center h-6 px-2 border border-white/30 rounded text-[11px] font-medium text-stone-200">{profile.printerBrand}</span>
+                                <span className="inline-flex items-center h-6 px-2 border border-white/30 rounded text-[11px] font-medium text-stone-200">
+                                    {profile.printerModel ? `${profile.printerBrand} ${profile.printerModel}` : profile.printerBrand}
+                                </span>
                             )}
                         </div>
                     </div>
