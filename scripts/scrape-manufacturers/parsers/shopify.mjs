@@ -80,7 +80,10 @@ export const BRANDS = [
 
 // ---------- shared helpers (same heuristics as eryone.mjs) ----------
 export const detectType = (name) => {
-  const s = String(name || '').toUpperCase();
+  // Negative tags ("not-tpu", "not-pla") are explicit non-matches, not material hints. A
+  // "not-tpu" tag on an ABS product was mis-classifying it as TPU (SainSmart), so strip them
+  // before any pattern runs. Confined to the detector, not the shared temperature regexes.
+  const s = String(name || '').replace(/\bnot-[a-z0-9-]+\b/gi, ' ').toUpperCase();
   if (/PA[ -]?CF|NYLON.*CF|CF.*NYLON|CARBON.*NYLON|NYLON.*CARBON/.test(s)) return 'PA-CF';
   if (/PA[ -]?GF|NYLON.*GLASS|GLASS.*NYLON/.test(s)) return 'PA-GF';
   // \b guards so short codes don't match inside longer words (TPE inside HTPETG, PC inside PCTG).
@@ -198,6 +201,133 @@ function tempsFrom(text, strict) {
   return { nozzleTemp: n, bedTemp: b };
 }
 
+// ---------- per-host spec extractors ----------
+//
+// A store whose specs live in a page structure the shared patterns cannot read gets a bounded
+// extractor keyed by host. Each runs ONLY for that host, before the shared patterns, and is
+// confined to that vendor's own labels/structure (SPEC §5 G3) — a relaxation here can never leak
+// into the page-wide NOZZLE_RE/BED_RE the other ~40 stores share. Extractors receive the raw
+// rendered HTML plus its stripped text and return { nozzleTemp, bedTemp } | null.
+
+// Midpoint of a two-number range, refusing inverted ranges ("190 - 110C" is a vendor typo, not a
+// range; averaging it shipped a 150 °C bed — same guard as the WooCommerce parser's mid()).
+const rangeMid = (a, b) => {
+  const lo = Number(a); const hi = Number(b);
+  if (Number.isNaN(lo) || Number.isNaN(hi)) return undefined;
+  if (lo > hi) return undefined;
+  return Math.round((lo + hi) / 2);
+};
+
+const recreusSpecs = (html, text) => {
+  // Spanish store. Nozzle: the nozzle-specs table's "Temperatura" column; the first data cell
+  // holding a temperature is the 0.4 mm default row. Bed: "Temperatura de la Cama" section,
+  // "Primera Capa" is the first published value.
+  const n = /nozzle-specs[\s\S]{0,600}?<td[^>]*>\s*(\d{1,3})\s*°\s*C\s*<\/td>/i.exec(html);
+  const b = /temperatura\s+de\s+la\s+cama[\s\S]{0,400}?primera\s+capa\s*:\s*(\d{1,3})\s*°\s*C/i.exec(html);
+  const nozzleTemp = n ? Number(n[1]) : undefined;
+  const bedTemp = b ? Number(b[1]) : undefined;
+  if (!okNozzle(nozzleTemp) || !okBed(bedTemp)) return null;
+  return { nozzleTemp, bedTemp };
+};
+
+const filamentsCaSpecs = (html, text) => {
+  // Two coexisting formats: the newer Hyper lines use "Nozzle Temperature: X°C" (read by the
+  // shared patterns); the older lines write "Print Settings: 200°C - 240°C" plus
+  // "print bed temperature to approximately 75-85°C", and ABS writes
+  // "Printing Temperature: Notes: 230°C + Heated bed: 110°C" (where "110" is split by a <span>
+  // and arrives as "11 0°C" after stripping).
+  let nozzleTemp;
+  let bedTemp;
+  const n = /print\s+settings\s*:\s*(\d{2,3})\s*(?:°\s*C)?\s*[-–]\s*(\d{2,3})\s*°\s*C/i.exec(text);
+  if (n) nozzleTemp = rangeMid(n[1], n[2]);
+  const b = /bed\s+temperature[^0-9]{0,30}(\d{2,3})\s*(?:°\s*C)?\s*[-–]\s*(\d{2,3})\s*°\s*C/i.exec(text);
+  if (b) bedTemp = rangeMid(b[1], b[2]);
+  if (nozzleTemp === undefined) {
+    const n2 = /printing\s+temperature[^0-9]{0,30}(\d{2,3})\s*°\s*C/i.exec(text);
+    if (n2) nozzleTemp = Number(n2[1]);
+  }
+  if (bedTemp === undefined) {
+    const b2 = /heated\s+bed\s*:\s*(\d{1,3})\s*(\d)?\s*°\s*C/i.exec(text);
+    if (b2) bedTemp = Number(b2[1] + (b2[2] || ''));
+  }
+  if (!okNozzle(nozzleTemp) || !okBed(bedTemp)) return null;
+  return { nozzleTemp, bedTemp };
+};
+
+const qidiSpecs = (html, text) => {
+  // "Nozzle Temperature 300-340 °C" and "Bed Temperature (with Glue) 70-80 °C" — the shared
+  // patterns fail on the "(with Glue)" parenthetical and on the value-with-unit range.
+  const n = /nozzle\s+temperature[^0-9]{0,20}(\d{2,3})\s*[-–]\s*(\d{2,3})\s*°\s*C/i.exec(text);
+  const b = /bed\s+temperature[^0-9]{0,30}(\d{2,3})\s*[-–]\s*(\d{2,3})\s*°\s*C/i.exec(text);
+  if (!n || !b) return null;
+  const nozzleTemp = rangeMid(n[1], n[2]);
+  const bedTemp = rangeMid(b[1], b[2]);
+  if (!okNozzle(nozzleTemp) || !okBed(bedTemp)) return null;
+  return { nozzleTemp, bedTemp };
+};
+
+const geeetechSpecs = (html, text) => {
+  // ASA: "nozzle temperature: 240 to 270℃" + "Heat platform temperature- 80 to 110℃".
+  // PETG: "Recommended extruding temperature 220-240°C" + "heatbed temperature 80-90°C".
+  // The "to" range separator and the ℃/° sign are what the shared patterns cannot read.
+  const n = /(?:nozzle|extruding)\s+temperature\s*[:.-]?\s*(\d{2,3})\s*(?:to|-)\s*(\d{2,3})\s*°/i.exec(text);
+  const b = /(?:(?:heat\s+)?platform|heatbed)\s+temperature\s*[:.-]?\s*(\d{2,3})\s*(?:to|-)\s*(\d{2,3})\s*°/i.exec(text);
+  if (!n || !b) return null;
+  const nozzleTemp = rangeMid(n[1], n[2]);
+  const bedTemp = rangeMid(b[1], b[2]);
+  if (!okNozzle(nozzleTemp) || !okBed(bedTemp)) return null;
+  return { nozzleTemp, bedTemp };
+};
+
+const x3dSpecs = (html, text) => {
+  // "Printing Temperature Range 250 – 270 °C" and "Buildplate Temperature 90 – 105 °C".
+  const n = /printing\s+temperature\s+range[^0-9]{0,12}(\d{2,3})\s*[-–]\s*(\d{2,3})\s*°/i.exec(text);
+  const b = /build\s*plate\s*temperature[^0-9]{0,12}(\d{2,3})\s*[-–]\s*(\d{2,3})\s*°/i.exec(text);
+  if (!n || !b) return null;
+  const nozzleTemp = rangeMid(n[1], n[2]);
+  const bedTemp = rangeMid(b[1], b[2]);
+  if (!okNozzle(nozzleTemp) || !okBed(bedTemp)) return null;
+  return { nozzleTemp, bedTemp };
+};
+
+const elegooSpecs = (html, text) => {
+  // Elegoo's newer pages carry the spec table as JSON inside a metafield script (not ld+json),
+  // so strip() drops it; read the raw HTML keys directly.
+  const n = /"Nozzle Temperature"\s*:\s*"([^"]+)"/.exec(html);
+  const b = /"Bed Temperature[^"]*"\s*:\s*"([^"]+)"/.exec(html);
+  if (!n || !b) return null;
+  const nv = nums(n[1]); const bv = nums(b[1]);
+  const nozzleTemp = nv.length >= 2 ? rangeMid(nv[0], nv[1]) : (nv.length ? Math.round(nv[0]) : undefined);
+  const bedTemp = bv.length >= 2 ? rangeMid(bv[0], bv[1]) : (bv.length ? Math.round(bv[0]) : undefined);
+  if (!okNozzle(nozzleTemp) || !okBed(bedTemp)) return null;
+  return { nozzleTemp, bedTemp };
+};
+
+const protopastaSpecs = (html, text) => {
+  // "Printing starting at 240 C w/ no bed heat required" — nozzle only; the bed is unheated.
+  const n = /starting\s+at\s+(\d{2,3})\s*°?\s*C\b/i.exec(text);
+  if (!n || !/no\s+bed\s+heat/i.test(text)) return null;
+  const nozzleTemp = Number(n[1]);
+  if (!okNozzle(nozzleTemp)) return null;
+  return { nozzleTemp, bedTemp: 0 };
+};
+
+const hostSpecs = {
+  'recreus.com': recreusSpecs,
+  'filaments.ca': filamentsCaSpecs,
+  'qidi3d.com': qidiSpecs,
+  'geeetech.com': geeetechSpecs,
+  'x3d.com.au': x3dSpecs,
+  'elegoo.com': elegooSpecs,
+  'proto-pasta.com': protopastaSpecs,
+};
+
+function vendorSpecs(host, html, text) {
+  const fn = hostSpecs[host];
+  if (!fn) return null;
+  try { return fn(html, text); } catch { return null; }
+}
+
 const COLOURS = 'black|white|red|blue|green|yellow|orange|purple|pink|brown|grey|gray|silver|gold|natural|transparent|clear|turquoise|cyan|magenta';
 
 function cleanBrand(title) {
@@ -312,7 +442,13 @@ export async function parseProduct(url) {
   const out = {
     manufacturer: brand.manufacturer,
     brand: cleanBrand(rec.title),
-    filamentType: detectType(`${rec.title} ${rec.product_type || ''} ${(rec.tags || []).join(' ')}`),
+    // The title is the product's identity; tags are the store's browse categories and are
+    // routinely wrong — qidi3d.com tags its "PC/ABS-FR Filament" as ["TPU/PC"], which typed a
+    // polycarbonate blend as flexible. So the title decides whenever it decides anything, and
+    // tags/product_type are consulted only when the title alone is unclassifiable.
+    filamentType: detectType(rec.title) !== 'Other'
+      ? detectType(rec.title)
+      : detectType(`${rec.title} ${rec.product_type || ''} ${(rec.tags || []).join(' ')}`),
     sourceUrl: `https://${host}/products/${handle}`,
     sourceType: 'manufacturer',
   };
@@ -327,9 +463,12 @@ export async function parseProduct(url) {
     const page = await get(`https://${host}/products/${handle}`);
     if (!page.ok) return null;
     const rendered = renderedText(page.body);
-    // The labelled panel first: it is the store's own spec table, so when one exists its
-    // numbers beat anything scraped out of the surrounding prose.
-    spec = specBlockTemps(strip(rendered)) || tempsFrom(rendered, true);
+    // Per-host extractors first (a store's own spec structure), then the labelled panel, then
+    // the shared strict patterns. Host extractors are confined to that vendor and return null
+    // for every other host, so they cannot disturb the ~40 stores on the shared path.
+    spec = vendorSpecs(host, page.body, strip(rendered))
+      || specBlockTemps(strip(rendered))
+      || tempsFrom(rendered, true);
     if (!spec) return null;
     specText = strip(rendered);
   }
