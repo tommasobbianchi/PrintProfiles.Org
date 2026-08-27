@@ -75,7 +75,7 @@ export const BRANDS = [
 ];
 
 // ---------- shared helpers (same heuristics as eryone.mjs) ----------
-const detectType = (name) => {
+export const detectType = (name) => {
   const s = String(name || '').toUpperCase();
   if (/PA[ -]?CF|NYLON.*CF|CF.*NYLON|CARBON.*NYLON|NYLON.*CARBON/.test(s)) return 'PA-CF';
   if (/PA[ -]?GF|NYLON.*GLASS|GLASS.*NYLON/.test(s)) return 'PA-GF';
@@ -252,7 +252,7 @@ function renderedText(html) {
 // Cheap gate so we do not fetch a rendered page for an obviously non-filament product
 // (resin, printer, accessory). It is an optimisation only — a false positive still resolves
 // to null via the nozzle/bed gate.
-function isFilamentLike(rec) {
+export function isFilamentLike(rec) {
   const t = `${rec.title || ''} ${rec.product_type || ''} ${(rec.tags || []).join(' ')}`.toLowerCase();
   if (/resin|photopolymer/.test(t)) return false;
   if (/\b(?:printer|dryer|washer|curing|clean|cure)\b/.test(t) && !/filament/.test(t)) return false;

@@ -36,7 +36,9 @@ const execFileAsync = promisify(execFile);
 
 export async function log(msg) {
   const line = `${new Date().toISOString()} ${msg}\n`;
-  process.stdout.write(line);
+  // QUIET keeps stdout clean for callers whose stdout IS the payload (coverage-audit --json).
+  // The line still reaches run.log, so nothing is lost — it just stops corrupting the parse.
+  if (!process.env.QUIET) process.stdout.write(line);
   return appendFile(LOG, line).catch(() => {});
 }
 
